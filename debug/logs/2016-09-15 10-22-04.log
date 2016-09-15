@@ -1,0 +1,23 @@
+38.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+10:22:03.0 (71949)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+10:22:03.0 (107922)|EXECUTION_STARTED
+10:22:03.0 (113738)|CODE_UNIT_STARTED|[EXTERNAL]|066p0000000CbRx|VF: /apexremote
+10:22:03.0 (274659)|CUMULATIVE_LIMIT_USAGE
+10:22:03.0 (274659)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+10:22:03.0 (274659)|CUMULATIVE_LIMIT_USAGE_END
+
+10:22:03.0 (331911)|CODE_UNIT_FINISHED|VF: /apexremote
+10:22:03.0 (1875064)|EXECUTION_FINISHED

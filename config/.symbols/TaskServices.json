@@ -1,0 +1,425 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000006eleEAAQ",
+    "innerClasses": [
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 21,
+                        "line": 38
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "considerTaskFieldMappings",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 18,
+                    "line": 37
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "considerTaskFieldMappings",
+                "references": [],
+                "type": "considerTaskFieldMappings"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 54,
+                        "line": 40
+                    },
+                    "modifiers": [],
+                    "name": "fieldMappings",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 48
+                    },
+                    "modifiers": [],
+                    "name": "recordTypeIds",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 49
+                    },
+                    "modifiers": [],
+                    "name": "rt",
+                    "references": [],
+                    "type": "RecordType"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 11,
+                        "line": 53
+                    },
+                    "modifiers": [],
+                    "name": "qry",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 52,
+                        "line": 54
+                    },
+                    "modifiers": [],
+                    "name": "fld",
+                    "references": [],
+                    "type": "Contact_to_Task_Field_Mapping__mdt"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 21,
+                        "line": 59
+                    },
+                    "modifiers": [],
+                    "name": "contactIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 22,
+                        "line": 60
+                    },
+                    "modifiers": [],
+                    "name": "tsk",
+                    "references": [],
+                    "type": "Task"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 62
+                    },
+                    "modifiers": [],
+                    "name": "contacts",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 63
+                    },
+                    "modifiers": [],
+                    "name": "c",
+                    "references": [],
+                    "type": "Contact"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 22,
+                        "line": 66
+                    },
+                    "modifiers": [],
+                    "name": "tsk",
+                    "references": [],
+                    "type": "Task"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 60,
+                        "line": 69
+                    },
+                    "modifiers": [],
+                    "name": "mapping",
+                    "references": [],
+                    "type": "Contact_to_Task_Field_Mapping__mdt"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 21,
+                        "line": 83
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "considerWrapUpTasks",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 18,
+                    "line": 82
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "considerWrapUpTasks",
+                "references": [],
+                "type": "considerWrapUpTasks"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 22,
+                        "line": 84
+                    },
+                    "modifiers": [],
+                    "name": "tsk",
+                    "references": [],
+                    "type": "Task"
+                }
+            ]
+        }
+    ],
+    "interfaces": [],
+    "key": "01p28000006eleEAAQ",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 21
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "updateTaskRecords",
+            "parameters": [
+                {
+                    "name": "tsks",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 29
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "deleteTaskRecords",
+            "parameters": [
+                {
+                    "name": "tsks",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "TaskServices",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 9
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "FIRST_ATTEMPT",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 10
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "SECOND_ATTEMPT",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 11
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "THIRD_ATTEMPT",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 12
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "MONTRACK_CALL_SUBJECT",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 13
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "COMPLETED",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 14
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "NOT_APPLICABLE",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 15
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "NOT_STARTED",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 30,
+            "line": 7
+        },
+        "modifiers": [
+            "public",
+            "without sharing"
+        ],
+        "name": "TaskServices",
+        "references": [],
+        "type": "TaskServices"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 53,
+                "line": 21
+            },
+            "modifiers": [],
+            "name": "tsks",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 53,
+                "line": 29
+            },
+            "modifiers": [],
+            "name": "tsks",
+            "references": [],
+            "type": "LIST"
+        }
+    ]
+}

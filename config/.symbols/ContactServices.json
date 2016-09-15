@@ -1,0 +1,1050 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000006ele6AAA",
+    "innerClasses": [
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 18
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "populateNullPersonIdField",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 19,
+                    "line": 17
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "populateNullPersonIdField",
+                "references": [],
+                "type": "populateNullPersonIdField"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 19
+                    },
+                    "modifiers": [],
+                    "name": "contacts",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 20
+                    },
+                    "modifiers": [],
+                    "name": "i",
+                    "references": [],
+                    "type": "Integer"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 32,
+                        "line": 22
+                    },
+                    "modifiers": [],
+                    "name": "index",
+                    "references": [],
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 40
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "enableCopyCaseInfoToContact",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 19,
+                    "line": 39
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "enableCopyCaseInfoToContact",
+                "references": [],
+                "type": "enableCopyCaseInfoToContact"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 41
+                    },
+                    "modifiers": [],
+                    "name": "c",
+                    "references": [],
+                    "type": "Contact"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 115
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "maintainEmailAddressHistory",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 16,
+                    "line": 114
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "maintainEmailAddressHistory",
+                "references": [],
+                "type": "maintainEmailAddressHistory"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 116
+                    },
+                    "modifiers": [],
+                    "name": "newContacts",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 117
+                    },
+                    "modifiers": [],
+                    "name": "oldContacts",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 119
+                    },
+                    "modifiers": [],
+                    "name": "i",
+                    "references": [],
+                    "type": "Integer"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 121
+                    },
+                    "modifiers": [],
+                    "name": "nw",
+                    "references": [],
+                    "type": "Contact"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 122
+                    },
+                    "modifiers": [],
+                    "name": "old",
+                    "references": [],
+                    "type": "Contact"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 37,
+                        "line": 130
+                    },
+                    "modifiers": [],
+                    "name": "addresses",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 40,
+                        "line": 135
+                    },
+                    "modifiers": [],
+                    "name": "address",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 40,
+                        "line": 140
+                    },
+                    "modifiers": [],
+                    "name": "address",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 40,
+                        "line": 150
+                    },
+                    "modifiers": [],
+                    "name": "addr",
+                    "references": [],
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 166
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "maintainAccountName",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 16,
+                    "line": 165
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "maintainAccountName",
+                "references": [],
+                "type": "maintainAccountName"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 167
+                    },
+                    "modifiers": [],
+                    "name": "newContacts",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 168
+                    },
+                    "modifiers": [],
+                    "name": "oldContacts",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 169
+                    },
+                    "modifiers": [],
+                    "name": "accountIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 32,
+                        "line": 170
+                    },
+                    "modifiers": [],
+                    "name": "accounts",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 20,
+                        "line": 171
+                    },
+                    "modifiers": [],
+                    "name": "accountRT",
+                    "references": [],
+                    "type": "Id"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 173
+                    },
+                    "modifiers": [],
+                    "name": "i",
+                    "references": [],
+                    "type": "Integer"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 175
+                    },
+                    "modifiers": [],
+                    "name": "nw",
+                    "references": [],
+                    "type": "Contact"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 176
+                    },
+                    "modifiers": [],
+                    "name": "old",
+                    "references": [],
+                    "type": "Contact"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 184
+                    },
+                    "modifiers": [],
+                    "name": "accts",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 185
+                    },
+                    "modifiers": [],
+                    "name": "key",
+                    "references": [],
+                    "type": "Id"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 33,
+                        "line": 186
+                    },
+                    "modifiers": [],
+                    "name": "a",
+                    "references": [],
+                    "type": "Account"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 206
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "copyMultiselectToTextField",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 19,
+                    "line": 205
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "copyMultiselectToTextField",
+                "references": [],
+                "type": "copyMultiselectToTextField"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 207
+                    },
+                    "modifiers": [],
+                    "name": "c",
+                    "references": [],
+                    "type": "Contact"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 208
+                    },
+                    "modifiers": [],
+                    "name": "v",
+                    "references": [],
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 227
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "addContactAccounts",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 226
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "addContactAccounts",
+                "references": [],
+                "type": "addContactAccounts"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 229
+                    },
+                    "modifiers": [],
+                    "name": "newAccounts",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 39,
+                        "line": 230
+                    },
+                    "modifiers": [],
+                    "name": "contactIndex",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 232
+                    },
+                    "modifiers": [],
+                    "name": "contacts",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 233
+                    },
+                    "modifiers": [],
+                    "name": "index",
+                    "references": [],
+                    "type": "Integer"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 32,
+                        "line": 238
+                    },
+                    "modifiers": [],
+                    "name": "firstName",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 43,
+                        "line": 251
+                    },
+                    "modifiers": [],
+                    "name": "saveResults",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 34,
+                        "line": 253
+                    },
+                    "modifiers": [],
+                    "name": "index",
+                    "references": [],
+                    "type": "Integer"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 36,
+                        "line": 257
+                    },
+                    "modifiers": [],
+                    "name": "errorMessage",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 48,
+                        "line": 258
+                    },
+                    "modifiers": [],
+                    "name": "err",
+                    "references": [],
+                    "type": "Error"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 277
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "cleanUpOrphanAccounts",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 276
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "cleanUpOrphanAccounts",
+                "references": [],
+                "type": "cleanUpOrphanAccounts"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 279
+                    },
+                    "modifiers": [],
+                    "name": "oldAccountIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 280
+                    },
+                    "modifiers": [],
+                    "name": "contact",
+                    "references": [],
+                    "type": "Contact"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 35,
+                        "line": 290
+                    },
+                    "modifiers": [],
+                    "name": "accountsToDelete",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 45,
+                        "line": 297
+                    },
+                    "modifiers": [],
+                    "name": "deleteResults",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 298
+                    },
+                    "modifiers": [],
+                    "name": "errorMessage",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 34,
+                        "line": 299
+                    },
+                    "modifiers": [],
+                    "name": "index",
+                    "references": [],
+                    "type": "Integer"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 48,
+                        "line": 305
+                    },
+                    "modifiers": [],
+                    "name": "err",
+                    "references": [],
+                    "type": "Error"
+                }
+            ]
+        }
+    ],
+    "interfaces": [],
+    "key": "01p28000006ele6AAA",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 61
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "copyMappedFieldsToCaseContacts",
+            "parameters": [
+                {
+                    "name": "cases",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 92
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "updateContacts",
+            "parameters": [
+                {
+                    "name": "contacts",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 102
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "updateMontrackFields",
+            "parameters": [
+                {
+                    "name": "con",
+                    "type": "Contact"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 332
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "fieldHasChanged",
+            "parameters": [
+                {
+                    "name": "fieldName",
+                    "type": "String"
+                },
+                {
+                    "name": "newObj",
+                    "type": "SObject"
+                },
+                {
+                    "name": "oldObj",
+                    "type": "SObject"
+                }
+            ],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        }
+    ],
+    "name": "ContactServices",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 30,
+            "line": 8
+        },
+        "modifiers": [
+            "public",
+            "without sharing"
+        ],
+        "name": "ContactServices",
+        "references": [],
+        "type": "ContactServices"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 67,
+                "line": 61
+            },
+            "modifiers": [],
+            "name": "cases",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 62
+            },
+            "modifiers": [],
+            "name": "contacts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 54,
+                "line": 65
+            },
+            "modifiers": [],
+            "name": "fieldMappings",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 70
+            },
+            "modifiers": [],
+            "name": "cse",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 71
+            },
+            "modifiers": [],
+            "name": "cont",
+            "references": [],
+            "type": "Contact"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 72
+            },
+            "modifiers": [],
+            "name": "errMsg",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 56,
+                "line": 73
+            },
+            "modifiers": [],
+            "name": "fieldMapping",
+            "references": [],
+            "type": "Case_to_Contact_Field_Mapping__mdt"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 54,
+                "line": 92
+            },
+            "modifiers": [],
+            "name": "contacts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 57,
+                "line": 102
+            },
+            "modifiers": [],
+            "name": "con",
+            "references": [],
+            "type": "Contact"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 103
+            },
+            "modifiers": [],
+            "name": "conUpdate",
+            "references": [],
+            "type": "Contact"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 332
+            },
+            "modifiers": [],
+            "name": "fieldName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 68,
+                "line": 332
+            },
+            "modifiers": [],
+            "name": "newObj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 84,
+                "line": 332
+            },
+            "modifiers": [],
+            "name": "oldObj",
+            "references": [],
+            "type": "SObject"
+        }
+    ]
+}

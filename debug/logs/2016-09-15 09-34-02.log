@@ -1,0 +1,586 @@
+35.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:33:58.0 (934710)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:33:58.0 (1001273)|EXECUTION_STARTED
+09:33:58.0 (1007076)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000006ele2|CampaignMemberServices_Test.confirmTaskCleanUpAtCohortChange
+09:33:58.0 (4542363)|SYSTEM_MODE_ENTER|false
+09:33:58.0 (4553064)|SYSTEM_MODE_EXIT|false
+09:33:58.0 (4635470)|SYSTEM_MODE_ENTER|false
+09:33:58.0 (5755449)|SOQL_EXECUTE_BEGIN|[332]|Aggregations:0|SELECT id FROM Profile WHERE name = :tmpVar1 LIMIT 1
+09:33:58.0 (8732760)|SOQL_EXECUTE_END|[332]|Rows:1
+09:33:58.0 (13183645)|DML_BEGIN|[349]|Op:Insert|Type:User|Rows:1
+09:33:58.0 (356302162)|DML_END|[349]
+09:33:58.0 (356542551)|DML_BEGIN|[199]|Op:Update|Type:User|Rows:1
+09:33:58.0 (491826370)|DML_END|[199]
+09:33:58.0 (491873045)|SYSTEM_MODE_EXIT|false
+09:33:58.0 (492057542)|SYSTEM_MODE_ENTER|false
+09:33:58.0 (501379186)|SYSTEM_MODE_EXIT|false
+09:33:58.0 (501476579)|DML_BEGIN|[18]|Op:Insert|Type:Account|Rows:10
+09:33:58.0 (632193268)|DML_END|[18]
+09:33:58.0 (633024074)|SYSTEM_MODE_ENTER|false
+09:33:58.0 (636440001)|SYSTEM_MODE_EXIT|false
+09:33:58.0 (636540210)|DML_BEGIN|[22]|Op:Insert|Type:Contact|Rows:10
+09:33:58.0 (719019237)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q42t|ContactTrigger on Contact trigger event BeforeInsert for [new, new, new, new, new, new, new, new, new, new]
+09:33:58.0 (723285538)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:33:58.0 (730838819)|USER_DEBUG|[25]|DEBUG|index =:006039393
+09:33:58.0 (731028812)|USER_DEBUG|[25]|DEBUG|index =:016039393
+09:33:58.0 (731256295)|USER_DEBUG|[25]|DEBUG|index =:026039393
+09:33:58.0 (731451847)|USER_DEBUG|[25]|DEBUG|index =:036039394
+09:33:58.0 (731585193)|USER_DEBUG|[25]|DEBUG|index =:046039394
+09:33:58.0 (731715405)|USER_DEBUG|[25]|DEBUG|index =:056039394
+09:33:58.0 (731847052)|USER_DEBUG|[25]|DEBUG|index =:066039394
+09:33:58.0 (732074711)|USER_DEBUG|[25]|DEBUG|index =:076039394
+09:33:58.0 (732304167)|USER_DEBUG|[25]|DEBUG|index =:086039394
+09:33:58.0 (732482662)|USER_DEBUG|[25]|DEBUG|index =:096039395
+09:33:58.740 (740204622)|CUMULATIVE_LIMIT_USAGE
+09:33:58.740 (740204622)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 22 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:33:58.740 (740204622)|CUMULATIVE_LIMIT_USAGE_END
+
+09:33:58.0 (747137067)|CODE_UNIT_FINISHED|ContactTrigger on Contact trigger event BeforeInsert for [new, new, new, new, new, new, new, new, new, new]
+09:33:58.0 (944158034)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Contact
+09:33:58.0 (962577554)|WF_RULE_EVAL_BEGIN|Workflow
+09:33:58.0 (962644500)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09a4]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:33:58.0 (967001415)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:33:58.0 (967058172)|WF_RULE_EVAL_VALUE|
+09:33:58.0 (967064015)|WF_CRITERIA_END|false
+09:33:58.0 (967085398)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09a4]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:33:58.0 (967386765)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:006039393
+09:33:58.0 (967391887)|WF_CRITERIA_END|false
+09:33:58.0 (967407729)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09a4]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:33:58.0 (967568052)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:006039393
+09:33:58.0 (967573122)|WF_CRITERIA_END|true
+09:33:58.0 (968678621)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09a4]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:33:58.0 (968757962)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:33:58.0 (977085704)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (977096606)|WF_CRITERIA_END|false
+09:33:58.0 (977130663)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09a4]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:58.0 (977248243)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:33:58.0 (977260113)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (977262630)|WF_CRITERIA_END|false
+09:33:58.0 (977274893)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09a4]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:33:58.0 (977347833)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:33:58.0 (977483827)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (977488547)|WF_CRITERIA_END|true
+09:33:58.0 (977540229)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09a5]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:33:58.0 (977675001)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:33:58.0 (977719118)|WF_RULE_EVAL_VALUE|
+09:33:58.0 (977722234)|WF_CRITERIA_END|false
+09:33:58.0 (977737289)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09a5]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:33:58.0 (977824648)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:016039393
+09:33:58.0 (977829850)|WF_CRITERIA_END|false
+09:33:58.0 (977843335)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09a5]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:33:58.0 (977888732)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:016039393
+09:33:58.0 (977893275)|WF_CRITERIA_END|true
+09:33:58.0 (977909430)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09a5]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:33:58.0 (977932643)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:33:58.0 (978045022)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (978049680)|WF_CRITERIA_END|false
+09:33:58.0 (978065372)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09a5]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:58.0 (978088408)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:33:58.0 (978097044)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (978099181)|WF_CRITERIA_END|false
+09:33:58.0 (978109784)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09a5]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:33:58.0 (978128829)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:33:58.0 (978232020)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (978235667)|WF_CRITERIA_END|true
+09:33:58.0 (978266462)|WF_CRITERIA_BEGIN|[Contact: Cruz2 John 003p000000C09a6]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:33:58.0 (978363911)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:33:58.0 (978389753)|WF_RULE_EVAL_VALUE|
+09:33:58.0 (978392735)|WF_CRITERIA_END|false
+09:33:58.0 (978406318)|WF_CRITERIA_BEGIN|[Contact: Cruz2 John 003p000000C09a6]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:33:58.0 (978471018)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:026039393
+09:33:58.0 (978475209)|WF_CRITERIA_END|false
+09:33:58.0 (978488505)|WF_CRITERIA_BEGIN|[Contact: Cruz2 John 003p000000C09a6]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:33:58.0 (978531136)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:026039393
+09:33:58.0 (978535072)|WF_CRITERIA_END|true
+09:33:58.0 (978549919)|WF_CRITERIA_BEGIN|[Contact: Cruz2 John 003p000000C09a6]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:33:58.0 (978572204)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:33:58.0 (978680602)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (978706155)|WF_CRITERIA_END|false
+09:33:58.0 (978729386)|WF_CRITERIA_BEGIN|[Contact: Cruz2 John 003p000000C09a6]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:58.0 (978759836)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:33:58.0 (978779702)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (978783485)|WF_CRITERIA_END|false
+09:33:58.0 (978802322)|WF_CRITERIA_BEGIN|[Contact: Cruz2 John 003p000000C09a6]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:33:58.0 (978834840)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:33:58.0 (978964040)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (978968008)|WF_CRITERIA_END|true
+09:33:58.0 (978999265)|WF_CRITERIA_BEGIN|[Contact: Cruz3 John 003p000000C09a7]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:33:58.0 (979097491)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:33:58.0 (979124845)|WF_RULE_EVAL_VALUE|
+09:33:58.0 (979128332)|WF_CRITERIA_END|false
+09:33:58.0 (979142414)|WF_CRITERIA_BEGIN|[Contact: Cruz3 John 003p000000C09a7]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:33:58.0 (979205893)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:036039394
+09:33:58.0 (979210155)|WF_CRITERIA_END|false
+09:33:58.0 (979223500)|WF_CRITERIA_BEGIN|[Contact: Cruz3 John 003p000000C09a7]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:33:58.0 (979264895)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:036039394
+09:33:58.0 (979268996)|WF_CRITERIA_END|true
+09:33:58.0 (979283895)|WF_CRITERIA_BEGIN|[Contact: Cruz3 John 003p000000C09a7]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:33:58.0 (979306332)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:33:58.0 (979415317)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (979418851)|WF_CRITERIA_END|false
+09:33:58.0 (979434160)|WF_CRITERIA_BEGIN|[Contact: Cruz3 John 003p000000C09a7]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:58.0 (979456622)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:33:58.0 (979464288)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (979466376)|WF_CRITERIA_END|false
+09:33:58.0 (979476661)|WF_CRITERIA_BEGIN|[Contact: Cruz3 John 003p000000C09a7]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:33:58.0 (979495309)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:33:58.0 (979597701)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (979601231)|WF_CRITERIA_END|true
+09:33:58.0 (979631422)|WF_CRITERIA_BEGIN|[Contact: Cruz4 John 003p000000C09a8]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:33:58.0 (979733702)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:33:58.0 (979759251)|WF_RULE_EVAL_VALUE|
+09:33:58.0 (979762151)|WF_CRITERIA_END|false
+09:33:58.0 (979775857)|WF_CRITERIA_BEGIN|[Contact: Cruz4 John 003p000000C09a8]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:33:58.0 (979838214)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:046039394
+09:33:58.0 (979842669)|WF_CRITERIA_END|false
+09:33:58.0 (979855754)|WF_CRITERIA_BEGIN|[Contact: Cruz4 John 003p000000C09a8]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:33:58.0 (979897360)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:046039394
+09:33:58.0 (979901445)|WF_CRITERIA_END|true
+09:33:58.0 (979916321)|WF_CRITERIA_BEGIN|[Contact: Cruz4 John 003p000000C09a8]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:33:58.0 (979939056)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:33:58.0 (980080047)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (980086404)|WF_CRITERIA_END|false
+09:33:58.0 (980105506)|WF_CRITERIA_BEGIN|[Contact: Cruz4 John 003p000000C09a8]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:58.0 (980129102)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:33:58.0 (980137357)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (980139627)|WF_CRITERIA_END|false
+09:33:58.0 (980150065)|WF_CRITERIA_BEGIN|[Contact: Cruz4 John 003p000000C09a8]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:33:58.0 (980169548)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:33:58.0 (980273149)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (980276788)|WF_CRITERIA_END|true
+09:33:58.0 (980307125)|WF_CRITERIA_BEGIN|[Contact: Cruz5 John 003p000000C09a9]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:33:58.0 (980405033)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:33:58.0 (980430501)|WF_RULE_EVAL_VALUE|
+09:33:58.0 (980433368)|WF_CRITERIA_END|false
+09:33:58.0 (980446913)|WF_CRITERIA_BEGIN|[Contact: Cruz5 John 003p000000C09a9]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:33:58.0 (980509222)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:056039394
+09:33:58.0 (980513615)|WF_CRITERIA_END|false
+09:33:58.0 (980526851)|WF_CRITERIA_BEGIN|[Contact: Cruz5 John 003p000000C09a9]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:33:58.0 (980567921)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:056039394
+09:33:58.0 (980572426)|WF_CRITERIA_END|true
+09:33:58.0 (980587676)|WF_CRITERIA_BEGIN|[Contact: Cruz5 John 003p000000C09a9]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:33:58.0 (980609836)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:33:58.0 (980723189)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (980726746)|WF_CRITERIA_END|false
+09:33:58.0 (980742127)|WF_CRITERIA_BEGIN|[Contact: Cruz5 John 003p000000C09a9]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:58.0 (980764625)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:33:58.0 (980772257)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (980774337)|WF_CRITERIA_END|false
+09:33:58.0 (980784296)|WF_CRITERIA_BEGIN|[Contact: Cruz5 John 003p000000C09a9]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:33:58.0 (980803137)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:33:58.0 (980949260)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (980954821)|WF_CRITERIA_END|true
+09:33:58.0 (980992693)|WF_CRITERIA_BEGIN|[Contact: Cruz6 John 003p000000C09aA]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:33:58.0 (981091083)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:33:58.0 (981117465)|WF_RULE_EVAL_VALUE|
+09:33:58.0 (981120387)|WF_CRITERIA_END|false
+09:33:58.0 (981134295)|WF_CRITERIA_BEGIN|[Contact: Cruz6 John 003p000000C09aA]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:33:58.0 (981197304)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:066039394
+09:33:58.0 (981201576)|WF_CRITERIA_END|false
+09:33:58.0 (981214743)|WF_CRITERIA_BEGIN|[Contact: Cruz6 John 003p000000C09aA]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:33:58.0 (981256567)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:066039394
+09:33:58.0 (981260439)|WF_CRITERIA_END|true
+09:33:58.0 (981275593)|WF_CRITERIA_BEGIN|[Contact: Cruz6 John 003p000000C09aA]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:33:58.0 (981297703)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:33:58.0 (981437946)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (981443068)|WF_CRITERIA_END|false
+09:33:58.0 (981465001)|WF_CRITERIA_BEGIN|[Contact: Cruz6 John 003p000000C09aA]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:58.0 (981500308)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:33:58.0 (981509482)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (981511948)|WF_CRITERIA_END|false
+09:33:58.0 (981523047)|WF_CRITERIA_BEGIN|[Contact: Cruz6 John 003p000000C09aA]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:33:58.0 (981544215)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:33:58.0 (981649638)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (981653354)|WF_CRITERIA_END|true
+09:33:58.0 (981688441)|WF_CRITERIA_BEGIN|[Contact: Cruz7 John 003p000000C09aB]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:33:58.0 (981785994)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:33:58.0 (981810772)|WF_RULE_EVAL_VALUE|
+09:33:58.0 (981813716)|WF_CRITERIA_END|false
+09:33:58.0 (981827289)|WF_CRITERIA_BEGIN|[Contact: Cruz7 John 003p000000C09aB]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:33:58.0 (981919599)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:076039394
+09:33:58.0 (981926582)|WF_CRITERIA_END|false
+09:33:58.0 (981946368)|WF_CRITERIA_BEGIN|[Contact: Cruz7 John 003p000000C09aB]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:33:58.0 (981996551)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:076039394
+09:33:58.0 (982000790)|WF_CRITERIA_END|true
+09:33:58.0 (982017581)|WF_CRITERIA_BEGIN|[Contact: Cruz7 John 003p000000C09aB]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:33:58.0 (982040128)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:33:58.0 (982147189)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (982150809)|WF_CRITERIA_END|false
+09:33:58.0 (982165887)|WF_CRITERIA_BEGIN|[Contact: Cruz7 John 003p000000C09aB]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:58.0 (982188341)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:33:58.0 (982196051)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (982198673)|WF_CRITERIA_END|false
+09:33:58.0 (982208726)|WF_CRITERIA_BEGIN|[Contact: Cruz7 John 003p000000C09aB]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:33:58.0 (982227492)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:33:58.0 (982329358)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (982332934)|WF_CRITERIA_END|true
+09:33:58.0 (982376199)|WF_CRITERIA_BEGIN|[Contact: Cruz8 John 003p000000C09aC]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:33:58.0 (982511895)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:33:58.0 (982538037)|WF_RULE_EVAL_VALUE|
+09:33:58.0 (982541000)|WF_CRITERIA_END|false
+09:33:58.0 (982554744)|WF_CRITERIA_BEGIN|[Contact: Cruz8 John 003p000000C09aC]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:33:58.0 (982617546)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:086039394
+09:33:58.0 (982622327)|WF_CRITERIA_END|false
+09:33:58.0 (982635326)|WF_CRITERIA_BEGIN|[Contact: Cruz8 John 003p000000C09aC]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:33:58.0 (982676507)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:086039394
+09:33:58.0 (982680381)|WF_CRITERIA_END|true
+09:33:58.0 (982699907)|WF_CRITERIA_BEGIN|[Contact: Cruz8 John 003p000000C09aC]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:33:58.0 (982722026)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:33:58.0 (982828913)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (982832527)|WF_CRITERIA_END|false
+09:33:58.0 (982857793)|WF_CRITERIA_BEGIN|[Contact: Cruz8 John 003p000000C09aC]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:58.0 (982895295)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:33:58.0 (982907775)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (982911339)|WF_CRITERIA_END|false
+09:33:58.0 (982929351)|WF_CRITERIA_BEGIN|[Contact: Cruz8 John 003p000000C09aC]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:33:58.0 (982963758)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:33:58.0 (983070959)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (983075381)|WF_CRITERIA_END|true
+09:33:58.0 (983105612)|WF_CRITERIA_BEGIN|[Contact: Cruz9 John 003p000000C09aD]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:33:58.0 (983201645)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:33:58.0 (983226761)|WF_RULE_EVAL_VALUE|
+09:33:58.0 (983229678)|WF_CRITERIA_END|false
+09:33:58.0 (983243906)|WF_CRITERIA_BEGIN|[Contact: Cruz9 John 003p000000C09aD]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:33:58.0 (983306231)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:096039395
+09:33:58.0 (983310562)|WF_CRITERIA_END|false
+09:33:58.0 (983323337)|WF_CRITERIA_BEGIN|[Contact: Cruz9 John 003p000000C09aD]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:33:58.0 (983364577)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:096039395
+09:33:58.0 (983368738)|WF_CRITERIA_END|true
+09:33:58.0 (983383651)|WF_CRITERIA_BEGIN|[Contact: Cruz9 John 003p000000C09aD]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:33:58.0 (983405979)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:33:58.0 (983568116)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (983571873)|WF_CRITERIA_END|false
+09:33:58.0 (983588778)|WF_CRITERIA_BEGIN|[Contact: Cruz9 John 003p000000C09aD]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:58.0 (983612044)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:33:58.0 (983620197)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (983622347)|WF_CRITERIA_END|false
+09:33:58.0 (983632695)|WF_CRITERIA_BEGIN|[Contact: Cruz9 John 003p000000C09aD]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:33:58.0 (983651604)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:33:58.0 (983761039)|WF_RULE_EVAL_VALUE|0
+09:33:58.0 (983764583)|WF_CRITERIA_END|true
+09:33:58.0 (983789761)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:33:58.0 (985225122)|WF_ACTION| Field Update: 20;
+09:33:58.0 (985229995)|WF_RULE_EVAL_END
+09:33:58.0 (985319753)|WF_ACTIONS_END| Field Update: 20;
+09:33:58.0 (985329669)|CODE_UNIT_FINISHED|Workflow:Contact
+09:33:58.0 (987212742)|DML_END|[22]
+09:33:58.0 (988544050)|SYSTEM_MODE_ENTER|false
+09:33:58.0 (991340019)|SYSTEM_MODE_EXIT|false
+09:33:58.0 (991419157)|DML_BEGIN|[33]|Op:Insert|Type:Campaign|Rows:1
+09:33:59.273 (1273730224)|DML_END|[33]
+09:33:59.273 (1274895928)|SYSTEM_MODE_ENTER|false
+09:33:59.273 (1276703476)|SYSTEM_MODE_EXIT|false
+09:33:59.273 (1276775842)|DML_BEGIN|[38]|Op:Insert|Type:Cohort__c|Rows:2
+09:33:59.273 (1320082900)|DML_END|[38]
+09:33:59.273 (1321050940)|SYSTEM_MODE_ENTER|false
+09:33:59.273 (1323627249)|SYSTEM_MODE_EXIT|false
+09:33:59.273 (1323687600)|DML_BEGIN|[45]|Op:Insert|Type:CampaignMember|Rows:10
+09:33:59.273 (1562253148)|DML_END|[45]
+09:33:59.273 (1562962275)|SOQL_EXECUTE_BEGIN|[48]|Aggregations:0|SELECT ID, contactID, cohort__c, CampaignID FROM CampaignMember WHERE (Cohort__c = :tmpVar1 AND CampaignID = :tmpVar2)
+09:33:59.273 (1593806027)|SOQL_EXECUTE_END|[48]|Rows:10
+09:33:59.273 (1596813810)|SYSTEM_MODE_ENTER|false
+09:33:59.273 (1599357272)|SYSTEM_MODE_EXIT|false
+09:33:59.273 (1599435272)|DML_BEGIN|[53]|Op:Insert|Type:Round__c|Rows:4
+09:33:59.273 (1721549754)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2I1|RoundTrigger on Round trigger event AfterInsert for [a02p0000002kTBw, a02p0000002kTBx, a02p0000002kTBy, a02p0000002kTBz]
+09:33:59.273 (1722522489)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:33:59.273 (1726549526)|SOQL_EXECUTE_BEGIN|[28]|Aggregations:0|SELECT id, Round_Number__c, Cohort__r.Name, Cohort__c, Name FROM Round__c 
+09:33:59.273 (1732357562)|SOQL_EXECUTE_END|[28]|Rows:4
+09:33:59.766 (1766856150)|CUMULATIVE_LIMIT_USAGE
+09:33:59.766 (1766856150)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 11 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 7 out of 150
+  Number of DML rows: 35 out of 10000
+  Maximum CPU time: 122 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:33:59.766 (1766856150)|TESTING_LIMITS
+09:33:59.766 (1766856150)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 4 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 10 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:33:59.766 (1766856150)|CUMULATIVE_LIMIT_USAGE_END
+
+09:33:59.273 (1768303670)|CODE_UNIT_FINISHED|RoundTrigger on Round trigger event AfterInsert for [a02p0000002kTBw, a02p0000002kTBx, a02p0000002kTBy, a02p0000002kTBz]
+09:33:59.273 (1771133705)|DML_END|[53]
+09:33:59.273 (1777263352)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000006eleJ|mt_createTaskBatch
+09:33:59.273 (1800150141)|SOQL_EXECUTE_BEGIN|[47]|Aggregations:0|SELECT SSA__c,Cohort__c, ContactId,Contact.MonTrack_Opt_Out__c FROM CampaignMember 
+09:33:59.273 (1845210930)|SOQL_EXECUTE_END|[47]|Rows:10
+09:33:59.861 (1861188445)|CUMULATIVE_LIMIT_USAGE
+09:33:59.861 (1861188445)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:33:59.861 (1861188445)|CUMULATIVE_LIMIT_USAGE_END
+
+09:33:59.273 (1861240483)|CODE_UNIT_FINISHED|mt_createTaskBatch
+09:33:59.273 (1862460724)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000006eleJ|mt_createTaskBatch
+09:33:59.273 (1910888802)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000006eleJ|mt_createTaskBatch
+09:33:59.273 (1925441437)|DML_BEGIN|[67]|Op:Insert|Type:Task|Rows:10
+09:33:59.273 (1939752652)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QLNr|TaskTrigger on Task trigger event BeforeInsert for [new, new, new, new, new, new, new, new, new, new]
+09:33:59.273 (1940108860)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:33:59.273 (1946347413)|SOQL_EXECUTE_BEGIN|[41]|Aggregations:0|SELECT Id, Contact_field_API_name__c, Task_field_API_name__c, Task_Record_Type__c FROM Contact_to_Task_Field_Mapping__mdt LIMIT 400
+09:33:59.273 (1950005487)|SOQL_EXECUTE_END|[41]|Rows:14
+09:33:59.273 (1950391867)|SOQL_EXECUTE_BEGIN|[49]|Aggregations:0|SELECT id, developerName FROM RecordType 
+09:33:59.273 (1955181730)|SOQL_EXECUTE_END|[49]|Rows:3
+09:33:59.273 (1956851807)|SOQL_EXECUTE_BEGIN|[63]|Aggregations:0|select Course_Name__c,Faculty__c,First_in_Family__c,HomePhone,International_Student__c,MobilePhone,MonTrack_Opt_Out__c,MonTrack_Opt_Out_Reason__c,Person_ID__c,Phone,Campus__c,Course_code__c,FirstName,LastName,Id from contact 
+09:33:59.273 (1961378527)|SOQL_EXECUTE_END|[63]|Rows:10
+09:33:59.976 (1976391809)|CUMULATIVE_LIMIT_USAGE
+09:33:59.976 (1976391809)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 200
+  Number of query rows: 27 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 10 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:33:59.976 (1976391809)|CUMULATIVE_LIMIT_USAGE_END
+
+09:33:59.273 (1978356181)|CODE_UNIT_FINISHED|TaskTrigger on Task trigger event BeforeInsert for [new, new, new, new, new, new, new, new, new, new]
+09:33:59.273 (2048454051)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QLNr|TaskTrigger on Task trigger event AfterInsert for [00Tp0000003qVor, 00Tp0000003qVos, 00Tp0000003qVot, 00Tp0000003qVou, 00Tp0000003qVov, 00Tp0000003qVow, 00Tp0000003qVox, 00Tp0000003qVoy, 00Tp0000003qVoz, 00Tp0000003qVp0]
+09:33:59.273 (2048948434)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:33:59.273 (2054599873)|SOQL_EXECUTE_BEGIN|[428]|Aggregations:0|SELECT id, Latest_Inbound_Email__c FROM Case WHERE (id = :tmpVar1 AND Latest_Inbound_Email__c != NULL AND isClosed = FALSE)
+09:33:59.273 (2056579030)|SOQL_EXECUTE_END|[428]|Rows:0
+09:34:00.56 (2056686794)|CUMULATIVE_LIMIT_USAGE
+09:34:00.56 (2056686794)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 200
+  Number of query rows: 27 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 10 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:00.56 (2056686794)|CUMULATIVE_LIMIT_USAGE_END
+
+09:33:59.273 (2058289168)|CODE_UNIT_FINISHED|TaskTrigger on Task trigger event AfterInsert for [00Tp0000003qVor, 00Tp0000003qVos, 00Tp0000003qVot, 00Tp0000003qVou, 00Tp0000003qVov, 00Tp0000003qVow, 00Tp0000003qVox, 00Tp0000003qVoy, 00Tp0000003qVoz, 00Tp0000003qVp0]
+09:33:59.273 (2058383771)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Task
+09:33:59.273 (2067714946)|WF_RULE_EVAL_BEGIN|Workflow
+09:33:59.273 (2067745321)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVor]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:33:59.273 (2082265185)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:33:59.273 (2082323149)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:33:59.273 (2082329492)|WF_CRITERIA_END|false
+09:33:59.273 (2082364269)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVor]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:59.273 (2082430773)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:33:59.273 (2082460056)|WF_RULE_EVAL_VALUE|Not Started
+09:33:59.273 (2082462795)|WF_CRITERIA_END|false
+09:33:59.273 (2082478784)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVos]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:33:59.273 (2082506116)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:33:59.273 (2082523843)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:33:59.273 (2082526527)|WF_CRITERIA_END|false
+09:33:59.273 (2082535784)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVos]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:59.273 (2082558688)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:33:59.273 (2082572429)|WF_RULE_EVAL_VALUE|Not Started
+09:33:59.273 (2082574876)|WF_CRITERIA_END|false
+09:33:59.273 (2082585021)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVot]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:33:59.273 (2082610067)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:33:59.273 (2082627309)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:33:59.273 (2082629906)|WF_CRITERIA_END|false
+09:33:59.273 (2082638760)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVot]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:59.273 (2082660888)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:33:59.273 (2082674306)|WF_RULE_EVAL_VALUE|Not Started
+09:33:59.273 (2082676553)|WF_CRITERIA_END|false
+09:33:59.273 (2082686995)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVou]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:33:59.273 (2082711493)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:33:59.273 (2082727556)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:33:59.273 (2082730128)|WF_CRITERIA_END|false
+09:33:59.273 (2082738792)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVou]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:59.273 (2082765514)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:33:59.273 (2082780273)|WF_RULE_EVAL_VALUE|Not Started
+09:33:59.273 (2082782607)|WF_CRITERIA_END|false
+09:33:59.273 (2082792680)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVov]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:33:59.273 (2082817372)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:33:59.273 (2082833876)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:33:59.273 (2082836362)|WF_CRITERIA_END|false
+09:33:59.273 (2082844835)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVov]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:59.273 (2082865951)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:33:59.273 (2082879877)|WF_RULE_EVAL_VALUE|Not Started
+09:33:59.273 (2082882203)|WF_CRITERIA_END|false
+09:33:59.273 (2082892271)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVow]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:33:59.273 (2082916415)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:33:59.273 (2082932411)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:33:59.273 (2082935438)|WF_CRITERIA_END|false
+09:33:59.273 (2082944052)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVow]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:59.273 (2082965252)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:33:59.273 (2082978255)|WF_RULE_EVAL_VALUE|Not Started
+09:33:59.273 (2082980576)|WF_CRITERIA_END|false
+09:33:59.273 (2082990018)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVox]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:33:59.273 (2083013658)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:33:59.273 (2083030993)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:33:59.273 (2083033464)|WF_CRITERIA_END|false
+09:33:59.273 (2083042186)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVox]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:59.273 (2083063024)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:33:59.273 (2083076359)|WF_RULE_EVAL_VALUE|Not Started
+09:33:59.273 (2083078621)|WF_CRITERIA_END|false
+09:33:59.273 (2083088639)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVoy]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:33:59.273 (2083112485)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:33:59.273 (2083128533)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:33:59.273 (2083130955)|WF_CRITERIA_END|false
+09:33:59.273 (2083139122)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVoy]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:59.273 (2083160096)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:33:59.273 (2083184406)|WF_RULE_EVAL_VALUE|Not Started
+09:33:59.273 (2083187137)|WF_CRITERIA_END|false
+09:33:59.273 (2083198646)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVoz]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:33:59.273 (2083224176)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:33:59.273 (2083240309)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:33:59.273 (2083242839)|WF_CRITERIA_END|false
+09:33:59.273 (2083250863)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVoz]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:59.273 (2083272426)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:33:59.273 (2083285772)|WF_RULE_EVAL_VALUE|Not Started
+09:33:59.273 (2083288107)|WF_CRITERIA_END|false
+09:33:59.273 (2083297674)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVp0]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:33:59.273 (2083320849)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:33:59.273 (2083336299)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:33:59.273 (2083338764)|WF_CRITERIA_END|false
+09:33:59.273 (2083346624)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVp0]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:59.273 (2083367269)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:33:59.273 (2083380103)|WF_RULE_EVAL_VALUE|Not Started
+09:33:59.273 (2083382337)|WF_CRITERIA_END|false
+09:33:59.273 (2083403898)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:33:59.273 (2083413712)|WF_ACTION| None
+09:33:59.273 (2083416011)|WF_RULE_EVAL_END
+09:33:59.273 (2083495050)|WF_ACTIONS_END| None
+09:33:59.273 (2083505701)|CODE_UNIT_FINISHED|Workflow:Task
+09:33:59.273 (2106351946)|DML_END|[67]
+09:33:59.273 (2106440233)|CODE_UNIT_FINISHED|mt_createTaskBatch
+09:34:00.123 (2123883234)|CUMULATIVE_LIMIT_USAGE
+09:34:00.123 (2123883234)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:00.123 (2123883234)|CUMULATIVE_LIMIT_USAGE_END
+
+09:33:59.273 (2123934869)|CODE_UNIT_FINISHED|mt_createTaskBatch
+09:33:59.273 (2124989733)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000006eleJ|mt_createTaskBatch
+09:33:59.273 (2136839330)|EXCEPTION_THROWN|[88]|System.EmailException: SendEmail failed. First exception on row 0; first error: NO_MASS_MAIL_PERMISSION, Single email is not enabled for your organization or profile.: []
+09:33:59.273 (2137973559)|FATAL_ERROR|System.EmailException: SendEmail failed. First exception on row 0; first error: NO_MASS_MAIL_PERMISSION, Single email is not enabled for your organization or profile.: []
+
+Class.mt_createTaskBatch.finish: line 88, column 1
+09:34:00.138 (2138000424)|CUMULATIVE_LIMIT_USAGE
+09:34:00.138 (2138000424)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:00.138 (2138000424)|CUMULATIVE_LIMIT_USAGE_END
+
+09:33:59.273 (2138031902)|CODE_UNIT_FINISHED|mt_createTaskBatch
+09:33:59.273 (2141441970)|FATAL_ERROR|System.EmailException: SendEmail failed. First exception on row 0; first error: NO_MASS_MAIL_PERMISSION, Single email is not enabled for your organization or profile.: []
+
+Class.mt_createTaskBatch.finish: line 88, column 1
+09:33:59.273 (2141455238)|FATAL_ERROR|System.EmailException: SendEmail failed. First exception on row 0; first error: NO_MASS_MAIL_PERMISSION, Single email is not enabled for your organization or profile.: []
+
+Class.mt_createTaskBatch.finish: line 88, column 1
+09:34:00.141 (2141460665)|CUMULATIVE_LIMIT_USAGE
+09:34:00.141 (2141460665)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 11 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 7 out of 150
+  Number of DML rows: 35 out of 10000
+  Maximum CPU time: 122 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:00.141 (2141460665)|TESTING_LIMITS
+09:34:00.141 (2141460665)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 4 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 10 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:00.141 (2141460665)|CUMULATIVE_LIMIT_USAGE_END
+
+09:33:59.273 (2141493472)|CODE_UNIT_FINISHED|CampaignMemberServices_Test.confirmTaskCleanUpAtCohortChange
+09:33:59.273 (2142665849)|EXECUTION_FINISHED

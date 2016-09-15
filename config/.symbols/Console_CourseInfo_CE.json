@@ -1,0 +1,532 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 88
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "Console_CourseInfo_CE",
+            "parameters": [
+                {
+                    "name": "controller",
+                    "type": "StandardController"
+                }
+            ],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01p28000007bsnnAAA",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000007bsnnAAA",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 26
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "updateCaseRecord",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 36
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "unlinkFromCase",
+            "parameters": [],
+            "references": [],
+            "returnType": "PageReference",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 45
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "linkToCase",
+            "parameters": [],
+            "references": [],
+            "returnType": "PageReference",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 121
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "initalLoad",
+            "parameters": [],
+            "references": [],
+            "returnType": "PageReference",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 144
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "retrieveStudentCourseAttempts",
+            "parameters": [],
+            "references": [],
+            "returnType": "API_ResultWrapper",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 162
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "retrieveApplicantCourse",
+            "parameters": [],
+            "references": [],
+            "returnType": "API_ResultWrapper",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 178
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "populateCourses",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 221
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "populateApplications",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "Console_CourseInfo_CE",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 9
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "c",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 10
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "tab",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 11
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "courseIdSelected",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 12
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "courseAPIResult",
+            "references": [],
+            "type": "API_ResultWrapper"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 13
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "applicationAPIResult",
+            "references": [],
+            "type": "API_ResultWrapper"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 14
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "httpError",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 15
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "loadAttempted",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 16
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "errMessage",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 17
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "citizenship",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 18
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "renderTable",
+            "references": [],
+            "type": "Boolean"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 7
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "Console_CourseInfo_CE",
+        "references": [],
+        "type": "Console_CourseInfo_CE"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 47
+            },
+            "modifiers": [],
+            "name": "params",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 51
+            },
+            "modifiers": [],
+            "name": "courseMatched",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 53
+            },
+            "modifiers": [],
+            "name": "ca",
+            "references": [],
+            "type": "API_StudentCourseAttempt"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 66
+            },
+            "modifiers": [],
+            "name": "ca",
+            "references": [],
+            "type": "API_ApplicantCourse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 63,
+                "line": 88
+            },
+            "modifiers": [],
+            "name": "controller",
+            "references": [],
+            "type": "StandardController"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 90
+            },
+            "modifiers": [],
+            "name": "caseId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 123
+            },
+            "modifiers": [],
+            "name": "process",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 145
+            },
+            "modifiers": [],
+            "name": "response",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 146
+            },
+            "modifiers": [],
+            "name": "courseAttemptResult",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 163
+            },
+            "modifiers": [],
+            "name": "response",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 164
+            },
+            "modifiers": [],
+            "name": "applicationResult",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 190
+            },
+            "modifiers": [],
+            "name": "codes",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 42,
+                "line": 191
+            },
+            "modifiers": [],
+            "name": "result",
+            "references": [],
+            "type": "API_StudentCourseAttempt"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 39,
+                "line": 198
+            },
+            "modifiers": [],
+            "name": "courses",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 199
+            },
+            "modifiers": [],
+            "name": "course",
+            "references": [],
+            "type": "Course__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 200
+            },
+            "modifiers": [],
+            "name": "result",
+            "references": [],
+            "type": "API_StudentCourseAttempt"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 232
+            },
+            "modifiers": [],
+            "name": "codes",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 233
+            },
+            "modifiers": [],
+            "name": "result",
+            "references": [],
+            "type": "API_ApplicantCourse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 39,
+                "line": 240
+            },
+            "modifiers": [],
+            "name": "courses",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 241
+            },
+            "modifiers": [],
+            "name": "course",
+            "references": [],
+            "type": "Course__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 41,
+                "line": 242
+            },
+            "modifiers": [],
+            "name": "result",
+            "references": [],
+            "type": "API_ApplicantCourse"
+        }
+    ]
+}

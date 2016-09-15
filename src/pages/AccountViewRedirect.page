@@ -1,0 +1,5 @@
+<apex:page standardController="Account" 
+            extensions="AccountRedirect_CE"
+            action="{!IndividualRedirect}">
+
+</apex:page>

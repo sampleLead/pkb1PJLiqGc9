@@ -1,0 +1,27 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000007bRMrAAM",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000007bRMrAAM",
+    "methods": [],
+    "name": "API_ResponseWrapper",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 1
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "API_ResponseWrapper",
+        "references": [],
+        "type": "API_ResponseWrapper"
+    },
+    "variables": []
+}

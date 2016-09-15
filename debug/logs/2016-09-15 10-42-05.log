@@ -1,0 +1,107 @@
+35.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+10:42:02.1 (1423070)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+10:42:02.1 (1523736)|EXECUTION_STARTED
+10:42:02.1 (1532872)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000006fPwa|AccountRedirect_CE_Test.testRedirectOfAccountTypes
+10:42:02.1 (9517774)|SYSTEM_MODE_ENTER|false
+10:42:02.1 (9526935)|SYSTEM_MODE_EXIT|false
+10:42:02.1 (9632079)|SYSTEM_MODE_ENTER|false
+10:42:02.1 (10272512)|SYSTEM_MODE_EXIT|false
+10:42:02.1 (10343958)|DML_BEGIN|[15]|Op:Insert|Type:Contact|Rows:1
+10:42:02.1 (353906782)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q42t|ContactTrigger on Contact trigger event BeforeInsert for [new]
+10:42:02.1 (360049266)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+10:42:02.1 (407265821)|USER_DEBUG|[25]|DEBUG|index =:000122593
+10:42:02.1 (418626017)|SYSTEM_MODE_ENTER|false
+10:42:02.1 (418639140)|SYSTEM_MODE_EXIT|false
+10:42:02.1 (436727396)|DML_BEGIN|[251]|Op:Insert|Type:Account|Rows:1
+10:42:02.1 (495111839)|DML_END|[251]
+10:42:02.1 (495998542)|SYSTEM_MODE_ENTER|false
+10:42:02.1 (496212125)|SYSTEM_MODE_EXIT|false
+10:42:02.498 (498507529)|CUMULATIVE_LIMIT_USAGE
+10:42:02.498 (498507529)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+10:42:02.498 (498507529)|CUMULATIVE_LIMIT_USAGE_END
+
+10:42:02.1 (501393781)|CODE_UNIT_FINISHED|ContactTrigger on Contact trigger event BeforeInsert for [new]
+10:42:02.1 (583986342)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Contact
+10:42:02.1 (600656036)|WF_RULE_EVAL_BEGIN|Workflow
+10:42:02.1 (600720379)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C0B6D]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+10:42:02.1 (605513238)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+10:42:02.1 (605568397)|WF_RULE_EVAL_VALUE|
+10:42:02.1 (605573267)|WF_CRITERIA_END|false
+10:42:02.1 (605593613)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C0B6D]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+10:42:02.1 (605926562)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:000122593
+10:42:02.1 (605933402)|WF_CRITERIA_END|false
+10:42:02.1 (605952292)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C0B6D]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+10:42:02.1 (606118207)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:000122593
+10:42:02.1 (606125289)|WF_CRITERIA_END|true
+10:42:02.1 (607331759)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C0B6D]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+10:42:02.1 (607390028)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+10:42:02.1 (616754331)|WF_RULE_EVAL_VALUE|0
+10:42:02.1 (616762411)|WF_CRITERIA_END|false
+10:42:02.1 (616789212)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C0B6D]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+10:42:02.1 (616850879)|WF_RULE_FILTER|[Contact : Deceased equals true]
+10:42:02.1 (616861385)|WF_RULE_EVAL_VALUE|0
+10:42:02.1 (616864345)|WF_CRITERIA_END|false
+10:42:02.1 (616879810)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C0B6D]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+10:42:02.1 (616933959)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+10:42:02.1 (617047641)|WF_RULE_EVAL_VALUE|0
+10:42:02.1 (617062498)|WF_CRITERIA_END|true
+10:42:02.1 (617088547)|WF_SPOOL_ACTION_BEGIN|Workflow
+10:42:02.1 (617332769)|WF_ACTION| Field Update: 2;
+10:42:02.1 (617337034)|WF_RULE_EVAL_END
+10:42:02.1 (617412577)|WF_ACTIONS_END| Field Update: 2;
+10:42:02.1 (617422067)|CODE_UNIT_FINISHED|Workflow:Contact
+10:42:02.1 (618870195)|DML_END|[15]
+10:42:02.1 (626402913)|DML_BEGIN|[22]|Op:Insert|Type:Account|Rows:1
+10:42:02.1 (670312099)|DML_END|[22]
+10:42:02.1 (697598590)|SYSTEM_MODE_ENTER|false
+10:42:02.1 (697613881)|SYSTEM_MODE_EXIT|false
+10:42:02.1 (697725654)|SYSTEM_MODE_ENTER|false
+10:42:02.1 (697922229)|SYSTEM_MODE_EXIT|false
+10:42:02.1 (697987706)|SYSTEM_MODE_ENTER|false
+10:42:02.1 (698687822)|SOQL_EXECUTE_BEGIN|[30]|Aggregations:1|SELECT id, RecordTypeId, (SELECT id FROM contacts LIMIT 1) FROM Account WHERE id = :tmpVar1 LIMIT 1
+10:42:02.1 (705987892)|SOQL_EXECUTE_END|[30]|Rows:1
+10:42:02.1 (718244408)|SYSTEM_MODE_EXIT|false
+10:42:02.1 (718592637)|SOQL_EXECUTE_BEGIN|[33]|Aggregations:0|SELECT id, accountId FROM contact WHERE id = :tmpVar1 LIMIT 1
+10:42:02.1 (722188774)|SOQL_EXECUTE_END|[33]|Rows:1
+10:42:02.1 (722470779)|SOQL_EXECUTE_BEGIN|[35]|Aggregations:0|SELECT id FROM Account WHERE id = :tmpVar1 LIMIT 1
+10:42:02.1 (724669418)|SOQL_EXECUTE_END|[35]|Rows:1
+10:42:02.1 (725477984)|SYSTEM_MODE_ENTER|false
+10:42:02.1 (725609997)|SYSTEM_MODE_EXIT|false
+10:42:02.1 (725659034)|SYSTEM_MODE_ENTER|false
+10:42:02.1 (726102272)|SOQL_EXECUTE_BEGIN|[30]|Aggregations:1|SELECT id, RecordTypeId, (SELECT id FROM contacts LIMIT 1) FROM Account WHERE id = :tmpVar1 LIMIT 1
+10:42:02.1 (731758005)|SOQL_EXECUTE_END|[30]|Rows:1
+10:42:02.1 (739426391)|SYSTEM_MODE_EXIT|false
+10:42:02.1 (739539983)|USER_DEBUG|[44]|DEBUG|System.PageReference[/003p000000C0B6D?nooverride=1]
+10:42:02.739 (739564101)|CUMULATIVE_LIMIT_USAGE
+10:42:02.739 (739564101)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 5 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 81 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+10:42:02.739 (739564101)|CUMULATIVE_LIMIT_USAGE_END
+
+10:42:02.1 (739614194)|CODE_UNIT_FINISHED|AccountRedirect_CE_Test.testRedirectOfAccountTypes
+10:42:02.1 (741613773)|EXECUTION_FINISHED

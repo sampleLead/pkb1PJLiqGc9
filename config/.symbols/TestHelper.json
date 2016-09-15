@@ -1,0 +1,1433 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000006eleFAAQ",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000006eleFAAQ",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 15
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "applyPermissionSets",
+            "parameters": [
+                {
+                    "name": "names",
+                    "type": "String"
+                },
+                {
+                    "name": "usr",
+                    "type": "User"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 34
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createEmailMessages",
+            "parameters": [
+                {
+                    "name": "EmailMessage",
+                    "type": "Integer"
+                },
+                {
+                    "name": "parentId",
+                    "type": "Id"
+                },
+                {
+                    "name": "fromName",
+                    "type": "String"
+                },
+                {
+                    "name": "fromAddress",
+                    "type": "String"
+                },
+                {
+                    "name": "ToAddress",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 61
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createTasks",
+            "parameters": [
+                {
+                    "name": "numberOfTasks",
+                    "type": "Integer"
+                },
+                {
+                    "name": "whoId",
+                    "type": "Id"
+                },
+                {
+                    "name": "whatId",
+                    "type": "Id"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 81
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createAttachments",
+            "parameters": [
+                {
+                    "name": "numberOfAttachments",
+                    "type": "Integer"
+                },
+                {
+                    "name": "parentId",
+                    "type": "Id"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 96
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createCourses",
+            "parameters": [
+                {
+                    "name": "numberOfCourses",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 113
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createOrphanContactRecords",
+            "parameters": [
+                {
+                    "name": "numberOfContacts",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 125
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createStudent",
+            "parameters": [
+                {
+                    "name": "numberOfStudents",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 152
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "retrieveContactRecords",
+            "parameters": [],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 170
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createStudentContacts",
+            "parameters": [
+                {
+                    "name": "numberOfContacts",
+                    "type": "Integer"
+                },
+                {
+                    "name": "accounts",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 195
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "ssaUser",
+            "parameters": [],
+            "references": [],
+            "returnType": "User",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 211
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createCampaign",
+            "parameters": [
+                {
+                    "name": "numberOfCampaigns",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 227
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createCohort",
+            "parameters": [
+                {
+                    "name": "numberOfCohorts",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 41,
+                "line": 246
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createCampaignMember",
+            "parameters": [
+                {
+                    "name": "ssaID",
+                    "type": "Id"
+                },
+                {
+                    "name": "cohortID",
+                    "type": "Id"
+                },
+                {
+                    "name": "CampaignID",
+                    "type": "Id"
+                },
+                {
+                    "name": "contactIds",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 270
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createRounds",
+            "parameters": [
+                {
+                    "name": "cohortID",
+                    "type": "Id"
+                },
+                {
+                    "name": "CampaignID",
+                    "type": "Id"
+                },
+                {
+                    "name": "ctr",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 296
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createTopics",
+            "parameters": [
+                {
+                    "name": "roundID",
+                    "type": "Id"
+                },
+                {
+                    "name": "SSAID",
+                    "type": "Id"
+                },
+                {
+                    "name": "contactID",
+                    "type": "Id"
+                },
+                {
+                    "name": "numberOfTopics",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 318
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createTriggerMutingCustomSetting",
+            "parameters": [
+                {
+                    "name": "username",
+                    "type": "String"
+                },
+                {
+                    "name": "triggersString",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 331
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "createTestUsers",
+            "parameters": [
+                {
+                    "name": "profileName",
+                    "type": "String"
+                },
+                {
+                    "name": "numberOfUsers",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 372
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "setupError",
+            "parameters": [
+                {
+                    "name": "errorType",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 381
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "throwError",
+            "parameters": [
+                {
+                    "name": "errorType",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 395
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "webToCaseForms",
+            "parameters": [
+                {
+                    "name": "numberOfForms",
+                    "type": "Integer"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        }
+    ],
+    "name": "TestHelper",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 359
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "errorsToThrow",
+            "references": [],
+            "type": "Set"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 6
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "TestHelper",
+        "references": [],
+        "type": "TestHelper"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 15
+            },
+            "modifiers": [],
+            "name": "names",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 63,
+                "line": 15
+            },
+            "modifiers": [],
+            "name": "usr",
+            "references": [],
+            "type": "User"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 16
+            },
+            "modifiers": [],
+            "name": "psNames",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 17
+            },
+            "modifiers": [],
+            "name": "nm",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 39,
+                "line": 18
+            },
+            "modifiers": [],
+            "name": "psaList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 19
+            },
+            "modifiers": [],
+            "name": "ps",
+            "references": [],
+            "type": "PermissionSet"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 66,
+                "line": 34
+            },
+            "modifiers": [],
+            "name": "EmailMessage",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 53,
+                "line": 35
+            },
+            "modifiers": [],
+            "name": "parentId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 57,
+                "line": 36
+            },
+            "modifiers": [],
+            "name": "fromName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 74,
+                "line": 36
+            },
+            "modifiers": [],
+            "name": "fromAddress",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 57,
+                "line": 37
+            },
+            "modifiers": [],
+            "name": "ToAddress",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 38
+            },
+            "modifiers": [],
+            "name": "emails",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 39
+            },
+            "modifiers": [],
+            "name": "index",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 50,
+                "line": 61
+            },
+            "modifiers": [],
+            "name": "numberOfTasks",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 68,
+                "line": 61
+            },
+            "modifiers": [],
+            "name": "whoId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 78,
+                "line": 61
+            },
+            "modifiers": [],
+            "name": "whatId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 62
+            },
+            "modifiers": [],
+            "name": "tasks",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 63
+            },
+            "modifiers": [],
+            "name": "index",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 62,
+                "line": 81
+            },
+            "modifiers": [],
+            "name": "numberOfAttachments",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 86,
+                "line": 81
+            },
+            "modifiers": [],
+            "name": "parentId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 82
+            },
+            "modifiers": [],
+            "name": "attachments",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 83
+            },
+            "modifiers": [],
+            "name": "index",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 57,
+                "line": 96
+            },
+            "modifiers": [],
+            "name": "numberOfCourses",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 97
+            },
+            "modifiers": [],
+            "name": "courses",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 98
+            },
+            "modifiers": [],
+            "name": "index",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 69,
+                "line": 113
+            },
+            "modifiers": [],
+            "name": "numberOfContacts",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 56,
+                "line": 125
+            },
+            "modifiers": [],
+            "name": "numberOfStudents",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 127
+            },
+            "modifiers": [],
+            "name": "accounts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 39,
+                "line": 128
+            },
+            "modifiers": [],
+            "name": "descSobject",
+            "references": [],
+            "type": "DescribeSObjectResult"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 44,
+                "line": 130
+            },
+            "modifiers": [],
+            "name": "recordTypeInfoByName",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 13,
+                "line": 132
+            },
+            "modifiers": [],
+            "name": "recTypeID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 137
+            },
+            "modifiers": [],
+            "name": "studentNumber",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 138
+            },
+            "modifiers": [],
+            "name": "newAccount",
+            "references": [],
+            "type": "Account"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 64,
+                "line": 170
+            },
+            "modifiers": [],
+            "name": "numberOfContacts",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 96,
+                "line": 170
+            },
+            "modifiers": [],
+            "name": "accounts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 172
+            },
+            "modifiers": [],
+            "name": "newContacts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 173
+            },
+            "modifiers": [],
+            "name": "contactNumber",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 174
+            },
+            "modifiers": [],
+            "name": "accountId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 175
+            },
+            "modifiers": [],
+            "name": "newContact",
+            "references": [],
+            "type": "Contact"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 197
+            },
+            "modifiers": [],
+            "name": "ssaUser",
+            "references": [],
+            "type": "User"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 58,
+                "line": 211
+            },
+            "modifiers": [],
+            "name": "numberOfCampaigns",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 212
+            },
+            "modifiers": [],
+            "name": "newCampaigns",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 213
+            },
+            "modifiers": [],
+            "name": "campaignNumber",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 214
+            },
+            "modifiers": [],
+            "name": "newCampaign",
+            "references": [],
+            "type": "Campaign"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 57,
+                "line": 227
+            },
+            "modifiers": [],
+            "name": "numberOfCohorts",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 228
+            },
+            "modifiers": [],
+            "name": "newCohorts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 229
+            },
+            "modifiers": [],
+            "name": "cohortNumber",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 230
+            },
+            "modifiers": [],
+            "name": "newCohort",
+            "references": [],
+            "type": "Cohort__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 65,
+                "line": 246
+            },
+            "modifiers": [],
+            "name": "ssaID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 65,
+                "line": 247
+            },
+            "modifiers": [],
+            "name": "cohortID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 65,
+                "line": 248
+            },
+            "modifiers": [],
+            "name": "CampaignID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 70,
+                "line": 249
+            },
+            "modifiers": [],
+            "name": "contactIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 251
+            },
+            "modifiers": [],
+            "name": "newCampaignMembers",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 252
+            },
+            "modifiers": [],
+            "name": "contactId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 253
+            },
+            "modifiers": [],
+            "name": "newCampaignMember",
+            "references": [],
+            "type": "CampaignMember"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 270
+            },
+            "modifiers": [],
+            "name": "cohortID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 271
+            },
+            "modifiers": [],
+            "name": "CampaignID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 56,
+                "line": 272
+            },
+            "modifiers": [],
+            "name": "ctr",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 274
+            },
+            "modifiers": [],
+            "name": "newRounds",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 275
+            },
+            "modifiers": [],
+            "name": "i",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 276
+            },
+            "modifiers": [],
+            "name": "newRound",
+            "references": [],
+            "type": "Round__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 296
+            },
+            "modifiers": [],
+            "name": "roundID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 297
+            },
+            "modifiers": [],
+            "name": "SSAID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 298
+            },
+            "modifiers": [],
+            "name": "contactID",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 54,
+                "line": 299
+            },
+            "modifiers": [],
+            "name": "numberOfTopics",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 300
+            },
+            "modifiers": [],
+            "name": "topics",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 301
+            },
+            "modifiers": [],
+            "name": "topicNumber",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 302
+            },
+            "modifiers": [],
+            "name": "newTopic",
+            "references": [],
+            "type": "Topic__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 65,
+                "line": 318
+            },
+            "modifiers": [],
+            "name": "username",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 82,
+                "line": 318
+            },
+            "modifiers": [],
+            "name": "triggersString",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 319
+            },
+            "modifiers": [],
+            "name": "request",
+            "references": [],
+            "type": "TriggerMuteRequest__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 55,
+                "line": 331
+            },
+            "modifiers": [],
+            "name": "profileName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 77,
+                "line": 331
+            },
+            "modifiers": [],
+            "name": "numberOfUsers",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 13,
+                "line": 332
+            },
+            "modifiers": [],
+            "name": "profileId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 335
+            },
+            "modifiers": [],
+            "name": "users",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 337
+            },
+            "modifiers": [],
+            "name": "userCount",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 338
+            },
+            "modifiers": [],
+            "name": "rnd",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 372
+            },
+            "modifiers": [],
+            "name": "errorType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 381
+            },
+            "modifiers": [],
+            "name": "errorType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 395
+            },
+            "modifiers": [],
+            "name": "numberOfForms",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 397
+            },
+            "modifiers": [],
+            "name": "cases",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 399
+            },
+            "modifiers": [],
+            "name": "formNumber",
+            "references": [],
+            "type": "Integer"
+        }
+    ]
+}

@@ -1,0 +1,554 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000006ele8AAA",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000006ele8AAA",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 12
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "add",
+            "parameters": [
+                {
+                    "name": "sourceType",
+                    "type": "String"
+                },
+                {
+                    "name": "objName",
+                    "type": "String"
+                },
+                {
+                    "name": "funcName",
+                    "type": "String"
+                },
+                {
+                    "name": "e",
+                    "type": "Exception"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 21
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "add",
+            "parameters": [
+                {
+                    "name": "sourceType",
+                    "type": "String"
+                },
+                {
+                    "name": "objName",
+                    "type": "String"
+                },
+                {
+                    "name": "funcName",
+                    "type": "String"
+                },
+                {
+                    "name": "e",
+                    "type": "Exception"
+                },
+                {
+                    "name": "recordID",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 30
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "add",
+            "parameters": [
+                {
+                    "name": "sourceType",
+                    "type": "String"
+                },
+                {
+                    "name": "objName",
+                    "type": "String"
+                },
+                {
+                    "name": "funcName",
+                    "type": "String"
+                },
+                {
+                    "name": "errorMsg",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 40
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "write",
+            "parameters": [
+                {
+                    "name": "sourceType",
+                    "type": "String"
+                },
+                {
+                    "name": "objName",
+                    "type": "String"
+                },
+                {
+                    "name": "funcName",
+                    "type": "String"
+                },
+                {
+                    "name": "e",
+                    "type": "Exception"
+                },
+                {
+                    "name": "recordID",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 60
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "write",
+            "parameters": [
+                {
+                    "name": "sourceType",
+                    "type": "String"
+                },
+                {
+                    "name": "objName",
+                    "type": "String"
+                },
+                {
+                    "name": "funcName",
+                    "type": "String"
+                },
+                {
+                    "name": "e",
+                    "type": "Error"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 79
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "write",
+            "parameters": [
+                {
+                    "name": "sourceType",
+                    "type": "String"
+                },
+                {
+                    "name": "objName",
+                    "type": "String"
+                },
+                {
+                    "name": "funcName",
+                    "type": "String"
+                },
+                {
+                    "name": "errorMsg",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "ExLog",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 9
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "ExLog",
+        "references": [],
+        "type": "ExLog"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 12
+            },
+            "modifiers": [],
+            "name": "sourceType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 54,
+                "line": 12
+            },
+            "modifiers": [],
+            "name": "objName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 70,
+                "line": 12
+            },
+            "modifiers": [],
+            "name": "funcName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 90,
+                "line": 12
+            },
+            "modifiers": [],
+            "name": "e",
+            "references": [],
+            "type": "Exception"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 21
+            },
+            "modifiers": [],
+            "name": "sourceType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 54,
+                "line": 21
+            },
+            "modifiers": [],
+            "name": "objName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 70,
+                "line": 21
+            },
+            "modifiers": [],
+            "name": "funcName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 90,
+                "line": 21
+            },
+            "modifiers": [],
+            "name": "e",
+            "references": [],
+            "type": "Exception"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 100,
+                "line": 21
+            },
+            "modifiers": [],
+            "name": "recordID",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 30
+            },
+            "modifiers": [],
+            "name": "sourceType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 54,
+                "line": 30
+            },
+            "modifiers": [],
+            "name": "objName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 70,
+                "line": 30
+            },
+            "modifiers": [],
+            "name": "funcName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 87,
+                "line": 30
+            },
+            "modifiers": [],
+            "name": "errorMsg",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 40
+            },
+            "modifiers": [],
+            "name": "sourceType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 56,
+                "line": 40
+            },
+            "modifiers": [],
+            "name": "objName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 40
+            },
+            "modifiers": [],
+            "name": "funcName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 92,
+                "line": 40
+            },
+            "modifiers": [],
+            "name": "e",
+            "references": [],
+            "type": "Exception"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 102,
+                "line": 40
+            },
+            "modifiers": [],
+            "name": "recordID",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 42
+            },
+            "modifiers": [],
+            "name": "exLog",
+            "references": [],
+            "type": "Exception_Log__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 60
+            },
+            "modifiers": [],
+            "name": "sourceType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 56,
+                "line": 60
+            },
+            "modifiers": [],
+            "name": "objName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 60
+            },
+            "modifiers": [],
+            "name": "funcName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 97,
+                "line": 60
+            },
+            "modifiers": [],
+            "name": "e",
+            "references": [],
+            "type": "Error"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 62
+            },
+            "modifiers": [],
+            "name": "exLog",
+            "references": [],
+            "type": "Exception_Log__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "sourceType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 56,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "objName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "funcName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 89,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "errorMsg",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 81
+            },
+            "modifiers": [],
+            "name": "exLog",
+            "references": [],
+            "type": "Exception_Log__c"
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+27.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:15:45.0 (484490)|ENTERING_MANAGED_PKG|copado
+09:15:45.1 (1238183)|CUMULATIVE_LIMIT_USAGE
+09:15:45.1 (1238183)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:15:45.1 (1238183)|CUMULATIVE_LIMIT_USAGE_END
+
+09:15:45.0 (7003472)|ENTERING_MANAGED_PKG|copado
+09:15:45.0 (114730864)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT Id, Name, copado__Org_ID__c FROM Environment__c 
+09:15:45.0 (149805543)|SOQL_EXECUTE_END|[18]|Rows:1
+09:15:45.0 (151030876)|SOQL_EXECUTE_BEGIN|[37]|Aggregations:0|SELECT Id, Name, copado__Org_ID__c FROM Environment__c 
+09:15:45.0 (155069421)|SOQL_EXECUTE_END|[37]|Rows:1
+09:15:45.0 (157799182)|SOQL_EXECUTE_BEGIN|[63]|Aggregations:0|SELECT Id FROM Attachment WHERE (ParentId IN :tmpVar1 AND Name = 'MetaData')
+09:15:45.0 (164098571)|SOQL_EXECUTE_END|[63]|Rows:0
+09:15:45.164 (164858425)|CUMULATIVE_LIMIT_USAGE
+09:15:45.164 (164858425)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:15:45.164 (164858425)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:15:45.164 (164858425)|CUMULATIVE_LIMIT_USAGE_END
+
+09:15:45.0 (231543650)|ENTERING_MANAGED_PKG|copado
+09:15:45.0 (233100826)|SOQL_EXECUTE_BEGIN|[63]|Aggregations:0|SELECT Id FROM Attachment WHERE (ParentId IN :tmpVar1 AND Name = 'MetaData')
+09:15:45.0 (235157790)|SOQL_EXECUTE_END|[63]|Rows:0
+09:15:45.235 (235916461)|CUMULATIVE_LIMIT_USAGE
+09:15:45.235 (235916461)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:15:45.235 (235916461)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:15:45.235 (235916461)|CUMULATIVE_LIMIT_USAGE_END
+

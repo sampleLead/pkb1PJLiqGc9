@@ -1,0 +1,69 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 15
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "API_StudentEncumbrance",
+            "parameters": [],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01p28000007bsnjAAA",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000007bsnjAAA",
+    "methods": [],
+    "name": "API_StudentEncumbrance",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 12
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "personId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 13
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "encumbered",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 11
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "API_StudentEncumbrance",
+        "references": [],
+        "type": "API_StudentEncumbrance"
+    },
+    "variables": []
+}

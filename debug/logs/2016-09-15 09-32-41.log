@@ -1,0 +1,135 @@
+31.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:32:38.0 (500991)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:32:38.0 (593825)|EXECUTION_STARTED
+09:32:38.0 (600641)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000007ald9|C1ASExtendedConfigTest.testSearch
+09:32:38.0 (7618174)|SOQL_EXECUTE_BEGIN|[63]|Aggregations:0|SELECT Key__c,Type__c,Value__c,Value2__c,Value3__c,Value4__c,Value5__c,Value6__c,Value7__c,Value8__c,Value9__c,Value10__c FROM C1ASCloudConnectorConfig__c WHERE Key__c = '005p0000000rQMPAA2'
+09:32:38.0 (10880599)|SOQL_EXECUTE_END|[63]|Rows:0
+09:32:38.0 (11576626)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (14225291)|SOQL_EXECUTE_END|[138]|Rows:0
+09:32:38.0 (14851132)|DML_BEGIN|[197]|Op:Insert|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (51929590)|DML_END|[197]
+09:32:38.0 (52458361)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (56739892)|SOQL_EXECUTE_END|[138]|Rows:0
+09:32:38.0 (57173672)|DML_BEGIN|[197]|Op:Insert|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (75372111)|DML_END|[197]
+09:32:38.0 (75849205)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (79814616)|SOQL_EXECUTE_END|[138]|Rows:1
+09:32:38.0 (80217390)|DML_BEGIN|[194]|Op:Update|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (109137583)|DML_END|[194]
+09:32:38.0 (109627607)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (113706892)|SOQL_EXECUTE_END|[138]|Rows:1
+09:32:38.0 (114141679)|DML_BEGIN|[194]|Op:Update|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (135355654)|DML_END|[194]
+09:32:38.0 (136007054)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (141295890)|SOQL_EXECUTE_END|[138]|Rows:1
+09:32:38.0 (141911846)|DML_BEGIN|[194]|Op:Update|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (163317158)|DML_END|[194]
+09:32:38.0 (164179554)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (169601979)|SOQL_EXECUTE_END|[138]|Rows:1
+09:32:38.0 (170541699)|DML_BEGIN|[194]|Op:Update|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (326240074)|DML_END|[194]
+09:32:38.0 (326936504)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (331708494)|SOQL_EXECUTE_END|[138]|Rows:1
+09:32:38.0 (332263170)|DML_BEGIN|[194]|Op:Update|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (356463446)|DML_END|[194]
+09:32:38.0 (357061966)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (361406557)|SOQL_EXECUTE_END|[138]|Rows:1
+09:32:38.0 (362044277)|DML_BEGIN|[194]|Op:Update|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (385033565)|DML_END|[194]
+09:32:38.0 (385807691)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (393562577)|SOQL_EXECUTE_END|[138]|Rows:1
+09:32:38.0 (394092650)|DML_BEGIN|[194]|Op:Update|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (416373190)|DML_END|[194]
+09:32:38.0 (416995767)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (421425133)|SOQL_EXECUTE_END|[138]|Rows:1
+09:32:38.0 (421986319)|DML_BEGIN|[194]|Op:Update|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (446382330)|DML_END|[194]
+09:32:38.0 (447000622)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (451701759)|SOQL_EXECUTE_END|[138]|Rows:1
+09:32:38.0 (452667240)|DML_BEGIN|[194]|Op:Update|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (475911858)|DML_END|[194]
+09:32:38.0 (476590398)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (481489820)|SOQL_EXECUTE_END|[138]|Rows:1
+09:32:38.0 (482263350)|SOQL_EXECUTE_BEGIN|[138]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (484984002)|SOQL_EXECUTE_END|[138]|Rows:1
+09:32:38.0 (486458364)|SOQL_EXECUTE_BEGIN|[63]|Aggregations:0|SELECT Key__c,Type__c,Value__c,Value2__c,Value3__c,Value4__c,Value5__c,Value6__c,Value7__c,Value8__c,Value9__c,Value10__c FROM C1ASCloudConnectorConfig__c WHERE Key__c = '005p0000000rQMPAA2'
+09:32:38.0 (489007950)|SOQL_EXECUTE_END|[63]|Rows:2
+09:32:38.0 (490007908)|SOQL_EXECUTE_BEGIN|[246]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = :tmpVar2) LIMIT 1
+09:32:38.0 (502551324)|SOQL_EXECUTE_END|[246]|Rows:0
+09:32:38.0 (502819699)|DML_BEGIN|[261]|Op:Insert|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (522638281)|DML_END|[261]
+09:32:38.0 (523133293)|SOQL_EXECUTE_BEGIN|[221]|Aggregations:0|select Key__c,Type__c,Value__c,Value2__c,Value3__c,Value4__c,Value5__c,Value6__c,Value7__c,Value8__c,Value9__c,Value10__c FROM C1ASCloudConnectorConfig__c WHERE Key__c = 'testB'
+09:32:38.0 (538129251)|SOQL_EXECUTE_END|[221]|Rows:1
+09:32:38.0 (538750582)|SOQL_EXECUTE_BEGIN|[230]|Aggregations:0|SELECT Value__c, Value2__c, Value3__c, Value4__c, Value5__c, Value6__c, Value7__c, Value8__c, Value9__c, Value10__c FROM C1ASCloudConnectorConfig__c WHERE (Key__c = :tmpVar1 AND Type__c = 'CustomerSP') LIMIT 1
+09:32:38.0 (552389759)|SOQL_EXECUTE_END|[230]|Rows:1
+09:32:38.0 (552568661)|DML_BEGIN|[231]|Op:Delete|Type:C1ASCloudConnectorConfig__c|Rows:1
+09:32:38.0 (641190191)|DML_END|[231]
+09:32:38.0 (679545790)|DML_BEGIN|[20]|Op:Update|Type:User|Rows:1
+09:32:38.0 (774973913)|DML_END|[20]
+09:32:38.0 (775385128)|SOQL_EXECUTE_BEGIN|[4]|Aggregations:0|SELECT SingleSignOn__c, SSO_AgentId__c, SSO_Pwd__c, SSO_Extension__c FROM User WHERE Id = :tmpVar1
+09:32:38.0 (792070497)|SOQL_EXECUTE_END|[4]|Rows:1
+09:32:38.792 (792536743)|CUMULATIVE_LIMIT_USAGE
+09:32:38.792 (792536743)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 19 out of 100
+  Number of query rows: 16 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 14 out of 150
+  Number of DML rows: 14 out of 10000
+  Maximum CPU time: 69 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:32:38.792 (792536743)|CUMULATIVE_LIMIT_USAGE_END
+
+09:32:38.0 (792585308)|CODE_UNIT_FINISHED|C1ASExtendedConfigTest.testSearch
+09:32:38.0 (794439232)|EXECUTION_FINISHED
+09:32:38.800 (800369995)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:32:38.800 (800386650)|EXECUTION_STARTED
+09:32:38.800 (800392370)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000007aldA|deleteCustomerSP
+09:32:38.800 (806703973)|SOQL_EXECUTE_BEGIN|[10]|Aggregations:0|SELECT Value__c FROM C1ASCloudConnectorConfig__c 
+09:32:38.800 (819492877)|SOQL_EXECUTE_END|[10]|Rows:0
+09:32:38.824 (824417429)|CUMULATIVE_LIMIT_USAGE
+09:32:38.824 (824417429)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:32:38.824 (824417429)|CUMULATIVE_LIMIT_USAGE_END
+
+09:32:38.800 (824445772)|CODE_UNIT_FINISHED|deleteCustomerSP
+09:32:38.800 (825598174)|EXECUTION_FINISHED
+09:32:38.826 (826627322)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:32:38.826 (826637542)|EXECUTION_STARTED
+09:32:38.826 (826640599)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000007aldA|deleteCustomerSP
+09:32:38.838 (838955848)|CUMULATIVE_LIMIT_USAGE
+09:32:38.838 (838955848)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:32:38.838 (838955848)|CUMULATIVE_LIMIT_USAGE_END
+
+09:32:38.826 (838981960)|CODE_UNIT_FINISHED|deleteCustomerSP
+09:32:38.826 (840161764)|EXECUTION_FINISHED

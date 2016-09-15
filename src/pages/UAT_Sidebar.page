@@ -1,0 +1,126 @@
+<apex:page applyBodyTag="false"
+           applyHtmlTag="false"
+           showHeader="false"
+           title="UAT Feedback"
+           docType="HTML-5.0">
+    
+    
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0122,'/assets/styles/salesforce-lightning-design-system-ltng.css')}"/>
+    <apex:includeScript value="/support/console/25.0/integration.js"/>
+    <apex:includeScript value="{!$Resource.jquery}"/>
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <style>
+            .errBorder { border-color:red; }
+        </style>
+        <apex:remoteObjects >
+            <apex:remoteObjectModel name="Feedback__c" fields="Notes__c,Category__c,Test_Ref__c,Referrer__c,Priority__c" jsShorthand="fb"/>
+        </apex:remoteObjects>
+        
+        <body style="background-color:#CFEEF8;" >
+            
+            <div class="slds" id="form">
+                <div class="slds-form--stacked" style="margin:5px;">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="category">Type of feedback</label>
+                      <div class="slds-form-element__control">
+                        <div class="slds-select_container">
+                            <select id="category" class="slds-select">
+                            <option></option>
+                              <option>UI Change</option>
+                              <option>Bug</option>
+                              <option>Suggestion</option>
+                            </select>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element">
+                      <input id="testRef" class="slds-input" type="text" placeholder="Test Ref # here" />
+                    </div>
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="category">Priority</label>
+                      <div class="slds-form-element__control">
+                        <div class="slds-select_container">
+                            <select id="priority" class="slds-select">
+                            <option></option>
+                              <option>Critical</option>
+                              <option>High</option>
+                              <option>Medium</option>
+                              <option>Low 1</option>
+                              <option>Low 2</option>
+                            </select>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="textarea">Notes</label>
+                      <div class="slds-form-element__control">
+                        <textarea id="notes" class="slds-textarea" style="height:120px;" placeholder="Start with your initials if using a test user account"></textarea>
+                      </div>
+                    </div> 
+                    <div class="slds-form-element">
+                      <div class="slds-form-element__control">
+                        <button class="slds-button " style="float:right;font-size:small;" onclick="sendFeedback();">Submit</button>
+                      </div>
+                    </div>   
+                    <a href = "https://ap2.salesforce.com/a0F?fcf=00B28000004zLI5" target="_blank" style="font-size:x-small;" >See all feedback</a>   
+                </div>
+            </div>
+            <div id="msg" style="display:none;" class="slds">
+                <div class="slds-notify_container">
+                    <div class="slds-notify slds-notify--confirm" role="alert">
+                      <h2>Saved</h2>
+                    </div>
+                </div>
+            </div>
+        </body>
+        <script>
+        function sendFeedback(){
+            var testref,notes,category,priority;
+            
+            testref = $("#testRef").val();
+            notes = $("#notes").val();
+            category = $("#category").val();
+            priority = $("#priority").val();
+
+            $("#notes").css("border-color","");
+            $("#category").css("border-color","");
+            $("#priority").css("border-color","");
+            
+            if( notes <= '' || category <= '' || priority <= '') { 
+                if(notes <= '') { $("#notes").css("border-color","red"); }
+                if(category <= '') { $("#category").css("border-color","red"); }
+                if(priority <= '') { $("#priority").css("border-color","red"); }
+                
+                alert('more information required sorry');
+            } else {
+            
+            
+                console.log(testref,notes,category);
+                var newfbDetails = { Notes__c : notes, 
+                                    Category__c : category, 
+                                    Test_Ref__c : testref , 
+                                    Referrer__c : document.referrer , 
+                                    Priority__c : priority };
+                var addfb = new SObjectModel.fb();
+                addfb.create( newfbDetails, function(err){
+                    if(err){
+                        console.log('error =',err.message);
+                        alert('an error occured sorry. Please let admin know the following:'+err.message);
+                    } else {
+                        console.log(addfb.log());
+                        console.log('new id =',addfb.get('Id'));
+                        $("#form").fadeOut(200).delay(1800).fadeIn();
+                        $("#msg").delay(200).fadeIn(200).delay(1600).fadeOut();
+                        $("#testRef").val("");
+                        $("#notes").val("");
+                        $("#category").val("");
+                        $("#priority").val("");
+                    }
+                });
+            }
+        }
+
+        </script>
+    </html>
+</apex:page>

@@ -1,0 +1,27 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p280000077n0MAAQ",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p280000077n0MAAQ",
+    "methods": [],
+    "name": "CustomerQueueDetailsException",
+    "namespace": null,
+    "parentClass": "Exception",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 4
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "CustomerQueueDetailsException",
+        "references": [],
+        "type": "CustomerQueueDetailsException"
+    },
+    "variables": []
+}

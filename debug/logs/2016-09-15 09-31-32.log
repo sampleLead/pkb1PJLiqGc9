@@ -1,0 +1,31 @@
+37.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:31:30.0 (508669)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:31:30.0 (585209)|EXECUTION_STARTED
+09:31:30.0 (590500)|CODE_UNIT_STARTED|[EXTERNAL]|01p280000091GxR|CommonServices_Test.checkMethods
+09:31:30.0 (1609778)|SOQL_EXECUTE_BEGIN|[9]|Aggregations:0|SELECT id, name FROM RecordType WHERE SobjectType = 'Contact' LIMIT 1
+09:31:30.0 (26246532)|SOQL_EXECUTE_END|[9]|Rows:1
+09:31:30.0 (95165374)|SOQL_EXECUTE_BEGIN|[29]|Aggregations:0|SELECT id, DisplayName FROM OrgWideEmailAddress
+09:31:30.0 (96947981)|SOQL_EXECUTE_END|[29]|Rows:14
+09:31:30.0 (98538850)|SOQL_EXECUTE_BEGIN|[29]|Aggregations:0|SELECT id, DisplayName FROM OrgWideEmailAddress
+09:31:30.0 (99987200)|SOQL_EXECUTE_END|[29]|Rows:14
+09:31:30.0 (104000259)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:0|SELECT Id, IsSandbox FROM Organization LIMIT 1
+09:31:30.0 (105836660)|SOQL_EXECUTE_END|[42]|Rows:1
+09:31:30.106 (106099011)|CUMULATIVE_LIMIT_USAGE
+09:31:30.106 (106099011)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 30 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:31:30.106 (106099011)|CUMULATIVE_LIMIT_USAGE_END
+
+09:31:30.0 (106154517)|CODE_UNIT_FINISHED|CommonServices_Test.checkMethods
+09:31:30.0 (107517077)|EXECUTION_FINISHED

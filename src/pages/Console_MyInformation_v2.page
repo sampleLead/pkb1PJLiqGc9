@@ -1,0 +1,93 @@
+<apex:page showHeader="false"
+           sidebar="false"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+           controller="Console_MyInformation_CCv2">
+    
+    <!-- use the VF LDS to align this page to console styling. -->
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ 
+     
+       <!-- libraries required -->
+
+    
+         <head>
+            <apex:stylesheet value="{!URLFOR($Resource.SLDS0122,'/assets/styles/salesforce-lightning-design-system-ltng.css')}"/>
+            <apex:includeScript value="/support/console/25.0/integration.js"/>
+            <apex:includeScript value="{!$Resource.jquery}"/>
+         </head>
+            
+         <body>
+             <apex:form id="theForm">
+                 <apex:actionFunction name="storeInputs" action="{!storeInputs}" />
+                <div class="slds">
+                    <!-- input panel -->
+                    <div class="slds-page-header" role="banner">
+                      <div class="slds-media">
+                        
+                        <div class="slds-media__body">
+                          <p class="slds-page-header__title slds-truncate slds-align-middle" title="Enter information" style="text-align:center;">Please enter your defaults</p>
+                        <p class="slds-text-body--small slds-page-header__info slds-align-middle" style="text-align:center;color:red;">Required to be able to save records</p>
+                          </div>
+                      </div>
+                    </div>
+                        
+                    <div class="slds-form--horizontal" style="padding:10px;">
+                        <div class="slds-form-element is-required">
+                        <label class="slds-form-element__label" for="loc">
+                            <abbr class="slds-required" title="required"><span style="color:red;">*&nbsp;</span></abbr>Location</label>
+                        <div class="slds-form-element__control">
+                          <div class="slds-select_container">
+                               <apex:selectList size="1" id="loc" value="{!newUser.Location__c}" styleClass="slds-select">
+                                   <apex:selectOptions value="{!locations}"></apex:selectOptions>
+                              </apex:selectList>
+                               
+                          </div>
+                        </div>
+                      </div>
+                        <div class="slds-form-element is-required">
+                        <label class="slds-form-element__label" for="queue">
+                            <abbr class="slds-required" title="required"><span style="color:red;">*&nbsp;</span></abbr>Queue</label>
+                        <div class="slds-form-element__control">
+                          <div class="slds-select_container">
+                               <apex:selectList size="1" id="queue" value="{!newUser.Queue__c}" styleClass="slds-select">
+                                   <apex:selectOptions value="{!queues}"></apex:selectOptions>
+                              </apex:selectList>
+                               
+                          </div>
+                            
+                        </div>
+                      </div>
+                       <div class="slds-form-element is-required">
+                        <label class="slds-form-element__label" for="role">
+                            <abbr class="slds-required" title="required"><span style="color:red;">*&nbsp;</span></abbr>Role</label>
+                        <div class="slds-form-element__control">
+                          <div class="slds-select_container">
+                               <apex:selectList size="1" id="role" value="{!newUser.Enquiry_Role__c}" styleClass="slds-select">
+                                   <apex:selectOptions value="{!enquiryroles}"></apex:selectOptions>
+                              </apex:selectList>
+                               
+                          </div>
+                        </div>
+                      </div> 
+                      <div class="slds-form-element" style="float:right;">
+                          <button class="slds-button slds-button--neutral" onclick="storeInputs(); return false;">Save</button>
+                        </div>
+                        
+                      </div>                          
+                </div>
+             </apex:form>
+             <script>
+                if("{!inputRequired}" == "true"){
+                    sforce.console.setCustomConsoleComponentWindowVisible(true);
+                } else {
+                    sforce.console.setCustomConsoleComponentWindowVisible(false);     // not required so hide input panel
+                }
+             </script>
+         </body>
+    </html>
+    
+    
+    
+</apex:page>

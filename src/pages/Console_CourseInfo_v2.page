@@ -1,0 +1,318 @@
+<apex:page showHeader="false" 
+    sidebar="false" 
+    standardController="Case" 
+    standardStylesheets="false" 
+      applyBodyTag="false"
+      applyHtmlTag="false" 
+      extensions="Console_CourseInfo_CE"
+      cache="false"> 
+      
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ 
+     
+       <!-- libraries required -->
+
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0122,'/assets/styles/salesforce-lightning-design-system-ltng.css')}"/>
+    <apex:includeScript value="/support/console/25.0/integration.js"/>
+    <apex:includeScript value="{!$Resource.jquery}"/>
+    
+    
+    
+    <style>
+        .pad { padding:5px; }
+        #detailsTable { border-left:1px solid; padding-left:15px; border-color-left:grey;}
+        
+        #detailsheader { padding-left:15px; border-color-left:grey;}
+    </style>
+    
+<body>
+    <!-- Remote Objects definition to set accessible sObjects and fields -->
+    <apex:remoteObjects >
+        <apex:remoteObjectModel name="Case"  fields="Id,contactId" jsShorthand="cs"/>
+    </apex:remoteObjects>
+    
+    <apex:form >
+        <apex:actionFunction name="init" action="{!initalLoad}"  reRender="thePanel"/>
+        <apex:actionFunction name="linkToCase" action="{!linkToCase}" reRender="{!$Component.resultsTable}" oncomplete="setTab();">
+            <apex:param name="cid" assignTo="{!courseIdSelected}" value=""/>
+        </apex:actionFunction>
+        <apex:actionFunction name="unlinkFromCase" action="{!unlinkFromCase}" reRender="{!$Component.resultsTable}" oncomplete="setTab();">
+            <apex:param name="cid" assignTo="{!courseIdSelected}" value=""/>
+        </apex:actionFunction>
+        <!-- course info layout -->
+            <div style="width:100%;text-align:right;">
+                <div class="slds" style="position:absolute;top:0;right:0;padding:10px;">
+                    <button class="slds-button" href="#" onclick="location.reload(true);"><span style="font-size:small;">Refresh</span></button>
+                </div>
+            </div> 
+        
+             
+            
+           <!-- tabbed section -->
+    <apex:outputPanel id="thePanel">     
+        
+        
+            <apex:outputPanel layout="none" id="loadingMsg" rendered="{!AND(NOT(ISBLANK(c.contact.Person_ID__c)),NOT(loadAttempted))}">
+                
+                <div class="slds">
+                    <div class="slds-notify_container" style="padding-top:50px;">
+                        <div class="slds-notify slds-notify--alert slds-theme--alert" role="alert">
+                            <span class="slds-assistive-text">Info</span>
+                            <h2>We're just looking up some data. Will be right with you...</h2>
+                        </div>
+                    </div>
+                </div>
+                    
+                
+            </apex:outputPanel> 
+         
+            <apex:outputPanel rendered="{!AND(NOT(httpError),loadAttempted,renderTable)}" id="resultsTable">
+                <div class="slds" id="sldsDiv">
+                    <div class="slds-tabs--default">
+                        <ul class="slds-tabs--default__nav" role="tablist">
+                          <li class="slds-tabs--default__item slds-text-heading--label {!IF(tab = '1','slds-active','')}" title="Item One" role="presentation">
+                            <a class="slds-tabs--default__link" onclick="selectTab(this);" href="#void" role="tab" tabindex="{!IF(tab = '1','0','-1')}" aria-selected="{!IF(tab = '1','true','false')}" aria-controls="tab-default-1" id="tab-default-1__item">Course Attempts</a>
+                          </li>
+                          <li class="slds-tabs--default__item slds-text-heading--label {!IF(tab = '2','slds-active','')}"  title="Item Two" role="presentation" >
+                            <a class="slds-tabs--default__link " onclick="selectTab(this);"  href="#void" role="tab" tabindex="{!IF(tab = '2','0','-1')}" aria-selected="{!IF(tab = '2','true','false')}" aria-controls="tab-default-2" id="tab-default-2__item" >Applications</a>
+                          </li>
+                        </ul>
+                
+                        <div id="tab-default-1" class="slds-tabs--default__content {!IF(tab = '1','slds-show','slds-hide')}" role="tabpanel" aria-labelledby="tab-default-1__item" >
+                            
+                            <!-- course attempts -->
+                            <div style="height:180px;overflow:scroll;">
+                                
+                            
+                            <table class="slds-table slds-table--bordered">
+                                <thead>
+                                  <tr class="slds-text-heading--label">
+                                    
+                                    <th class="slds-is-sortable" scope="col">
+                                      <div class="slds-truncate">Code : Name</div>
+                                    </th>
+                                    <th class="slds-is-sortable" scope="col">
+                                      <div class="slds-truncate">Status</div>
+                                    </th>
+                                    <th class="slds-is-sortable" scope="col">
+                                      <div class="slds-truncate">Type</div>
+                                    </th>
+                                    <th class="slds-is-sortable" scope="col">
+                                      <div class="slds-truncate">Home Campus</div>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!courseAPIResult.courseAttempts}" var="f">
+                                        <tr class="slds-hint-parent">
+                                    
+                                        <td class="" data-label="Code">
+                                            <a href="#" onclick="PopNewSubTab('{!JSINHTMLENCODE(f.courseId)}','{!JSINHTMLENCODE(f.courseCode)}');return false;">{!JSINHTMLENCODE(f.courseCode)}</a>&nbsp;:&nbsp;{!JSINHTMLENCODE(f.courseShortTitle)}
+                                        </td>
+                                        <td class="" data-label="Status">{!JSINHTMLENCODE(f.courseAttemptStatus)}</td>
+                                        <td class="slds-truncate" data-label="Type">{!JSINHTMLENCODE(f.attendanceType)}</td>
+                                            <td class="slds-truncate" data-label="Type">{!JSINHTMLENCODE(f.homeCampus)}</td>
+                                        <td class="">
+                                            <apex:outputPanel layout="none" rendered="{!f.courseCode == c.Course_Code__c}"><button onclick="unlinkFromCase('{!JSINHTMLENCODE(f.courseId)}'); return false;" class="slds-button" >UnLink</button></apex:outputPanel>
+                                            <apex:outputPanel layout="none" rendered="{!f.courseCode != c.Course_Code__c}"><button onclick="linkToCase('{!JSINHTMLENCODE(f.courseId)}:{!JSINHTMLENCODE(f.courseCode)}'); return false;" class="slds-button" >Link</button></apex:outputPanel>
+                                        </td>
+                                        
+                                      </tr>
+                                    </apex:repeat>
+                                 </tbody>
+                            </table>
+                                </div>
+                        </div>
+                   
+                        <div id="tab-default-2" class="slds-tabs--default__content {!IF(tab = '2','slds-show','slds-hide')}" role="tabpanel" aria-labelledby="tab-default-2__item">
+                            <!-- applications  -->
+                            <div style="height:180px;overflow:scroll;">
+                            <table class="slds-table slds-table--bordered">
+                                <thead>
+                                  <tr class="slds-text-heading--label">
+                                    
+                                    <th class="slds-is-sortable" scope="col">
+                                      <div class="slds-truncate">Code : Name</div>
+                                    </th>
+                                    <th class="slds-is-sortable" scope="col">
+                                      <div class="slds-truncate">Outcome</div>
+                                    </th>
+                                    <th class="slds-is-sortable" scope="col">
+                                      <div class="slds-truncate">Response</div>
+                                    </th>
+                                    <th class="slds-is-sortable" scope="col">
+                                      <div class="slds-truncate"></div>
+                                    </th>
+                                    
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!applicationAPIResult.applications}" var="f">
+                                        <tr class="slds-hint-parent">
+                                    
+                                        <td class="" data-label="Code">
+                                            <a href="#" onclick="PopNewSubTab('{!JSINHTMLENCODE(f.courseId)}','{!JSINHTMLENCODE(f.nominatedCourseCd)}');return false;">{!JSINHTMLENCODE(f.nominatedCourseCd)}</a>&nbsp;:&nbsp;{!JSINHTMLENCODE(f.title)}
+                                        </td>
+                                        <td class="slds-truncate" data-label="Type">{!JSINHTMLENCODE(f.sAdmOutcomeStatus)}</td>
+                                        <td class="" data-label="Status">{!JSINHTMLENCODE(f.admOfferRespStatus)}</td>
+                                        <td class="">
+                                            <apex:outputPanel layout="none" rendered="{!f.nominatedCourseCd == c.Course_Code__c}"><button onclick="unlinkFromCase('{!JSINHTMLENCODE(f.courseId)}'); return false;" class="slds-button" >UnLink</button></apex:outputPanel>
+                                            <apex:outputPanel layout="none" rendered="{!f.nominatedCourseCd != c.Course_Code__c}"><button onclick="linkToCase('{!JSINHTMLENCODE(f.courseId)}:{!JSINHTMLENCODE(f.nominatedCourseCd)}'); return false;" class="slds-button" >Link</button></apex:outputPanel>
+                                        </td>
+                                        
+                                      </tr>
+                                    </apex:repeat>
+                                 </tbody>
+                            </table>
+                            </div>     
+                                
+                        </div>
+                    </div>
+                </div>
+               </apex:outputPanel>              
+                
+                <!-- no results to display -->
+               
+                <apex:outputPanel rendered="{!AND(NOT(httpError),loadAttempted,OR(NOT(renderTable),ISBLANK(c.contact.Person_ID__c)))}">
+                    
+                    <div class="slds">
+                        <div class="slds-notify_container" style="padding-top:50px;">
+                            <div class="slds-notify slds-notify--alert slds-theme--alert" role="alert">
+                              <span class="slds-assistive-text">Info</span>
+                                <h2>No results to display.</h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </apex:outputPanel>
+                
+                <!-- handle error -->
+                
+                <apex:outputPanel rendered="{!AND(httpError,loadAttempted)}">
+                    
+                    <div class="slds">
+                        <div class="slds-notify_container" style="padding-top:50px;">
+                            <div class="slds-notify slds-notify--alert slds-theme--alert" role="alert">
+                              <span class="slds-assistive-text">Info</span>
+                                <h2>An error has occured: {!JSINHTMLENCODE(errMessage)}.<br/>Please <a href="#" onclick="location.reload();">try again</a>.</h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </apex:outputPanel>
+        </apex:outputPanel>
+        
+    </apex:form>        
+    
+    <div style="width:100%;position:absolute;bottom:0;left:0;background-color:red;font-size:x-small;padding:15px;font-family:Arial;display:none;" id="errMsg">
+        Error polling enquiry. Will try again.
+    </div>
+    <script>
+        init();
+        var postLinkTab;
+        var enquiryType = '{!case.Enquiry_Type__c}';    
+        var results; // global scope var for enquiry interests and course info
+        var CHECK_FOR_CHANGES_POLLTIME_MS = 4000; // controls the polling delay to check for changes to case
+        var caseContact = '{!case.contactId}';
+        var courseLinked = '{!case.Course_Code__c}';
+        var isClosed = '{!case.isClosed}';
+        
+        
+        function setTab(){
+            if(postLinkTab != undefined) $(postLinkTab).click();
+        }
+    
+        // this manages the transitions from one tab to another that's been clicked
+        
+        function selectTab(elmnt) {
+            currentTab = $(elmnt).attr('id');
+            postLinkTab = elmnt;
+            // slds-active
+            $(elmnt).parent("li").siblings(".slds-active").removeClass("slds-active");
+            $(elmnt).parent("li").addClass("slds-active");
+        
+            // tabindex
+            $(elmnt).parent("li").siblings().children("a").attr("tabindex", -1);
+            $(elmnt).attr("tabindex", 0);
+        
+            // aria-selected
+            $(elmnt).parent("li").siblings().children("a").attr("aria-selected", false);
+            $(elmnt).attr("aria-selected", true);
+        
+            // hiding previouly selected tab (slds-show/slds-hide)
+            $(elmnt).closest(".slds-tabs--default").children("div[role='tabpanel'].slds-show").addClass("slds-hide");
+            $(elmnt).closest(".slds-tabs--default").children("div[role='tabpanel'].slds-show").removeClass("slds-show");
+            // displaying newly selected tab (slds-show/slds-hide)
+            $(elmnt).closest(".slds-tabs--default").children("div[aria-labelledby='"+elmnt.id+"']").addClass("slds-show");
+            $(elmnt).closest(".slds-tabs--default").children("div[aria-labelledby='"+elmnt.id+"']").removeClass("slds-hide");
+        }
+    
+        function RefreshFocusedPrimaryTabId() {
+            sforce.console.getFocusedPrimaryTabId(refreshTab);
+        }
+        
+        function PopNewSubTab(recordId, title){
+            sforce.console.getFocusedPrimaryTabId(function(result){
+                sforce.console.openSubtab( result.id, '/'+recordId, true,'Course Details:'+ title, null,tabOpenSuccess);
+            });    
+        }
+        
+        var tabOpenSuccess = function tabOpenSuccess(result){
+             if(!result.success){
+                 alert('error when opening tab. Please try again.');
+             }
+        }
+        
+        var refreshTab = function refreshTab(result) {
+            //refresh the tab by ID
+            sforce.console.refreshPrimaryTabById(result.id, true, refreshSuccess);
+        };
+
+        var refreshSuccess = function refreshSuccess(result) {
+            //Report whether refreshing the primary tab was successful
+            if (result.success != true) {
+                alert('Note: Enquiry Tab did not refresh.');
+            }
+        };
+      
+        
+    
+        function pollForChanges() {
+            setTimeout(function(){
+                var cs = new SObjectModel.cs(); 
+                $("#errMsg").hide();
+                cs.retrieve(
+                    { where: {
+                        Id: {eq: '{!case.Id}' }
+                     },
+                     limit: 1 },
+                    function(err, records){
+                        if(err) {
+                            console.log(err);
+                            $("#errMsg").show();
+                        } else {
+                            var recContact = (records[0].get("ContactId") == undefined) ? '' : records[0].get("ContactId");
+                            if(caseContact != recContact ){
+                                location.reload(true);
+                            } else {
+                                pollForChanges();
+                            }
+                        }
+                        
+                     }
+                )}
+            ,CHECK_FOR_CHANGES_POLLTIME_MS);
+            
+        }
+    
+        pollForChanges();
+    
+        
+    
+    
+    
+    
+    </script>  
+</body>
+</html>
+</apex:page>

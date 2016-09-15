@@ -1,0 +1,14 @@
+<apex:page showHeader="false" sidebar="false" controller="QFlowContact_CC" >   
+ 
+    <script>
+        var cid = '{!cid}';
+    //cid = '';
+        if(cid > ''){
+            window.location.href = '../../console#/'+cid;
+        } else {
+            window.location.href = '../../console#/apex/Console_ContactSearch';
+        }
+    
+    
+    </script>
+</apex:page>

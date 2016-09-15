@@ -1,0 +1,151 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000006ele1AAA",
+    "innerClasses": [
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 16,
+                        "line": 22
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "manageChangesOfCohort",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 16,
+                    "line": 20
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "manageChangesOfCohort",
+                "references": [],
+                "type": "manageChangesOfCohort"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 24
+                    },
+                    "modifiers": [],
+                    "name": "cmList",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 20,
+                        "line": 25
+                    },
+                    "modifiers": [],
+                    "name": "cohortSet",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 20,
+                        "line": 26
+                    },
+                    "modifiers": [],
+                    "name": "contactIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 28
+                    },
+                    "modifiers": [],
+                    "name": "cm",
+                    "references": [],
+                    "type": "CampaignMember"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 30
+                    },
+                    "modifiers": [],
+                    "name": "oldValue",
+                    "references": [],
+                    "type": "CampaignMember"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 45
+                    },
+                    "modifiers": [],
+                    "name": "roundIds",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 48
+                    },
+                    "modifiers": [],
+                    "name": "tasksToDelete",
+                    "references": [],
+                    "type": "LIST"
+                }
+            ]
+        }
+    ],
+    "interfaces": [],
+    "key": "01p28000006ele1AAA",
+    "methods": [],
+    "name": "CampaignMemberServices",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 9
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "CampaignMemberServices",
+        "references": [],
+        "type": "CampaignMemberServices"
+    },
+    "variables": []
+}

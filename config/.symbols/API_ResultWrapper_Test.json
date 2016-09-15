@@ -1,0 +1,132 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000007bsngAAA",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000007bsngAAA",
+    "methods": [
+        {
+            "annotations": [
+                {
+                    "name": "IsTest"
+                }
+            ],
+            "location": {
+                "column": 28,
+                "line": 7
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "testMethod"
+            ],
+            "name": "coverCustomClasses",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "API_ResultWrapper_Test",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [
+            {
+                "name": "IsTest"
+            }
+        ],
+        "location": {
+            "column": 15,
+            "line": 5
+        },
+        "modifiers": [
+            "private",
+            "testMethod"
+        ],
+        "name": "API_ResultWrapper_Test",
+        "references": [],
+        "type": "API_ResultWrapper_Test"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 8
+            },
+            "modifiers": [],
+            "name": "tst",
+            "references": [],
+            "type": "API_ResultWrapper"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 9
+            },
+            "modifiers": [],
+            "name": "sc",
+            "references": [],
+            "type": "API_StudentCourseAttempt"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 10
+            },
+            "modifiers": [],
+            "name": "pn",
+            "references": [],
+            "type": "API_StudentPersonNote"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 11
+            },
+            "modifiers": [],
+            "name": "se",
+            "references": [],
+            "type": "API_StudentEncumbrance"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 12
+            },
+            "modifiers": [],
+            "name": "ac",
+            "references": [],
+            "type": "API_ApplicantCourse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 13
+            },
+            "modifiers": [],
+            "name": "citizen",
+            "references": [],
+            "type": "API_StudentCitizenship"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "resp",
+            "references": [],
+            "type": "HttpResponse"
+        }
+    ]
+}

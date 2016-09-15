@@ -1,0 +1,126 @@
+36.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:30:30.0 (635783)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:30:30.0 (735860)|EXECUTION_STARTED
+09:30:30.0 (743164)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000007afQx|MyProfilePageControllerTest.testSave
+09:30:30.0 (2466999)|SYSTEM_MODE_ENTER|false
+09:30:30.0 (2482784)|SYSTEM_MODE_EXIT|false
+09:30:30.0 (2582700)|SYSTEM_MODE_ENTER|false
+09:30:30.0 (4602462)|SOQL_EXECUTE_BEGIN|[19]|Aggregations:0|SELECT id, profileId, userRoleId FROM User WHERE (UserRoleId != NULL AND UserType = 'CustomerSuccess')
+09:30:30.0 (46495194)|SOQL_EXECUTE_END|[19]|Rows:0
+09:30:30.0 (47144235)|SOQL_EXECUTE_BEGIN|[22]|Aggregations:0|SELECT id, title, firstname, lastname, email, phone, mobilephone, fax, street, city, state, postalcode, country FROM User WHERE id = :tmpVar1
+09:30:30.0 (56244032)|SOQL_EXECUTE_END|[22]|Rows:1
+09:30:30.0 (61843316)|SOQL_EXECUTE_BEGIN|[15]|Aggregations:0|SELECT id, email, username, usertype, communitynickname, timezonesidkey, languagelocalekey, firstname, lastname, phone, title, street, city, country, postalcode, state, localesidkey, mobilephone, extension, fax, contact.email FROM User WHERE id = :tmpVar1
+09:30:30.0 (74057834)|SOQL_EXECUTE_END|[15]|Rows:1
+09:30:30.0 (74989546)|SOQL_EXECUTE_BEGIN|[55]|Aggregations:0|SELECT id, email, username, communitynickname, timezonesidkey, languagelocalekey, firstname, lastname, phone, title, street, city, country, postalcode, state, localesidkey, mobilephone, extension, fax, contact.email FROM User WHERE id = :tmpVar1
+09:30:30.0 (84552771)|SOQL_EXECUTE_END|[55]|Rows:1
+09:30:30.0 (85052581)|DML_BEGIN|[34]|Op:Insert|Type:Contact|Rows:1
+09:30:30.0 (133825606)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q42t|ContactTrigger on Contact trigger event BeforeInsert for [new]
+09:30:30.0 (145998258)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:30:30.0 (157678561)|USER_DEBUG|[25]|DEBUG|index =:005831026
+09:30:30.0 (162265601)|SYSTEM_MODE_ENTER|false
+09:30:30.0 (162276738)|SYSTEM_MODE_EXIT|false
+09:30:30.0 (178334176)|DML_BEGIN|[251]|Op:Insert|Type:Account|Rows:1
+09:30:30.0 (271847102)|DML_END|[251]
+09:30:30.0 (277284663)|SYSTEM_MODE_ENTER|false
+09:30:30.0 (277297590)|SYSTEM_MODE_EXIT|false
+09:30:30.0 (277376950)|SYSTEM_MODE_ENTER|false
+09:30:30.0 (277672901)|SYSTEM_MODE_EXIT|false
+09:30:30.279 (279624877)|CUMULATIVE_LIMIT_USAGE
+09:30:30.279 (279624877)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:30.279 (279624877)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:30.0 (282241862)|CODE_UNIT_FINISHED|ContactTrigger on Contact trigger event BeforeInsert for [new]
+09:30:30.0 (413659678)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Contact
+09:30:30.0 (429362615)|WF_RULE_EVAL_BEGIN|Workflow
+09:30:30.0 (429416371)|WF_CRITERIA_BEGIN|[Contact: TestContact 003p000000C09EA]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:30:30.0 (433770686)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:30:30.0 (433823965)|WF_RULE_EVAL_VALUE|
+09:30:30.0 (433840555)|WF_CRITERIA_END|false
+09:30:30.0 (433869209)|WF_CRITERIA_BEGIN|[Contact: TestContact 003p000000C09EA]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:30:30.0 (434195668)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:005831026
+09:30:30.0 (434204186)|WF_CRITERIA_END|false
+09:30:30.0 (434223819)|WF_CRITERIA_BEGIN|[Contact: TestContact 003p000000C09EA]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:30:30.0 (434392131)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:005831026
+09:30:30.0 (434398587)|WF_CRITERIA_END|true
+09:30:30.0 (435460517)|WF_CRITERIA_BEGIN|[Contact: TestContact 003p000000C09EA]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:30:30.0 (435519119)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:30:30.0 (443648539)|WF_RULE_EVAL_VALUE|0
+09:30:30.0 (443654576)|WF_CRITERIA_END|false
+09:30:30.0 (443676930)|WF_CRITERIA_BEGIN|[Contact: TestContact 003p000000C09EA]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:30:30.0 (443738515)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:30:30.0 (443747332)|WF_RULE_EVAL_VALUE|0
+09:30:30.0 (443750360)|WF_CRITERIA_END|false
+09:30:30.0 (443765512)|WF_CRITERIA_BEGIN|[Contact: TestContact 003p000000C09EA]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:30:30.0 (443812522)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:30:30.0 (443919674)|WF_RULE_EVAL_VALUE|0
+09:30:30.0 (443924249)|WF_CRITERIA_END|true
+09:30:30.0 (443940499)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:30:30.0 (444157584)|WF_ACTION| Field Update: 2;
+09:30:30.0 (444162465)|WF_RULE_EVAL_END
+09:30:30.0 (444230217)|WF_ACTIONS_END| Field Update: 2;
+09:30:30.0 (444236629)|CODE_UNIT_FINISHED|Workflow:Contact
+09:30:30.0 (446165991)|DML_END|[34]
+09:30:30.0 (446574099)|DML_BEGIN|[39]|Op:Update|Type:User|Rows:1
+09:30:30.0 (513753644)|DML_END|[39]
+09:30:30.0 (514021610)|SYSTEM_MODE_EXIT|false
+09:30:30.514 (514044005)|CUMULATIVE_LIMIT_USAGE
+09:30:30.514 (514044005)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:30.514 (514044005)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:30.0 (514090893)|CODE_UNIT_FINISHED|MyProfilePageControllerTest.testSave
+09:30:30.0 (516199730)|EXECUTION_FINISHED
+09:30:30.869 (869932995)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:30:30.869 (869956229)|EXECUTION_STARTED
+09:30:30.869 (869961815)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000007afQx|MyProfilePageControllerTest.testSetContactFields
+09:30:30.869 (870892887)|SYSTEM_MODE_ENTER|false
+09:30:30.869 (870906524)|SYSTEM_MODE_EXIT|false
+09:30:30.869 (871008837)|SYSTEM_MODE_ENTER|false
+09:30:30.869 (871433396)|SOQL_EXECUTE_BEGIN|[7]|Aggregations:0|SELECT title, firstname, lastname, email, phone, mobilephone, fax, street, city, state, postalcode, country FROM User WHERE id = :tmpVar1
+09:30:30.869 (881834469)|SOQL_EXECUTE_END|[7]|Rows:1
+09:30:30.869 (882492631)|SYSTEM_MODE_EXIT|false
+09:30:30.882 (882512509)|CUMULATIVE_LIMIT_USAGE
+09:30:30.882 (882512509)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:30.882 (882512509)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:30.869 (882557169)|CODE_UNIT_FINISHED|MyProfilePageControllerTest.testSetContactFields
+09:30:30.869 (885023952)|EXECUTION_FINISHED

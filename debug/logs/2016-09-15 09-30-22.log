@@ -1,0 +1,929 @@
+35.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:30:20.0 (538951)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:30:20.0 (667201)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (2904307)|DML_BEGIN|[32]|Op:Insert|Type:copado__Feature__c|Rows:1
+09:30:20.0 (33850751)|DML_END|[32]
+09:30:20.0 (34103751)|DML_BEGIN|[34]|Op:Insert|Type:copado__Feature__c|Rows:1
+09:30:20.0 (48719359)|DML_END|[34]
+09:30:20.0 (49761271)|DML_BEGIN|[37]|Op:Insert|Type:copado__Git_Repository__c|Rows:1
+09:30:20.0 (56876653)|ENTERING_MANAGED_PKG|copado
+09:30:20.57 (57730494)|CUMULATIVE_LIMIT_USAGE
+09:30:20.57 (57730494)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.57 (57730494)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.57 (57730494)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.0 (61801105)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (64439017)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (64514726)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (66694202)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (66761396)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (67884290)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (71610228)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (72807274)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (73935870)|ENTERING_MANAGED_PKG|copado
+09:30:20.74 (74029677)|CUMULATIVE_LIMIT_USAGE
+09:30:20.74 (74029677)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.74 (74029677)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.74 (74029677)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.0 (96314469)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (96542259)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (97255115)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (97449115)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (97478299)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (97634097)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (97692078)|ENTERING_MANAGED_PKG|copado
+09:30:20.97 (97736008)|CUMULATIVE_LIMIT_USAGE
+09:30:20.97 (97736008)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.97 (97736008)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.97 (97736008)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.0 (100768755)|DML_END|[37]
+09:30:20.0 (103834158)|DML_BEGIN|[43]|Op:Insert|Type:copado__Deployment_Flow__c|Rows:2
+09:30:20.0 (108596358)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (109512649)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (110214746)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (112045836)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (112086797)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (112925625)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (112981180)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (113386720)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (114509840)|SOQL_EXECUTE_BEGIN|[15]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow__c WHERE (Active__c = TRUE AND Main_Branch__c != NULL AND Git_Repository__c != NULL AND (NOT Id = :tmpVar1))
+09:30:20.0 (116569310)|SOQL_EXECUTE_END|[15]|Rows:0
+09:30:20.0 (117635743)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow_Step__c WHERE (Deployment_Flow__r.Active__c = TRUE AND Deployment_Flow__r.Main_Branch__c != NULL AND Deployment_Flow__r.Git_Repository__c != NULL AND Branch__c != NULL)
+09:30:20.0 (119127399)|SOQL_EXECUTE_END|[16]|Rows:0
+09:30:20.0 (119247322)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (119462152)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (119882089)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (119950088)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (120051628)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (120094081)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (120114689)|ENTERING_MANAGED_PKG|copado
+09:30:20.120 (120181276)|CUMULATIVE_LIMIT_USAGE
+09:30:20.120 (120181276)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.120 (120181276)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 5 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.120 (120181276)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.0 (154942162)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (155317640)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (156053454)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (156296314)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (156343108)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (156511337)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (156572539)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (156610446)|ENTERING_MANAGED_PKG|copado
+09:30:20.156 (156661944)|CUMULATIVE_LIMIT_USAGE
+09:30:20.156 (156661944)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.156 (156661944)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 5 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.156 (156661944)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.0 (161436151)|DML_END|[43]
+09:30:20.0 (161910067)|DML_BEGIN|[53]|Op:Insert|Type:copado__Deployment_Flow__c|Rows:1
+09:30:20.0 (165528929)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (165843190)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (166456985)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (166672287)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (166703544)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (166740358)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (166760417)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (167314863)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (168667555)|SOQL_EXECUTE_BEGIN|[15]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow__c WHERE (Active__c = TRUE AND Main_Branch__c != NULL AND Git_Repository__c != NULL AND (NOT Id = :tmpVar1))
+09:30:20.0 (187898775)|SOQL_EXECUTE_END|[15]|Rows:2
+09:30:20.0 (188949540)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow_Step__c WHERE (Deployment_Flow__r.Active__c = TRUE AND Deployment_Flow__r.Main_Branch__c != NULL AND Deployment_Flow__r.Git_Repository__c != NULL AND Branch__c != NULL)
+09:30:20.0 (191401744)|SOQL_EXECUTE_END|[16]|Rows:0
+09:30:20.0 (191580886)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (191920476)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (192046376)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (192082591)|ENTERING_MANAGED_PKG|copado
+09:30:20.192 (192165635)|CUMULATIVE_LIMIT_USAGE
+09:30:20.192 (192165635)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.192 (192165635)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 6 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.192 (192165635)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.0 (208996607)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (209319626)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (210095142)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (210337722)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (210372639)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (210498391)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (210535454)|ENTERING_MANAGED_PKG|copado
+09:30:20.210 (210594935)|CUMULATIVE_LIMIT_USAGE
+09:30:20.210 (210594935)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.210 (210594935)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 6 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.210 (210594935)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.0 (213401347)|DML_END|[53]
+09:30:20.0 (215738840)|DML_BEGIN|[64]|Op:Insert|Type:copado__Deployment_Flow__c|Rows:1
+09:30:20.0 (219305139)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (219596144)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (220180018)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (220406072)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (220439305)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (220481964)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (220504399)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (221114051)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (222517507)|SOQL_EXECUTE_BEGIN|[15]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow__c WHERE (Active__c = TRUE AND Main_Branch__c != NULL AND Git_Repository__c != NULL AND (NOT Id = :tmpVar1))
+09:30:20.0 (238931843)|SOQL_EXECUTE_END|[15]|Rows:2
+09:30:20.0 (239533197)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow_Step__c WHERE (Deployment_Flow__r.Active__c = TRUE AND Deployment_Flow__r.Main_Branch__c != NULL AND Deployment_Flow__r.Git_Repository__c != NULL AND Branch__c != NULL)
+09:30:20.0 (241193501)|SOQL_EXECUTE_END|[16]|Rows:0
+09:30:20.0 (241327385)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (241637149)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (245396353)|ENTERING_MANAGED_PKG|copado
+09:30:20.0 (245425258)|ENTERING_MANAGED_PKG|copado
+09:30:20.245 (245488318)|CUMULATIVE_LIMIT_USAGE
+09:30:20.245 (245488318)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.245 (245488318)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 6 out of 150
+  Number of DML rows: 7 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.245 (245488318)|TESTING_LIMITS
+09:30:20.245 (245488318)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.245 (245488318)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.245 (245488318)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.0 (248818758)|DML_END|[64]
+09:30:20.591 (591881818)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:30:20.591 (591916646)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (592542802)|DML_BEGIN|[76]|Op:Insert|Type:copado__Feature__c|Rows:1
+09:30:20.591 (609575265)|DML_END|[76]
+09:30:20.591 (609715760)|DML_BEGIN|[78]|Op:Insert|Type:copado__Feature__c|Rows:1
+09:30:20.591 (622847974)|DML_END|[78]
+09:30:20.591 (622975183)|DML_BEGIN|[81]|Op:Insert|Type:copado__Git_Repository__c|Rows:1
+09:30:20.591 (626878388)|ENTERING_MANAGED_PKG|copado
+09:30:20.627 (627580654)|CUMULATIVE_LIMIT_USAGE
+09:30:20.627 (627580654)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.627 (627580654)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.627 (627580654)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.591 (630950112)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (632480592)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (632511173)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (633766031)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (633800933)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (633834353)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (635635809)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (635679841)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (636139260)|ENTERING_MANAGED_PKG|copado
+09:30:20.636 (636188338)|CUMULATIVE_LIMIT_USAGE
+09:30:20.636 (636188338)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.636 (636188338)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.636 (636188338)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.591 (653743332)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (654018241)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (654647274)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (654844712)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (654877408)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (655001028)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (655036116)|ENTERING_MANAGED_PKG|copado
+09:30:20.655 (655084802)|CUMULATIVE_LIMIT_USAGE
+09:30:20.655 (655084802)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.655 (655084802)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.655 (655084802)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.591 (658066853)|DML_END|[81]
+09:30:20.591 (658501006)|DML_BEGIN|[86]|Op:Insert|Type:copado__Deployment_Flow__c|Rows:2
+09:30:20.591 (662115391)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (662700098)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (663215047)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (664135081)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (664162998)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (664368148)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (664384423)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (664784842)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (666144597)|SOQL_EXECUTE_BEGIN|[15]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow__c WHERE (Active__c = TRUE AND Main_Branch__c != NULL AND Git_Repository__c != NULL AND (NOT Id = :tmpVar1))
+09:30:20.591 (668338005)|SOQL_EXECUTE_END|[15]|Rows:0
+09:30:20.591 (669081586)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow_Step__c WHERE (Deployment_Flow__r.Active__c = TRUE AND Deployment_Flow__r.Main_Branch__c != NULL AND Deployment_Flow__r.Git_Repository__c != NULL AND Branch__c != NULL)
+09:30:20.591 (670923631)|SOQL_EXECUTE_END|[16]|Rows:0
+09:30:20.591 (671069089)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (671251016)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (671633096)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (671714862)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (671856727)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (671897415)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (671927634)|ENTERING_MANAGED_PKG|copado
+09:30:20.671 (671999733)|CUMULATIVE_LIMIT_USAGE
+09:30:20.671 (671999733)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.671 (671999733)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 5 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.671 (671999733)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.591 (694914264)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (695200667)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (695772962)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (695957586)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (695990826)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (696100178)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (696129382)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (696147750)|ENTERING_MANAGED_PKG|copado
+09:30:20.696 (696185739)|CUMULATIVE_LIMIT_USAGE
+09:30:20.696 (696185739)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.696 (696185739)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 5 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.696 (696185739)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.591 (699135614)|DML_END|[86]
+09:30:20.591 (699338553)|DML_BEGIN|[90]|Op:Insert|Type:copado__Deployment_Flow__c|Rows:1
+09:30:20.591 (702196639)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (702355483)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (702930866)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (703070745)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (703092564)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (703117741)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (703131685)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (703527500)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (704430744)|SOQL_EXECUTE_BEGIN|[15]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow__c WHERE (Active__c = TRUE AND Main_Branch__c != NULL AND Git_Repository__c != NULL AND (NOT Id = :tmpVar1))
+09:30:20.591 (709263546)|SOQL_EXECUTE_END|[15]|Rows:2
+09:30:20.591 (709806317)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow_Step__c WHERE (Deployment_Flow__r.Active__c = TRUE AND Deployment_Flow__r.Main_Branch__c != NULL AND Deployment_Flow__r.Git_Repository__c != NULL AND Branch__c != NULL)
+09:30:20.591 (711203312)|SOQL_EXECUTE_END|[16]|Rows:0
+09:30:20.591 (711337109)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (711584259)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (711666956)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (711688160)|ENTERING_MANAGED_PKG|copado
+09:30:20.711 (711746783)|CUMULATIVE_LIMIT_USAGE
+09:30:20.711 (711746783)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.711 (711746783)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 6 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.711 (711746783)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.591 (728174360)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (728392826)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (728966441)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (729142532)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (729166927)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (729240969)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (729262970)|ENTERING_MANAGED_PKG|copado
+09:30:20.729 (729299138)|CUMULATIVE_LIMIT_USAGE
+09:30:20.729 (729299138)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.729 (729299138)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 6 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.729 (729299138)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.591 (731766027)|DML_END|[90]
+09:30:20.591 (733889650)|DML_BEGIN|[98]|Op:Update|Type:copado__Deployment_Flow__c|Rows:1
+09:30:20.591 (742628730)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (742880060)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (743494828)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (743666003)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (743691886)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (743723930)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (743737589)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (744132621)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (745097826)|SOQL_EXECUTE_BEGIN|[15]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow__c WHERE (Active__c = TRUE AND Main_Branch__c != NULL AND Git_Repository__c != NULL AND (NOT Id = :tmpVar1))
+09:30:20.591 (749359994)|SOQL_EXECUTE_END|[15]|Rows:2
+09:30:20.591 (749852420)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow_Step__c WHERE (Deployment_Flow__r.Active__c = TRUE AND Deployment_Flow__r.Main_Branch__c != NULL AND Deployment_Flow__r.Git_Repository__c != NULL AND Branch__c != NULL)
+09:30:20.591 (751309696)|SOQL_EXECUTE_END|[16]|Rows:0
+09:30:20.591 (751414109)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (751692624)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (754917886)|ENTERING_MANAGED_PKG|copado
+09:30:20.591 (754969414)|ENTERING_MANAGED_PKG|copado
+09:30:20.755 (755037889)|CUMULATIVE_LIMIT_USAGE
+09:30:20.755 (755037889)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.755 (755037889)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 6 out of 150
+  Number of DML rows: 7 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.755 (755037889)|TESTING_LIMITS
+09:30:20.755 (755037889)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.755 (755037889)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.755 (755037889)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.591 (758299837)|DML_END|[98]
+09:30:20.907 (907648163)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:30:20.907 (907688712)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (908322867)|DML_BEGIN|[7]|Op:Insert|Type:copado__Feature__c|Rows:1
+09:30:20.907 (927350054)|DML_END|[7]
+09:30:20.907 (927584861)|DML_BEGIN|[9]|Op:Insert|Type:copado__Feature__c|Rows:1
+09:30:20.907 (942330531)|DML_END|[9]
+09:30:20.907 (942579112)|DML_BEGIN|[13]|Op:Insert|Type:copado__Deployment_Flow__c|Rows:1
+09:30:20.907 (946697128)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (948409890)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (948446276)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (950200601)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (950249743)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (950491650)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (950536627)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (950978278)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (953396977)|SOQL_EXECUTE_BEGIN|[15]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow__c WHERE (Active__c = TRUE AND Main_Branch__c != NULL AND Git_Repository__c != NULL AND (NOT Id = :tmpVar1))
+09:30:20.907 (954781856)|SOQL_EXECUTE_END|[15]|Rows:0
+09:30:20.907 (955240837)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow_Step__c WHERE (Deployment_Flow__r.Active__c = TRUE AND Deployment_Flow__r.Main_Branch__c != NULL AND Deployment_Flow__r.Git_Repository__c != NULL AND Branch__c != NULL)
+09:30:20.907 (956406344)|SOQL_EXECUTE_END|[16]|Rows:0
+09:30:20.907 (956507151)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (956783838)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (956883115)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (956910102)|ENTERING_MANAGED_PKG|copado
+09:30:20.956 (956970869)|CUMULATIVE_LIMIT_USAGE
+09:30:20.956 (956970869)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.956 (956970869)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.956 (956970869)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.907 (974992131)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (975273444)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (975925399)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (976114640)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (976149110)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (976265401)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (976290603)|ENTERING_MANAGED_PKG|copado
+09:30:20.976 (976328066)|CUMULATIVE_LIMIT_USAGE
+09:30:20.976 (976328066)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.976 (976328066)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.976 (976328066)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.907 (979231300)|DML_END|[13]
+09:30:20.907 (979476844)|DML_BEGIN|[22]|Op:Insert|Type:copado__Deployment_Flow__c|Rows:1
+09:30:20.907 (982485181)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (982690157)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (983278120)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (983438797)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (983462737)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (983490709)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (983504789)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (983898306)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (984817286)|SOQL_EXECUTE_BEGIN|[15]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow__c WHERE (Active__c = TRUE AND Main_Branch__c != NULL AND Git_Repository__c != NULL AND (NOT Id = :tmpVar1))
+09:30:20.907 (989715502)|SOQL_EXECUTE_END|[15]|Rows:0
+09:30:20.907 (990245814)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT COUNT() FROM Deployment_Flow_Step__c WHERE (Deployment_Flow__r.Active__c = TRUE AND Deployment_Flow__r.Main_Branch__c != NULL AND Deployment_Flow__r.Git_Repository__c != NULL AND Branch__c != NULL)
+09:30:20.907 (991767888)|SOQL_EXECUTE_END|[16]|Rows:0
+09:30:20.907 (991895416)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (992158804)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (992262145)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (992284160)|ENTERING_MANAGED_PKG|copado
+09:30:20.992 (992345900)|CUMULATIVE_LIMIT_USAGE
+09:30:20.992 (992345900)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.992 (992345900)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:20.992 (992345900)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.907 (1009068700)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (1009342344)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (1009965475)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (1010157156)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (1010184123)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (1010277210)|ENTERING_MANAGED_PKG|copado
+09:30:20.907 (1010299475)|ENTERING_MANAGED_PKG|copado
+09:30:21.10 (1010337043)|CUMULATIVE_LIMIT_USAGE
+09:30:21.10 (1010337043)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:21.10 (1010337043)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:30:21.10 (1010337043)|CUMULATIVE_LIMIT_USAGE_END
+
+09:30:20.907 (1012802344)|DML_END|[22]

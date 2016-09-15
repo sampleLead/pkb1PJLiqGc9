@@ -1,0 +1,38 @@
+27.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+10:59:19.87 (87604990)|SOQL_EXECUTE_BEGIN|[43]|Aggregations:0|SELECT copado__API_URL__c FROM User WHERE id = :tmpVar1
+10:59:19.87 (98352328)|SOQL_EXECUTE_END|[43]|Rows:1
+10:59:19.87 (115117258)|SOQL_EXECUTE_BEGIN|[205]|Aggregations:0|SELECT Id, copado__API_URL__c FROM User WHERE Id = :tmpVar1
+10:59:19.87 (120780436)|SOQL_EXECUTE_END|[205]|Rows:1
+10:59:19.87 (859558200)|SOQL_EXECUTE_BEGIN|[122]|Aggregations:0|SELECT OwnerId FROM Org__c WHERE Id = :tmpVar1
+10:59:19.87 (866532347)|SOQL_EXECUTE_END|[122]|Rows:1
+10:59:21.437 (2437617049)|CUMULATIVE_LIMIT_USAGE
+10:59:21.437 (2437617049)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 94 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+10:59:21.437 (2437617049)|LIMIT_USAGE_FOR_NS|copado|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 2 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+10:59:21.437 (2437617049)|CUMULATIVE_LIMIT_USAGE_END
+

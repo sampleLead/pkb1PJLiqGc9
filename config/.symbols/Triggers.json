@@ -1,0 +1,245 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000006eleIAAQ",
+    "innerClasses": [
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [],
+            "key": null,
+            "methods": [],
+            "name": "Evnt",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 15,
+                    "line": 15
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "Evnt",
+                "references": [],
+                "type": "Evnt"
+            },
+            "variables": []
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [],
+            "key": null,
+            "methods": [],
+            "name": "Handler",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 20,
+                    "line": 32
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "Handler",
+                "references": [],
+                "type": "Handler"
+            },
+            "variables": []
+        }
+    ],
+    "interfaces": [],
+    "key": "01p28000006eleIAAQ",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 49
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "bind",
+            "parameters": [
+                {
+                    "name": "event",
+                    "type": "Evnt"
+                },
+                {
+                    "name": "eh",
+                    "type": "Handler"
+                }
+            ],
+            "references": [],
+            "returnType": "Triggers",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 65
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "getEventType",
+            "parameters": [],
+            "references": [],
+            "returnType": "Evnt",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 97
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "execute",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 9,
+                "line": 33
+            },
+            "modifiers": [
+                "public",
+                "abstract"
+            ],
+            "name": "run",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "Triggers",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 37
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "event_handler_map",
+            "references": [],
+            "type": "Map"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 8
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "Triggers",
+        "references": [],
+        "type": "Triggers"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 49
+            },
+            "modifiers": [],
+            "name": "event",
+            "references": [],
+            "type": "Evnt"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 44,
+                "line": 49
+            },
+            "modifiers": [],
+            "name": "eh",
+            "references": [],
+            "type": "Handler"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 51
+            },
+            "modifiers": [],
+            "name": "handlers",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 9,
+                "line": 67
+            },
+            "modifiers": [],
+            "name": "event",
+            "references": [],
+            "type": "Evnt"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 9,
+                "line": 99
+            },
+            "modifiers": [],
+            "name": "event",
+            "references": [],
+            "type": "Evnt"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 105
+            },
+            "modifiers": [],
+            "name": "handlers",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 107
+            },
+            "modifiers": [],
+            "name": "h",
+            "references": [],
+            "type": "Handler"
+        }
+    ]
+}

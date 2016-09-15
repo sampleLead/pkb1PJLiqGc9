@@ -1,0 +1,107 @@
+36.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:33:56.0 (836441)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:33:56.0 (907421)|EXECUTION_STARTED
+09:33:56.0 (913781)|CODE_UNIT_STARTED|[EXTERNAL]|01p280000077n0R|SMSServices_Test.basicTestCoverage
+09:33:56.0 (7596460)|SYSTEM_MODE_ENTER|false
+09:33:56.0 (7605977)|SYSTEM_MODE_EXIT|false
+09:33:56.0 (7717337)|SYSTEM_MODE_ENTER|false
+09:33:56.0 (10884518)|SYSTEM_MODE_EXIT|false
+09:33:56.0 (10963439)|DML_BEGIN|[14]|Op:Insert|Type:Contact|Rows:1
+09:33:56.0 (84350358)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q42t|ContactTrigger on Contact trigger event BeforeInsert for [new]
+09:33:56.0 (89338916)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:33:56.0 (100688955)|USER_DEBUG|[25]|DEBUG|index =:006036991
+09:33:56.0 (106112517)|SYSTEM_MODE_ENTER|false
+09:33:56.0 (106121670)|SYSTEM_MODE_EXIT|false
+09:33:56.0 (118482808)|DML_BEGIN|[251]|Op:Insert|Type:Account|Rows:1
+09:33:56.0 (198420578)|DML_END|[251]
+09:33:56.0 (199339390)|SYSTEM_MODE_ENTER|false
+09:33:56.0 (199542196)|SYSTEM_MODE_EXIT|false
+09:33:56.201 (201732624)|CUMULATIVE_LIMIT_USAGE
+09:33:56.201 (201732624)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:33:56.201 (201732624)|CUMULATIVE_LIMIT_USAGE_END
+
+09:33:56.0 (204328442)|CODE_UNIT_FINISHED|ContactTrigger on Contact trigger event BeforeInsert for [new]
+09:33:56.0 (293140283)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Contact
+09:33:56.0 (309813127)|WF_RULE_EVAL_BEGIN|Workflow
+09:33:56.0 (309890285)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09Zu]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:33:56.0 (315174473)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:33:56.0 (315235506)|WF_RULE_EVAL_VALUE|
+09:33:56.0 (315240585)|WF_CRITERIA_END|false
+09:33:56.0 (315263225)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09Zu]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:33:56.0 (315584212)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:006036991
+09:33:56.0 (315591068)|WF_CRITERIA_END|false
+09:33:56.0 (315613276)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09Zu]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:33:56.0 (315775838)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:006036991
+09:33:56.0 (315782011)|WF_CRITERIA_END|true
+09:33:56.0 (317151684)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09Zu]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:33:56.0 (317236491)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:33:56.0 (325261408)|WF_RULE_EVAL_VALUE|0
+09:33:56.0 (325273786)|WF_CRITERIA_END|false
+09:33:56.0 (325325960)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09Zu]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:33:56.0 (325448506)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:33:56.0 (325464717)|WF_RULE_EVAL_VALUE|0
+09:33:56.0 (325469478)|WF_CRITERIA_END|false
+09:33:56.0 (325497694)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09Zu]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:33:56.0 (325581607)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:33:56.0 (325760611)|WF_RULE_EVAL_VALUE|0
+09:33:56.0 (325767272)|WF_CRITERIA_END|true
+09:33:56.0 (325806014)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:33:56.0 (326198971)|WF_ACTION| Field Update: 2;
+09:33:56.0 (326207720)|WF_RULE_EVAL_END
+09:33:56.0 (326321453)|WF_ACTIONS_END| Field Update: 2;
+09:33:56.0 (326334978)|CODE_UNIT_FINISHED|Workflow:Contact
+09:33:56.0 (327545942)|DML_END|[14]
+09:33:56.0 (338159328)|SOQL_EXECUTE_BEGIN|[20]|Aggregations:0|SELECT label, username__c, password__c, Base_URL__c FROM Credential__mdt WHERE label = 'MonashAPI' LIMIT 1
+09:33:56.0 (345411657)|SOQL_EXECUTE_END|[20]|Rows:1
+09:33:56.0 (346235181)|CALLOUT_REQUEST|[35]|System.HttpRequest[Endpoint=https://api.monash.edustudent_course_attempts003p000000C09ZuAAJ, Method=GET]
+09:33:56.0 (346507246)|CALLOUT_RESPONSE|[35]|System.HttpResponse[Status=Complete, StatusCode=200]
+09:33:56.0 (346560370)|USER_DEBUG|[36]|DEBUG|** ENDPOINT https://api.monash.edustudent_course_attempts003p000000C09ZuAAJ
+09:33:56.0 (346613071)|USER_DEBUG|[37]|DEBUG|** RESP =System.HttpResponse[Status=Complete, StatusCode=200]
+09:33:56.348 (348137093)|CUMULATIVE_LIMIT_USAGE
+09:33:56.348 (348137093)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:33:56.348 (348137093)|TESTING_LIMITS
+09:33:56.348 (348137093)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:33:56.348 (348137093)|CUMULATIVE_LIMIT_USAGE_END
+
+09:33:56.0 (348201919)|CODE_UNIT_FINISHED|SMSServices_Test.basicTestCoverage
+09:33:56.0 (349498785)|EXECUTION_FINISHED

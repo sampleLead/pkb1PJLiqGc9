@@ -1,0 +1,209 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000006g5hmAAA",
+    "innerClasses": [
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 19,
+                        "line": 13
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "linkInterestsToPerson",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 19,
+                    "line": 12
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "linkInterestsToPerson",
+                "references": [],
+                "type": "linkInterestsToPerson"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 16,
+                        "line": 15
+                    },
+                    "modifiers": [],
+                    "name": "caseIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 32,
+                        "line": 16
+                    },
+                    "modifiers": [],
+                    "name": "interest",
+                    "references": [],
+                    "type": "Enquiry_Interest__c"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 21,
+                        "line": 20
+                    },
+                    "modifiers": [],
+                    "name": "cases",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 32,
+                        "line": 28
+                    },
+                    "modifiers": [],
+                    "name": "interest",
+                    "references": [],
+                    "type": "Enquiry_Interest__c"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 21,
+                        "line": 42
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "preventDeletionOnClosedCases",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 18,
+                    "line": 41
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "preventDeletionOnClosedCases",
+                "references": [],
+                "type": "preventDeletionOnClosedCases"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 21,
+                        "line": 43
+                    },
+                    "modifiers": [],
+                    "name": "caseIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 37,
+                        "line": 44
+                    },
+                    "modifiers": [],
+                    "name": "interest",
+                    "references": [],
+                    "type": "Enquiry_Interest__c"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 45
+                    },
+                    "modifiers": [],
+                    "name": "cases",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 37,
+                        "line": 46
+                    },
+                    "modifiers": [],
+                    "name": "interest",
+                    "references": [],
+                    "type": "Enquiry_Interest__c"
+                }
+            ]
+        }
+    ],
+    "interfaces": [],
+    "key": "01p28000006g5hmAAA",
+    "methods": [],
+    "name": "EnquiryInterestServices",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 6
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "EnquiryInterestServices",
+        "references": [],
+        "type": "EnquiryInterestServices"
+    },
+    "variables": []
+}

@@ -1,0 +1,40 @@
+36.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:31:38.0 (469111)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:31:38.0 (556808)|EXECUTION_STARTED
+09:31:38.0 (564686)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000006ele9|ExLog_Test.exLogTest
+09:31:38.0 (2044661)|SOQL_EXECUTE_BEGIN|[13]|Aggregations:0|SELECT id, developername FROM recordtype
+09:31:38.0 (13406548)|SOQL_EXECUTE_END|[13]|Rows:21
+09:31:38.0 (20774799)|DML_BEGIN|[23]|Op:Insert|Type:Account|Rows:2
+09:31:38.0 (168371678)|DML_END|[23]
+09:31:38.0 (169328458)|USER_DEBUG|[28]|DEBUG|Successfully inserted account. Account ID: 001p000000DSywFAAT
+09:31:38.0 (169651190)|USER_DEBUG|[33]|DEBUG|The following error has occurred.
+09:31:38.0 (175152872)|USER_DEBUG|[36]|DEBUG|Account fields that affected this error: (Name)
+09:31:38.0 (177758917)|DML_BEGIN|[71]|Op:Insert|Type:Exception_Log__c|Rows:1
+09:31:38.0 (210865789)|DML_END|[71]
+09:31:38.0 (211742307)|DML_BEGIN|[52]|Op:Insert|Type:Exception_Log__c|Rows:1
+09:31:38.0 (229982504)|DML_END|[52]
+09:31:38.0 (230590199)|DML_BEGIN|[52]|Op:Insert|Type:Exception_Log__c|Rows:1
+09:31:38.0 (248452629)|DML_END|[52]
+09:31:38.0 (248869247)|DML_BEGIN|[90]|Op:Insert|Type:Exception_Log__c|Rows:1
+09:31:38.0 (268547744)|DML_END|[90]
+09:31:38.0 (268853565)|SOQL_EXECUTE_BEGIN|[47]|Aggregations:0|SELECT COUNT() FROM Exception_Log__c
+09:31:38.0 (282513052)|SOQL_EXECUTE_END|[47]|Rows:4
+09:31:38.282 (282665165)|CUMULATIVE_LIMIT_USAGE
+09:31:38.282 (282665165)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 25 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 6 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:31:38.282 (282665165)|CUMULATIVE_LIMIT_USAGE_END
+
+09:31:38.0 (282734070)|CODE_UNIT_FINISHED|ExLog_Test.exLogTest
+09:31:38.0 (284339570)|EXECUTION_FINISHED

@@ -1,0 +1,275 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p280000078EXUAA2",
+    "innerClasses": [
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 21,
+                        "line": 13
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "mapEmailToAddressToCases",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 18,
+                    "line": 12
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "mapEmailToAddressToCases",
+                "references": [],
+                "type": "mapEmailToAddressToCases"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 15
+                    },
+                    "modifiers": [],
+                    "name": "cases",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 21,
+                        "line": 16
+                    },
+                    "modifiers": [],
+                    "name": "caseIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 18
+                    },
+                    "modifiers": [],
+                    "name": "email",
+                    "references": [],
+                    "type": "EmailMessage"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 38,
+                        "line": 33
+                    },
+                    "modifiers": [],
+                    "name": "email",
+                    "references": [],
+                    "type": "EmailMessage"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 21,
+                        "line": 52
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "flagInboundEmailResponse",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 18,
+                    "line": 51
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "flagInboundEmailResponse",
+                "references": [],
+                "type": "flagInboundEmailResponse"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 54
+                    },
+                    "modifiers": [],
+                    "name": "cases",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 21,
+                        "line": 55
+                    },
+                    "modifiers": [],
+                    "name": "caseIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 57
+                    },
+                    "modifiers": [],
+                    "name": "email",
+                    "references": [],
+                    "type": "EmailMessage"
+                }
+            ]
+        }
+    ],
+    "interfaces": [],
+    "key": "01p280000078EXUAA2",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 75
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "maintainCaseFields",
+            "parameters": [
+                {
+                    "name": "caseIds",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "EmailMessageServices",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 6
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "EmailMessageServices",
+        "references": [],
+        "type": "EmailMessageServices"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 75
+            },
+            "modifiers": [],
+            "name": "caseIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 76
+            },
+            "modifiers": [],
+            "name": "cases",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 88
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 92
+            },
+            "modifiers": [],
+            "name": "msgDate",
+            "references": [],
+            "type": "Datetime"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 93
+            },
+            "modifiers": [],
+            "name": "updatedCase",
+            "references": [],
+            "type": "Case"
+        }
+    ]
+}

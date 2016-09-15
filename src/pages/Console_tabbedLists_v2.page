@@ -1,0 +1,355 @@
+<apex:page showHeader="false" 
+    sidebar="false"
+    cache="false"
+    standardController="Case" 
+    standardStylesheets="false" 
+    extensions="Console_components_CE" applyBodyTag="false" applyHtmlTag="false" > 
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- libraries required -->
+    <head>
+        
+        
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0122,'/assets/styles/salesforce-lightning-design-system-ltng.css')}"/>
+    <apex:includeScript value="/support/console/25.0/integration.js"/>
+    <apex:includeScript value="{!$Resource.jquery}"/>
+    
+    
+    </head>
+        <body>
+            
+            <!-- Remote Objects definitions to set accessible sObjects and fields -->
+    <apex:remoteObjects >
+        <apex:remoteObjectModel name="Case"  fields="Id,contactId" jsShorthand="cs"/>
+        <apex:remoteObjectModel name="Person_Note__c" fields="Id,LastModifiedCustom__c,Contact__c" jsShorthand="notes"/>
+        <apex:remoteObjectModel name="Enquiry_Interest__c" fields="Id,LastModifiedCustom__c,Case__c" jsShorthand="interests"/>
+        <apex:remoteObjectModel name="Contact" fields="Id,LastModifiedDate" jsShorthand="contactx"/>
+    
+    </apex:remoteObjects>
+    
+            
+    <apex:form id="theForm">
+        <apex:actionFunction name="refreshViewStep1" action="{!checkForEncumbrances}" oncomplete="refreshViewStep2();" rerender="thePanel" >    
+            <apex:param name="contextTab" value="" assignTo="{!tab}"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="refreshViewStep2" action="{!refreshLists}" rerender="thePanel" >    
+            <apex:param name="contextTab" value="" assignTo="{!tab}"/>
+        </apex:actionFunction>
+    </apex:form>
+            
+    <div style="width:100%;text-align:right;">
+        <div class="slds" style="position:absolute;top:0;right:0;padding:10px;">
+            <button class="slds-button" href="#" onclick="window.location.reload(true);"><span style="font-size:small;">Refresh</span></button>
+        </div>
+    </div>       
+     <!-- tabbed section -->
+            
+    <apex:outputPanel id="thePanel">
+        <div class="slds">
+            <apex:outputPanel rendered="{!AND(httpError, loadingAttempted, encumbranceChecked)}" >
+                <div class="slds-notify_container">
+                    <div class="slds-notify slds-notify--alert slds-theme--alert" role="alert">
+                        <span class="slds-assistive-text">Info</span>
+                        <h2>An error has occured.<br/>Please <a href="#" onclick="location.reload();">try again</a>.</h2>
+                    </div>
+                </div>
+            
+            </apex:outputPanel>   
+            
+            <apex:outputPanel rendered="{!AND(NOT(httpError), NOT(loadingAttempted), NOT(encumbranceChecked), NOT(ISBLANK(studentId)) )}" >
+                <div class="slds-notify_container">
+                    <div class="slds-notify slds-notify--alert slds-theme--alert" role="alert">
+                        <span class="slds-assistive-text">Info</span>
+                        <h2>Looking up some info for you. Will just be a sec...</h2>
+                    </div>
+                </div>
+            
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!AND(NOT(httpError), NOT(loadingAttempted), encumbranceChecked, NOT(ISBLANK(studentId)) )}" >
+                <div class="slds-notify_container">
+                    <div class="slds-notify slds-notify--alert slds-theme--alert" role="alert">
+                        <span class="slds-assistive-text">Info</span>
+                        <h2>Updating...</h2>
+                    </div>
+                </div>
+            
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!ISBLANK(studentId)}" >
+                <div class="slds-notify_container">
+                    <div class="slds-notify slds-notify--alert slds-theme--alert" role="alert">
+                        <span class="slds-assistive-text">Info</span>
+                        <h2>Nothing to see here, as there is no Student Id available to search on</h2>
+                    </div>
+                </div>
+            
+            
+            
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!AND(NOT(httpError),loadingAttempted,encumbranceChecked)}">
+                
+                <Table style="width:100%;">    
+                    <tr>
+                        <td style="width:100%;vertical-align:top;">
+                            <div class="slds-tabs--default">
+                                <ul class="slds-tabs--default__nav" role="tablist">
+                                  <li class="slds-tabs--default__item slds-text-heading--label {!IF(tab = '1','slds-active','')}" title="Item One" role="presentation">
+                                    <a class="slds-tabs--default__link"  onclick="selectTab(this);" href="#void" role="tab" tabindex="{!IF(tab = '1','0','-1')}" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Person Notes ({!personNotes.size})</a>
+                                  </li>
+                                  <li class="slds-tabs--default__item slds-text-heading--label {!IF(tab = '2','slds-active','')}" title="Item Two" role="presentation">
+                                    <a class="slds-tabs--default__link" href="#void" onclick="selectTab(this);" role="tab" tabindex="{!IF(tab = '2','0','-1')}" aria-selected="true" aria-controls="tab-default-2" id="tab-default-2__item">Interests (<span id="interestCount">{!c.Enquiry_Interests__r.size}</span>)</a>
+                                  </li>
+                                </ul>
+                                <div id="tab-default-1" class="slds-tabs--default__content {!IF(tab = '1','slds-show','slds-hide')}" role="tabpanel" aria-labelledby="tab-default-1__item">
+                                    <!-- person notes -->
+                                    <div style="height:330px;overflow-y:scroll;">
+                                        <Table>
+                                                  <tr class="headerRow">
+                                                        <th style="width:15%;">Reference</th>
+                                                        <th style="width:15%;">Type</th>
+                                                        <th style="width:70%;">Details</th>
+                                                        
+                                                  </tr>
+                                              <apex:repeat value="{!personNotes}" var="pn" >
+                                                  <tr id="{!pn.id}" class="record">
+                                                        <td style="vertical-align:top;">{!JSINHTMLENCODE(pn.Name)}</td>
+                                                        <td style="vertical-align:top;">{!JSINHTMLENCODE(pn.Type__c)}</td>
+                                                        <td style="padding-left:5px;vertical-align:top;"><span style="{!JSINHTMLENCODE(pn.Style_Text__c)}"><apex:outputText value="{!SUBSTITUTE(JSENCODE(pn.Notes__c),"\n","<br/>")}" escape="false" /></span></td>
+                                                        
+                                                    </tr>
+                                              </apex:repeat>
+                                        </Table>  
+                                    </div>
+                                </div>
+                                <div id="tab-default-2" class="slds-tabs--default__content {!IF(tab = '2','slds-show','slds-hide')}" role="tabpanel" aria-labelledby="tab-default-2__item">
+                                    <!-- interests -->  
+                                    <Table>
+                                          <tr class="headerRow">
+                                            <th>Reference</th>
+                                            <th>Course</th>
+                                            <th>Description</th>
+                                            <th>Specialisation</th>
+                                            <th>Study Area</th>
+                                            <th>Detailed Study Area</th>
+                                          </tr>
+                                            <apex:repeat value="{!c.Enquiry_Interests__r}" var="int" >
+                                                <tr id="interest_{!int.id}" class="record">
+                                                    <td>
+                                                        <apex:outputPanel layout="none" rendered="{!AND(int.createdbyid = $User.Id,NOT(c.IsClosed))}">
+                                                            <a href="#" onclick="deleteRecord('{!JSINHTMLENCODE(int.id)}');">(del)&nbsp;</a>
+                                                        </apex:outputPanel>
+                                                        <a href="#" onclick="PopNewSubTab('{!JSINHTMLENCODE(int.id)}','{!JSINHTMLENCODE(int.name)}');">{!JSINHTMLENCODE(int.name)}</a>
+                                                    </td>
+                                                    <td><a href="#" onclick="PopNewSubTab('{!JSINHTMLENCODE(int.Course__c)}','{!JSINHTMLENCODE(int.course__r.name)}');">{!JSINHTMLENCODE(int.course__r.name)}</a></td>
+                                                    <td>{!JSINHTMLENCODE(int.course__r.Course_Description__c)}</td>
+                                                    <td>{!JSINHTMLENCODE(int.Specialisation_f__c)}</td>
+                                                    <td>{!JSINHTMLENCODE(int.Study_Area__c)}</td>
+                                                    <td>{!JSINHTMLENCODE(int.Detailed_Study_Area__c)}</td>
+                                                </tr>
+                                          </apex:repeat>
+                                    </Table>
+
+                                </div>
+                            </div>
+                       </td>
+                       
+                    </tr>
+                </Table>
+                
+             </apex:outputPanel>
+        </div>
+       </apex:outputPanel> 
+      
+            <!-- used to display msg to user that error occured -->
+     <div style="width:100%;position:absolute;bottom:0;left:0;background-color:red;font-size:x-small;padding:15px;font-family:Arial;display:none;" id="errMsg">
+        Error polling enquiry. Will try again.
+    </div> 
+            
+    <script>
+            refreshViewStep1();
+                
+            var caseContact = '{!contactId}';
+            var currentTab,lastPollDT;
+            var POLLING_DELAY_MS = 6000;
+            
+            var eventHandler = function eventHandler(result) {
+               // just do nothing so I do not refresh - prefer to handle via actionFunction :)
+            };
+            
+            sforce.console.onEnclosingTabRefresh(eventHandler);
+            
+                
+            function popPrimaryTab(recordId, title){
+                sforce.console.openPrimaryTab( null, '/'+recordId, true, title,tabOpenSuccess);    
+            }
+            
+            function PopNewSubTab(recordId, title){
+                sforce.console.getFocusedPrimaryTabId(function(result){
+                    sforce.console.openSubtab( result.id, '/'+recordId, true,'Course Details:'+ title, null,tabOpenSuccess);
+                });    
+            }
+            
+            function deleteRecord(recordId){
+                // TODO via remote objects
+                var eventInterest = new SObjectModel.interests();
+                eventInterest.del(recordId, handleDeleteResponse);
+            }
+            
+            function handleDeleteResponse(err,ids){
+                if(err){
+                    alert('error during deletion. Refresh panel and try again.');
+                } else {
+                    $("#interest_"+ids[0]).remove();
+                    var count = parseInt($("#interestCount").text());
+                    count --;
+                    $("#interestCount").text(count);
+                }
+            }
+            var tabOpenSuccess = function tabOpenSuccess(result){
+                 if(!result.success){
+                     //alert('error when opening tab. Please try again.');
+                 }
+            }
+            
+            
+            
+                function pollForChanges() {
+                    if(lastPollDT == undefined) lastPollDT = new Date();
+                    setTimeout(function(){
+                        $("#errMsg").hide();
+                        var cs = new SObjectModel.cs();  // case
+                        var notes = new SObjectModel.notes(); // Person Notes
+                        var interests = new SObjectModel.interests(); // Enquiry interests
+                        var contactx = new SObjectModel.contactx(); // Contact record
+                        // check cases to see if linked contact has changed
+                        if('{!caseId}' > ''){
+                            cs.retrieve(
+                                { where: {
+                                    Id: {eq: '{!caseId}' }
+                                },
+                                 limit: 1 },
+                                function(err, records){
+                                    if(err) {
+                                        $("#errMsg").show();
+                                    } else {
+                                        var recCont = (records[0].get("ContactId") == undefined) ? '' : records[0].get("ContactId");
+                                        if(caseContact != recCont ){ // checks if the contact has changed
+                                            caseContact = recCont;
+                                            lastPollDT = new Date();
+                                            refreshViewStep1(currentTab);   
+                                            
+                                        } 
+                                    }
+                                    
+                                }
+                            );
+                        }
+                        // check for person notes against case that have changed since last polled
+                        if('{!contactId}' > '' ){
+                            notes.retrieve(
+                                { where: {
+                                    Contact__c: {eq: '{!contactId}' } 
+                                },
+                                 limit: 50 },
+                                function(err, records){
+                                    if(err) {
+                                        $("#errMsg").show();
+                                    } else {
+                                        for(i=0; i<records.length;i++){
+                                            if(Date.parse(records[i].get("LastModifiedCustom__c")) > lastPollDT ){
+                                                lastPollDT = new Date();
+                                                refreshViewStep1(currentTab); 
+                                            }
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                                
+                            );
+                            
+                            contactx.retrieve(
+                                { where: {
+                                    Id: {eq: '{!contactId}' } 
+                                },
+                                 limit: 1 },
+                                function(err, records){
+                                    if(err) {
+                                        $("#errMsg").show();
+                                    } else {
+                                        for(i=0; i<records.length;i++){
+                                            if(Date.parse(records[i].get("LastModifiedDate")) > lastPollDT ){
+                                               lastPollDT = new Date(); 
+                                               refreshViewStep1(currentTab); 
+                                                
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                            );
+                            
+                        }
+                        
+                        // check for interests against case that have changed since last polled
+                        if('{!caseId}' >''){
+                            interests.retrieve(
+                                { where: {
+                                    Case__c: {eq: '{!caseId}' } 
+                                },
+                                 limit: 50 },
+                                function(err, records){
+                                    if(err) {
+                                        $("#errMsg").show();
+                                    } else {
+                                        for(i=0; i<records.length;i++){
+                                            if(Date.parse(records[i].get("LastModifiedCustom__c")) > lastPollDT ){
+                                                lastPollDT = new Date();
+                                                refreshViewStep1(currentTab);  
+                                            }
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                                
+                            );
+                        }
+                        pollForChanges();
+                    }
+                    ,POLLING_DELAY_MS);
+                
+            }
+        
+            pollForChanges();
+            
+            // this manages the transitions from one tab to another that's been clicked
+        
+            function selectTab(elmnt) {
+                currentTab = $(elmnt).attr('id');
+                // slds-active
+                $(elmnt).parent("li").siblings(".slds-active").removeClass("slds-active");
+                $(elmnt).parent("li").addClass("slds-active");
+            
+                // tabindex
+                $(elmnt).parent("li").siblings().children("a").attr("tabindex", -1);
+                $(elmnt).attr("tabindex", 0);
+            
+                // aria-selected
+                $(elmnt).parent("li").siblings().children("a").attr("aria-selected", false);
+                $(elmnt).attr("aria-selected", true);
+            
+                // hiding previouly selected tab (slds-show/slds-hide)
+                $(elmnt).closest(".slds-tabs--default").children("div[role='tabpanel'].slds-show").addClass("slds-hide");
+                $(elmnt).closest(".slds-tabs--default").children("div[role='tabpanel'].slds-show").removeClass("slds-show");
+                // displaying newly selected tab (slds-show/slds-hide)
+                $(elmnt).closest(".slds-tabs--default").children("div[aria-labelledby='"+elmnt.id+"']").addClass("slds-show");
+                $(elmnt).closest(".slds-tabs--default").children("div[aria-labelledby='"+elmnt.id+"']").removeClass("slds-hide");
+            }
+
+        </script> 
+    </body>
+</html>
+</apex:page>

@@ -1,0 +1,699 @@
+<apex:page id="thePage" controller="mt_mainControllerCC" sidebar="false" showHeader="false" title="Montrack">
+  <apex:includeScript value="https://code.jquery.com/jquery-2.1.3.min.js"/>
+  <style>
+      .hoverClass { cursor: pointer; cursor: hand; }
+      #container { width: 100%; margin: 10px auto; }
+      #top { padding: .5em; }
+      #leftcol { float: left; width: 49%; }
+      #rightcol { width:49%; margin:auto; }
+      .column { position: relative; float: left; padding: 5px; 5px; 0px; 0px; }
+      .selectedRow {  }
+      .detailName { font-size:1.3em; }
+      .bPageBlock { border-top: 4px solid #004B92; }
+      .pbSubheader { background-color: #004B92;}
+      
+  </style>
+  
+  <div id="container">
+    <apex:form id="theForm">
+      <div id="top" >
+      <span style="float:right;line-height: 0.8em;margin-right:10px;">
+            Logged in as {!$User.FirstName} {!$User.LastName} [<a href="/secur/logout.jsp" class="logout">Logout</a>]
+         </span>
+          <apex:image url="{!$Resource.MonashLogo}" height="45px" /><br/><span style="margin-left:15px;font-size:1.8em;">MONTRACK</span><br/>
+          
+      </div>
+      <div id="leftcol" class="column">
+        <!-- FUNCTIONS -->
+            <apex:actionFunction name="taskClicked"  action="{!taskClicked}" rerender="personDetailsBlock,logCallBlock" oncomplete="taskTableStatus('stop');">
+                <apex:param name="tId" value=""/>
+                <apex:param name="cId" value=""/>
+            </apex:actionFunction>
+            <apex:actionFunction name="clearContextStudent" action="{!clearContextStudent}" rerender="dummyPanel" />
+            <apex:outputPanel id="dummyPanel"/>
+        <!-- LEFT COLUMN -->    
+            <apex:outputPanel layout="block" id="leftColumn">
+              <!-- Section 1 - select cohort, user etc -->
+              <apex:pageBlock title="Confirm User Details"  id="userDetailsBlock" mode="edit"> 
+                  <apex:outputPanel layout="block" >
+                      <div id="userContent">
+                              
+                              <apex:pageBlockSection collapsible="false" columns="2" >
+                                  <apex:pageblockSectionItem >
+                                      <apex:outputLabel value="Cohort" for="cohort"/>
+                                      <apex:selectList size="1" value="{!cohort}" id="cohort">
+                                          <apex:selectOptions value="{!cohortOptions}"/>
+                                          <apex:actionSupport event="onchange" action="{!resetRoundAndUser}"  status="roundStatus" rerender="round,usr,retrieveBtn,callSelectBlock,personDetailsBlock,logCallBlock" />
+                                      </apex:selectList>
+                                  </apex:pageblockSectionItem>
+                                  <apex:pageBlockSectionItem />
+                                  <apex:pageblockSectionItem >
+                                      <apex:outputLabel value="Round" for="round"/>
+                                      <apex:actionStatus id="roundStatus">
+                                        <apex:facet name="start">
+                                            <apex:image value="/img/loading32.gif" height="16" width="16"/>
+                                        </apex:facet>
+                                        <apex:facet name="stop">
+                                            <apex:selectList size="1" value="{!round}" id="round" disabled="{!disableRoundSelect}">
+                                                <apex:selectOptions value="{!roundOptions}"/>
+                                            <apex:actionSupport event="onchange" rerender="usr,callSelectBlock,logCallBlock" action="{!resetUser}" status="userStatus"/>
+                                          </apex:selectList>
+                                            </apex:facet>
+                                      </apex:actionStatus>
+                                  </apex:pageblockSectionItem>  
+                                  <apex:pageBlockSectionItem />
+                                  <apex:pageblockSectionItem >
+                                      <apex:outputLabel value="SSA" for="usr"/>
+                                      <apex:actionStatus id="userStatus">
+                                            <apex:facet name="start">
+                                                <apex:image value="/img/loading32.gif" height="16" width="16"/>
+                                            </apex:facet>
+                                            <apex:facet name="stop">
+                                            <apex:selectList size="1" value="{!ssaUser}" id="usr" disabled="{!round = ''}">
+                                                <apex:selectOptions value="{!ssaUserOptions}"/>
+                                                <!-- <apex:actionSupport event="onchange" rerender="retrieveBtn,callSelectBlock" status="searchButtonStatus"/> -->
+                                                <apex:actionSupport action="{!retrieveCalls}" event="onchange" rerender="callSelectBlock" oncomplete="accordion('call');" status="userStatus"/>
+                                            </apex:selectList>
+                                            </apex:facet>   
+                                      </apex:actionStatus>
+                                  </apex:pageblockSectionItem>  
+                                  <!-- <apex:pageBlockSectionItem >
+                                      <apex:actionStatus id="searchButtonStatus">
+                                            <apex:facet name="start">
+                                                <apex:image value="/img/loading32.gif" height="16" width="16"/>
+                                            </apex:facet>
+                                            <apex:facet name="stop">
+                                                <apex:commandButton value="Search for Calls" status="searchButtonStatus" disabled="{!ssaUser = ''}" id="retrieveBtn" action="{!retrieveCalls}" rerender="callSelectBlock" oncomplete="accordion('call');" />
+                                            </apex:facet>   
+                                      </apex:actionStatus>
+                                  </apex:pageBlockSectionItem>   -->
+                              </apex:pageBlockSection>
+                      </div>
+                  </apex:outputPanel>
+              </apex:pageBlock>
+              
+              <!-- Section 2 - call list section -->
+              <apex:pageBlock title="Select who to call"  id="callSelectBlock" >
+                    <div id="callContent" style="display:none;">
+                          <apex:pageMessage rendered="{!NOT(ssaUser = '')}" summary="Use the call status picklist to filter your view. Click column headers to sort the table.Click a row to select." severity="info" strength="1" /> 
+                          <apex:pageMessage rendered="{!ssaUser = ''}" summary="Once you have selected a Cohort,Round and User above, this section will be populated." severity="info" strength="1" /> 
+                          <apex:pageBlockSection columns="1" collapsible="false" >
+                            
+                            <!-- TASK LIST FILTER  -->
+                            <apex:pageBlockSectionItem rendered="{!NOT(ssaUser = '')}">
+                                <apex:outputPanel layout="none">
+                                    <apex:outputLabel value="Call Status " for="listFilter"/>
+                                    <apex:selectList size="1" value="{!listFilter}" id="listFilter">
+                                        <apex:selectOptions value="{!filterOptions}"/>
+                                        <apex:actionSupport event="onchange" action="{!onChangeRefreshList}" status="taskTableStatus" rerender="taskTable"/>
+                                    </apex:selectList>
+                                    <apex:actionStatus id="taskTableStatus">
+                                    <apex:facet name="start">
+                                        <apex:image value="/img/loading32.gif" height="16" width="16" style="padding-left:10px;"/>
+                                    </apex:facet>
+                                    <apex:facet name="stop"/>
+                                </apex:actionStatus>
+                                </apex:outputPanel>
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem rendered="{!NOT(ssaUser = '')}">
+                                <!-- TASK TABLE HERE -->
+                                    <apex:outputPanel layout="none">
+                                    <div id="taskTableDiv" style="height:400px;overflow-y:scroll;"> 
+                                        <apex:outputPanel id="taskTable" layout="none">
+                                        <apex:pageMessage rendered="{!NOT(renderTaskTable)}" summary="No results to display." severity="info" strength="1" /> 
+                                        <apex:outputPanel rendered="{!renderTaskTable}" ><p style="padding-bottom:10px;"><b>{!taskDetailList.size} results.</b></p></apex:outputPanel>
+                                        <apex:pageblocktable value="{!taskDetailList}" var="t"  onRowClick="taskRowClick(this);" rendered="{!renderTaskTable}">
+                                                   <apex:column styleClass="{!IF(taskId = t.taskId,'selectedRow','')}">
+                                                        <apex:facet name="header" >
+                                                            <apex:commandLink action="{!sortTable}" rerender="taskTable" status="taskTableStatus">
+                                                                <apex:outputText value="First Name "/>
+                                                                <apex:image value="/img/colTitle_downarrow.gif" rendered="{!AND(colFilter='firstName',sortOrder)}"/>
+                                                                <apex:image value="/img/colTitle_uparrow.gif" rendered="{!AND(colFilter='firstName',NOT(sortOrder))}"/>
+                                                                <apex:param name="colFilter" value="firstName"/>
+                                                                <apex:param name="colClick" assignTo="{!colClicked}" value="true"/>
+                                                            </apex:commandLink>
+                                                        </apex:facet>
+                                                        
+                                                        <apex:outputText value="{!t.firstname}" />
+                                                        <apex:outputText value="{!t.taskId}" styleClass="taskId" style="display:none;"/><!-- FOR REFERENCE WHEN ROW CLICKED -->
+                                                        <apex:outputText value="{!t.contactId}" styleClass="contactId" style="display:none;"/><!-- FOR REFERENCE WHEN ROW CLICKED -->
+                                                    </apex:column>
+                                                    <apex:column styleClass="{!IF(taskId = t.taskId,'selectedRow','')}" >
+                                                        <apex:facet name="header">
+                                                            <apex:commandLink action="{!sortTable}" rerender="taskTable" status="taskTableStatus">
+                                                                <apex:outputText value="Last Name " />
+                                                                <apex:image value="/img/colTitle_downarrow.gif" rendered="{!AND(colFilter='lastName',sortOrder)}"/>
+                                                                <apex:image value="/img/colTitle_uparrow.gif" rendered="{!AND(colFilter='lastName',NOT(sortOrder))}"/>
+                                                                <apex:param name="colFilter" value="lastName"/>
+                                                                <apex:param name="colClick" assignTo="{!colClicked}" value="true"/>
+                                                            </apex:commandLink>
+                                                        </apex:facet>
+                                                        <apex:outputText value="{!t.lastname}" />
+                                                    </apex:column>
+                                                    
+                                                    <apex:column styleClass="{!IF(taskId = t.taskId,'selectedRow','')}">
+                                                        <apex:facet name="header">
+                                                            <apex:commandLink action="{!sortTable}" rerender="taskTable" status="taskTableStatus">
+                                                                <apex:outputText value="Course "/>
+                                                                <apex:image value="/img/colTitle_downarrow.gif" rendered="{!AND(colFilter='course',sortOrder)}"/>
+                                                                <apex:image value="/img/colTitle_uparrow.gif" rendered="{!AND(colFilter='course',NOT(sortOrder))}"/>
+                                                                <apex:param name="colFilter" value="course"/>
+                                                            </apex:commandLink>
+                                                        </apex:facet>
+                                                        <apex:outputText value="{!t.course}" />
+                                                    </apex:column>
+                                                    <apex:column styleClass="{!IF(taskId = t.taskId,'selectedRow','')}">
+                                                        <apex:facet name="header">
+                                                            <apex:commandLink action="{!sortTable}" rerender="taskTable" status="taskTableStatus">
+                                                                <apex:outputText value="Faculty "/>
+                                                                <apex:image value="/img/colTitle_downarrow.gif" rendered="{!AND(colFilter='faculty',sortOrder)}"/>
+                                                                <apex:image value="/img/colTitle_uparrow.gif" rendered="{!AND(colFilter='faculty',NOT(sortOrder))}"/>
+                                                                <apex:param name="colFilter" value="faculty"/>
+                                                            </apex:commandLink>
+                                                        </apex:facet>
+                                                        <apex:outputText value="{!t.faculty}" />
+                                                    </apex:column>
+                                                     
+                                                    <apex:column styleClass="{!IF(taskId = t.taskId,'selectedRow','')}">
+                                                        <apex:facet name="header">
+                                                            <apex:commandLink action="{!sortTable}" rerender="taskTable" status="taskTableStatus">
+                                                                <apex:outputText value="Campus "/>
+                                                                <apex:image value="/img/colTitle_downarrow.gif" rendered="{!AND(colFilter='campus',sortOrder)}"/>
+                                                                <apex:image value="/img/colTitle_uparrow.gif" rendered="{!AND(colFilter='campus',NOT(sortOrder))}"/>
+                                                                <apex:param name="colFilter" value="campus"/>
+                                                                <apex:param name="colClick" assignTo="{!colClicked}" value="true"/>
+                                                            </apex:commandLink>
+                                                        </apex:facet>
+                                                        <apex:outputText value="{!t.campus}" />
+                                                    </apex:column>
+                                                    <apex:column style="width:82px;" styleClass="{!IF(taskId = t.taskId,'selectedRow','')}">
+                                                    <apex:facet name="header">
+                                                        <apex:commandLink action="{!sortTable}" rerender="taskTable" status="taskTableStatus">
+                                                                <apex:outputText value="Call Attempt "/>
+                                                                <apex:image value="/img/colTitle_downarrow.gif" rendered="{!AND(colFilter='callAttempt',sortOrder)}"/>
+                                                                <apex:image value="/img/colTitle_uparrow.gif" rendered="{!AND(colFilter='callAttempt',NOT(sortOrder))}"/>
+                                                                <apex:param name="colFilter" value="callAttempt"/>
+                                                                <apex:param name="colClick" assignTo="{!colClicked}" value="true"/>
+                                                            </apex:commandLink>
+                                                    </apex:facet>
+                                                       <center>
+                                                          <apex:outputpanel rendered="{!IF(t.CallAttempt='First Attempt',true,false)}">
+                                                             1
+                                                          </apex:outputpanel>
+                                                          <apex:outputpanel rendered="{!IF(t.CallAttempt='Second Attempt',true,false)}">
+                                                             2
+                                                          </apex:outputpanel>
+                                                          <apex:outputpanel rendered="{!IF(t.CallAttempt='Third Attempt' ,true,false)}">
+                                                             3
+                                                          </apex:outputpanel>
+                                                       </center>
+                                                    
+                                                    </apex:column>
+                                                    <apex:column styleClass="{!IF(taskId = t.taskId,'selectedRow','')}"  style="{!t.textBackgroundColour}">
+                                                        <apex:facet name="header">
+                                                            <apex:commandLink action="{!sortTable}" rerender="taskTable" status="taskTableStatus">
+                                                                <apex:outputText value="Status "/>
+                                                                <apex:image value="/img/colTitle_downarrow.gif" rendered="{!AND(colFilter='status',sortOrder)}"/>
+                                                                <apex:image value="/img/colTitle_uparrow.gif" rendered="{!AND(colFilter='status',NOT(sortOrder))}"/>
+                                                                <apex:param name="colFilter" value="status"/>
+                                                                <apex:param name="colClick" assignTo="{!colClicked}" value="true"/>
+                                                            </apex:commandLink>
+                                                        </apex:facet>
+                                                        <apex:outputText value="{!t.status}" />&nbsp;
+                                                        
+                                                    </apex:column>
+                                                    <apex:column styleClass="{!IF(taskId = t.taskId,'selectedRow','')}" style="{!t.datetimeColour}">
+                                                        <apex:facet name="header">
+                                                            <apex:commandLink action="{!sortTable}" rerender="taskTable" status="taskTableStatus">
+                                                                <apex:outputText value="Call Back Date/Time "/>
+                                                                <apex:image value="/img/colTitle_downarrow.gif" rendered="{!AND(colFilter='callBackDateTime',sortOrder)}"/>
+                                                                <apex:image value="/img/colTitle_uparrow.gif" rendered="{!AND(colFilter='callBackDateTime',NOT(sortOrder))}"/>
+                                                                <apex:param name="colFilter" value="callBackDateTime"/>
+                                                                <apex:param name="colClick" assignTo="{!colClicked}" value="true"/>
+                                                            </apex:commandLink>
+                                                        </apex:facet>
+                                                        <!--  <apex:outputText value="{!t.callBackDateTime}" />-->
+                                                        <apex:outputText value="{!t.alternateDateTime}"/>
+                                                    </apex:column>
+                                                    
+                                                 </apex:pageblocktable>
+                                                 </apex:outputPanel>
+                                            </div>
+                                    <div id="taskTableDivWorking" style="height:200px;text-align:center;display:none;margin-top:150px;">
+                                        <apex:image value="/img/loading32.gif" height="16" width="16" style="padding-left:10px;"/>
+                                        <apex:outputText value=" Retrieving information. Please wait."/>
+                                    </div>
+                                            </apex:outputPanel>
+                            </apex:pageBlockSectionItem>
+                            
+                        </apex:pageBlockSection>
+                      </div>
+                  
+              </apex:pageBlock>
+              
+              <!-- DETAILS OF PERSON CLICKED ON IN SELECT PERSON PANEL -->
+              <apex:outputPanel id="personDetailsBlock" layout="none">
+                   
+                    <div id="contactDetails" style="display:none;">
+                        <apex:pageBlock title="Selected Student Details"  rendered="{!NOT(ISNULL(contactId))}" >
+                            <apex:pageblockSection columns="2" collapsible="false" rendered="{!NOT(ISNULL(taskId))}" >
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="First Name" for="firstname"/>
+                                       <apex:outputText value="{!tdetail.firstname}" id="firstname"/>
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Last Name" for="lastname"/>
+                                       <apex:outputText value="{!tdetail.lastname}" id="lastname"/>
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Student ID" for="studentID"/>
+                                       <apex:outputText value="{!tdetail.studentId}" id="studentID"/>
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Cohort" for="cohort"/>
+                                       <apex:outputText value="{!tdetail.cohortName}" id="cohort" />
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Campus" for="campus"/>
+                                       <apex:outputText value="{!tdetail.campus}" id="campus"/>
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Faculty" for="faculty"/>
+                                       <apex:outputText value="{!tdetail.faculty}" id="faculty"/>
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Course" for="course"/>
+                                       <apex:outputText value="{!tdetail.course}" id="course"/>
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Suburb" for="suburb"/>
+                                       <apex:outputText value="{!tdetail.suburb}" id="suburb"/>
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Postcode" for="postcode"/>
+                                       <apex:outputText value="{!tdetail.postcode}" id="postcode"/>
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Phone" for="phone1"/>
+                                       <apex:outputText value="{!tdetail.phone1}" id="phone1"/>
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Home Phone" for="phone2"/>
+                                       <apex:outputText value="{!tdetail.phone2}" id="phone2"/>
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Mobile Phone" for="phone3"/>
+                                       <apex:outputText value="{!tdetail.phone3}" id="phone3"/>
+                                    </apex:pageBlockSectionItem>
+                                    <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="Monash Email" for="personalemail"/>
+                                       <apex:outputText value="{!tdetail.personalEmail}" id="personalemail"/>
+                                    </apex:pageBlockSectionItem>
+                                     <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="First in Family" for="firstinfamily"/>
+                                       <apex:inputCheckbox value="{!tdetail.isFirstInFamily}" disabled="true" id="firstinfamily"/>
+                                       
+                                    </apex:pageBlockSectionItem>
+                                     <apex:pageBlockSectionItem >
+                                       <apex:outputLabel value="International Student" for="internationalstudent"/>
+                                       <apex:inputCheckbox value="{!tdetail.isInternational}" disabled="true" id="internationalstudent"/>
+                                    </apex:pageBlockSectionItem>
+                            </apex:pageblockSection>
+                            
+                            <apex:pageBlockSection columns="1" collapsible="false"/>
+                                <div style="margin-left:1em;font-size:1.2em;"><h2>Call History</h2></div><br/>
+                                
+                                    <div  style="height:300px;overflow-y:scroll;">
+                                    <apex:pageBlockTable value="{!otherRounds}" var="otherRnd">
+                                        <apex:column >
+                                           <apex:facet name="header" >Cohort</apex:facet>
+                                           <apex:outputText value="{!otherRnd.cohort}"/>
+                                        </apex:column>
+                                        <apex:column >
+                                           <apex:facet name="header" >Round</apex:facet>
+                                           <apex:outputText value="{!otherRnd.round.Round_Number__c}"/>
+                                        </apex:column>
+                                        <apex:column >
+                                           <apex:facet name="header" >Call Attempt</apex:facet>
+                                           <apex:outputText value="{!otherRnd.task.Call_Attempt__c}"/>
+                                        </apex:column>
+                                        <apex:column >
+                                           <apex:facet name="header" >Call Outcome</apex:facet>
+                                           <apex:outputText value="{!otherRnd.task.Status}"/>
+                                        </apex:column>
+                                        <apex:column >
+                                           <apex:facet name="header" >Reaction to Call</apex:facet>
+                                           <apex:outputText value="{!otherRnd.task.Reaction_to_Call__c}"/>
+                                        </apex:column>
+                                        <apex:column >
+                                           <apex:facet name="header" >Duration (mins)</apex:facet>
+                                           <apex:outputText value="{!otherRnd.task.Duration_mins__c}"/>
+                                        </apex:column>
+                                            <apex:column >
+                                           <apex:facet name="header" >SSA</apex:facet>
+                                           <apex:outputText value="{!otherRnd.SSAName}"/>
+                                        </apex:column>
+                                        <apex:column >
+                                           <apex:facet name="header" >Comments</apex:facet>
+                                           <apex:outputText value="{!otherRnd.task.Description}"/>
+                                        </apex:column>
+                                         <apex:column >
+                                           <apex:facet name="header" >Date</apex:facet>
+                                           <apex:outputText value="{!otherRnd.createdDate}"/>
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </div>
+                                
+                            
+                            
+                    </apex:pageBlock>
+                 </div>
+                  
+              </apex:outputPanel>
+          </apex:outputPanel>
+        
+      </div>
+      <!--  RIGHT COLUMN -->
+      <div id="rightcol" class="column">
+          <apex:outputPanel id="logCallBlock" layout="block">
+                        
+                        <apex:pageBlock title="Round {!tdetail.roundNumber}" rendered="{!NOT(ISNULL(taskId))}" mode="edit">
+                            <apex:pageMessage rendered="{!NOT(ISBLANK(nextCallbackMessage))}" summary="{!nextCallbackMessage}" severity="info" strength="1" /> 
+                          
+                            <apex:pageMessages id="callLoggingSectionMessages" rendered="{!saveCallClicked}"/>
+                            <apex:pageBlockSection columns="1" collapsible="false" id="callLoggingSection" title="Log a Call">
+                                <apex:pageBlockSectionItem >
+                                    <apex:outputLabel value="Call Status" for="callstatus"/>
+                                      <apex:outputText id="callstatus" value="{!callAttemptNote}"/>
+                                </apex:pageBlockSectionItem>
+                                <apex:pageBlockSectionItem rendered="{!allowToUpdate}">
+                                    <apex:outputLabel value="Call Outcome" for="calloutcome"/>
+                                    <apex:actionStatus id="outcomeStatus" >
+                                        <apex:facet name="start">
+                                            <apex:image value="/img/loading32.gif" height="16" width="16"/>
+                                        </apex:facet>
+                                        <apex:facet name="stop">
+                                            <apex:inputField value="{!currentTask.Status}" id="calloutcome" >
+                                            <apex:actionSupport event="onchange" action="{!resetChildObjects}" rerender="logCallBlock" status="outcomeStatus"/>
+                                            </apex:inputField>
+                                        </apex:facet>
+                                    </apex:actionStatus>
+                                </apex:pageBlockSectionItem>
+                                <apex:pageBlockSectionItem id="reactionSectionItem" rendered="{!currentTask.Status='Completed'}">
+                                   <apex:outputLabel value="Reaction to Call" for="reaction"/>
+                                   <apex:outputPanel >
+                                         <div class="requiredInput">
+                                             <div class="requiredBlock"></div>
+                                               <apex:inputField value="{!currentTask.Reaction_to_Call__c}" id="reaction" />
+                                         </div>
+                                   </apex:outputPanel>     
+                                </apex:pageBlockSectionItem>
+                                <apex:pageBlockSectionItem id="durationSectionItem" rendered="{!currentTask.Status='Completed'}" >
+                                   <apex:outputLabel value="Duration (mins)" for="durations"/>
+                                   <apex:outputPanel >
+                                         <div class="requiredInput">
+                                             <div class="requiredBlock"></div>
+                                               <apex:inputField value="{!currentTask.Duration_mins__c}" id="duration" / >
+                                         </div>
+                                   </apex:outputPanel>            
+                                </apex:pageBlockSectionItem>
+                                <apex:pageBlockSectionItem id="optoutSectionItem" rendered="{!currentTask.Status='Completed'}">
+                                   <apex:outputLabel value="Opt Out" for="optout"/>
+                                   <apex:inputField value="{!currentContact.MonTrack_Opt_Out__c}" id="optout">
+                                   </apex:inputField>
+                                </apex:pageBlockSectionItem>
+                                <apex:pageBlockSectionItem id="optReasonSectionItem" rendered="{!currentTask.Status='Completed'}">
+                                   <apex:outputLabel value="Opt Out Reason" for="optoutreason"/>
+                                   <apex:inputField value="{!currentContact.MonTrack_Opt_Out_Reason__c}" id="optoutreason"  />
+                                </apex:pageBlockSectionItem>
+                                
+                                <apex:pageBlockSectionItem id="callBackDateTimeItem" rendered="{!currentTask.Status='Call Back Requested by Student/Other'}">
+                                   <apex:outputLabel value="Call Back Date/Time" for="callbackdatetime"/>
+                                   <apex:inputField value="{!currentTask.Call_Back_Date_Time__c}" id="callbackdatetime" / >
+                                </apex:pageBlockSectionItem>
+                                <apex:pageBlockSectionItem id="commentSectionItem" rendered="{!allowToUpdate}">
+                                  <apex:outputLabel value="Comments" for="comment"/>
+                                  <apex:inputField value="{!currentTask.Description}" id="comment" style="width: 100%; height: 3em;"/ >
+                                </apex:pageBlockSectionItem>
+                                
+                            </apex:pageBlockSection>
+                            <apex:pageBlockSection title="Call History" columns="1" collapsible="true">
+                                <apex:pageBlockSectionItem >
+                                    <apex:outputLabel value="Call History" for="callHx"/>
+                                    <apex:outputPanel id="callHx" layout="block">
+                                        <apex:repeat value="{!taskHistories}" var="th">
+                                          <p><!-- 
+                                              <apex:outputpanel rendered="{!AND(lastChanceUndo,th.ta.Call_Attempt__c == roundTask.Call_Attempt__c,NOT(ISBLANK(roundTask.Call_Attempt__c)))}" layout="none">
+                                                <apex:actionStatus id="deleteTaskStatus">
+                                                    <apex:facet name="stop">
+                                                        <apex:commandbutton value="Undo" action="{!deleteTask}" immediate="true" status="deleteTaskStatus" rerender="logCallBlock,callHx">
+                                                            <apex:param name="deleteId" value="{!th.ta.ID}"/>
+                                                        </apex:commandbutton>
+                                                        
+                                                    </apex:facet>
+                                                    <apex:facet name="start">
+                                                        <apex:image value="/img/loading32.gif" height="16" width="16" style="padding-left:10px;"/>
+                                                    </apex:facet>
+                                                </apex:actionStatus>
+                                              </apex:outputpanel> -->
+                                              <b>{!th.ta.Call_Attempt__c} attempted at {!th.friendlyCreatedDate} ({!IF(th.daysAgo > 0,TEXT(th.daysAgo) & ' days ago','today')})</b>
+                                              <br />
+                                              {!th.ta.Status} {!IF(th.ta.Status == 'Call Back Requested by Student/Other',' at ' + th.myCallBackDate,'')}
+                                              <br />
+                                              {!IF(th.ta.Description == '','','Comments: ' + th.ta.Description)}
+                                          </p>
+                                          
+                                       </apex:repeat>
+                                       
+                                    </apex:outputPanel> 
+                                </apex:pageBlockSectionItem>
+                                <apex:pageblockSectionItem rendered="{!allowToUpdate}">
+                                    <apex:outputpanel layout="block" style="text-align: center;padding-top:1em;" id="saveCallButton" >
+                                        <apex:actionStatus id="saveCallStatus">
+                                            <apex:facet name="stop">
+                                                <apex:commandButton rendered="{!ISNULL(deleteId)}" value="Save Call" oncomplete="setupBlocks();"  action="{!saveCall}" rerender="logCallBlock,callSelectBlock" status="saveCallStatus" />
+                                            </apex:facet>
+                                            <apex:facet name="start">
+                                                <apex:image value="/img/loading32.gif" height="16" width="16" style="padding-left:10px;"/>
+                                            </apex:facet>
+                                        </apex:actionStatus>
+                                    </apex:outputpanel>
+                                </apex:pageblocksectionitem>
+                                <apex:pageblocksectionitem rendered="{!NOT(ISNULL(deleteId))}">
+                                    <apex:outputpanel layout="block" style="text-align: center;padding-top:1em;" id="undoSaveButton" >
+                                        <apex:actionStatus id="undoSaveStatus">
+                                            <apex:facet name="stop">
+                                                <apex:commandbutton value="Undo Save" action="{!deleteTask}" oncomplete="setupBlocks();" immediate="true" status="undoSaveStatus" rerender="logCallBlock,callSelectBlock"/> 
+                                            </apex:facet>
+                                            <apex:facet name="start">
+                                                <apex:image value="/img/loading32.gif" height="16" width="16" style="padding-left:10px;"/>
+                                            </apex:facet>
+                                        </apex:actionStatus>
+                                    </apex:outputpanel>
+                                </apex:pageblockSectionItem>
+                                    
+                            
+                            </apex:pageBlockSection>          
+                            </apex:pageBlock>
+                            <apex:outputPanel id="topicBlock">
+                                <apex:pageBlock title="Topics" rendered="{!NOT(ISNULL(taskId))}">
+                                    <apex:pageBlockSection rendered="{!allowToUpdate}" columns="1">
+                                       <apex:pageblocksectionitem >
+                                            <apex:outputLabel for="Type" value="Type"/>
+                                            <apex:inputField value="{!topic.Type__c}" id="Type">
+                                                <apex:actionSupport event="onchange" status="saveTopicStatus" rerender="saveTopicButton"/>
+                                            </apex:inputField>
+                                       </apex:pageblocksectionitem>
+                                       <apex:pageblocksectionitem >
+                                            <apex:outputLabel for="Desc" value="Description"/>
+                                            <apex:inputField value="{!topic.Description__c}" id="Desc"/>
+                                       </apex:pageblocksectionitem>
+                                       <apex:pageblocksectionitem >
+                                           <apex:outputpanel layout="block" style="text-align: center;" id="saveTopicButton">
+                                                <apex:actionStatus id="saveTopicStatus">
+                                                    <apex:facet name="stop">
+                                                        <apex:commandButton action="{!saveTopicRecord}"  disabled="{!topic.Type__c == 'Not Applicable'}" status="saveTopicStatus" oncomplete="setupBlocks();" Value="Add Topic" rerender="topicBlock" />
+                                                    </apex:facet>
+                                                    <apex:facet name="start">
+                                                        <apex:image value="/img/loading32.gif" height="16" width="16" style="padding-left:10px;"/>
+                                                    </apex:facet>
+                                                </apex:actionStatus>
+                                            </apex:outputpanel>
+                                        </apex:pageblocksectionitem>
+                                    </apex:pageBlockSection>
+                                    <apex:pageBlockTable value="{!relatedTopic}" var="topic">
+                                       <apex:column >
+                                          <apex:facet name="header" >Type</apex:facet>
+                                          <apex:commandlink value="(del)" oncomplete="setupBlocks();" status="delTopicStatus" action="{!deleteTopicRecord}" rerender="topicBlock" rendered="{!allowToUpdate}">
+                                                <apex:param name="tId" value="{!topic.id}"/>
+                                          </apex:commandlink>
+                                          <apex:outputText value=" " rendered="{!allowToUpdate}"/>
+                                          <apex:actionStatus id="delTopicStatus">
+                                                <apex:facet name="stop"/>
+                                                <apex:facet name="start">
+                                                    <apex:image value="/img/loading32.gif" height="16" width="16" style="padding-left:10px;"/>&nbsp;
+                                                </apex:facet>
+                                          </apex:actionStatus>
+                                          <apex:outputText value=" " rendered="{!allowToUpdate}"/>
+                                          <apex:outputText value="{!topic.Type__c}"/>
+                                       </apex:column>
+                                       <apex:column >
+                                          <apex:facet name="header" >Description</apex:facet>
+                                          <apex:outputText value="{!topic.Description__c}"/>
+                                       </apex:column>
+                                       <apex:column >
+                                          <apex:facet name="header" >SSA Identified</apex:facet>
+                                          <apex:outputText value="{!topic.SSA_Identified__r.Name}"/>
+                                       </apex:column>
+                                    </apex:pageBlockTable>
+                                    
+                                    
+                                </apex:pageBlock>
+                            </apex:outputPanel> 
+                            <apex:outputPanel id="ReferralSection" >
+                                <apex:pageBlock title="Referrals" rendered="{!NOT(ISNULL(taskId))}">
+                                    
+                                    <apex:pageBlockSection rendered="{!allowToUpdate}" columns="1">
+                                       <apex:pageBlockSectionItem >
+                                        <apex:outputLabel for="Referral" value="Referral type"/>
+                                        <apex:inputField value="{!referral.Referral__c}" id="Referral">
+                                            <apex:actionSupport event="onchange" status="saveReferralStatus" rerender="saveReferralButton"/>
+                                        </apex:inputField>
+                                       </apex:pageBlockSectionItem>
+                                       <apex:pageBlockSectionItem >
+                                            <apex:outputpanel layout="block" style="text-align: center;" id="saveReferralButton">
+                                                <apex:actionStatus id="saveReferralStatus">
+                                                    <apex:facet name="start">
+                                                        <apex:image value="/img/loading32.gif" height="16" width="16" style="padding-left:10px;"/>
+                                                    </apex:facet>
+                                                    <apex:facet name="stop">
+                                                        <apex:commandbutton action="{!saveReferralRecord}" disabled="{!referral.Referral__c == 'Not Applicable'}" status="saveReferralStatus" oncomplete="setupBlocks();" Value="Add Referral" rerender="ReferralSection"  />
+                                                    </apex:facet>
+                                                </apex:actionStatus>
+                                            </apex:outputpanel>
+                                       </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                    <apex:pageBlockTable value="{!relatedReferrals}" var="ref1" id="Referraltable">
+                                       <apex:column >
+                                          <apex:facet name="header" >Referrals</apex:facet>
+                                          <apex:commandlink value="(del)" oncomplete="setupBlocks();" status="delReferralStatus" action="{!deleteReferralRecord}" rerender="ReferralSection" rendered="{!allowToUpdate}">
+                                                <apex:param name="rId" value="{!ref1.id}"/>
+                                            </apex:commandlink>
+                                            <apex:outputText value=" " rendered="{!allowToUpdate}"/>
+                                          <apex:actionStatus id="delReferralStatus">
+                                                <apex:facet name="stop"/>
+                                                <apex:facet name="start">
+                                                    <apex:image value="/img/loading32.gif" height="16" width="16" style="padding-left:10px;"/>
+                                                </apex:facet>
+                                          </apex:actionStatus>
+                                          <apex:outputText value="{!ref1.Referral__c}"/>
+                                       </apex:column>
+                                       <apex:column >
+                                          <apex:facet name="header" >Cohort</apex:facet>
+                                          <apex:outputText value="{!ref1.Round__r.Cohort__r.Name}"/>
+                                       </apex:column>
+            
+                                       <apex:column >
+                                          <apex:facet name="header" >Round</apex:facet>
+                                          <apex:outputText value="{!ref1.Round__r.Round_Number__c}"/>
+                                       </apex:column>
+                                       <apex:column >
+                                          <apex:facet name="header" >SSA Identified</apex:facet>
+                                          <apex:outputText value="{!ref1.SSA_Identified__r.Name}"/>
+                                       </apex:column>
+                                    </apex:pageBlockTable>
+                                 </apex:pageBlock>
+                            </apex:outputPanel>
+                            
+                        
+                    
+            </apex:outputPanel>
+      </div> <!-- end right column -->
+      
+    </apex:form>
+  </div> <!-- end container -->
+  
+  <script>
+      
+      // add a hover class and listeners to left col titles so users know to click them..
+      function setupBlocks(){
+          var els = document.getElementById('leftcol').getElementsByTagName('h2');
+          for(var i=0; i<els.length; i++){
+              els[i].className += " hoverClass";
+              var label = els[i].innerHTML;
+              if(label == 'Confirm User Details'){
+                els[i].addEventListener("click",function(){
+                    accordion('user');
+                });
+              } 
+              if(label == 'Select who to call'){
+                els[i].addEventListener("click",function(){
+                    clearContextStudent();accordion('call');
+                });
+              }
+              
+          }
+      }
+      
+      // simple js to deliver accordion effect on left column of page
+      function accordion(evt){
+          var spd = 'slow';
+          console.log('accordion click event');
+          if(evt == 'user'){
+              j$("#userContent").slideDown(spd);
+              j$("#callContent").slideUp(spd);
+              j$("#contactDetails").slideUp(spd);
+          } else
+          if(evt == 'call'){
+              j$("#callContent").slideDown(spd);
+              j$("#userContent").slideUp(spd);
+              j$("#contactDetails").slideUp(spd);
+              j$("#rightcol").hide();
+              
+              
+          } else 
+          if(evt == 'details'){
+              j$("#callContent").slideUp(spd);
+              j$("#userContent").slideUp(spd);
+              j$("#contactDetails").slideDown(spd);
+          }
+          setupBlocks();
+          
+      }
+      (function(){
+        j$ = jQuery.noConflict();
+        setupBlocks(); // required to place click listeners on the pageblock titles. Redone after each UI full or part refresh.
+      })();
+      
+      // table row click processing - this controls the UI response to a row in student list table being clicked, and calls apex:actionFunction
+      
+      function taskRowClick(row){
+        console.log('clicked',row);
+        j$(row).siblings().removeClass('selectedRow');
+        j$(row).addClass('selectedRow');
+        var taskId = j$(row).find(".taskId").html();
+        var contactId = j$(row).find(".contactId").html();
+        taskTableStatus('start');
+        taskClicked(taskId,contactId); // pass row attributes to page controller
+        
+      }
+      
+      // provides a 'please wait' status panel, as embedding pageblocktable in actionstatus component got interesting...
+      function taskTableStatus(st){
+        if(st == 'start'){
+            j$("#taskTableDiv").hide();
+            j$("#taskTableDivWorking").show();
+        }
+        if(st == 'stop'){
+            j$("#taskTableDiv").show();
+            j$("#taskTableDivWorking").hide();
+            accordion('details');
+            j$("#rightcol").show(); // we'll allow 2 seconds for refresh to complete prior to displaying it
+            setupBlocks();
+                
+        }
+      }
+      
+  </script>
+</apex:page>

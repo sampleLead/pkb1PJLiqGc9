@@ -1,0 +1,200 @@
+36.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:32:33.0 (499444)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:32:33.0 (565464)|EXECUTION_STARTED
+09:32:33.0 (569926)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000008UMlr|TaskServices_Test.testMapping
+09:32:33.0 (3241654)|SOQL_EXECUTE_BEGIN|[11]|Aggregations:0|SELECT Id, Contact_field_API_name__c, Task_field_API_name__c, Task_Record_Type__c FROM Contact_to_Task_Field_Mapping__mdt WHERE (Task_Record_Type__c = 'Montrack' AND Contact_field_API_name__c = 'LastName')
+09:32:33.0 (7154741)|SOQL_EXECUTE_END|[11]|Rows:1
+09:32:33.0 (12081402)|SYSTEM_MODE_ENTER|false
+09:32:33.0 (12090974)|SYSTEM_MODE_EXIT|false
+09:32:33.0 (12212070)|SYSTEM_MODE_ENTER|false
+09:32:33.0 (15147506)|SYSTEM_MODE_EXIT|false
+09:32:33.0 (15213396)|DML_BEGIN|[21]|Op:Insert|Type:Contact|Rows:1
+09:32:33.0 (82765344)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q42t|ContactTrigger on Contact trigger event BeforeInsert for [new]
+09:32:33.0 (86847060)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:32:33.0 (98548920)|USER_DEBUG|[25]|DEBUG|index =:005953229
+09:32:33.0 (102893175)|SYSTEM_MODE_ENTER|false
+09:32:33.0 (102902617)|SYSTEM_MODE_EXIT|false
+09:32:33.0 (117214549)|DML_BEGIN|[251]|Op:Insert|Type:Account|Rows:1
+09:32:33.0 (191289400)|DML_END|[251]
+09:32:33.0 (192197001)|SYSTEM_MODE_ENTER|false
+09:32:33.0 (192369734)|SYSTEM_MODE_EXIT|false
+09:32:33.194 (194321294)|CUMULATIVE_LIMIT_USAGE
+09:32:33.194 (194321294)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:32:33.194 (194321294)|CUMULATIVE_LIMIT_USAGE_END
+
+09:32:33.0 (197639935)|CODE_UNIT_FINISHED|ContactTrigger on Contact trigger event BeforeInsert for [new]
+09:32:33.0 (271888119)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Contact
+09:32:33.0 (302865769)|WF_RULE_EVAL_BEGIN|Workflow
+09:32:33.0 (302927934)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09I2]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:32:33.0 (307845618)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:32:33.0 (307903288)|WF_RULE_EVAL_VALUE|
+09:32:33.0 (307907844)|WF_CRITERIA_END|false
+09:32:33.0 (307924645)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09I2]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:32:33.0 (308264321)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:005953229
+09:32:33.0 (308271615)|WF_CRITERIA_END|false
+09:32:33.0 (308288684)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09I2]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:32:33.0 (308452194)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:005953229
+09:32:33.0 (308456860)|WF_CRITERIA_END|true
+09:32:33.0 (309407411)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09I2]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:32:33.0 (309476375)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:32:33.0 (318582916)|WF_RULE_EVAL_VALUE|0
+09:32:33.0 (318589145)|WF_CRITERIA_END|false
+09:32:33.0 (318612547)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09I2]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:32:33.0 (318710042)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:32:33.0 (318720322)|WF_RULE_EVAL_VALUE|0
+09:32:33.0 (318722882)|WF_CRITERIA_END|false
+09:32:33.0 (318735271)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09I2]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:32:33.0 (318789438)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:32:33.0 (318903618)|WF_RULE_EVAL_VALUE|0
+09:32:33.0 (318907414)|WF_CRITERIA_END|true
+09:32:33.0 (318935011)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:32:33.0 (319211903)|WF_ACTION| Field Update: 2;
+09:32:33.0 (319216898)|WF_RULE_EVAL_END
+09:32:33.0 (319303508)|WF_ACTIONS_END| Field Update: 2;
+09:32:33.0 (319313255)|CODE_UNIT_FINISHED|Workflow:Contact
+09:32:33.0 (320724458)|DML_END|[21]
+09:32:33.0 (320968633)|SOQL_EXECUTE_BEGIN|[23]|Aggregations:0|SELECT id FROM RecordType WHERE (SObjectType = 'Task' AND DeveloperName = 'Montrack') LIMIT 1
+09:32:33.0 (343150597)|SOQL_EXECUTE_END|[23]|Rows:1
+09:32:33.0 (346389698)|DML_BEGIN|[29]|Op:Insert|Type:Task|Rows:1
+09:32:33.0 (359039016)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QLNr|TaskTrigger on Task trigger event BeforeInsert for [new]
+09:32:33.0 (359464857)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:32:33.0 (366747693)|SOQL_EXECUTE_BEGIN|[41]|Aggregations:0|SELECT Id, Contact_field_API_name__c, Task_field_API_name__c, Task_Record_Type__c FROM Contact_to_Task_Field_Mapping__mdt LIMIT 400
+09:32:33.0 (368527419)|SOQL_EXECUTE_END|[41]|Rows:14
+09:32:33.0 (368857537)|SOQL_EXECUTE_BEGIN|[49]|Aggregations:0|SELECT id, developerName FROM RecordType 
+09:32:33.0 (372032467)|SOQL_EXECUTE_END|[49]|Rows:3
+09:32:33.0 (373417288)|SOQL_EXECUTE_BEGIN|[63]|Aggregations:0|select Course_Name__c,Faculty__c,First_in_Family__c,HomePhone,International_Student__c,MobilePhone,MonTrack_Opt_Out__c,MonTrack_Opt_Out_Reason__c,Person_ID__c,Phone,Campus__c,Course_code__c,FirstName,LastName,Id from contact 
+09:32:33.0 (377133588)|SOQL_EXECUTE_END|[63]|Rows:1
+09:32:33.379 (379026104)|CUMULATIVE_LIMIT_USAGE
+09:32:33.379 (379026104)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 20 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 71 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:32:33.379 (379026104)|CUMULATIVE_LIMIT_USAGE_END
+
+09:32:33.0 (380866709)|CODE_UNIT_FINISHED|TaskTrigger on Task trigger event BeforeInsert for [new]
+09:32:33.0 (428271539)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QLNr|TaskTrigger on Task trigger event AfterInsert for [00Tp0000003qVoX]
+09:32:33.0 (428672076)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:32:33.0 (435064190)|SOQL_EXECUTE_BEGIN|[428]|Aggregations:0|SELECT id, Latest_Inbound_Email__c FROM Case WHERE (id = :tmpVar1 AND Latest_Inbound_Email__c != NULL AND isClosed = FALSE)
+09:32:33.0 (441668601)|SOQL_EXECUTE_END|[428]|Rows:0
+09:32:33.441 (441796016)|CUMULATIVE_LIMIT_USAGE
+09:32:33.441 (441796016)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 20 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 71 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:32:33.441 (441796016)|CUMULATIVE_LIMIT_USAGE_END
+
+09:32:33.0 (443341747)|CODE_UNIT_FINISHED|TaskTrigger on Task trigger event AfterInsert for [00Tp0000003qVoX]
+09:32:33.0 (443933994)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Task
+09:32:33.0 (452911537)|WF_RULE_EVAL_BEGIN|Workflow
+09:32:33.0 (452952455)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVoX]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:32:33.0 (454918574)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:32:33.0 (454950189)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:32:33.0 (454954179)|WF_CRITERIA_END|false
+09:32:33.0 (454966138)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVoX]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:32:33.0 (455013060)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:32:33.0 (455035929)|WF_RULE_EVAL_VALUE|Not Started
+09:32:33.0 (455038588)|WF_CRITERIA_END|false
+09:32:33.0 (455052648)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:32:33.0 (455058223)|WF_ACTION| None
+09:32:33.0 (455060243)|WF_RULE_EVAL_END
+09:32:33.0 (455114275)|WF_ACTIONS_END| None
+09:32:33.0 (455122982)|CODE_UNIT_FINISHED|Workflow:Task
+09:32:33.0 (456919598)|DML_END|[29]
+09:32:33.0 (457217812)|SOQL_EXECUTE_BEGIN|[31]|Aggregations:0|SELECT last_name__c FROM task WHERE id = :tmpVar1 LIMIT 1
+09:32:33.0 (475941063)|SOQL_EXECUTE_END|[31]|Rows:1
+09:32:33.0 (476800286)|DML_BEGIN|[22]|Op:Update|Type:Task|Rows:1
+09:32:33.0 (486265410)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QLNr|TaskTrigger on Task trigger event BeforeUpdate for [00Tp0000003qVoX]
+09:32:33.0 (486730237)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:32:33.0 (487740444)|SOQL_EXECUTE_BEGIN|[41]|Aggregations:0|SELECT Id, Contact_field_API_name__c, Task_field_API_name__c, Task_Record_Type__c FROM Contact_to_Task_Field_Mapping__mdt LIMIT 400
+09:32:33.0 (489938297)|SOQL_EXECUTE_END|[41]|Rows:14
+09:32:33.0 (490421997)|SOQL_EXECUTE_BEGIN|[49]|Aggregations:0|SELECT id, developerName FROM RecordType 
+09:32:33.0 (494232641)|SOQL_EXECUTE_END|[49]|Rows:3
+09:32:33.0 (495441061)|SOQL_EXECUTE_BEGIN|[63]|Aggregations:0|select Course_Name__c,Faculty__c,First_in_Family__c,HomePhone,International_Student__c,MobilePhone,MonTrack_Opt_Out__c,MonTrack_Opt_Out_Reason__c,Person_ID__c,Phone,Campus__c,Course_code__c,FirstName,LastName,Id from contact 
+09:32:33.0 (499593248)|SOQL_EXECUTE_END|[63]|Rows:1
+09:32:33.502 (502424459)|CUMULATIVE_LIMIT_USAGE
+09:32:33.502 (502424459)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 7 out of 100
+  Number of query rows: 39 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 71 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:32:33.502 (502424459)|CUMULATIVE_LIMIT_USAGE_END
+
+09:32:33.0 (504346859)|CODE_UNIT_FINISHED|TaskTrigger on Task trigger event BeforeUpdate for [00Tp0000003qVoX]
+09:32:33.0 (524105078)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Task
+09:32:33.0 (529954367)|WF_RULE_EVAL_BEGIN|Workflow
+09:32:33.0 (529988995)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVoX]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:32:33.0 (529995943)|WF_RULE_NOT_EVALUATED
+09:32:33.0 (530002100)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVoX]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:32:33.0 (530074069)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:32:33.0 (530088513)|WF_RULE_EVAL_VALUE|Not Started
+09:32:33.0 (530091904)|WF_CRITERIA_END|false
+09:32:33.0 (530105731)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:32:33.0 (530115305)|WF_ACTION| None
+09:32:33.0 (530117672)|WF_RULE_EVAL_END
+09:32:33.0 (530166765)|WF_ACTIONS_END| None
+09:32:33.0 (530174591)|CODE_UNIT_FINISHED|Workflow:Task
+09:32:33.0 (530423925)|DML_END|[22]
+09:32:33.0 (530612782)|DML_BEGIN|[30]|Op:Delete|Type:Task|Rows:1
+09:32:33.0 (753913153)|DML_END|[30]
+09:32:33.754 (754140249)|CUMULATIVE_LIMIT_USAGE
+09:32:33.754 (754140249)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 7 out of 100
+  Number of query rows: 39 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 5 out of 10000
+  Maximum CPU time: 71 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:32:33.754 (754140249)|CUMULATIVE_LIMIT_USAGE_END
+
+09:32:33.0 (754210987)|CODE_UNIT_FINISHED|TaskServices_Test.testMapping
+09:32:33.0 (755891575)|EXECUTION_FINISHED

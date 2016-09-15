@@ -1,0 +1,1047 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 104
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "console_OffSystemEmail_CE",
+            "parameters": [
+                {
+                    "name": "controller",
+                    "type": "StandardController"
+                }
+            ],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01p28000007aWDlAAM",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000007aWDlAAM",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 33
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "strDate",
+            "parameters": [
+                {
+                    "name": "dt",
+                    "type": "Datetime"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 64
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "dummyAction",
+            "parameters": [],
+            "references": [],
+            "returnType": "PageReference",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 70
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "refreshCaseInfo",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 118
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "prepareAndSendEmail",
+            "parameters": [
+                {
+                    "name": "htmlBody",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 186
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "sendEmail",
+            "parameters": [],
+            "references": [],
+            "returnType": "PageReference",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 218
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "sendPreviewEmail",
+            "parameters": [],
+            "references": [],
+            "returnType": "PageReference",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 234
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "retrieveContactFields",
+            "parameters": [
+                {
+                    "name": "contactId",
+                    "type": "Id"
+                }
+            ],
+            "references": [],
+            "returnType": "Contact",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 248
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "retrieveCaseFields",
+            "parameters": [
+                {
+                    "name": "caseId",
+                    "type": "Id"
+                }
+            ],
+            "references": [],
+            "returnType": "Case",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 259
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "emailHeader",
+            "parameters": [],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 268
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "emailCaseDetails",
+            "parameters": [],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 286
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "emailContactDetails",
+            "parameters": [],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 313
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "sectionheader",
+            "parameters": [
+                {
+                    "name": "sectionTitle",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 320
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "emailHistory",
+            "parameters": [],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 347
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "activityDetails",
+            "parameters": [],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 365
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "emailBody",
+            "parameters": [],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        }
+    ],
+    "name": "Console_OffSystemEmail_CE",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 11
+            },
+            "modifiers": [
+                "public",
+                "final"
+            ],
+            "name": "c",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 12
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "cse",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 13
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "caseId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 14
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "feedbackMsg",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 15
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "ToEmailAddress",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 16
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "TASK_SUBJECT_EMAILREFSENT",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 17
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "caseDetails",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 18
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "contactDetails",
+            "references": [],
+            "type": "Contact"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 19
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "msg",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 20
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "mode",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 21
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "attachmentParentIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 22
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "attachments",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 23
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "previewMode",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 25
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "params",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 48
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "facultyOptions",
+            "references": [],
+            "type": "LIST"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 9
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "Console_OffSystemEmail_CE",
+        "references": [],
+        "type": "Console_OffSystemEmail_CE"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 33
+            },
+            "modifiers": [],
+            "name": "dt",
+            "references": [],
+            "type": "Datetime"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 35
+            },
+            "modifiers": [],
+            "name": "localdt",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 50
+            },
+            "modifiers": [],
+            "name": "options",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 52
+            },
+            "modifiers": [],
+            "name": "prefix",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 53
+            },
+            "modifiers": [],
+            "name": "labelPrefix",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 54
+            },
+            "modifiers": [],
+            "name": "addr",
+            "references": [],
+            "type": "Off_System_Email_Address__mdt"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 71
+            },
+            "modifiers": [],
+            "name": "cId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 96
+            },
+            "modifiers": [],
+            "name": "em",
+            "references": [],
+            "type": "EmailMessage"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 97
+            },
+            "modifiers": [],
+            "name": "a",
+            "references": [],
+            "type": "Attachment"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 67,
+                "line": 104
+            },
+            "modifiers": [],
+            "name": "controller",
+            "references": [],
+            "type": "StandardController"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 118
+            },
+            "modifiers": [],
+            "name": "htmlBody",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 120
+            },
+            "modifiers": [],
+            "name": "ids",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 121
+            },
+            "modifiers": [],
+            "name": "sub",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 122
+            },
+            "modifiers": [],
+            "name": "plainTxt",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 124
+            },
+            "modifiers": [],
+            "name": "semail",
+            "references": [],
+            "type": "SingleEmailMessage"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 132
+            },
+            "modifiers": [],
+            "name": "emailMsg",
+            "references": [],
+            "type": "EmailMessage"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 143
+            },
+            "modifiers": [],
+            "name": "attSet",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 145
+            },
+            "modifiers": [],
+            "name": "files",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 147
+            },
+            "modifiers": [],
+            "name": "aid",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 148
+            },
+            "modifiers": [],
+            "name": "a",
+            "references": [],
+            "type": "Attachment"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 149
+            },
+            "modifiers": [],
+            "name": "efa",
+            "references": [],
+            "type": "EmailFileAttachment"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 164
+            },
+            "modifiers": [],
+            "name": "clonedAttachments",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 165
+            },
+            "modifiers": [],
+            "name": "a",
+            "references": [],
+            "type": "Attachment"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 166
+            },
+            "modifiers": [],
+            "name": "att",
+            "references": [],
+            "type": "Attachment"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 193
+            },
+            "modifiers": [],
+            "name": "contactLinked",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 234
+            },
+            "modifiers": [],
+            "name": "contactId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 235
+            },
+            "modifiers": [],
+            "name": "queryString",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 236
+            },
+            "modifiers": [],
+            "name": "fld",
+            "references": [],
+            "type": "FieldSetMember"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 248
+            },
+            "modifiers": [],
+            "name": "caseId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 249
+            },
+            "modifiers": [],
+            "name": "queryString",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 250
+            },
+            "modifiers": [],
+            "name": "fld",
+            "references": [],
+            "type": "FieldSetMember"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 260
+            },
+            "modifiers": [],
+            "name": "msg",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 269
+            },
+            "modifiers": [],
+            "name": "details",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 271
+            },
+            "modifiers": [],
+            "name": "fld",
+            "references": [],
+            "type": "FieldSetMember"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 272
+            },
+            "modifiers": [],
+            "name": "typ",
+            "references": [],
+            "type": "DisplayType"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 275
+            },
+            "modifiers": [],
+            "name": "val",
+            "references": [],
+            "type": "Object"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 287
+            },
+            "modifiers": [],
+            "name": "details",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 288
+            },
+            "modifiers": [],
+            "name": "contId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 39,
+                "line": 292
+            },
+            "modifiers": [],
+            "name": "fld",
+            "references": [],
+            "type": "FieldSetMember"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 294
+            },
+            "modifiers": [],
+            "name": "typ",
+            "references": [],
+            "type": "DisplayType"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 297
+            },
+            "modifiers": [],
+            "name": "val",
+            "references": [],
+            "type": "Object"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 41,
+                "line": 313
+            },
+            "modifiers": [],
+            "name": "sectionTitle",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 314
+            },
+            "modifiers": [],
+            "name": "hdr",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 321
+            },
+            "modifiers": [],
+            "name": "hx",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 322
+            },
+            "modifiers": [],
+            "name": "em",
+            "references": [],
+            "type": "EmailMessage"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 348
+            },
+            "modifiers": [],
+            "name": "hx",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 350
+            },
+            "modifiers": [],
+            "name": "act",
+            "references": [],
+            "type": "Task"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 352
+            },
+            "modifiers": [],
+            "name": "activityDate",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 355
+            },
+            "modifiers": [],
+            "name": "descriptx",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 368
+            },
+            "modifiers": [],
+            "name": "content",
+            "references": [],
+            "type": "String"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000006ele0AAA",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000006ele0AAA",
+    "methods": [],
+    "name": "AccountServices",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 12
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "ACCOUNT_INDIVIDUAL_TYPE",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 13
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "ACCOUNT_ORGANISATION_TYPE",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 10
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "AccountServices",
+        "references": [],
+        "type": "AccountServices"
+    },
+    "variables": []
+}

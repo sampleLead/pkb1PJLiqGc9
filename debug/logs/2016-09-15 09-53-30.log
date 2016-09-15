@@ -1,0 +1,25 @@
+34.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:53:27.1 (1125142)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:53:27.1 (1214958)|EXECUTION_STARTED
+09:53:27.1 (1220866)|CODE_UNIT_STARTED|[EXTERNAL]|01pp0000000EVTI|AccountServicesTest.test_constants
+09:53:27.1 (11047526)|SYSTEM_MODE_ENTER|false
+09:53:27.1 (11062530)|SYSTEM_MODE_EXIT|false
+09:53:27.11 (11218023)|CUMULATIVE_LIMIT_USAGE
+09:53:27.11 (11218023)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:53:27.11 (11218023)|CUMULATIVE_LIMIT_USAGE_END
+
+09:53:27.1 (11277273)|CODE_UNIT_FINISHED|AccountServicesTest.test_constants
+09:53:27.1 (13112579)|EXECUTION_FINISHED

@@ -1,0 +1,69 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 14
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "QFlowContact_CC",
+            "parameters": [],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01p28000007cHVMAA2",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000007cHVMAA2",
+    "methods": [],
+    "name": "QFlowContact_CC",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 12
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "cid",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 10
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "QFlowContact_CC",
+        "references": [],
+        "type": "QFlowContact_CC"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 18
+            },
+            "modifiers": [],
+            "name": "studentId",
+            "references": [],
+            "type": "String"
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+<!-- links page for the Monash Connect console -->
+
+<apex:page applyBodyTag="false"
+           applyHtmlTag="false"
+           showHeader="false"
+           title="Useful links"
+           standardController="Case">
+    
+    
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0122,'/assets/styles/salesforce-lightning-design-system-ltng.css')}"/>
+    <apex:includeScript value="/support/console/25.0/integration.js"/>
+    <apex:includeScript value="{!$Resource.jquery}"/>
+    
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <body>
+            <div class="slds">
+               
+      <ul>
+          <li >
+          <a href ="{!URLFOR($Resource.QRG)}" target="_blank">
+            <p class="slds-truncate">Quick Reference Guide</p>
+          </a>
+        </li>
+        <li >
+          <a href ="https://www.study.monash/courses/find-a-course" target="_blank">
+            <p class="slds-truncate">Find a course</p>
+          </a>
+        </li>
+        <li >
+          <a href ="https://www.monash.edu/pubs/2016handbooks/" target="_blank">
+            <p class="slds-truncate">2016 Course Handbook</p>
+          </a>
+        </li>
+        <li >
+          <a href ="http://intranet.monash.edu.au/student-services/connect/" target="_blank">
+            <p class="slds-truncate">Monash Connect Intranet</p>
+          </a>
+        </li>
+        <li >
+          <a href ="http://www.monash.edu/students/dates/principal-dates.html" target="_blank">
+            <p class="slds-truncate">Monash Key principal dates</p>
+          </a>
+        </li>
+        <li >
+          <a href ="http://www.vtac.edu.au/" target="_blank">
+            <p class="slds-truncate">VTAC Homepage</p>
+          </a>
+        </li>
+        <li >
+          <a href ="http://monash-refunds-prod.appspot.com/dashboard" target="_blank">
+            <p class="slds-truncate">Refunds dashboard</p>
+          </a>
+        </li>
+        <li >
+          <a href ="http://intranet.monash.edu.au/student-services/askmonash/enquiry-submission/" target="_blank">
+            <p class="slds-truncate">Manual ask.monash enquiry</p>
+          </a>
+        </li>
+        <li >
+          <a href ="https://ap01.alma.exlibrisgroup.com/mng/login?institute=61MONASH_AU" target="_blank">
+            <p class="slds-truncate">Library program ALMA</p>
+          </a>
+        </li>
+        <li >
+          <a href ="https://prisms.education.gov.au/Logon/Logon.aspx" target="_blank">
+            <p class="slds-truncate">PRISMS</p>
+          </a>
+        </li>
+        <li >
+          <a href ="https://www.monash.edu/graduations/ceremonies" target="_blank">
+            <p class="slds-truncate">Graduation ceremonies and dates</p>
+          </a>
+        </li>
+        <li >
+          <a href ="http://www.monash.edu/connect/forms" target="_blank">
+            <p class="slds-truncate">Student forms and closing dates</p>
+          </a>
+        </li>
+        <!-- ADD MORE LINKS HERE -->
+      </ul>
+     
+            
+            </div>
+            
+        </body>
+    </html>
+</apex:page>

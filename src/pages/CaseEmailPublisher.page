@@ -1,0 +1,7 @@
+<apex:page standardController="Case" >
+  <apex:emailPublisher entityId="{!case.id}" 
+      fromVisibility="selectable"
+      toVisibility="readOnly"
+      toAddresses="{!case.contact.email}"
+      emailBody=""/>
+</apex:page>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>36.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>surfaced as a custom component in the contact detail layout, to retrieve person notes relating to context contact record.</description>
+    <label>Console_ContactNotesPanel</label>
+</ApexPage>

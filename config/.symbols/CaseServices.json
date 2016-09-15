@@ -1,0 +1,2137 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000006ele3AAA",
+    "innerClasses": [
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 21,
+                        "line": 39
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "performValidation",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 18,
+                    "line": 38
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "performValidation",
+                "references": [],
+                "type": "performValidation"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 18,
+                        "line": 41
+                    },
+                    "modifiers": [],
+                    "name": "cases",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 27,
+                        "line": 42
+                    },
+                    "modifiers": [],
+                    "name": "cse",
+                    "references": [],
+                    "type": "Case"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 75
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "copyCaseFieldsOverToLinkedContact",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 74
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "copyCaseFieldsOverToLinkedContact",
+                "references": [],
+                "type": "copyCaseFieldsOverToLinkedContact"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 77
+                    },
+                    "modifiers": [],
+                    "name": "caseMap",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 78
+                    },
+                    "modifiers": [],
+                    "name": "contactUpdates",
+                    "references": [],
+                    "type": "LIST"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 148
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "addCourseInterests",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 147
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "addCourseInterests",
+                "references": [],
+                "type": "addCourseInterests"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 44,
+                        "line": 149
+                    },
+                    "modifiers": [],
+                    "name": "interests",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 150
+                    },
+                    "modifiers": [],
+                    "name": "caseIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 152
+                    },
+                    "modifiers": [],
+                    "name": "cse",
+                    "references": [],
+                    "type": "Case"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 165
+                    },
+                    "modifiers": [],
+                    "name": "managingFaculty",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 166
+                    },
+                    "modifiers": [],
+                    "name": "facultyCode",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 167
+                    },
+                    "modifiers": [],
+                    "name": "suppliedInterest",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 168
+                    },
+                    "modifiers": [],
+                    "name": "commencementYear",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 31,
+                        "line": 169
+                    },
+                    "modifiers": [],
+                    "name": "nameOfInstitution",
+                    "references": [],
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 238
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "maintainBusinessHours",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 237
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "maintainBusinessHours",
+                "references": [],
+                "type": "maintainBusinessHours"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 41,
+                        "line": 243
+                    },
+                    "modifiers": [],
+                    "name": "status",
+                    "references": [],
+                    "type": "BH_Stop_Status__mdt"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 247
+                    },
+                    "modifiers": [],
+                    "name": "caseIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 44,
+                        "line": 248
+                    },
+                    "modifiers": [],
+                    "name": "hours",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 252
+                    },
+                    "modifiers": [],
+                    "name": "newCases",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 253
+                    },
+                    "modifiers": [],
+                    "name": "oldCases",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 24,
+                        "line": 255
+                    },
+                    "modifiers": [],
+                    "name": "cid",
+                    "references": [],
+                    "type": "Id"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 256
+                    },
+                    "modifiers": [],
+                    "name": "newc",
+                    "references": [],
+                    "type": "Case"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 257
+                    },
+                    "modifiers": [],
+                    "name": "oldc",
+                    "references": [],
+                    "type": "Case"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 39,
+                        "line": 267
+                    },
+                    "modifiers": [],
+                    "name": "qh",
+                    "references": [],
+                    "type": "queueHours__c"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 281
+                    },
+                    "modifiers": [],
+                    "name": "cid",
+                    "references": [],
+                    "type": "Id"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 283
+                    },
+                    "modifiers": [],
+                    "name": "newc",
+                    "references": [],
+                    "type": "Case"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 284
+                    },
+                    "modifiers": [],
+                    "name": "oldc",
+                    "references": [],
+                    "type": "Case"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 32,
+                        "line": 285
+                    },
+                    "modifiers": [],
+                    "name": "newKey",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 32,
+                        "line": 286
+                    },
+                    "modifiers": [],
+                    "name": "oldKey",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 39,
+                        "line": 289
+                    },
+                    "modifiers": [],
+                    "name": "newOwnerQH",
+                    "references": [],
+                    "type": "queueHours__c"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 39,
+                        "line": 290
+                    },
+                    "modifiers": [],
+                    "name": "oldOwnerQH",
+                    "references": [],
+                    "type": "queueHours__c"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 336
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "setupBusinessHours",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 335
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "setupBusinessHours",
+                "references": [],
+                "type": "setupBusinessHours"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 37,
+                        "line": 337
+                    },
+                    "modifiers": [],
+                    "name": "hours",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 24,
+                        "line": 339
+                    },
+                    "modifiers": [],
+                    "name": "recTypeName",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 340
+                    },
+                    "modifiers": [],
+                    "name": "cse",
+                    "references": [],
+                    "type": "Case"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 355
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "mapCourseCode",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 354
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "mapCourseCode",
+                "references": [],
+                "type": "mapCourseCode"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 356
+                    },
+                    "modifiers": [],
+                    "name": "courses",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 357
+                    },
+                    "modifiers": [],
+                    "name": "cse",
+                    "references": [],
+                    "type": "Case"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 43,
+                        "line": 362
+                    },
+                    "modifiers": [],
+                    "name": "courseInfo",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 35,
+                        "line": 363
+                    },
+                    "modifiers": [],
+                    "name": "course",
+                    "references": [],
+                    "type": "Course__c"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 32,
+                        "line": 368
+                    },
+                    "modifiers": [],
+                    "name": "courseCode",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 32,
+                        "line": 369
+                    },
+                    "modifiers": [],
+                    "name": "specialisation",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 376
+                    },
+                    "modifiers": [],
+                    "name": "cse",
+                    "references": [],
+                    "type": "Case"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 36,
+                        "line": 380
+                    },
+                    "modifiers": [],
+                    "name": "spec",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 36,
+                        "line": 381
+                    },
+                    "modifiers": [],
+                    "name": "course",
+                    "references": [],
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 401
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "manageReopenedDateTime",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 400
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "manageReopenedDateTime",
+                "references": [],
+                "type": "manageReopenedDateTime"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 402
+                    },
+                    "modifiers": [],
+                    "name": "oldCases",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 403
+                    },
+                    "modifiers": [],
+                    "name": "newCases",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 404
+                    },
+                    "modifiers": [],
+                    "name": "cases",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 24,
+                        "line": 405
+                    },
+                    "modifiers": [],
+                    "name": "cid",
+                    "references": [],
+                    "type": "Id"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 424
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "clearLastEmailReceived",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 423
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "clearLastEmailReceived",
+                "references": [],
+                "type": "clearLastEmailReceived"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 425
+                    },
+                    "modifiers": [],
+                    "name": "caseIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 426
+                    },
+                    "modifiers": [],
+                    "name": "tsk",
+                    "references": [],
+                    "type": "Task"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 428
+                    },
+                    "modifiers": [],
+                    "name": "cases",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 435
+                    },
+                    "modifiers": [],
+                    "name": "cse",
+                    "references": [],
+                    "type": "Case"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 452
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "checkDefaultsSet",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 451
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "checkDefaultsSet",
+                "references": [],
+                "type": "checkDefaultsSet"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 453
+                    },
+                    "modifiers": [],
+                    "name": "userIds",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 22,
+                        "line": 454
+                    },
+                    "modifiers": [],
+                    "name": "usr",
+                    "references": [],
+                    "type": "User"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 458
+                    },
+                    "modifiers": [],
+                    "name": "cse",
+                    "references": [],
+                    "type": "Case"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 467
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "maintainLastQueueOwner",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 466
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "maintainLastQueueOwner",
+                "references": [],
+                "type": "maintainLastQueueOwner"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 468
+                    },
+                    "modifiers": [],
+                    "name": "cse",
+                    "references": [],
+                    "type": "Case"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 483
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "checkForAndLinkToContacts",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 481
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "checkForAndLinkToContacts",
+                "references": [],
+                "type": "checkForAndLinkToContacts"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 485
+                    },
+                    "modifiers": [],
+                    "name": "matchedCases",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 486
+                    },
+                    "modifiers": [],
+                    "name": "emailAddresses",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 35,
+                        "line": 487
+                    },
+                    "modifiers": [],
+                    "name": "casesMap",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 492
+                    },
+                    "modifiers": [],
+                    "name": "facultyEmailAddresses",
+                    "references": [],
+                    "type": "Set"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 51,
+                        "line": 493
+                    },
+                    "modifiers": [],
+                    "name": "addr",
+                    "references": [],
+                    "type": "Off_System_Email_Address__mdt"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 27,
+                        "line": 499
+                    },
+                    "modifiers": [],
+                    "name": "caseObj",
+                    "references": [],
+                    "type": "Case"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 38,
+                        "line": 512
+                    },
+                    "modifiers": [],
+                    "name": "existingContacts",
+                    "references": [],
+                    "type": "Map"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 33,
+                        "line": 514
+                    },
+                    "modifiers": [],
+                    "name": "existingContact",
+                    "references": [],
+                    "type": "Contact"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 534
+                    },
+                    "modifiers": [],
+                    "name": "caseObj",
+                    "references": [],
+                    "type": "Case"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 44,
+                        "line": 566
+                    },
+                    "modifiers": [],
+                    "name": "emailAddr",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 57,
+                        "line": 567
+                    },
+                    "modifiers": [],
+                    "name": "soslContacts",
+                    "references": [],
+                    "type": "LIST"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 598
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "convertStringRecordTypeNameToAnId",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 596
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "convertStringRecordTypeNameToAnId",
+                "references": [],
+                "type": "convertStringRecordTypeNameToAnId"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 600
+                    },
+                    "modifiers": [],
+                    "name": "inboundCase",
+                    "references": [],
+                    "type": "Case"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 672
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "clearAccountFieldOnContactChange",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 671
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "clearAccountFieldOnContactChange",
+                "references": [],
+                "type": "clearAccountFieldOnContactChange"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 673
+                    },
+                    "modifiers": [],
+                    "name": "TriggerOld",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 674
+                    },
+                    "modifiers": [],
+                    "name": "TriggerNew",
+                    "references": [],
+                    "type": "LIST"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 29,
+                        "line": 675
+                    },
+                    "modifiers": [],
+                    "name": "index",
+                    "references": [],
+                    "type": "Integer"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 676
+                    },
+                    "modifiers": [],
+                    "name": "oldCase",
+                    "references": [],
+                    "type": "Case"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 26,
+                        "line": 677
+                    },
+                    "modifiers": [],
+                    "name": "newCase",
+                    "references": [],
+                    "type": "Case"
+                }
+            ]
+        },
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "Handler"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 688
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "run",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "void",
+                    "type": null
+                }
+            ],
+            "name": "setDefaultsOnNewCases",
+            "namespace": null,
+            "parentClass": "",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 22,
+                    "line": 687
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "setDefaultsOnNewCases",
+                "references": [],
+                "type": "setDefaultsOnNewCases"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 22,
+                        "line": 689
+                    },
+                    "modifiers": [],
+                    "name": "usr",
+                    "references": [],
+                    "type": "User"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 25,
+                        "line": 690
+                    },
+                    "modifiers": [],
+                    "name": "userHasDefaults",
+                    "references": [],
+                    "type": "Boolean"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 30,
+                        "line": 696
+                    },
+                    "modifiers": [],
+                    "name": "cse",
+                    "references": [],
+                    "type": "Case"
+                }
+            ]
+        }
+    ],
+    "interfaces": [],
+    "key": "01p28000006ele3AAA",
+    "methods": [
+        {
+            "annotations": [
+                {
+                    "name": "Future"
+                }
+            ],
+            "location": {
+                "column": 28,
+                "line": 63
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "storeExLog",
+            "parameters": [
+                {
+                    "name": "proc",
+                    "type": "String"
+                },
+                {
+                    "name": "cls",
+                    "type": "String"
+                },
+                {
+                    "name": "meth",
+                    "type": "String"
+                },
+                {
+                    "name": "msg",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 101
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "copyMappedFieldsToCaseContact",
+            "parameters": [
+                {
+                    "name": "caseIds",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 195
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "addBusinessHrs",
+            "parameters": [
+                {
+                    "name": "qh",
+                    "type": "queueHours__c"
+                }
+            ],
+            "references": [],
+            "returnType": "Decimal",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 207
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "newQueueHoursRecord",
+            "parameters": [
+                {
+                    "name": "cse",
+                    "type": "Case"
+                }
+            ],
+            "references": [],
+            "returnType": "queueHours__c",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 223
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "shouldIncrement",
+            "parameters": [
+                {
+                    "name": "cse",
+                    "type": "Case"
+                }
+            ],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 620
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "retrieveCases",
+            "parameters": [
+                {
+                    "name": "Ids",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 640
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "clearCurrentCourseFields",
+            "parameters": [
+                {
+                    "name": "cs",
+                    "type": "Case"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 659
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "populateCurrentCourseFields",
+            "parameters": [
+                {
+                    "name": "cs",
+                    "type": "Case"
+                },
+                {
+                    "name": "courseCode",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 721
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "fieldHasChanged",
+            "parameters": [
+                {
+                    "name": "fieldName",
+                    "type": "String"
+                },
+                {
+                    "name": "newObj",
+                    "type": "SObject"
+                },
+                {
+                    "name": "oldObj",
+                    "type": "SObject"
+                }
+            ],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        }
+    ],
+    "name": "CaseServices",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 9
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "POPULATE_ENQUIRY_INTEREST_COUNT",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 10
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "final"
+            ],
+            "name": "MONASH_CONNECT_OFFICER",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 11
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "CASE_RECORDTYPENAME_SCHOOLENQUIRY",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 12
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "final"
+            ],
+            "name": "FORCE_SIGN_IN",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 13
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "final"
+            ],
+            "name": "FACE_TO_FACE",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 14
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "final"
+            ],
+            "name": "CUSTOMER_QUEUE_DETAILS_EXCEPTION",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 16
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "BUSINESS_HRS_MS_CONVERT_FACTOR",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 17
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "CASE_MONASH_CONNECT_RECORDTYPE",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 19
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "CURRENT_COURSE",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 20
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "FUTURE_COURSE",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 22
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "stopStatusLabels",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 24
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "businessHoursId",
+            "references": [],
+            "type": "Id"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 7
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "CaseServices",
+        "references": [],
+        "type": "CaseServices"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 63
+            },
+            "modifiers": [],
+            "name": "proc",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 59,
+                "line": 63
+            },
+            "modifiers": [],
+            "name": "cls",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 71,
+                "line": 63
+            },
+            "modifiers": [],
+            "name": "meth",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 84,
+                "line": 63
+            },
+            "modifiers": [],
+            "name": "msg",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 76,
+                "line": 101
+            },
+            "modifiers": [],
+            "name": "caseIds",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 102
+            },
+            "modifiers": [],
+            "name": "contacts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 54,
+                "line": 105
+            },
+            "modifiers": [],
+            "name": "fieldMappings",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 114
+            },
+            "modifiers": [],
+            "name": "qry",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 52,
+                "line": 115
+            },
+            "modifiers": [],
+            "name": "mapping",
+            "references": [],
+            "type": "Case_to_Contact_Field_Mapping__mdt"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 120
+            },
+            "modifiers": [],
+            "name": "cse",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 121
+            },
+            "modifiers": [],
+            "name": "errMsg",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 122
+            },
+            "modifiers": [],
+            "name": "c",
+            "references": [],
+            "type": "Contact"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 56,
+                "line": 123
+            },
+            "modifiers": [],
+            "name": "fieldMapping",
+            "references": [],
+            "type": "Case_to_Contact_Field_Mapping__mdt"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 61,
+                "line": 195
+            },
+            "modifiers": [],
+            "name": "qh",
+            "references": [],
+            "type": "queueHours__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 63,
+                "line": 207
+            },
+            "modifiers": [],
+            "name": "cse",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 208
+            },
+            "modifiers": [],
+            "name": "userRole",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 53,
+                "line": 223
+            },
+            "modifiers": [],
+            "name": "cse",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 61,
+                "line": 620
+            },
+            "modifiers": [],
+            "name": "Ids",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 58,
+                "line": 640
+            },
+            "modifiers": [],
+            "name": "cs",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 61,
+                "line": 659
+            },
+            "modifiers": [],
+            "name": "cs",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 659
+            },
+            "modifiers": [],
+            "name": "courseCode",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 661
+            },
+            "modifiers": [],
+            "name": "course",
+            "references": [],
+            "type": "Course__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 55,
+                "line": 721
+            },
+            "modifiers": [],
+            "name": "fieldName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 74,
+                "line": 721
+            },
+            "modifiers": [],
+            "name": "newObj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 90,
+                "line": 721
+            },
+            "modifiers": [],
+            "name": "oldObj",
+            "references": [],
+            "type": "SObject"
+        }
+    ]
+}

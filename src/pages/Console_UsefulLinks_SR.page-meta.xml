@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>36.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>a static page of useful URLs for use by the Student Recruitment staff. Surfaced as a custom console component</description>
+    <label>Console_UsefulLinks_SR</label>
+</ApexPage>

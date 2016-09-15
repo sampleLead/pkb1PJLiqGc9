@@ -1,0 +1,360 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 30
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "API_ResultWrapper",
+            "parameters": [
+                {
+                    "name": "resp",
+                    "type": "HttpResponse"
+                },
+                {
+                    "name": "result",
+                    "type": "API_StudentCitizenship"
+                }
+            ],
+            "references": [],
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 40
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "API_ResultWrapper",
+            "parameters": [
+                {
+                    "name": "resp",
+                    "type": "HttpResponse"
+                },
+                {
+                    "name": "results",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 51
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "API_ResultWrapper",
+            "parameters": [
+                {
+                    "name": "resp",
+                    "type": "HttpResponse"
+                },
+                {
+                    "name": "results",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 61
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "API_ResultWrapper",
+            "parameters": [
+                {
+                    "name": "resp",
+                    "type": "HttpResponse"
+                },
+                {
+                    "name": "result",
+                    "type": "API_StudentEncumbrance"
+                }
+            ],
+            "references": [],
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 71
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "API_ResultWrapper",
+            "parameters": [
+                {
+                    "name": "resp",
+                    "type": "HttpResponse"
+                },
+                {
+                    "name": "results",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 79
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "API_ResultWrapper",
+            "parameters": [],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01p28000007bRMsAAM",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000007bRMsAAM",
+    "methods": [],
+    "name": "API_ResultWrapper",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 17
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "statusCode",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 18
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "status",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 20
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "courseAttempts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 21
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "encumbrance",
+            "references": [],
+            "type": "API_StudentEncumbrance"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 22
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "applications",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 23
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "notes",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 24
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "citizenship",
+            "references": [],
+            "type": "API_StudentCitizenship"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 15
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "API_ResultWrapper",
+        "references": [],
+        "type": "API_ResultWrapper"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 30
+            },
+            "modifiers": [],
+            "name": "resp",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 30
+            },
+            "modifiers": [],
+            "name": "result",
+            "references": [],
+            "type": "API_StudentCitizenship"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 40
+            },
+            "modifiers": [],
+            "name": "resp",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 80,
+                "line": 40
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 51
+            },
+            "modifiers": [],
+            "name": "resp",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 77,
+                "line": 51
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 61
+            },
+            "modifiers": [],
+            "name": "resp",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 61
+            },
+            "modifiers": [],
+            "name": "result",
+            "references": [],
+            "type": "API_StudentEncumbrance"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 71
+            },
+            "modifiers": [],
+            "name": "resp",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 75,
+                "line": 71
+            },
+            "modifiers": [],
+            "name": "results",
+            "references": [],
+            "type": "LIST"
+        }
+    ]
+}

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object captures the various topics that could be discussed during a MonTRACK call</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Alias__c</fullName>
+        <description>The name of record migrated from source org</description>
+        <externalId>true</externalId>
+        <label>Alias</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Captures a range of topics that can be discussed. It depends on the type of topic selected</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <picklist>
+            <controllingField>Type__c</controllingField>
+            <picklistValues>
+                <fullName>No topic discussed</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Attendance (lectures, tutorials, labs etc.)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - English Proficiency spoken or written</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Essay, report and assignment writing</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Exam anxiety</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Exam preparation/revision</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Exam timetable</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Exam venue/transport</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Lecturer/tutor issues</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Referencing and citing</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Results</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Special consideration</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Timetable issues</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic - Workload/time management</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administration - Encumbrance</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administration - Enrolment queries/difficulties</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administration - Fees</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administration - Financial issues/difficulties</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administration - Moodle</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administration - Orientation will miss/has missed</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administration - Parking on campus</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administration - Parking permits</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administration - Scholarships/bursaries</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administration - Semester dates</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administratoin - IT issues</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Career</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Change load</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course – Choice/preference</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Credit/RPL</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Exchange/Abroad</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Intermission</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Materials</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Placement/internship</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Postgraduate supervision</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Progression</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Research projects</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Transfer</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Unit selection</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Unit wishes to withdraw</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course - Wishes to leave uni</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not enroling next semester</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 1</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Offer - Awaiting further offer</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Offer - Deferment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Offer - Has not received</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Offer - Rejecting</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Peronsal - Health/disability concerns</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal - Accommodation</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal - Family commitments</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal - Homesick</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal - Isolation/friends/getting involved</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal - Job seeking</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal - Socialising too much</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal - Transport</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal - Volunteering/leadership</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal - Work commitments</fullName>
+                <default>false</default>
+                <controllingFieldValues>Montrack</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason - Family commitments</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason - Financial reasons</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason - Health</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason - Not ready for university study</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason -Plan to study different course at different institution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason - Plan to study different course at Monash</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason - Plan to study similar course at different institution</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason - Relocation</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason -Travel</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason - Unsure about course/career choice</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason - Wish to extend deferment for additional 12 months (reason – travel, work, financial, relocation)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason - Working (F/T or P/T)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 2</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unsure if they will enrol next semester</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 1</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes they are enroling next semester</fullName>
+                <default>false</default>
+                <controllingFieldValues>Other Campaign (Not Montrack) 1</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Round__c</fullName>
+        <description>Identifies the related call round</description>
+        <externalId>false</externalId>
+        <label>Round</label>
+        <referenceTo>Round__c</referenceTo>
+        <relationshipLabel>Transition Topics</relationshipLabel>
+        <relationshipName>Transition_Topics</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>SSA_Identified__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Identifies the SSA</description>
+        <externalId>false</externalId>
+        <label>SSA Identified</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Transition_Topics</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Student__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Identifies the student/contact</description>
+        <externalId>false</externalId>
+        <label>Student</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Transition Topics</relationshipLabel>
+        <relationshipName>Transition_Topics</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Captures the type of topic</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Montrack</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Campaign (Not Montrack) 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Campaign (Not Montrack) 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Transition Topic</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>TT-{00000}</displayFormat>
+        <label>Transition Topic Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Transition Topics</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

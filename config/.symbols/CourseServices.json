@@ -1,0 +1,164 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p280000077n0LAAQ",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p280000077n0LAAQ",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 33
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "checkForAndAddCourseRecords",
+            "parameters": [
+                {
+                    "name": "applications",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "CourseServices",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 41,
+                "line": 10
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "CourseInfoByName",
+            "references": [],
+            "type": "Map"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 6
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "CourseServices",
+        "references": [],
+        "type": "CourseServices"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 14
+            },
+            "modifiers": [],
+            "name": "courses",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 18
+            },
+            "modifiers": [],
+            "name": "course",
+            "references": [],
+            "type": "Course__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 78,
+                "line": 33
+            },
+            "modifiers": [],
+            "name": "applications",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 34
+            },
+            "modifiers": [],
+            "name": "courseCodes",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 35
+            },
+            "modifiers": [],
+            "name": "application",
+            "references": [],
+            "type": "API_ApplicantCourse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 36
+            },
+            "modifiers": [],
+            "name": "courses",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 37
+            },
+            "modifiers": [],
+            "name": "course",
+            "references": [],
+            "type": "Course__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 38
+            },
+            "modifiers": [],
+            "name": "newCourses",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 40
+            },
+            "modifiers": [],
+            "name": "application",
+            "references": [],
+            "type": "API_ApplicantCourse"
+        }
+    ]
+}

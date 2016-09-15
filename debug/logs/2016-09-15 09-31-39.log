@@ -1,0 +1,27 @@
+36.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:31:37.0 (522008)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:31:37.0 (620160)|EXECUTION_STARTED
+09:31:37.0 (628467)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000007afQt|ChangePasswordControllerTest.testChangePasswordController
+09:31:37.0 (2121130)|SYSTEM_MODE_ENTER|false
+09:31:37.0 (2132197)|SYSTEM_MODE_EXIT|false
+09:31:37.0 (2192795)|SYSTEM_MODE_ENTER|false
+09:31:37.0 (3318336)|SYSTEM_MODE_EXIT|false
+09:31:37.3 (3339377)|CUMULATIVE_LIMIT_USAGE
+09:31:37.3 (3339377)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:31:37.3 (3339377)|CUMULATIVE_LIMIT_USAGE_END
+
+09:31:37.0 (3394924)|CODE_UNIT_FINISHED|ChangePasswordControllerTest.testChangePasswordController
+09:31:37.0 (5266031)|EXECUTION_FINISHED

@@ -1,0 +1,148 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000006ele5AAA",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000006ele5AAA",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 15
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "recordTypeId",
+            "parameters": [
+                {
+                    "name": "sObjName",
+                    "type": "String"
+                },
+                {
+                    "name": "recordTypeName",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Id",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 27
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "orgWideAddressId",
+            "parameters": [
+                {
+                    "name": "displayName",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Id",
+            "type": null
+        }
+    ],
+    "name": "CommonServices",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 8
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "ORGWIDE_ADDRESS_MONASH",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 39
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "isSandbox",
+            "references": [],
+            "type": "Boolean"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 6
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "CommonServices",
+        "references": [],
+        "type": "CommonServices"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 15
+            },
+            "modifiers": [],
+            "name": "sObjName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 60,
+                "line": 15
+            },
+            "modifiers": [],
+            "name": "recordTypeName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 27
+            },
+            "modifiers": [],
+            "name": "displayName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 29
+            },
+            "modifiers": [],
+            "name": "owa",
+            "references": [],
+            "type": "OrgWideEmailAddress"
+        }
+    ]
+}

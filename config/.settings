@@ -1,0 +1,17 @@
+{
+    "projectName": "Monash_Copado",
+    "username": "ant.custodio@monash.edu.unicrm.copado",
+    "id": "2cd0d5a0-7a43-11e6-82d7-77bc747a7543",
+    "namespace": "",
+    "environment": "sandbox",
+    "loginUrl": "https://test.salesforce.com/",
+    "workspace": "C:\\Users\\acus0001\\Downloads\\MavensMateWorkspace",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "CustomObject",
+        "StaticResource"
+    ]
+}

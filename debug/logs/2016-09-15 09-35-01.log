@@ -1,0 +1,2601 @@
+36.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:34:55.0 (977478)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:34:55.0 (1050318)|EXECUTION_STARTED
+09:34:55.0 (1057040)|CODE_UNIT_STARTED|[EXTERNAL]|01p280000078EXV|EmailMessageServices_Test.confirmEmailMapping
+09:34:55.0 (5012357)|SYSTEM_MODE_ENTER|false
+09:34:55.0 (5021485)|SYSTEM_MODE_EXIT|false
+09:34:55.0 (5086252)|SYSTEM_MODE_ENTER|false
+09:34:55.0 (8678402)|SYSTEM_MODE_EXIT|false
+09:34:55.0 (8768490)|DML_BEGIN|[13]|Op:Insert|Type:Contact|Rows:2
+09:34:55.0 (93130819)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q42t|ContactTrigger on Contact trigger event BeforeInsert for [new, new]
+09:34:55.0 (96806649)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:55.0 (104551932)|USER_DEBUG|[25]|DEBUG|index =:006095195
+09:34:55.0 (104699718)|USER_DEBUG|[25]|DEBUG|index =:016095195
+09:34:55.0 (109343472)|SYSTEM_MODE_ENTER|false
+09:34:55.0 (109354780)|SYSTEM_MODE_EXIT|false
+09:34:55.0 (139780849)|DML_BEGIN|[251]|Op:Insert|Type:Account|Rows:2
+09:34:55.0 (226204727)|DML_END|[251]
+09:34:55.0 (227143726)|SYSTEM_MODE_ENTER|false
+09:34:55.0 (227391487)|SYSTEM_MODE_EXIT|false
+09:34:55.0 (227760530)|SYSTEM_MODE_ENTER|false
+09:34:55.0 (227787773)|SYSTEM_MODE_EXIT|false
+09:34:55.230 (230039070)|CUMULATIVE_LIMIT_USAGE
+09:34:55.230 (230039070)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:55.230 (230039070)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:55.0 (233467235)|CODE_UNIT_FINISHED|ContactTrigger on Contact trigger event BeforeInsert for [new, new]
+09:34:55.0 (453578522)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Contact
+09:34:55.0 (473455766)|WF_RULE_EVAL_BEGIN|Workflow
+09:34:55.0 (473520098)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E6]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:34:55.0 (478468996)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:34:55.0 (478524997)|WF_RULE_EVAL_VALUE|
+09:34:55.0 (478531588)|WF_CRITERIA_END|false
+09:34:55.0 (478553820)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E6]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:34:55.0 (478961898)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:006095195
+09:34:55.0 (478972803)|WF_CRITERIA_END|false
+09:34:55.0 (479000153)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E6]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:34:55.0 (479260453)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:006095195
+09:34:55.0 (479268236)|WF_CRITERIA_END|true
+09:34:55.0 (480467023)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E6]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:34:55.0 (480553433)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:34:55.0 (488852600)|WF_RULE_EVAL_VALUE|0
+09:34:55.0 (488864462)|WF_CRITERIA_END|false
+09:34:55.0 (488911605)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E6]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:55.0 (489003607)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:34:55.0 (489013779)|WF_RULE_EVAL_VALUE|0
+09:34:55.0 (489019061)|WF_CRITERIA_END|false
+09:34:55.0 (489035830)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E6]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:34:55.0 (489093365)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:34:55.0 (489206457)|WF_RULE_EVAL_VALUE|0
+09:34:55.0 (489212494)|WF_CRITERIA_END|true
+09:34:55.0 (489259047)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09E7]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:34:55.0 (489376900)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:34:55.0 (489421667)|WF_RULE_EVAL_VALUE|
+09:34:55.0 (489426220)|WF_CRITERIA_END|false
+09:34:55.0 (489444235)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09E7]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:34:55.0 (489558902)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:016095195
+09:34:55.0 (489564337)|WF_CRITERIA_END|false
+09:34:55.0 (489582297)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09E7]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:34:55.0 (489645024)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:016095195
+09:34:55.0 (489650004)|WF_CRITERIA_END|true
+09:34:55.0 (489670194)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09E7]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:34:55.0 (489698791)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:34:55.0 (489829074)|WF_RULE_EVAL_VALUE|0
+09:34:55.0 (489834964)|WF_CRITERIA_END|false
+09:34:55.0 (489855196)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09E7]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:55.0 (489885596)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:34:55.0 (489892843)|WF_RULE_EVAL_VALUE|0
+09:34:55.0 (489896288)|WF_CRITERIA_END|false
+09:34:55.0 (489914965)|WF_CRITERIA_BEGIN|[Contact: Cruz1 John 003p000000C09E7]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:34:55.0 (489941818)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:34:55.0 (490049881)|WF_RULE_EVAL_VALUE|0
+09:34:55.0 (490056563)|WF_CRITERIA_END|true
+09:34:55.0 (490082247)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:34:55.0 (490570602)|WF_ACTION| Field Update: 4;
+09:34:55.0 (490576111)|WF_RULE_EVAL_END
+09:34:55.0 (490654837)|WF_ACTIONS_END| Field Update: 4;
+09:34:55.0 (490661080)|CODE_UNIT_FINISHED|Workflow:Contact
+09:34:55.0 (496752351)|DML_END|[13]
+09:34:55.0 (496978666)|SOQL_EXECUTE_BEGIN|[15]|Aggregations:0|SELECT COUNT() FROM Contact
+09:34:55.0 (513406553)|SOQL_EXECUTE_END|[15]|Rows:2
+09:34:55.0 (521809276)|DML_BEGIN|[34]|Op:Insert|Type:Case|Rows:2
+09:34:55.0 (560869217)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeInsert for [new, new]
+09:34:55.0 (561277967)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:55.0 (570122516)|SOQL_EXECUTE_BEGIN|[363]|Aggregations:0|SELECT id, name, course_code__c FROM course__c 
+09:34:55.0 (572734121)|SOQL_EXECUTE_END|[363]|Rows:0
+09:34:55.0 (576647315)|SOQL_EXECUTE_BEGIN|[56]|Aggregations:0|SELECT id, Enquiry_Role__c, Location__c, Profile.Name, My_Information_LastUpdate__c, Queue__c FROM User WHERE id = :tmpVar1
+09:34:55.0 (588453587)|SOQL_EXECUTE_END|[56]|Rows:1
+09:34:55.0 (590289536)|SOQL_EXECUTE_BEGIN|[41]|Aggregations:0|SELECT id, AssigneeId FROM PermissionSetAssignment 
+09:34:55.0 (594853037)|SOQL_EXECUTE_END|[41]|Rows:0
+09:34:55.0 (692793393)|SOQL_EXECUTE_BEGIN|[493]|Aggregations:0|SELECT label, Email_Address__c FROM Off_System_Email_Address__mdt 
+09:34:55.0 (696712786)|SOQL_EXECUTE_END|[493]|Rows:27
+09:34:55.0 (699831189)|SOQL_EXECUTE_BEGIN|[514]|Aggregations:0|SELECT Id, AccountId, Email, Monash_Email_Address__c, Applicant_Email_Address__c FROM Contact 
+09:34:55.0 (708704251)|SOQL_EXECUTE_END|[514]|Rows:0
+09:34:55.0 (710368108)|SOSL_EXECUTE_BEGIN|[567]|FIND :tmpVar1 IN ALL FIELDS RETURNING contact(Id) LIMIT 1
+09:34:55.0 (714588821)|SOSL_EXECUTE_END|[567]|Rows:0
+09:34:55.0 (719235846)|DML_BEGIN|[90]|Op:Insert|Type:Exception_Log__c|Rows:1
+09:34:55.0 (752390583)|DML_END|[90]
+09:34:55.752 (752976285)|CUMULATIVE_LIMIT_USAGE
+09:34:55.752 (752976285)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 5 out of 100
+  Number of query rows: 30 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 7 out of 10000
+  Maximum CPU time: 82 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:55.752 (752976285)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:55.0 (754755887)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeInsert for [new, new]
+09:34:55.0 (796663741)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:new
+09:34:55.0 (796692042)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:55.0 (799066615)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email - System , $UserRole.Name=eSolutions
+09:34:55.0 (799079768)|VALIDATION_PASS
+09:34:55.0 (799083808)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:55.0 (800104592)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Closed , Origin=Email - System , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:55.0 (800116798)|VALIDATION_PASS
+09:34:55.0 (800119667)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:55.0 (800451849)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:55.0 (800459739)|VALIDATION_PASS
+09:34:55.0 (800462217)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:55.0 (800773310)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=null
+09:34:55.0 (800781680)|VALIDATION_PASS
+09:34:55.0 (800784144)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:55.0 (801088515)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=0 , Category_Level_2__c=null
+09:34:55.0 (801101096)|VALIDATION_PASS
+09:34:55.0 (801103503)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:55.0 (801417969)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Closed , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:55.0 (801425080)|VALIDATION_PASS
+09:34:55.0 (801457927)|CODE_UNIT_FINISHED|Validation:Case:new
+09:34:55.0 (801518586)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:new
+09:34:55.0 (801527348)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:55.0 (801724715)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email - System , $UserRole.Name=eSolutions
+09:34:55.0 (801731552)|VALIDATION_PASS
+09:34:55.0 (801733901)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:55.0 (802156490)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Closed , Origin=Email - System , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:55.0 (802165705)|VALIDATION_PASS
+09:34:55.0 (802168074)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:55.0 (802497221)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:55.0 (802505475)|VALIDATION_PASS
+09:34:55.0 (802507759)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:55.0 (802827526)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=null
+09:34:55.0 (802835956)|VALIDATION_PASS
+09:34:55.0 (802838233)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:55.0 (803177430)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=0 , Category_Level_2__c=null
+09:34:55.0 (803186350)|VALIDATION_PASS
+09:34:55.0 (803188846)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:55.0 (803530960)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Closed , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:55.0 (803538327)|VALIDATION_PASS
+09:34:55.0 (803562945)|CODE_UNIT_FINISHED|Validation:Case:new
+09:34:55.0 (861752578)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterInsert for [500p0000002kJ96, 500p0000002kJ97]
+09:34:55.0 (862323172)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:55.0 (872008533)|SOQL_EXECUTE_BEGIN|[104]|Aggregations:0|SELECT id, userrole.name FROM user 
+09:34:55.0 (992452435)|SOQL_EXECUTE_END|[104]|Rows:800
+09:34:56.227 (1227466735)|SOQL_EXECUTE_BEGIN|[86]|Aggregations:0|SELECT id, firstname, lastname FROM User 
+09:34:56.227 (1352286266)|SOQL_EXECUTE_END|[86]|Rows:840
+09:34:56.227 (1606552046)|SOQL_EXECUTE_BEGIN|[90]|Aggregations:0|SELECT id, name FROM Group 
+09:34:56.227 (1610890906)|SOQL_EXECUTE_END|[90]|Rows:42
+09:34:56.227 (1622308973)|DML_BEGIN|[343]|Op:Upsert|Type:queueHours__c|Rows:2
+09:34:56.227 (1661692015)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:56.227 (1662264107)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:56.227 (1667355939)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:1|SELECT id, (SELECT id FROM enquiry_interests__r LIMIT 1) FROM case 
+09:34:56.227 (1673490172)|SOQL_EXECUTE_END|[42]|Rows:2
+09:34:56.227 (1674120255)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:34:56.227 (1674670737)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:34:56.227 (1675034341)|SYSTEM_MODE_ENTER|true
+09:34:56.227 (1675050306)|SYSTEM_MODE_EXIT|true
+09:34:56.227 (1675076424)|SYSTEM_MODE_ENTER|true
+09:34:56.227 (1675085285)|SYSTEM_MODE_EXIT|true
+09:34:56.675 (1675758051)|CUMULATIVE_LIMIT_USAGE
+09:34:56.675 (1675758051)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 9 out of 100
+  Number of query rows: 1714 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 9 out of 10000
+  Maximum CPU time: 290 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:56.675 (1675758051)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:56.227 (1677756491)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:56.227 (1682020198)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ96
+09:34:56.227 (1682032540)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:56.227 (1682215322)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email - System , $UserRole.Name=eSolutions
+09:34:56.227 (1682223200)|VALIDATION_PASS
+09:34:56.227 (1682226144)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:56.227 (1682656635)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Closed , Origin=Email - System , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:56.227 (1682666031)|VALIDATION_PASS
+09:34:56.227 (1682668634)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:56.227 (1683006910)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:56.227 (1683016318)|VALIDATION_PASS
+09:34:56.227 (1683018855)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:56.227 (1683332817)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:56.227 (1683341710)|VALIDATION_PASS
+09:34:56.227 (1683344057)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:56.227 (1683646178)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=1 , Category_Level_2__c=null
+09:34:56.227 (1683654029)|VALIDATION_PASS
+09:34:56.227 (1683656929)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:56.227 (1683944356)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Closed , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:56.227 (1683955666)|VALIDATION_PASS
+09:34:56.227 (1683984264)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ96
+09:34:56.227 (1684010044)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ97
+09:34:56.227 (1684017169)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:56.227 (1684198934)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email - System , $UserRole.Name=eSolutions
+09:34:56.227 (1684205843)|VALIDATION_PASS
+09:34:56.227 (1684208221)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:56.227 (1684650836)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Closed , Origin=Email - System , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:56.227 (1684662047)|VALIDATION_PASS
+09:34:56.227 (1684666518)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:56.227 (1685029921)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:56.227 (1685039621)|VALIDATION_PASS
+09:34:56.227 (1685042012)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:56.227 (1685357719)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:56.227 (1685365865)|VALIDATION_PASS
+09:34:56.227 (1685368243)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:56.227 (1685706405)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=1 , Category_Level_2__c=null
+09:34:56.227 (1685714595)|VALIDATION_PASS
+09:34:56.227 (1685716965)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:56.227 (1686050673)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Closed , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:56.227 (1686059192)|VALIDATION_PASS
+09:34:56.227 (1686083021)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ97
+09:34:56.227 (1709479682)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:56.227 (1709989234)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:56.227 (1712060142)|SOQL_EXECUTE_BEGIN|[243]|Aggregations:0|SELECT Id, Label FROM BH_Stop_Status__mdt 
+09:34:56.227 (1715942015)|SOQL_EXECUTE_END|[243]|Rows:1
+09:34:56.227 (1719492407)|SOQL_EXECUTE_BEGIN|[106]|Aggregations:0|SELECT Id, Case_API_name__c, Contact_Field_API_name__c FROM Case_to_Contact_Field_Mapping__mdt LIMIT 400
+09:34:56.227 (1722756728)|SOQL_EXECUTE_END|[106]|Rows:14
+09:34:56.227 (1723882650)|SOQL_EXECUTE_BEGIN|[120]|Aggregations:0|select Level_of_Study__c,Supplied_Date_of_Birth__c,Supplied_Country_of_Residence__c,SuppliedEmail,Supplied_Email_Opt_out__c,Supplied_First_Name__c,Highest_Level_of_Study__c,Supplied_Name_of_Institution__c,Supplied_Nationality__c,Residency_Status__c,Supplied_City__c,Supplied_Area_of_Interest__c,Supplied_Last_Name__c,SuppliedPhone,Id,contactId from case 
+09:34:56.227 (1733351092)|SOQL_EXECUTE_END|[120]|Rows:0
+09:34:56.733 (1733623988)|CUMULATIVE_LIMIT_USAGE
+09:34:56.733 (1733623988)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 10 out of 100
+  Number of query rows: 1729 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 9 out of 10000
+  Maximum CPU time: 290 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:56.733 (1733623988)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:56.227 (1735636240)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:56.227 (1746681327)|DML_END|[343]
+09:34:56.227 (1747890418)|SOQL_EXECUTE_BEGIN|[152]|Aggregations:0|SELECT id, origin, contactid, course__c, course__r.Managing_Faculty__c, course__r.Faculty_Code__c, Supplied_Area_of_Interest__c, Supplied_Name_of_Institution__c, Commencement_Year__c, Level_of_Study__c FROM Case 
+09:34:56.227 (1783036684)|SOQL_EXECUTE_END|[152]|Rows:0
+09:34:56.783 (1783456929)|CUMULATIVE_LIMIT_USAGE
+09:34:56.783 (1783456929)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 11 out of 100
+  Number of query rows: 1729 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 9 out of 10000
+  Maximum CPU time: 290 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:56.783 (1783456929)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:56.227 (1785073531)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterInsert for [500p0000002kJ96, 500p0000002kJ97]
+09:34:56.227 (1785869842)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Case
+09:34:56.227 (1798432441)|WF_RULE_EVAL_BEGIN|Assignment
+09:34:56.227 (1798468277)|WF_SPOOL_ACTION_BEGIN|Assignment
+09:34:56.227 (1798475422)|WF_ACTION|.
+09:34:56.227 (1798480409)|WF_RULE_EVAL_END
+09:34:56.227 (1798505047)|WF_RULE_EVAL_BEGIN|Workflow
+09:34:56.227 (1798555509)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:34:56.227 (1807725507)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Research Deferral Request]
+09:34:56.227 (1807759164)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1807767982)|WF_CRITERIA_END|false
+09:34:56.227 (1807789709)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:34:56.227 (1807834613)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Research Future Students]
+09:34:56.227 (1807849393)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1807853559)|WF_CRITERIA_END|false
+09:34:56.227 (1807882484)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:34:56.227 (1808325941)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]{!ID:Owner:Queue.QueueName} = "Schools Engagement"|Values:Owner:Queue.QueueName=null
+09:34:56.227 (1808336046)|WF_CRITERIA_END|false
+09:34:56.227 (1808359412)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:56.227 (1808680344)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( 
+{!ID:IsClosed} , 
+NOT( {!ID:$User.Alias} = "dload") /* exclude data load user */
+)|Values:IsClosed=1, $User.Alias=acust
+09:34:56.227 (1808686251)|WF_CRITERIA_END|true
+09:34:56.227 (1810519332)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:56.227 (1810645068)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:34:56.227 (1810671727)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:56.227 (1810676554)|WF_CRITERIA_END|false
+09:34:56.227 (1810692332)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:34:56.227 (1810811024)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web, course enquiry webform, Email - System, Web - Research Future Students, Email - study, Web - Future Students International, Web - Find Course International, Web - Monash College] 
+AND [Enquiry : Enquiry Record Type equals Standard Enquiry] 
+AND [Enquiry : Web Email not equal to , future@monash.edu] 
+AND [User : Profile not equal to Data Loading]
+09:34:56.227 (1810838202)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1810853619)|WF_RULE_EVAL_VALUE|01228000000Pnsk
+09:34:56.227 (1810858792)|WF_RULE_EVAL_VALUE|testformemail@monash.edu
+09:34:56.227 (1810883399)|WF_RULE_EVAL_VALUE|00e280000018gmz
+09:34:56.227 (1810892296)|WF_CRITERIA_END|true
+09:34:56.227 (1810917895)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:34:56.227 (1810959053)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Monash College]
+09:34:56.227 (1810973147)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1810976904)|WF_CRITERIA_END|false
+09:34:56.227 (1810991305)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:56.227 (1811082868)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:34:56.227 (1811101032)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:56.227 (1811105096)|WF_CRITERIA_END|false
+09:34:56.227 (1811119831)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:34:56.227 (1811160356)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Email - Airport Pickup]
+09:34:56.227 (1811178494)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1811182412)|WF_CRITERIA_END|false
+09:34:56.227 (1811197151)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:34:56.227 (1811236108)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Email - sr-socialenquiry-l]
+09:34:56.227 (1811251393)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1811255241)|WF_CRITERIA_END|false
+09:34:56.227 (1811269219)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:34:56.227 (1811307358)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals course enquiry webform]
+09:34:56.227 (1811324713)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1811328592)|WF_CRITERIA_END|false
+09:34:56.227 (1811342945)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:34:56.227 (1811382865)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Find Course International]
+09:34:56.227 (1811396262)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1811400070)|WF_CRITERIA_END|false
+09:34:56.227 (1811414277)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:34:56.227 (1811453200)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Future Students International]
+09:34:56.227 (1811466503)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1811470956)|WF_CRITERIA_END|false
+09:34:56.227 (1811487698)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:34:56.227 (1811540741)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:56.227 (1811545199)|WF_CRITERIA_END|true
+09:34:56.227 (1811570742)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:34:56.227 (1811613286)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Email - study]
+09:34:56.227 (1811632527)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1811636564)|WF_CRITERIA_END|false
+09:34:56.227 (1811651383)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:34:56.227 (1811690946)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Research Current Students]
+09:34:56.227 (1811704529)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1811708350)|WF_CRITERIA_END|false
+09:34:56.227 (1811722114)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:34:56.227 (1811909611)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Closed
+09:34:56.227 (1811914772)|WF_CRITERIA_END|false
+09:34:56.227 (1811931304)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:56.227 (1812021684)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:34:56.227 (1812040259)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:56.227 (1812044318)|WF_CRITERIA_END|false
+09:34:56.227 (1812068415)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:34:56.227 (1812094180)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Research Deferral Request]
+09:34:56.227 (1812108069)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1812112026)|WF_CRITERIA_END|false
+09:34:56.227 (1812125496)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:34:56.227 (1812149289)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Research Future Students]
+09:34:56.227 (1812165129)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1812168980)|WF_CRITERIA_END|false
+09:34:56.227 (1812183205)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:34:56.227 (1812306183)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]{!ID:Owner:Queue.QueueName} = "Schools Engagement"|Values:Owner:Queue.QueueName=null
+09:34:56.227 (1812311173)|WF_CRITERIA_END|false
+09:34:56.227 (1812326875)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:56.227 (1812446985)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( 
+{!ID:IsClosed} , 
+NOT( {!ID:$User.Alias} = "dload") /* exclude data load user */
+)|Values:IsClosed=1, $User.Alias=acust
+09:34:56.227 (1812451867)|WF_CRITERIA_END|true
+09:34:56.227 (1812473480)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:56.227 (1812527683)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:34:56.227 (1812545899)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:56.227 (1812550187)|WF_CRITERIA_END|false
+09:34:56.227 (1812564328)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:34:56.227 (1812634358)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web, course enquiry webform, Email - System, Web - Research Future Students, Email - study, Web - Future Students International, Web - Find Course International, Web - Monash College] 
+AND [Enquiry : Enquiry Record Type equals Standard Enquiry] 
+AND [Enquiry : Web Email not equal to , future@monash.edu] 
+AND [User : Profile not equal to Data Loading]
+09:34:56.227 (1812656402)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1812666075)|WF_RULE_EVAL_VALUE|01228000000Pnsk
+09:34:56.227 (1812670621)|WF_RULE_EVAL_VALUE|testformemail@monash.edu
+09:34:56.227 (1812689212)|WF_RULE_EVAL_VALUE|00e280000018gmz
+09:34:56.227 (1812693623)|WF_CRITERIA_END|true
+09:34:56.227 (1812717029)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:34:56.227 (1812743165)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Monash College]
+09:34:56.227 (1812756838)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1812760486)|WF_CRITERIA_END|false
+09:34:56.227 (1812774184)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:56.227 (1812824238)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:34:56.227 (1812840096)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:56.227 (1812844010)|WF_CRITERIA_END|false
+09:34:56.227 (1812858193)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:34:56.227 (1812882279)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Email - Airport Pickup]
+09:34:56.227 (1812901249)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1812905325)|WF_CRITERIA_END|false
+09:34:56.227 (1812919412)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:34:56.227 (1812946686)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Email - sr-socialenquiry-l]
+09:34:56.227 (1812961736)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1812965418)|WF_CRITERIA_END|false
+09:34:56.227 (1812978780)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:34:56.227 (1813002609)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals course enquiry webform]
+09:34:56.227 (1813016098)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1813020364)|WF_CRITERIA_END|false
+09:34:56.227 (1813033778)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:34:56.227 (1813057824)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Find Course International]
+09:34:56.227 (1813070381)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1813074001)|WF_CRITERIA_END|false
+09:34:56.227 (1813087039)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:34:56.227 (1813110453)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Future Students International]
+09:34:56.227 (1813122775)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1813126916)|WF_CRITERIA_END|false
+09:34:56.227 (1813143062)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:34:56.227 (1813165287)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:56.227 (1813169505)|WF_CRITERIA_END|true
+09:34:56.227 (1813189450)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:34:56.227 (1813214112)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Email - study]
+09:34:56.227 (1813229765)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1813233459)|WF_CRITERIA_END|false
+09:34:56.227 (1813246776)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:34:56.227 (1813270863)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Research Current Students]
+09:34:56.227 (1813283216)|WF_RULE_EVAL_VALUE|Email - System
+09:34:56.227 (1813286873)|WF_CRITERIA_END|false
+09:34:56.227 (1813299773)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:34:56.227 (1813378591)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Closed
+09:34:56.227 (1813383774)|WF_CRITERIA_END|false
+09:34:56.227 (1813399196)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:56.227 (1813452227)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:34:56.227 (1813469461)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:56.227 (1813473392)|WF_CRITERIA_END|false
+09:34:56.227 (1813489012)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:34:56.227 (1824096652)|WF_RULE_INVOCATION|[Enquiry: 03108925 500p0000002kJ96]
+09:34:56.227 (1824176414)|WF_ACTION_TASK|Task:Wrap Up Task|Id=01V28000000HHq2|CurrentRule:at wrap up, add a wrap up task (Id=01Q28000000dVD0)|AssignedTo:Anterey Custodio|DueDate:Thu Sep 15 00:00:00 GMT 2016
+09:34:56.227 (1824643522)|WF_RULE_INVOCATION|[Enquiry: 03108926 500p0000002kJ97]
+09:34:56.227 (1824688555)|WF_ACTION_TASK|Task:Wrap Up Task|Id=01V28000000HHq2|CurrentRule:at wrap up, add a wrap up task (Id=01Q28000000dVD0)|AssignedTo:Anterey Custodio|DueDate:Thu Sep 15 00:00:00 GMT 2016
+09:34:56.227 (1824721487)|WF_RULE_INVOCATION|[Enquiry: 03108925 500p0000002kJ96]
+09:34:56.227 (1824732866)|WF_EMAIL_ALERT|Id=01W28000000LM7a|CurrentRule:Case - Auto Response Email (Id=01Q28000000MKC4)
+09:34:56.227 (1996654027)|WF_EMAIL_SENT|Template:00X28000000ZFhi|Recipients:testformemail@monash.edu |CcEmails:
+09:34:56.227 (1996710165)|WF_RULE_INVOCATION|[Enquiry: 03108926 500p0000002kJ97]
+09:34:56.227 (1996727609)|WF_EMAIL_ALERT|Id=01W28000000LM7a|CurrentRule:Case - Auto Response Email (Id=01Q28000000MKC4)
+09:34:56.227 (2064003399)|WF_EMAIL_SENT|Template:00X28000000ZFhi|Recipients:testformemail@monash.edu |CcEmails:
+09:34:56.227 (2064067918)|WF_ACTION| Task: 2; Email Alert: 2; Flow Trigger: 2;
+09:34:56.227 (2064076149)|WF_RULE_EVAL_END
+09:34:56.227 (2069754006)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QLNr|TaskTrigger on Task trigger event BeforeInsert for [new, new]
+09:34:56.227 (2070296962)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:56.227 (2076110614)|SOQL_EXECUTE_BEGIN|[41]|Aggregations:0|SELECT Id, Contact_field_API_name__c, Task_field_API_name__c, Task_Record_Type__c FROM Contact_to_Task_Field_Mapping__mdt LIMIT 400
+09:34:56.227 (2079793283)|SOQL_EXECUTE_END|[41]|Rows:14
+09:34:56.227 (2080330184)|SOQL_EXECUTE_BEGIN|[49]|Aggregations:0|SELECT id, developerName FROM RecordType 
+09:34:56.227 (2086330398)|SOQL_EXECUTE_END|[49]|Rows:3
+09:34:56.227 (2088286174)|SOQL_EXECUTE_BEGIN|[63]|Aggregations:0|select Course_Name__c,Faculty__c,First_in_Family__c,HomePhone,International_Student__c,MobilePhone,MonTrack_Opt_Out__c,MonTrack_Opt_Out_Reason__c,Person_ID__c,Phone,Campus__c,Course_code__c,FirstName,LastName,Id from contact 
+09:34:56.227 (2091795448)|SOQL_EXECUTE_END|[63]|Rows:0
+09:34:57.92 (2092151770)|CUMULATIVE_LIMIT_USAGE
+09:34:57.92 (2092151770)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 13 out of 100
+  Number of query rows: 1746 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 9 out of 10000
+  Maximum CPU time: 508 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.92 (2092151770)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:56.227 (2095304152)|CODE_UNIT_FINISHED|TaskTrigger on Task trigger event BeforeInsert for [new, new]
+09:34:56.227 (2143067290)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QLNr|TaskTrigger on Task trigger event AfterInsert for [00Tp0000003qVp1, 00Tp0000003qVp2]
+09:34:56.227 (2143499332)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:56.227 (2144642745)|SOQL_EXECUTE_BEGIN|[428]|Aggregations:0|SELECT id, Latest_Inbound_Email__c FROM Case WHERE (id = :tmpVar1 AND Latest_Inbound_Email__c != NULL AND isClosed = FALSE)
+09:34:56.227 (2163671411)|SOQL_EXECUTE_END|[428]|Rows:0
+09:34:57.163 (2163877147)|CUMULATIVE_LIMIT_USAGE
+09:34:57.163 (2163877147)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 14 out of 100
+  Number of query rows: 1746 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 9 out of 10000
+  Maximum CPU time: 508 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.163 (2163877147)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:56.227 (2180961578)|CODE_UNIT_FINISHED|TaskTrigger on Task trigger event AfterInsert for [00Tp0000003qVp1, 00Tp0000003qVp2]
+09:34:56.227 (2185217124)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:34:57.185 (2185315802)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:34:57.185 (2187345120)|FLOW_CREATE_INTERVIEW_END|4492af12f47f5ceb75cbcce7e2f1572ad9eef9-7830|Set Enquiry Student Type Based on Contact Profile
+09:34:56.227 (2187723574)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:34:57.187 (2187764431)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:34:57.187 (2187807780)|FLOW_CREATE_INTERVIEW_END|4493af12f47f5ceb75cbcce7e2f1572ad9eef9-7831|Set Enquiry Student Type Based on Contact Profile
+09:34:57.188 (2188044930)|FLOW_START_INTERVIEWS_BEGIN|2
+09:34:57.188 (2189863448)|FLOW_START_INTERVIEW_BEGIN|4492af12f47f5ceb75cbcce7e2f1572ad9eef9-7830|Set Enquiry Student Type Based on Contact Profile
+09:34:57.188 (2192835490)|FLOW_START_INTERVIEW_END|4492af12f47f5ceb75cbcce7e2f1572ad9eef9-7830|Set Enquiry Student Type Based on Contact Profile
+09:34:57.188 (2192841179)|FLOW_START_INTERVIEW_BEGIN|4493af12f47f5ceb75cbcce7e2f1572ad9eef9-7831|Set Enquiry Student Type Based on Contact Profile
+09:34:57.188 (2194968438)|FLOW_START_INTERVIEW_END|4493af12f47f5ceb75cbcce7e2f1572ad9eef9-7831|Set Enquiry Student Type Based on Contact Profile
+09:34:57.188 (2194979218)|FLOW_START_INTERVIEWS_END|2
+09:34:56.227 (2196654198)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:34:56.227 (2196660981)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:34:56.227 (2196691468)|WF_TIME_TRIGGERS_BEGIN
+09:34:56.227 (2201481899)|WF_ACTIONS_END| Task: 2; Email Alert: 2; Flow Trigger: 2;
+09:34:56.227 (2201489529)|CODE_UNIT_FINISHED|Workflow:Case
+09:34:56.227 (2201859380)|DML_END|[34]
+09:34:56.227 (2202113403)|DML_BEGIN|[38]|Op:Update|Type:Case|Rows:2
+09:34:56.227 (2221687562)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:56.227 (2222128012)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:56.227 (2223448799)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:1|SELECT id, (SELECT id FROM enquiry_interests__r LIMIT 1) FROM case 
+09:34:57.227 (2227120774)|SOQL_EXECUTE_END|[42]|Rows:2
+09:34:57.227 (2227366477)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:34:57.227 (2227587280)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:34:57.228 (2228240596)|CUMULATIVE_LIMIT_USAGE
+09:34:57.228 (2228240596)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 15 out of 100
+  Number of query rows: 1748 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 6 out of 150
+  Number of DML rows: 11 out of 10000
+  Maximum CPU time: 508 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.228 (2228240596)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2229938365)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:57.227 (2235083353)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ96
+09:34:57.227 (2235099128)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:57.227 (2235381157)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email , $UserRole.Name=eSolutions
+09:34:57.227 (2235390642)|VALIDATION_PASS
+09:34:57.227 (2235394830)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:57.227 (2236002960)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Closed , Origin=Email , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:57.227 (2236013896)|VALIDATION_PASS
+09:34:57.227 (2236016778)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:57.227 (2236360970)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:57.227 (2236368678)|VALIDATION_PASS
+09:34:57.227 (2236371104)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:57.227 (2236681825)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:57.227 (2236690128)|VALIDATION_PASS
+09:34:57.227 (2236692689)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:57.227 (2236982873)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=1 , Category_Level_2__c=null
+09:34:57.227 (2236990055)|VALIDATION_PASS
+09:34:57.227 (2236992664)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:57.227 (2237286641)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Closed , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:57.227 (2237295259)|VALIDATION_PASS
+09:34:57.227 (2237323289)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ96
+09:34:57.227 (2237350972)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ97
+09:34:57.227 (2237357171)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:57.227 (2237548457)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email - System , $UserRole.Name=eSolutions
+09:34:57.227 (2237555100)|VALIDATION_PASS
+09:34:57.227 (2237557469)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:57.227 (2237968974)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Closed , Origin=Email - System , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:57.227 (2237977593)|VALIDATION_PASS
+09:34:57.227 (2237980016)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:57.227 (2238305448)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:57.227 (2238314659)|VALIDATION_PASS
+09:34:57.227 (2238316869)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:57.227 (2238624186)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:57.227 (2238631990)|VALIDATION_PASS
+09:34:57.227 (2238634198)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:57.227 (2238956765)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=1 , Category_Level_2__c=null
+09:34:57.227 (2238964929)|VALIDATION_PASS
+09:34:57.227 (2238967244)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:57.227 (2239298991)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Closed , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:57.227 (2239307062)|VALIDATION_PASS
+09:34:57.227 (2239329854)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ97
+09:34:57.227 (2257871936)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:57.227 (2258302896)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2259777873)|SOQL_EXECUTE_BEGIN|[243]|Aggregations:0|SELECT Id, Label FROM BH_Stop_Status__mdt 
+09:34:57.227 (2261550538)|SOQL_EXECUTE_END|[243]|Rows:1
+09:34:57.227 (2262907808)|SOQL_EXECUTE_BEGIN|[106]|Aggregations:0|SELECT Id, Case_API_name__c, Contact_Field_API_name__c FROM Case_to_Contact_Field_Mapping__mdt LIMIT 400
+09:34:57.227 (2264300330)|SOQL_EXECUTE_END|[106]|Rows:14
+09:34:57.227 (2265113578)|SOQL_EXECUTE_BEGIN|[120]|Aggregations:0|select Level_of_Study__c,Supplied_Date_of_Birth__c,Supplied_Country_of_Residence__c,SuppliedEmail,Supplied_Email_Opt_out__c,Supplied_First_Name__c,Highest_Level_of_Study__c,Supplied_Name_of_Institution__c,Supplied_Nationality__c,Residency_Status__c,Supplied_City__c,Supplied_Area_of_Interest__c,Supplied_Last_Name__c,SuppliedPhone,Id,contactId from case 
+09:34:57.227 (2269998596)|SOQL_EXECUTE_END|[120]|Rows:0
+09:34:57.270 (2270264355)|CUMULATIVE_LIMIT_USAGE
+09:34:57.270 (2270264355)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 16 out of 100
+  Number of query rows: 1763 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 6 out of 150
+  Number of DML rows: 11 out of 10000
+  Maximum CPU time: 508 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.270 (2270264355)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2271763022)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:57.227 (2272394313)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Case
+09:34:57.227 (2278858671)|WF_RULE_EVAL_BEGIN|Assignment
+09:34:57.227 (2278880743)|WF_SPOOL_ACTION_BEGIN|Assignment
+09:34:57.227 (2278888836)|WF_ACTION|.
+09:34:57.227 (2278891652)|WF_RULE_EVAL_END
+09:34:57.227 (2278907105)|WF_RULE_EVAL_BEGIN|Workflow
+09:34:57.227 (2278939385)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:34:57.227 (2278949670)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2278962276)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:34:57.227 (2278966789)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2278976765)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:34:57.227 (2278980992)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2278990408)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2279144399)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279163031)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2279281020)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:34:57.227 (2279303401)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2279308727)|WF_CRITERIA_END|false
+09:34:57.227 (2279324538)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:34:57.227 (2279329847)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279340172)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:34:57.227 (2279344349)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279354018)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2279418472)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:34:57.227 (2279433989)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2279441173)|WF_CRITERIA_END|false
+09:34:57.227 (2279456172)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:34:57.227 (2279461370)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279471448)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:34:57.227 (2279475822)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279485404)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:34:57.227 (2279489585)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279498814)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:34:57.227 (2279502826)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279514757)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:34:57.227 (2279518945)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279529703)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:34:57.227 (2279573596)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:57.227 (2279578248)|WF_CRITERIA_END|true
+09:34:57.227 (2279606510)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:34:57.227 (2279611801)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279621746)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:34:57.227 (2279625854)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279635438)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:34:57.227 (2279741027)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Closed
+09:34:57.227 (2279746074)|WF_CRITERIA_END|false
+09:34:57.227 (2279773707)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2279842075)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:34:57.227 (2279857937)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2279862010)|WF_CRITERIA_END|false
+09:34:57.227 (2279904113)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:34:57.227 (2279910005)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279920489)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:34:57.227 (2279924640)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279934427)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:34:57.227 (2279939118)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2279951676)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2280032827)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2280050629)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2280121827)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:34:57.227 (2280140508)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2280144881)|WF_CRITERIA_END|false
+09:34:57.227 (2280159444)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:34:57.227 (2280164581)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2280174366)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:34:57.227 (2280179011)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2280188900)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2280252980)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:34:57.227 (2280268286)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2280272245)|WF_CRITERIA_END|false
+09:34:57.227 (2280288528)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:34:57.227 (2280293999)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2280304578)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:34:57.227 (2280308863)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2280318963)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:34:57.227 (2280323132)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2280332442)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:34:57.227 (2280336290)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2280345428)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:34:57.227 (2280349536)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2280358766)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:34:57.227 (2280393086)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:57.227 (2280397058)|WF_CRITERIA_END|true
+09:34:57.227 (2280416919)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:34:57.227 (2280422549)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2280432374)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:34:57.227 (2280436564)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2280446329)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:34:57.227 (2280521222)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Closed
+09:34:57.227 (2280526068)|WF_CRITERIA_END|false
+09:34:57.227 (2280543697)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2280609546)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:34:57.227 (2280624982)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2280629627)|WF_CRITERIA_END|false
+09:34:57.227 (2280656220)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:34:57.227 (2280690977)|WF_ACTION| Flow Trigger: 2;
+09:34:57.227 (2280693839)|WF_RULE_EVAL_END
+09:34:57.227 (2280732858)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:34:57.280 (2280791012)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:34:57.280 (2280861848)|FLOW_CREATE_INTERVIEW_END|4518af12f47f5ceb75cbcce7e2f1572ad9eef9-784a|Set Enquiry Student Type Based on Contact Profile
+09:34:57.227 (2281195094)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:34:57.281 (2281234534)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:34:57.281 (2281279020)|FLOW_CREATE_INTERVIEW_END|4521af12f47f5ceb75cbcce7e2f1572ad9eef9-784d|Set Enquiry Student Type Based on Contact Profile
+09:34:57.281 (2281533654)|FLOW_START_INTERVIEWS_BEGIN|2
+09:34:57.281 (2281569611)|FLOW_START_INTERVIEW_BEGIN|4518af12f47f5ceb75cbcce7e2f1572ad9eef9-784a|Set Enquiry Student Type Based on Contact Profile
+09:34:57.281 (2284168433)|FLOW_START_INTERVIEW_END|4518af12f47f5ceb75cbcce7e2f1572ad9eef9-784a|Set Enquiry Student Type Based on Contact Profile
+09:34:57.281 (2284174039)|FLOW_START_INTERVIEW_BEGIN|4521af12f47f5ceb75cbcce7e2f1572ad9eef9-784d|Set Enquiry Student Type Based on Contact Profile
+09:34:57.281 (2286295148)|FLOW_START_INTERVIEW_END|4521af12f47f5ceb75cbcce7e2f1572ad9eef9-784d|Set Enquiry Student Type Based on Contact Profile
+09:34:57.281 (2286305595)|FLOW_START_INTERVIEWS_END|2
+09:34:57.227 (2287277548)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:34:57.227 (2287282303)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:34:57.227 (2287301824)|WF_TIME_TRIGGERS_BEGIN
+09:34:57.227 (2290063067)|WF_ACTIONS_END| Flow Trigger: 2;
+09:34:57.227 (2290070217)|CODE_UNIT_FINISHED|Workflow:Case
+09:34:57.227 (2290464507)|DML_END|[38]
+09:34:57.227 (2291161057)|DML_BEGIN|[51]|Op:Insert|Type:EmailMessage|Rows:2
+09:34:57.227 (2343642272)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QErh|EmailMessageTrigger on EmailMessage trigger event AfterInsert for [02sp0000000H4N2, 02sp0000000H4N3]
+09:34:57.227 (2344085815)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2347835258)|SOQL_EXECUTE_BEGIN|[24]|Aggregations:0|SELECT id, Email_To__c, Latest_Inbound_Email__c FROM Case WHERE (id = :tmpVar1 AND (Email_To__c = NULL OR Email_To__c = '') AND (Origin = 'Email' OR Origin LIKE 'Email%'))
+09:34:57.227 (2370046380)|SOQL_EXECUTE_END|[24]|Rows:2
+09:34:57.227 (2370567873)|DML_BEGIN|[39]|Op:Update|Type:Case|Rows:2
+09:34:57.227 (2383350641)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:57.227 (2383835740)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2385646806)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:1|SELECT id, (SELECT id FROM enquiry_interests__r LIMIT 1) FROM case 
+09:34:57.227 (2389460219)|SOQL_EXECUTE_END|[42]|Rows:2
+09:34:57.227 (2389808209)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:34:57.227 (2390111186)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:34:57.390 (2390983398)|CUMULATIVE_LIMIT_USAGE
+09:34:57.390 (2390983398)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 18 out of 100
+  Number of query rows: 1767 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 8 out of 150
+  Number of DML rows: 15 out of 10000
+  Maximum CPU time: 584 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.390 (2390983398)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2392771570)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:57.227 (2396958656)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ96
+09:34:57.227 (2396973056)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:57.227 (2397168597)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email , $UserRole.Name=eSolutions
+09:34:57.227 (2397177109)|VALIDATION_PASS
+09:34:57.227 (2397180230)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:57.227 (2397607300)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Closed , Origin=Email , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:57.227 (2397615439)|VALIDATION_PASS
+09:34:57.227 (2397618600)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:57.227 (2397958271)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:57.227 (2397965986)|VALIDATION_PASS
+09:34:57.227 (2397968481)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:57.227 (2398283331)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:57.227 (2398293206)|VALIDATION_PASS
+09:34:57.227 (2398295648)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:57.227 (2398595692)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=1 , Category_Level_2__c=null
+09:34:57.227 (2398603228)|VALIDATION_PASS
+09:34:57.227 (2398605578)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:57.227 (2398910048)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Closed , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:57.227 (2398917774)|VALIDATION_PASS
+09:34:57.227 (2398954796)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ96
+09:34:57.227 (2398983986)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ97
+09:34:57.227 (2398990069)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:57.227 (2399182048)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email - System , $UserRole.Name=eSolutions
+09:34:57.227 (2399189796)|VALIDATION_PASS
+09:34:57.227 (2399192313)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:57.227 (2399613954)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Closed , Origin=Email - System , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:57.227 (2399622706)|VALIDATION_PASS
+09:34:57.227 (2399625112)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:57.227 (2399970731)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:57.227 (2399978581)|VALIDATION_PASS
+09:34:57.227 (2399980887)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:57.227 (2400310324)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:57.227 (2400319046)|VALIDATION_PASS
+09:34:57.227 (2400321381)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:57.227 (2400672332)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=1 , Category_Level_2__c=null
+09:34:57.227 (2400680485)|VALIDATION_PASS
+09:34:57.227 (2400682780)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:57.227 (2401023864)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Closed , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:57.227 (2401032039)|VALIDATION_PASS
+09:34:57.227 (2401057170)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ97
+09:34:57.227 (2418398811)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:57.227 (2418889596)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2419819153)|SOQL_EXECUTE_BEGIN|[243]|Aggregations:0|SELECT Id, Label FROM BH_Stop_Status__mdt 
+09:34:57.227 (2421346608)|SOQL_EXECUTE_END|[243]|Rows:1
+09:34:57.227 (2422643805)|SOQL_EXECUTE_BEGIN|[106]|Aggregations:0|SELECT Id, Case_API_name__c, Contact_Field_API_name__c FROM Case_to_Contact_Field_Mapping__mdt LIMIT 400
+09:34:57.227 (2423921772)|SOQL_EXECUTE_END|[106]|Rows:14
+09:34:57.227 (2424931452)|SOQL_EXECUTE_BEGIN|[120]|Aggregations:0|select Level_of_Study__c,Supplied_Date_of_Birth__c,Supplied_Country_of_Residence__c,SuppliedEmail,Supplied_Email_Opt_out__c,Supplied_First_Name__c,Highest_Level_of_Study__c,Supplied_Name_of_Institution__c,Supplied_Nationality__c,Residency_Status__c,Supplied_City__c,Supplied_Area_of_Interest__c,Supplied_Last_Name__c,SuppliedPhone,Id,contactId from case 
+09:34:57.227 (2431457728)|SOQL_EXECUTE_END|[120]|Rows:0
+09:34:57.431 (2431687788)|CUMULATIVE_LIMIT_USAGE
+09:34:57.431 (2431687788)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 19 out of 100
+  Number of query rows: 1782 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 8 out of 150
+  Number of DML rows: 15 out of 10000
+  Maximum CPU time: 584 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.431 (2431687788)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2433369075)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:57.227 (2433461430)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Case
+09:34:57.227 (2439658223)|WF_RULE_EVAL_BEGIN|Assignment
+09:34:57.227 (2439710480)|WF_SPOOL_ACTION_BEGIN|Assignment
+09:34:57.227 (2439715947)|WF_ACTION|.
+09:34:57.227 (2439718875)|WF_RULE_EVAL_END
+09:34:57.227 (2439734361)|WF_RULE_EVAL_BEGIN|Workflow
+09:34:57.227 (2439769144)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:34:57.227 (2439786700)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2439802187)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:34:57.227 (2439807236)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2439817717)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:34:57.227 (2439822121)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2439832160)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2440016965)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440035685)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2440157290)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:34:57.227 (2440180017)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2440185367)|WF_CRITERIA_END|false
+09:34:57.227 (2440201282)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:34:57.227 (2440206676)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440217294)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:34:57.227 (2440221420)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440230936)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2440295706)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:34:57.227 (2440310749)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2440314885)|WF_CRITERIA_END|false
+09:34:57.227 (2440329177)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:34:57.227 (2440334952)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440345390)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:34:57.227 (2440349576)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440358953)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:34:57.227 (2440363013)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440372180)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:34:57.227 (2440376300)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440385485)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:34:57.227 (2440389567)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440416235)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:34:57.227 (2440484971)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:57.227 (2440491103)|WF_CRITERIA_END|true
+09:34:57.227 (2440521966)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:34:57.227 (2440527618)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440537870)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:34:57.227 (2440541945)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440551531)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:34:57.227 (2440657939)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Closed
+09:34:57.227 (2440662899)|WF_CRITERIA_END|false
+09:34:57.227 (2440678505)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2440748669)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:34:57.227 (2440764743)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2440768842)|WF_CRITERIA_END|false
+09:34:57.227 (2440806389)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:34:57.227 (2440811998)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440822352)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:34:57.227 (2440826555)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440836209)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:34:57.227 (2440840851)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2440850156)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2440983945)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2441006765)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2441082658)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:34:57.227 (2441100893)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2441105192)|WF_CRITERIA_END|false
+09:34:57.227 (2441119982)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:34:57.227 (2441125197)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2441135115)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:34:57.227 (2441139848)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2441149401)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2441211440)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:34:57.227 (2441226122)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2441229958)|WF_CRITERIA_END|false
+09:34:57.227 (2441243914)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:34:57.227 (2441249077)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2441258943)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:34:57.227 (2441262919)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2441272170)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:34:57.227 (2441276803)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2441286415)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:34:57.227 (2441290443)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2441299364)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:34:57.227 (2441303498)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2441312683)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:34:57.227 (2441348828)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:57.227 (2441352827)|WF_CRITERIA_END|true
+09:34:57.227 (2441372605)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:34:57.227 (2441378132)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2441388660)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:34:57.227 (2441392939)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2441402134)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:34:57.227 (2441478856)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Closed
+09:34:57.227 (2441483723)|WF_CRITERIA_END|false
+09:34:57.227 (2441499172)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2441565193)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:34:57.227 (2441580665)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2441584752)|WF_CRITERIA_END|false
+09:34:57.227 (2441611938)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:34:57.227 (2441644257)|WF_ACTION| Flow Trigger: 2;
+09:34:57.227 (2441646918)|WF_RULE_EVAL_END
+09:34:57.227 (2441688785)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:34:57.441 (2441752634)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:34:57.441 (2441830835)|FLOW_CREATE_INTERVIEW_END|4596af12f47f5ceb75cbcce7e2f1572ad9eef9-7898|Set Enquiry Student Type Based on Contact Profile
+09:34:57.227 (2442241924)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:34:57.442 (2442281382)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:34:57.442 (2442326009)|FLOW_CREATE_INTERVIEW_END|4597af12f47f5ceb75cbcce7e2f1572ad9eef9-7899|Set Enquiry Student Type Based on Contact Profile
+09:34:57.442 (2442573129)|FLOW_START_INTERVIEWS_BEGIN|2
+09:34:57.442 (2442607935)|FLOW_START_INTERVIEW_BEGIN|4596af12f47f5ceb75cbcce7e2f1572ad9eef9-7898|Set Enquiry Student Type Based on Contact Profile
+09:34:57.442 (2445318295)|FLOW_START_INTERVIEW_END|4596af12f47f5ceb75cbcce7e2f1572ad9eef9-7898|Set Enquiry Student Type Based on Contact Profile
+09:34:57.442 (2445324573)|FLOW_START_INTERVIEW_BEGIN|4597af12f47f5ceb75cbcce7e2f1572ad9eef9-7899|Set Enquiry Student Type Based on Contact Profile
+09:34:57.442 (2447451911)|FLOW_START_INTERVIEW_END|4597af12f47f5ceb75cbcce7e2f1572ad9eef9-7899|Set Enquiry Student Type Based on Contact Profile
+09:34:57.442 (2447463195)|FLOW_START_INTERVIEWS_END|2
+09:34:57.227 (2448408843)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:34:57.227 (2448413586)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:34:57.227 (2448434220)|WF_TIME_TRIGGERS_BEGIN
+09:34:57.227 (2451249731)|WF_ACTIONS_END| Flow Trigger: 2;
+09:34:57.227 (2451257377)|CODE_UNIT_FINISHED|Workflow:Case
+09:34:57.227 (2451654687)|DML_END|[39]
+09:34:57.227 (2453073262)|SOQL_EXECUTE_BEGIN|[76]|Aggregations:1|SELECT id, Latest_Inbound_Email__c, Latest_Unassigned_Queue_OwnerId__c, Status, CreatedDate, Origin, (SELECT id, MessageDate FROM emailMessages WHERE Incoming = TRUE ORDER BY MessageDate DESC NULLS FIRST LIMIT 2), IsClosed FROM Case WHERE id = :tmpVar1
+09:34:57.227 (2498418375)|SOQL_EXECUTE_END|[76]|Rows:2
+09:34:57.227 (2499045258)|USER_DEBUG|[91]|DEBUG|** met criteria so reopening
+09:34:57.227 (2499499666)|DML_BEGIN|[100]|Op:Update|Type:Case|Rows:2
+09:34:57.227 (2513325827)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:57.227 (2513823246)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2515114921)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:1|SELECT id, (SELECT id FROM enquiry_interests__r LIMIT 1) FROM case 
+09:34:57.227 (2519170722)|SOQL_EXECUTE_END|[42]|Rows:2
+09:34:57.227 (2519542642)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:34:57.227 (2519777485)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:34:57.520 (2520419790)|CUMULATIVE_LIMIT_USAGE
+09:34:57.520 (2520419790)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 21 out of 100
+  Number of query rows: 1788 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 9 out of 150
+  Number of DML rows: 17 out of 10000
+  Maximum CPU time: 584 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.520 (2520419790)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2522238935)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:57.227 (2525433808)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ96
+09:34:57.227 (2525446372)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:57.227 (2525650760)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email , $UserRole.Name=eSolutions
+09:34:57.227 (2525659651)|VALIDATION_PASS
+09:34:57.227 (2525662620)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:57.227 (2526765283)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Open , Origin=Email , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:57.227 (2526774574)|VALIDATION_PASS
+09:34:57.227 (2526777020)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:57.227 (2527208229)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:57.227 (2527217783)|VALIDATION_PASS
+09:34:57.227 (2527220298)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:57.227 (2527627860)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:57.227 (2527636144)|VALIDATION_PASS
+09:34:57.227 (2527638647)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:57.227 (2528014931)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=1 , Category_Level_2__c=null
+09:34:57.227 (2528023743)|VALIDATION_PASS
+09:34:57.227 (2528026236)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:57.227 (2528363714)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Open , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:57.227 (2528373870)|VALIDATION_PASS
+09:34:57.227 (2528413837)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ96
+09:34:57.227 (2528447817)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ97
+09:34:57.227 (2528455785)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:57.227 (2528648370)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email - System , $UserRole.Name=eSolutions
+09:34:57.227 (2528655517)|VALIDATION_PASS
+09:34:57.227 (2528658024)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:57.227 (2529157496)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Closed , Origin=Email - System , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:57.227 (2529167739)|VALIDATION_PASS
+09:34:57.227 (2529170082)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:57.227 (2529646335)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:57.227 (2529654827)|VALIDATION_PASS
+09:34:57.227 (2529657127)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:57.227 (2530052974)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Closed , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:57.227 (2530062657)|VALIDATION_PASS
+09:34:57.227 (2530065199)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:57.227 (2530407031)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=1 , Category_Level_2__c=null
+09:34:57.227 (2530414896)|VALIDATION_PASS
+09:34:57.227 (2530417144)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:57.227 (2530799930)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Closed , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:57.227 (2530807991)|VALIDATION_PASS
+09:34:57.227 (2530831527)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ97
+09:34:57.227 (2550080937)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:57.227 (2550636681)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2552022545)|SOQL_EXECUTE_BEGIN|[243]|Aggregations:0|SELECT Id, Label FROM BH_Stop_Status__mdt 
+09:34:57.227 (2553703112)|SOQL_EXECUTE_END|[243]|Rows:1
+09:34:57.227 (2554984609)|SOQL_EXECUTE_BEGIN|[267]|Aggregations:0|SELECT id, uniqueId__c, ownerIdString__c, minutes__c, last_updated__c, owner__c, owner_name__c, case__c FROM queueHours__c 
+09:34:57.227 (2560268574)|SOQL_EXECUTE_END|[267]|Rows:1
+09:34:57.227 (2561348229)|SOQL_EXECUTE_BEGIN|[27]|Aggregations:0|SELECT id FROM BusinessHours LIMIT 1
+09:34:57.227 (2563441309)|SOQL_EXECUTE_END|[27]|Rows:1
+09:34:57.227 (2565499061)|DML_BEGIN|[323]|Op:Upsert|Type:queueHours__c|Rows:1
+09:34:57.227 (2595975191)|DML_END|[323]
+09:34:57.227 (2596894007)|DML_BEGIN|[412]|Op:Update|Type:Case|Rows:1
+09:34:57.227 (2604583088)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96]
+09:34:57.604 (2604810102)|CUMULATIVE_LIMIT_USAGE
+09:34:57.604 (2604810102)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 23 out of 100
+  Number of query rows: 1791 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 11 out of 150
+  Number of DML rows: 19 out of 10000
+  Maximum CPU time: 584 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.604 (2604810102)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2606880749)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96]
+09:34:57.227 (2609978542)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ96
+09:34:57.227 (2609990306)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:57.227 (2610184626)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email , $UserRole.Name=eSolutions
+09:34:57.227 (2610193287)|VALIDATION_PASS
+09:34:57.227 (2610196337)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:57.227 (2610644934)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Open , Origin=Email , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:57.227 (2610653857)|VALIDATION_PASS
+09:34:57.227 (2610656305)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:57.227 (2611017624)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:57.227 (2611026339)|VALIDATION_PASS
+09:34:57.227 (2611028762)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:57.227 (2611355654)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:57.227 (2611363409)|VALIDATION_PASS
+09:34:57.227 (2611365731)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:57.227 (2611683025)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=0 , Category_Level_2__c=null
+09:34:57.227 (2611691086)|VALIDATION_PASS
+09:34:57.227 (2611693573)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:57.227 (2612001954)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Open , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:57.227 (2612010035)|VALIDATION_PASS
+09:34:57.227 (2612037512)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ96
+09:34:57.227 (2626870743)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96]
+09:34:57.627 (2627043114)|CUMULATIVE_LIMIT_USAGE
+09:34:57.627 (2627043114)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 23 out of 100
+  Number of query rows: 1791 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 11 out of 150
+  Number of DML rows: 19 out of 10000
+  Maximum CPU time: 584 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.627 (2627043114)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2628389109)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96]
+09:34:57.227 (2628792292)|DML_END|[412]
+09:34:57.227 (2629413077)|SOQL_EXECUTE_BEGIN|[106]|Aggregations:0|SELECT Id, Case_API_name__c, Contact_Field_API_name__c FROM Case_to_Contact_Field_Mapping__mdt LIMIT 400
+09:34:57.227 (2631530474)|SOQL_EXECUTE_END|[106]|Rows:14
+09:34:57.227 (2632484668)|SOQL_EXECUTE_BEGIN|[120]|Aggregations:0|select Level_of_Study__c,Supplied_Date_of_Birth__c,Supplied_Country_of_Residence__c,SuppliedEmail,Supplied_Email_Opt_out__c,Supplied_First_Name__c,Highest_Level_of_Study__c,Supplied_Name_of_Institution__c,Supplied_Nationality__c,Residency_Status__c,Supplied_City__c,Supplied_Area_of_Interest__c,Supplied_Last_Name__c,SuppliedPhone,Id,contactId from case 
+09:34:57.227 (2638123458)|SOQL_EXECUTE_END|[120]|Rows:0
+09:34:57.638 (2638353761)|CUMULATIVE_LIMIT_USAGE
+09:34:57.638 (2638353761)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 24 out of 100
+  Number of query rows: 1805 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 11 out of 150
+  Number of DML rows: 19 out of 10000
+  Maximum CPU time: 672 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.638 (2638353761)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2639740881)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96, 500p0000002kJ97]
+09:34:57.227 (2639852235)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Case
+09:34:57.227 (2646732400)|WF_RULE_EVAL_BEGIN|Assignment
+09:34:57.227 (2646752477)|WF_SPOOL_ACTION_BEGIN|Assignment
+09:34:57.227 (2646756969)|WF_ACTION|.
+09:34:57.227 (2646759795)|WF_RULE_EVAL_END
+09:34:57.227 (2646772746)|WF_RULE_EVAL_BEGIN|Workflow
+09:34:57.227 (2646806798)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:34:57.227 (2646815462)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2646827687)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:34:57.227 (2646832285)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2646842300)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:34:57.227 (2646857221)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2646878681)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2647067295)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647086457)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2647196979)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:34:57.227 (2647229146)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2647237499)|WF_CRITERIA_END|false
+09:34:57.227 (2647264452)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:34:57.227 (2647273707)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647295080)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:34:57.227 (2647303261)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647324420)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2647402290)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:34:57.227 (2647418041)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2647422295)|WF_CRITERIA_END|false
+09:34:57.227 (2647436722)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:34:57.227 (2647442104)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647452273)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:34:57.227 (2647456389)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647465783)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:34:57.227 (2647470047)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647479911)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:34:57.227 (2647483897)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647493027)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:34:57.227 (2647497058)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647506186)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:34:57.227 (2647550184)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:57.227 (2647554551)|WF_CRITERIA_END|true
+09:34:57.227 (2647581344)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:34:57.227 (2647586809)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647611816)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:34:57.227 (2647620518)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647643031)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:34:57.227 (2647774110)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Open
+09:34:57.227 (2647779226)|WF_CRITERIA_END|true
+09:34:57.227 (2647800863)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2647868647)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:34:57.227 (2647884278)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2647888412)|WF_CRITERIA_END|false
+09:34:57.227 (2647930452)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:34:57.227 (2647936761)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647947784)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:34:57.227 (2647951926)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647961662)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:34:57.227 (2647965668)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2647974762)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2648075250)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2648101319)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2648209350)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:34:57.227 (2648228659)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2648233476)|WF_CRITERIA_END|false
+09:34:57.227 (2648248345)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:34:57.227 (2648253724)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2648263888)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:34:57.227 (2648267968)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2648277051)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2648338944)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:34:57.227 (2648353967)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2648357859)|WF_CRITERIA_END|false
+09:34:57.227 (2648372454)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:34:57.227 (2648377419)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2648387319)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:34:57.227 (2648391524)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2648400689)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:34:57.227 (2648404570)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2648413972)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:34:57.227 (2648417708)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2648426778)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:34:57.227 (2648430726)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2648440265)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:34:57.227 (2648475774)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:57.227 (2648479943)|WF_CRITERIA_END|true
+09:34:57.227 (2648507981)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:34:57.227 (2648516569)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2648538083)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:34:57.227 (2648546912)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2648568664)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:34:57.227 (2648673732)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Closed
+09:34:57.227 (2648678868)|WF_CRITERIA_END|false
+09:34:57.227 (2648695502)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2648762483)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:34:57.227 (2648777856)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2648781917)|WF_CRITERIA_END|false
+09:34:57.227 (2648808893)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:34:57.227 (2648967247)|WF_FIELD_UPDATE|[Enquiry: 03108925 500p0000002kJ96]|Field:Enquiry: Latest Inbound Email|Value:null|Id=04Y28000000E6Mz|CurrentRule:Status Changed - Clear Latest Inbound Email Field (Id=01Q280000002P34)
+09:34:57.227 (2649017199)|WF_ACTION| Field Update: 1; Flow Trigger: 2;
+09:34:57.227 (2649021788)|WF_RULE_EVAL_END
+09:34:57.227 (2651190729)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96]
+09:34:57.227 (2651579441)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2652869275)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:1|SELECT id, (SELECT id FROM enquiry_interests__r LIMIT 1) FROM case 
+09:34:57.227 (2656228743)|SOQL_EXECUTE_END|[42]|Rows:1
+09:34:57.227 (2656512479)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:34:57.227 (2656816738)|SYSTEM_MODE_ENTER|true
+09:34:57.227 (2656826128)|SYSTEM_MODE_EXIT|true
+09:34:57.227 (2656842770)|SYSTEM_MODE_ENTER|true
+09:34:57.227 (2656847811)|SYSTEM_MODE_EXIT|true
+09:34:57.657 (2657220495)|CUMULATIVE_LIMIT_USAGE
+09:34:57.657 (2657220495)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 25 out of 100
+  Number of query rows: 1806 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 11 out of 150
+  Number of DML rows: 19 out of 10000
+  Maximum CPU time: 672 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.657 (2657220495)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2658658307)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96]
+09:34:57.227 (2671357366)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96]
+09:34:57.227 (2671743860)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2672787185)|SOQL_EXECUTE_BEGIN|[243]|Aggregations:0|SELECT Id, Label FROM BH_Stop_Status__mdt 
+09:34:57.227 (2674391731)|SOQL_EXECUTE_END|[243]|Rows:1
+09:34:57.227 (2675273612)|SOQL_EXECUTE_BEGIN|[267]|Aggregations:0|SELECT id, uniqueId__c, ownerIdString__c, minutes__c, last_updated__c, owner__c, owner_name__c, case__c FROM queueHours__c 
+09:34:57.227 (2679309898)|SOQL_EXECUTE_END|[267]|Rows:1
+09:34:57.227 (2680403085)|DML_BEGIN|[323]|Op:Upsert|Type:queueHours__c|Rows:1
+09:34:57.227 (2703791453)|DML_END|[323]
+09:34:57.227 (2704723842)|DML_BEGIN|[412]|Op:Update|Type:Case|Rows:1
+09:34:57.227 (2714545040)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96]
+09:34:57.714 (2714852555)|CUMULATIVE_LIMIT_USAGE
+09:34:57.714 (2714852555)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 26 out of 100
+  Number of query rows: 1808 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 13 out of 150
+  Number of DML rows: 21 out of 10000
+  Maximum CPU time: 672 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.714 (2714852555)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2716173670)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ96]
+09:34:57.227 (2719756950)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ96
+09:34:57.227 (2719769841)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:57.227 (2719960559)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email , $UserRole.Name=eSolutions
+09:34:57.227 (2719968540)|VALIDATION_PASS
+09:34:57.227 (2719971590)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:57.227 (2720416191)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Open , Origin=Email , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:57.227 (2720425747)|VALIDATION_PASS
+09:34:57.227 (2720428186)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:57.227 (2720766676)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:57.227 (2720774365)|VALIDATION_PASS
+09:34:57.227 (2720776720)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:57.227 (2721098293)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:57.227 (2721107915)|VALIDATION_PASS
+09:34:57.227 (2721110434)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:57.227 (2721428181)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=0 , Category_Level_2__c=null
+09:34:57.227 (2721435468)|VALIDATION_PASS
+09:34:57.227 (2721437687)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:57.227 (2721720938)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Open , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:57.227 (2721728553)|VALIDATION_PASS
+09:34:57.227 (2721759123)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ96
+09:34:57.227 (2734990133)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96]
+09:34:57.735 (2735292778)|CUMULATIVE_LIMIT_USAGE
+09:34:57.735 (2735292778)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 26 out of 100
+  Number of query rows: 1808 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 13 out of 150
+  Number of DML rows: 21 out of 10000
+  Maximum CPU time: 672 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.735 (2735292778)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2736863303)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96]
+09:34:57.227 (2737412288)|DML_END|[412]
+09:34:57.227 (2738138658)|SOQL_EXECUTE_BEGIN|[106]|Aggregations:0|SELECT Id, Case_API_name__c, Contact_Field_API_name__c FROM Case_to_Contact_Field_Mapping__mdt LIMIT 400
+09:34:57.227 (2740511696)|SOQL_EXECUTE_END|[106]|Rows:14
+09:34:57.227 (2741332830)|SOQL_EXECUTE_BEGIN|[120]|Aggregations:0|select Level_of_Study__c,Supplied_Date_of_Birth__c,Supplied_Country_of_Residence__c,SuppliedEmail,Supplied_Email_Opt_out__c,Supplied_First_Name__c,Highest_Level_of_Study__c,Supplied_Name_of_Institution__c,Supplied_Nationality__c,Residency_Status__c,Supplied_City__c,Supplied_Area_of_Interest__c,Supplied_Last_Name__c,SuppliedPhone,Id,contactId from case 
+09:34:57.227 (2746869035)|SOQL_EXECUTE_END|[120]|Rows:0
+09:34:57.747 (2747213612)|CUMULATIVE_LIMIT_USAGE
+09:34:57.747 (2747213612)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 27 out of 100
+  Number of query rows: 1822 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 13 out of 150
+  Number of DML rows: 21 out of 10000
+  Maximum CPU time: 672 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.747 (2747213612)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2748679679)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ96]
+09:34:57.227 (2748892335)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:34:57.748 (2748982238)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:34:57.748 (2749082169)|FLOW_CREATE_INTERVIEW_END|4598af12f47f5ceb75cbcce7e2f1572ad9eef9-789a|Set Enquiry Student Type Based on Contact Profile
+09:34:57.227 (2749460270)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:34:57.749 (2749516498)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:34:57.749 (2749580921)|FLOW_CREATE_INTERVIEW_END|4599af12f47f5ceb75cbcce7e2f1572ad9eef9-789b|Set Enquiry Student Type Based on Contact Profile
+09:34:57.749 (2749931800)|FLOW_START_INTERVIEWS_BEGIN|2
+09:34:57.749 (2749978155)|FLOW_START_INTERVIEW_BEGIN|4598af12f47f5ceb75cbcce7e2f1572ad9eef9-789a|Set Enquiry Student Type Based on Contact Profile
+09:34:57.749 (2754048660)|FLOW_START_INTERVIEW_END|4598af12f47f5ceb75cbcce7e2f1572ad9eef9-789a|Set Enquiry Student Type Based on Contact Profile
+09:34:57.749 (2754056386)|FLOW_START_INTERVIEW_BEGIN|4599af12f47f5ceb75cbcce7e2f1572ad9eef9-789b|Set Enquiry Student Type Based on Contact Profile
+09:34:57.749 (2756573993)|FLOW_START_INTERVIEW_END|4599af12f47f5ceb75cbcce7e2f1572ad9eef9-789b|Set Enquiry Student Type Based on Contact Profile
+09:34:57.749 (2756590720)|FLOW_START_INTERVIEWS_END|2
+09:34:57.227 (2757597005)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:34:57.227 (2757604296)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:34:57.227 (2757664187)|WF_RULE_EVAL_BEGIN|Workflow
+09:34:57.227 (2757701135)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|1
+09:34:57.227 (2757713702)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2757740633)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|1
+09:34:57.227 (2757750002)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2757773671)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|1
+09:34:57.227 (2757782676)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2757805370)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|1
+09:34:57.227 (2757820744)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2757846436)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|1
+09:34:57.227 (2758006598)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:34:57.227 (2758043418)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2758049990)|WF_CRITERIA_END|false
+09:34:57.227 (2758069426)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|1
+09:34:57.227 (2758075873)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2758087814)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|1
+09:34:57.227 (2758092548)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2758103198)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|1
+09:34:57.227 (2758224645)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:34:57.227 (2758253208)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2758261626)|WF_CRITERIA_END|false
+09:34:57.227 (2758289688)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|1
+09:34:57.227 (2758299781)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2758325224)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|1
+09:34:57.227 (2758334519)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2758359927)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|1
+09:34:57.227 (2758368943)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2758392476)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|1
+09:34:57.227 (2758401880)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2758424674)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|1
+09:34:57.227 (2758432778)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2758456093)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|1
+09:34:57.227 (2758463806)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2758484010)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|1
+09:34:57.227 (2758490722)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2758508726)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ96]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|1
+09:34:57.227 (2758678308)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:34:57.227 (2758706782)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2758713809)|WF_CRITERIA_END|false
+09:34:57.227 (2758757121)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:34:57.227 (2758776771)|WF_ACTION| None
+09:34:57.227 (2758781697)|WF_RULE_EVAL_END
+09:34:57.227 (2758814086)|WF_TIME_TRIGGERS_BEGIN
+09:34:57.227 (2761418680)|WF_ACTIONS_END| Field Update: 1; Flow Trigger: 2;
+09:34:57.227 (2761428866)|CODE_UNIT_FINISHED|Workflow:Case
+09:34:57.227 (2761933373)|DML_END|[100]
+09:34:57.762 (2762137307)|CUMULATIVE_LIMIT_USAGE
+09:34:57.762 (2762137307)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 27 out of 100
+  Number of query rows: 1822 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 13 out of 150
+  Number of DML rows: 21 out of 10000
+  Maximum CPU time: 672 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.762 (2762137307)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2763770383)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert for [02sp0000000H4N2, 02sp0000000H4N3]
+09:34:57.227 (2764366486)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:EmailMessage
+09:34:57.227 (2776088979)|WF_RULE_EVAL_BEGIN|Workflow
+09:34:57.227 (2776134236)|WF_CRITERIA_BEGIN|[Email Message:  02sp0000000H4N2]|Mark_Email_Enquiry_has_Attachment30128000000J3T4|01Q280000002P50|ON_CREATE_ONLY|0
+09:34:57.227 (2776244080)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:57.227 (2776252598)|WF_CRITERIA_END|true
+09:34:57.227 (2777284572)|WF_CRITERIA_BEGIN|[Email Message:  02sp0000000H4N3]|Mark_Email_Enquiry_has_Attachment30128000000J3T4|01Q280000002P50|ON_CREATE_ONLY|0
+09:34:57.227 (2777331958)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:57.227 (2777336915)|WF_CRITERIA_END|true
+09:34:57.227 (2777358119)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:34:57.227 (2777386905)|WF_ACTION| Flow Trigger: 2;
+09:34:57.227 (2777390745)|WF_RULE_EVAL_END
+09:34:57.227 (2777427871)|WF_FLOW_ACTION_BEGIN|09L28000000MLl1
+09:34:57.777 (2777477245)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfT|30128000000J3T4
+09:34:57.777 (2779624689)|FLOW_CREATE_INTERVIEW_END|4644af12f47f5ceb75cbcce7e2f1572ad9eef9-78c8|Mark Email Enquiry has Attachment
+09:34:57.227 (2779831898)|WF_FLOW_ACTION_BEGIN|09L28000000MLl1
+09:34:57.779 (2779870175)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfT|30128000000J3T4
+09:34:57.779 (2779919236)|FLOW_CREATE_INTERVIEW_END|4646af12f47f5ceb75cbcce7e2f1572ad9eef9-78ca|Mark Email Enquiry has Attachment
+09:34:57.780 (2780153495)|FLOW_START_INTERVIEWS_BEGIN|2
+09:34:57.780 (2780190864)|FLOW_START_INTERVIEW_BEGIN|4644af12f47f5ceb75cbcce7e2f1572ad9eef9-78c8|Mark Email Enquiry has Attachment
+09:34:57.780 (2780977805)|FLOW_START_INTERVIEW_END|4644af12f47f5ceb75cbcce7e2f1572ad9eef9-78c8|Mark Email Enquiry has Attachment
+09:34:57.780 (2780983412)|FLOW_START_INTERVIEW_BEGIN|4646af12f47f5ceb75cbcce7e2f1572ad9eef9-78ca|Mark Email Enquiry has Attachment
+09:34:57.780 (2781450470)|FLOW_START_INTERVIEW_END|4646af12f47f5ceb75cbcce7e2f1572ad9eef9-78ca|Mark Email Enquiry has Attachment
+09:34:57.780 (2781460154)|FLOW_START_INTERVIEWS_END|2
+09:34:57.227 (2782413674)|WF_FLOW_ACTION_END|09L28000000MLl1
+09:34:57.227 (2782418130)|WF_FLOW_ACTION_END|09L28000000MLl1
+09:34:57.227 (2782503530)|WF_ACTIONS_END| Flow Trigger: 2;
+09:34:57.227 (2782509222)|CODE_UNIT_FINISHED|Workflow:EmailMessage
+09:34:57.227 (2782667110)|DML_END|[51]
+09:34:57.227 (2783001398)|SOQL_EXECUTE_BEGIN|[53]|Aggregations:0|SELECT id, IsClosed FROM case WHERE id = :tmpVar1 LIMIT 1
+09:34:57.227 (2791400400)|SOQL_EXECUTE_END|[53]|Rows:1
+09:34:57.227 (2791790255)|SOQL_EXECUTE_BEGIN|[54]|Aggregations:0|SELECT id, IsClosed FROM case WHERE id = :tmpVar1 LIMIT 1
+09:34:57.227 (2800115446)|SOQL_EXECUTE_END|[54]|Rows:1
+09:34:57.227 (2800520567)|DML_BEGIN|[63]|Op:Insert|Type:EmailMessage|Rows:1
+09:34:57.227 (2828588186)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QErh|EmailMessageTrigger on EmailMessage trigger event AfterInsert for [02sp0000000H4N4]
+09:34:57.227 (2829179735)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2830660236)|SOQL_EXECUTE_BEGIN|[24]|Aggregations:0|SELECT id, Email_To__c, Latest_Inbound_Email__c FROM Case WHERE (id = :tmpVar1 AND (Email_To__c = NULL OR Email_To__c = '') AND (Origin = 'Email' OR Origin LIKE 'Email%'))
+09:34:57.227 (2835600472)|SOQL_EXECUTE_END|[24]|Rows:0
+09:34:57.227 (2836885094)|SOQL_EXECUTE_BEGIN|[76]|Aggregations:1|SELECT id, Latest_Inbound_Email__c, Latest_Unassigned_Queue_OwnerId__c, Status, CreatedDate, Origin, (SELECT id, MessageDate FROM emailMessages WHERE Incoming = TRUE ORDER BY MessageDate DESC NULLS FIRST LIMIT 2), IsClosed FROM Case WHERE id = :tmpVar1
+09:34:57.227 (2850505158)|SOQL_EXECUTE_END|[76]|Rows:1
+09:34:57.227 (2850927054)|USER_DEBUG|[91]|DEBUG|** met criteria so reopening
+09:34:57.227 (2851205815)|DML_BEGIN|[100]|Op:Update|Type:Case|Rows:1
+09:34:57.227 (2859872892)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ97]
+09:34:57.227 (2860426265)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2862244924)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:1|SELECT id, (SELECT id FROM enquiry_interests__r LIMIT 1) FROM case 
+09:34:57.227 (2866371617)|SOQL_EXECUTE_END|[42]|Rows:1
+09:34:57.227 (2866705776)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:34:57.867 (2867413240)|CUMULATIVE_LIMIT_USAGE
+09:34:57.867 (2867413240)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 32 out of 100
+  Number of query rows: 1828 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 15 out of 150
+  Number of DML rows: 23 out of 10000
+  Maximum CPU time: 672 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.867 (2867413240)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2869158042)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ97]
+09:34:57.227 (2872123402)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ97
+09:34:57.227 (2872141133)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:57.227 (2872359475)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email - System , $UserRole.Name=eSolutions
+09:34:57.227 (2872367673)|VALIDATION_PASS
+09:34:57.227 (2872370628)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:57.227 (2872813099)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Open , Origin=Email - System , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:57.227 (2872823392)|VALIDATION_PASS
+09:34:57.227 (2872825817)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:57.227 (2873207429)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:57.227 (2873217332)|VALIDATION_PASS
+09:34:57.227 (2873219934)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:57.227 (2873582179)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:57.227 (2873600211)|VALIDATION_PASS
+09:34:57.227 (2873602991)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:57.227 (2873919291)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=1 , Category_Level_2__c=null
+09:34:57.227 (2873927640)|VALIDATION_PASS
+09:34:57.227 (2873930016)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:57.227 (2874226752)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Open , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:57.227 (2874235153)|VALIDATION_PASS
+09:34:57.227 (2874285576)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ97
+09:34:57.227 (2891943518)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ97]
+09:34:57.227 (2892426794)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2893945551)|SOQL_EXECUTE_BEGIN|[243]|Aggregations:0|SELECT Id, Label FROM BH_Stop_Status__mdt 
+09:34:57.227 (2895869803)|SOQL_EXECUTE_END|[243]|Rows:1
+09:34:57.227 (2897037053)|SOQL_EXECUTE_BEGIN|[267]|Aggregations:0|SELECT id, uniqueId__c, ownerIdString__c, minutes__c, last_updated__c, owner__c, owner_name__c, case__c FROM queueHours__c 
+09:34:57.227 (2901685233)|SOQL_EXECUTE_END|[267]|Rows:1
+09:34:57.227 (2902956705)|DML_BEGIN|[323]|Op:Upsert|Type:queueHours__c|Rows:1
+09:34:57.227 (2926633866)|DML_END|[323]
+09:34:57.227 (2927498743)|DML_BEGIN|[412]|Op:Update|Type:Case|Rows:1
+09:34:57.227 (2935717102)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ97]
+09:34:57.935 (2935932335)|CUMULATIVE_LIMIT_USAGE
+09:34:57.935 (2935932335)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 33 out of 100
+  Number of query rows: 1830 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 17 out of 150
+  Number of DML rows: 25 out of 10000
+  Maximum CPU time: 771 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.935 (2935932335)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2937464199)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ97]
+09:34:57.227 (2940105830)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ97
+09:34:57.227 (2940122263)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:57.227 (2940314335)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email - System , $UserRole.Name=eSolutions
+09:34:57.227 (2940322186)|VALIDATION_PASS
+09:34:57.227 (2940324986)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:57.227 (2940769605)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Open , Origin=Email - System , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:57.227 (2940779184)|VALIDATION_PASS
+09:34:57.227 (2940781690)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:57.227 (2941136981)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:57.227 (2941146310)|VALIDATION_PASS
+09:34:57.227 (2941148804)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:57.227 (2941529883)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:57.227 (2941537965)|VALIDATION_PASS
+09:34:57.227 (2941540388)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:57.227 (2941859278)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=0 , Category_Level_2__c=null
+09:34:57.227 (2941867147)|VALIDATION_PASS
+09:34:57.227 (2941869417)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:57.227 (2942170418)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Open , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:57.227 (2942178642)|VALIDATION_PASS
+09:34:57.227 (2942223456)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ97
+09:34:57.227 (2954930041)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ97]
+09:34:57.955 (2955175293)|CUMULATIVE_LIMIT_USAGE
+09:34:57.955 (2955175293)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 33 out of 100
+  Number of query rows: 1830 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 17 out of 150
+  Number of DML rows: 25 out of 10000
+  Maximum CPU time: 771 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.955 (2955175293)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2956434116)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ97]
+09:34:57.227 (2956992776)|DML_END|[412]
+09:34:57.227 (2957601839)|SOQL_EXECUTE_BEGIN|[106]|Aggregations:0|SELECT Id, Case_API_name__c, Contact_Field_API_name__c FROM Case_to_Contact_Field_Mapping__mdt LIMIT 400
+09:34:57.227 (2959726245)|SOQL_EXECUTE_END|[106]|Rows:14
+09:34:57.227 (2961077020)|SOQL_EXECUTE_BEGIN|[120]|Aggregations:0|select Level_of_Study__c,Supplied_Date_of_Birth__c,Supplied_Country_of_Residence__c,SuppliedEmail,Supplied_Email_Opt_out__c,Supplied_First_Name__c,Highest_Level_of_Study__c,Supplied_Name_of_Institution__c,Supplied_Nationality__c,Residency_Status__c,Supplied_City__c,Supplied_Area_of_Interest__c,Supplied_Last_Name__c,SuppliedPhone,Id,contactId from case 
+09:34:57.227 (2967086744)|SOQL_EXECUTE_END|[120]|Rows:0
+09:34:57.967 (2967351956)|CUMULATIVE_LIMIT_USAGE
+09:34:57.967 (2967351956)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 34 out of 100
+  Number of query rows: 1844 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 17 out of 150
+  Number of DML rows: 25 out of 10000
+  Maximum CPU time: 771 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.967 (2967351956)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2968969071)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ97]
+09:34:57.227 (2969101495)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Case
+09:34:57.227 (2975939104)|WF_RULE_EVAL_BEGIN|Assignment
+09:34:57.227 (2975970570)|WF_SPOOL_ACTION_BEGIN|Assignment
+09:34:57.227 (2975977115)|WF_ACTION|.
+09:34:57.227 (2975981670)|WF_RULE_EVAL_END
+09:34:57.227 (2976002021)|WF_RULE_EVAL_BEGIN|Workflow
+09:34:57.227 (2976042582)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:34:57.227 (2976055209)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2976081859)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:34:57.227 (2976091255)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2976112854)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:34:57.227 (2976121465)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2976142477)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2976341640)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2976368927)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2976538031)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:34:57.227 (2976569756)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2976578451)|WF_CRITERIA_END|false
+09:34:57.227 (2976604869)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:34:57.227 (2976613282)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2976635879)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:34:57.227 (2976645152)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2976666942)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2976784186)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:34:57.227 (2976809385)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2976816293)|WF_CRITERIA_END|false
+09:34:57.227 (2976839126)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:34:57.227 (2976848051)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2976872211)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:34:57.227 (2976881070)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2976912030)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:34:57.227 (2976921263)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2976945225)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:34:57.227 (2976953148)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2976973267)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:34:57.227 (2976981606)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2977003942)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:34:57.227 (2977068626)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:57.227 (2977076095)|WF_CRITERIA_END|true
+09:34:57.227 (2977116911)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:34:57.227 (2977126629)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2977147502)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:34:57.227 (2977154971)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (2977175050)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:34:57.227 (2977334460)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Open
+09:34:57.227 (2977342227)|WF_CRITERIA_END|true
+09:34:57.227 (2977372750)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:34:57.227 (2977490842)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:34:57.227 (2977517519)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (2977524606)|WF_CRITERIA_END|false
+09:34:57.227 (2977575918)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:34:57.227 (2977718896)|WF_FIELD_UPDATE|[Enquiry: 03108926 500p0000002kJ97]|Field:Enquiry: Latest Inbound Email|Value:null|Id=04Y28000000E6Mz|CurrentRule:Status Changed - Clear Latest Inbound Email Field (Id=01Q280000002P34)
+09:34:57.227 (2977770516)|WF_ACTION| Field Update: 1; Flow Trigger: 1;
+09:34:57.227 (2977775342)|WF_RULE_EVAL_END
+09:34:57.227 (2979939542)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ97]
+09:34:57.227 (2980429012)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (2982226024)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:1|SELECT id, (SELECT id FROM enquiry_interests__r LIMIT 1) FROM case 
+09:34:57.227 (2985712368)|SOQL_EXECUTE_END|[42]|Rows:1
+09:34:57.227 (2986002486)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:34:57.227 (2986286530)|SYSTEM_MODE_ENTER|true
+09:34:57.227 (2986296931)|SYSTEM_MODE_EXIT|true
+09:34:57.227 (2986312469)|SYSTEM_MODE_ENTER|true
+09:34:57.227 (2986317882)|SYSTEM_MODE_EXIT|true
+09:34:57.986 (2986614476)|CUMULATIVE_LIMIT_USAGE
+09:34:57.986 (2986614476)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 35 out of 100
+  Number of query rows: 1845 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 17 out of 150
+  Number of DML rows: 25 out of 10000
+  Maximum CPU time: 771 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:57.986 (2986614476)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (2988325339)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ97]
+09:34:57.227 (3004085351)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ97]
+09:34:57.227 (3004528766)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:34:57.227 (3005512998)|SOQL_EXECUTE_BEGIN|[243]|Aggregations:0|SELECT Id, Label FROM BH_Stop_Status__mdt 
+09:34:57.227 (3007050338)|SOQL_EXECUTE_END|[243]|Rows:1
+09:34:57.227 (3007898061)|SOQL_EXECUTE_BEGIN|[267]|Aggregations:0|SELECT id, uniqueId__c, ownerIdString__c, minutes__c, last_updated__c, owner__c, owner_name__c, case__c FROM queueHours__c 
+09:34:57.227 (3012056098)|SOQL_EXECUTE_END|[267]|Rows:1
+09:34:57.227 (3013022793)|DML_BEGIN|[323]|Op:Upsert|Type:queueHours__c|Rows:1
+09:34:57.227 (3036903667)|DML_END|[323]
+09:34:57.227 (3037519923)|DML_BEGIN|[412]|Op:Update|Type:Case|Rows:1
+09:34:57.227 (3044425615)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ97]
+09:34:58.44 (3044617302)|CUMULATIVE_LIMIT_USAGE
+09:34:58.44 (3044617302)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 36 out of 100
+  Number of query rows: 1847 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 19 out of 150
+  Number of DML rows: 27 out of 10000
+  Maximum CPU time: 771 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:58.44 (3044617302)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (3046096379)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ97]
+09:34:57.227 (3048542615)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ97
+09:34:57.227 (3048554564)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:34:57.227 (3048739871)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Email - System , $UserRole.Name=eSolutions
+09:34:57.227 (3048748755)|VALIDATION_PASS
+09:34:57.227 (3048751657)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:34:57.227 (3049186886)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Open , Origin=Email - System , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:34:57.227 (3049196036)|VALIDATION_PASS
+09:34:57.227 (3049198446)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:34:57.227 (3049539792)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:34:57.227 (3049548306)|VALIDATION_PASS
+09:34:57.227 (3049550551)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:34:57.227 (3049865991)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:34:57.227 (3049873795)|VALIDATION_PASS
+09:34:57.227 (3049876235)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:34:57.227 (3050202271)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=0 , Category_Level_2__c=null
+09:34:57.227 (3050210567)|VALIDATION_PASS
+09:34:57.227 (3050212881)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:34:57.227 (3050501137)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Open , $UserRole.Name=eSolutions , $User.Alias=acust
+09:34:57.227 (3050508171)|VALIDATION_PASS
+09:34:57.227 (3050540330)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ97
+09:34:57.227 (3061695590)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ97]
+09:34:58.61 (3061936026)|CUMULATIVE_LIMIT_USAGE
+09:34:58.61 (3061936026)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 36 out of 100
+  Number of query rows: 1847 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 19 out of 150
+  Number of DML rows: 27 out of 10000
+  Maximum CPU time: 771 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:58.61 (3061936026)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (3063172152)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ97]
+09:34:57.227 (3063580530)|DML_END|[412]
+09:34:57.227 (3064091615)|SOQL_EXECUTE_BEGIN|[106]|Aggregations:0|SELECT Id, Case_API_name__c, Contact_Field_API_name__c FROM Case_to_Contact_Field_Mapping__mdt LIMIT 400
+09:34:57.227 (3065964558)|SOQL_EXECUTE_END|[106]|Rows:14
+09:34:57.227 (3066781497)|SOQL_EXECUTE_BEGIN|[120]|Aggregations:0|select Level_of_Study__c,Supplied_Date_of_Birth__c,Supplied_Country_of_Residence__c,SuppliedEmail,Supplied_Email_Opt_out__c,Supplied_First_Name__c,Highest_Level_of_Study__c,Supplied_Name_of_Institution__c,Supplied_Nationality__c,Residency_Status__c,Supplied_City__c,Supplied_Area_of_Interest__c,Supplied_Last_Name__c,SuppliedPhone,Id,contactId from case 
+09:34:57.227 (3072195437)|SOQL_EXECUTE_END|[120]|Rows:0
+09:34:58.72 (3072432750)|CUMULATIVE_LIMIT_USAGE
+09:34:58.72 (3072432750)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 37 out of 100
+  Number of query rows: 1861 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 19 out of 150
+  Number of DML rows: 27 out of 10000
+  Maximum CPU time: 771 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:58.72 (3072432750)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (3073960747)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ97]
+09:34:57.227 (3074158950)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:34:58.74 (3074227281)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:34:58.74 (3074303771)|FLOW_CREATE_INTERVIEW_END|4702af12f47f5ceb75cbcce7e2f1572ad9eef9-792d|Set Enquiry Student Type Based on Contact Profile
+09:34:58.74 (3074647957)|FLOW_START_INTERVIEWS_BEGIN|1
+09:34:58.74 (3074682504)|FLOW_START_INTERVIEW_BEGIN|4702af12f47f5ceb75cbcce7e2f1572ad9eef9-792d|Set Enquiry Student Type Based on Contact Profile
+09:34:58.74 (3077283133)|FLOW_START_INTERVIEW_END|4702af12f47f5ceb75cbcce7e2f1572ad9eef9-792d|Set Enquiry Student Type Based on Contact Profile
+09:34:58.74 (3077295156)|FLOW_START_INTERVIEWS_END|1
+09:34:57.227 (3078220582)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:34:57.227 (3078266927)|WF_RULE_EVAL_BEGIN|Workflow
+09:34:57.227 (3078292352)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|1
+09:34:57.227 (3078300583)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078313638)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|1
+09:34:57.227 (3078318209)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078328589)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|1
+09:34:57.227 (3078333073)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078343082)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|1
+09:34:57.227 (3078352056)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078363673)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|1
+09:34:57.227 (3078491871)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:34:57.227 (3078532860)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (3078538916)|WF_CRITERIA_END|false
+09:34:57.227 (3078555849)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|1
+09:34:57.227 (3078561631)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078572856)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|1
+09:34:57.227 (3078577089)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078587233)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|1
+09:34:57.227 (3078672097)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:34:57.227 (3078690412)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (3078694890)|WF_CRITERIA_END|false
+09:34:57.227 (3078710575)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|1
+09:34:57.227 (3078716132)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078726898)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|1
+09:34:57.227 (3078731220)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078741399)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|1
+09:34:57.227 (3078745484)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078755105)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|1
+09:34:57.227 (3078759786)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078769780)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|1
+09:34:57.227 (3078773965)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078784103)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|1
+09:34:57.227 (3078787974)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078797748)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|1
+09:34:57.227 (3078801905)|WF_RULE_NOT_EVALUATED
+09:34:57.227 (3078811788)|WF_CRITERIA_BEGIN|[Enquiry: 03108926 500p0000002kJ97]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|1
+09:34:57.227 (3078899956)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:34:57.227 (3078923185)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:34:57.227 (3078927914)|WF_CRITERIA_END|false
+09:34:57.227 (3078963275)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:34:57.227 (3078973712)|WF_ACTION| None
+09:34:57.227 (3078978969)|WF_RULE_EVAL_END
+09:34:57.227 (3079006528)|WF_TIME_TRIGGERS_BEGIN
+09:34:57.227 (3081932502)|WF_ACTIONS_END| Field Update: 1; Flow Trigger: 1;
+09:34:57.227 (3081940218)|CODE_UNIT_FINISHED|Workflow:Case
+09:34:57.227 (3082276556)|DML_END|[100]
+09:34:58.82 (3082355935)|CUMULATIVE_LIMIT_USAGE
+09:34:58.82 (3082355935)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 37 out of 100
+  Number of query rows: 1861 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 19 out of 150
+  Number of DML rows: 27 out of 10000
+  Maximum CPU time: 771 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:58.82 (3082355935)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (3083806467)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert for [02sp0000000H4N4]
+09:34:57.227 (3084347591)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:EmailMessage
+09:34:57.227 (3093463146)|WF_RULE_EVAL_BEGIN|Workflow
+09:34:57.227 (3093501078)|WF_CRITERIA_BEGIN|[Email Message:  02sp0000000H4N4]|Mark_Email_Enquiry_has_Attachment30128000000J3T4|01Q280000002P50|ON_CREATE_ONLY|0
+09:34:57.227 (3093560791)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:34:57.227 (3093566114)|WF_CRITERIA_END|true
+09:34:57.227 (3093590009)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:34:57.227 (3093613074)|WF_ACTION| Flow Trigger: 1;
+09:34:57.227 (3093616124)|WF_RULE_EVAL_END
+09:34:57.227 (3093655580)|WF_FLOW_ACTION_BEGIN|09L28000000MLl1
+09:34:58.93 (3093711078)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfT|30128000000J3T4
+09:34:58.93 (3093786634)|FLOW_CREATE_INTERVIEW_END|4703af12f47f5ceb75cbcce7e2f1572ad9eef9-792e|Mark Email Enquiry has Attachment
+09:34:58.94 (3094113135)|FLOW_START_INTERVIEWS_BEGIN|1
+09:34:58.94 (3094145823)|FLOW_START_INTERVIEW_BEGIN|4703af12f47f5ceb75cbcce7e2f1572ad9eef9-792e|Mark Email Enquiry has Attachment
+09:34:58.94 (3094816010)|FLOW_START_INTERVIEW_END|4703af12f47f5ceb75cbcce7e2f1572ad9eef9-792e|Mark Email Enquiry has Attachment
+09:34:58.94 (3094826171)|FLOW_START_INTERVIEWS_END|1
+09:34:57.227 (3095667341)|WF_FLOW_ACTION_END|09L28000000MLl1
+09:34:57.227 (3095742640)|WF_ACTIONS_END| Flow Trigger: 1;
+09:34:57.227 (3095748653)|CODE_UNIT_FINISHED|Workflow:EmailMessage
+09:34:57.227 (3095886075)|DML_END|[63]
+09:34:57.227 (3096203030)|SOQL_EXECUTE_BEGIN|[64]|Aggregations:0|SELECT id, IsClosed FROM case WHERE id = :tmpVar1 LIMIT 1
+09:34:57.227 (3104307762)|SOQL_EXECUTE_END|[64]|Rows:1
+09:34:58.104 (3104521032)|CUMULATIVE_LIMIT_USAGE
+09:34:58.104 (3104521032)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 38 out of 100
+  Number of query rows: 1862 out of 50000
+  Number of SOSL queries: 1 out of 20
+  Number of DML statements: 19 out of 150
+  Number of DML rows: 27 out of 10000
+  Maximum CPU time: 771 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:34:58.104 (3104521032)|CUMULATIVE_LIMIT_USAGE_END
+
+09:34:57.227 (3104573335)|CODE_UNIT_FINISHED|EmailMessageServices_Test.confirmEmailMapping
+09:34:57.227 (3105953831)|EXECUTION_FINISHED

@@ -1,0 +1,39 @@
+<!-- links page for the Student Recruitment console -->
+
+<apex:page applyBodyTag="false"
+           applyHtmlTag="false"
+           showHeader="false"
+           title="Useful links"
+           standardController="Case">
+    
+    
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0122,'/assets/styles/salesforce-lightning-design-system-ltng.css')}"/>
+    <apex:includeScript value="/support/console/25.0/integration.js"/>
+    <apex:includeScript value="{!$Resource.jquery}"/>
+    
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <body>
+            <div class="slds">
+               
+      <ul>
+          <li >
+          <a href ="{!URLFOR($Resource.QRG)}" target="_blank">
+            <p class="slds-truncate">Quick Reference Guide</p>
+          </a>
+        </li>
+        <li >
+          <a href ="https://www.study.monash/courses/find-a-course" target="_blank">
+            <p class="slds-truncate">Find a course</p>
+          </a>
+        </li>
+        <!-- ADD MORE LINKS HERE -->
+      </ul>
+     
+            
+            </div>
+            
+        </body>
+    </html>
+</apex:page>

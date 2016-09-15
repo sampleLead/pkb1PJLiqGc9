@@ -1,0 +1,137 @@
+<apex:page standardController="Case"
+           extensions="Console_OffSystemEmail_CE"
+           showHeader="false"
+           sidebar="false"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+           cache="false">
+    
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <head>
+        
+        <script>
+        function prepAttachmentIds(mode){
+            disableBtns();
+            var res = '';
+            $(".attachmentOption").each(function(){
+                if($(this).prop('checked')) res += $(this).attr("id") + ';'; // ids of attachments that have been picked
+             });
+            var toEm = $("#ToEmail").val();
+            var msg = unescape(encodeURIComponent($("#EmailMessage").val()));
+            console.log('res',msg);
+            if(mode == 'send') sendEmail(res,toEm,msg);
+            if(mode == 'preview') sendPreviewEmail(res,toEm,msg);
+            
+        }
+        
+        function disableBtns(){
+        	$(".vfBtn").attr("disabled","disabled");
+    	}
+        
+        function enableBtns(){
+            $("#ToEmail").val("");
+        	$(".vfBtn").removeAttr("disabled","disabled");
+            
+    	}
+        
+        function alertIfNotSent(){
+        	if($("#panelMsg").text() != null && $("#panelMsg").text().indexOf('You need to link') >=0){
+            	alert('Please note: The email was not sent as no Contact has been linked.');
+            }
+        }
+        
+    </script>
+        </head>
+     
+       <!-- libraries required -->
+
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0122,'/assets/styles/salesforce-lightning-design-system-ltng.css')}"/>
+    <apex:includeScript value="/support/console/25.0/integration.js"/>
+    <apex:includeScript value="{!$Resource.jquery}"/>
+    <body>
+    
+        
+    <apex:form >
+        
+        <apex:actionFunction action="{!sendEmail}" name="sendEmail" oncomplete="enableBtns();alertIfNotSent();" reRender="msgs">
+            <apex:param id="attachmentIds" value="" name="attIds"/>
+            <apex:param id="toemail" value="" name="toemail"/>
+            <apex:param id="msg" value="" name="msg"/>
+        </apex:actionFunction>
+        <apex:actionFunction action="{!sendPreviewEmail}" name="sendPreviewEmail" oncomplete="enableBtns();alertIfNotSent();" reRender="msgs">
+            <apex:param id="attachmentIds2" value="" name="attIds"/>
+            <apex:param id="toemail2" value="" name="toemail"/>
+            <apex:param id="msg2" value="" name="msg"/>
+        </apex:actionFunction>
+        
+        <div class="slds">
+            <div class="slds-form--stacked">
+                
+                <!-- msg panel -->
+                <apex:outputPanel id="msgs">
+                    <apex:outputPanel rendered="{!feedbackMsg != ''}">
+                        <div class="slds-notify_container">
+                            <div class="slds-notify slds-notify--alert slds-theme--alert-texture" role="alert">
+                              <h2><span id="panelMsg">{!feedbackMsg}</span></h2>
+                            </div>
+                          </div>
+                     </apex:outputPanel>
+                </apex:outputPanel>
+                <br/>
+                
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="faculty">Faculty/Departmental Presets</label>
+                    <div class="slds-form-element__control">
+                      <apex:selectList size="1" id="faculty" value="{!ToEmailAddress}" styleClass="slds-select">
+                          <apex:actionSupport event="onchange" action="{!dummyAction}" reRender="emailAddr"/>
+                          <apex:selectOptions value="{!facultyOptions}"/>
+                      </apex:selectList>
+                    </div>
+                  </div>
+                <br/>
+                <apex:outputPanel id="emailAddr" layout="block">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="text-input-01">To</label>
+                    <div class="slds-form-element__control">
+                      <input id="ToEmail" class="slds-input" type="email" placeholder="Recipient Email Address" value="{!IF(NOT(ISBLANK(ToEmailAddress)),ToEmailAddress,'')}" />
+                    </div>
+                  </div>
+                </apex:outputPanel>
+                <br/>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="textarea-input-01">Message</label>
+                    <div class="slds-form-element__control">
+                      <textarea id="EmailMessage" class="slds-textarea" type="text"  style="height:8em;">{!$Label.Off_System_Default_Message}</textarea>
+                    </div>
+                  </div>
+                <apex:outputPanel layout="none" rendered="{!NOT(attachments.size = 0)}">
+                    <div class="slds-form-element">
+                    <div class="slds-form-element__control">
+                        <legend class="form-element__legend slds-form-element__label">Select attachments from Enquiry to include</legend>
+                        <apex:repeat value="{!attachments}" var="att">
+                            <label class="slds-checkbox" for="{!att.id}">
+                              <input name="default" type="checkbox" id="{!att.id}" class="attachmentOption"/>
+                              <span class="slds-checkbox--faux"></span>
+                              <span class="slds-form-element__label">{!att.name}</span>
+                            </label>
+                        </apex:repeat>
+                    </div>
+                    </div>
+                </apex:outputPanel>
+                
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control" style="float:right;">
+                      <button id="sendBtn" class="vfBtn slds-button slds-button--neutral" onclick="prepAttachmentIds('preview');return false;">Send Preview</button>&nbsp;&nbsp;
+                      <button id="PreviewBtn" class="vfBtn slds-button slds-button--brand" onclick="prepAttachmentIds('send');return false;" >Send</button>
+                    </div>
+                  </div>
+                
+            </div>
+        </div>
+     </apex:form>   
+        
+        
+    </body>    
+    </html>
+</apex:page>

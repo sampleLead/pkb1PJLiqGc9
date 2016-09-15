@@ -1,0 +1,280 @@
+<apex:page applyBodyTag="false"
+    applyHtmlTag="false"
+    showHeader="false"
+    title="Search for Contact"
+    standardStylesheets="false"
+    docType="html-5.0"
+    controller="Console_ContactSearch_CC">
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0122,'/assets/styles/salesforce-lightning-design-system-ltng.css')}"/>
+    <apex:includeScript value="/support/console/27.0/integration.js"/>
+    <apex:includeScript value="{!$Resource.jquery}"/>
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <style>
+            .topMargin { margin-top:10px; }    
+            .highlight { background: lightGreen; }
+        </style>
+        <apex:form id="theForm">
+            <div class="slds">
+                <div class="slds-modal slds-fade-in-open slds-modal--large" aria-hidden="false" role="dialog">
+                    <div class="slds-modal__container" style="margin:auto;">
+                        <div class="slds-modal__header">
+                            <h2 class="slds-text-heading--medium">Search for Contact</h2>
+                        </div>
+                        <div class="slds-modal__content " style="min-height:550px;">
+                            <!-- input field row -->
+                            <div class="slds-grid slds-wrap slds-grid--pull-padded">
+                                <div class="slds-col--padded slds-size--1-of-6">
+                                    
+                                    <div class="slds-form-element">
+                                        <input id="firstname" class="slds-input searchInput topMargin" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" placeholder="First name" />
+                                    </div>
+                                    <div class="slds-form-element">
+                                        <input id="lastname" class="slds-input  searchInput topMargin" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" placeholder="Last name" />
+                                    </div>
+                                    <div class="slds-form-element">
+                                        <input id="personId" class="slds-input  topMargin searchInput" type="text" placeholder="Person Id"/>
+                                    </div>
+                                    <div class="slds-form-element">
+                                        <input id="birthdate" class="slds-input  topMargin searchInput" type="date" placeholder="Birthdate (DD/MM/YY)"/>
+                                    </div>
+                                    <div class="slds-form-element">
+                                        <input id="email" class="slds-input  topMargin searchInput" type="email" placeholder="Email"/>
+                                    </div>
+                                    <div class="slds-form-element">
+                                        <input id="monashemail" class="slds-input  topMargin searchInput" type="email" placeholder="Monash Email"/>
+                                    </div>
+                                    <div class="slds-form-element">
+                                        <input id="mobile" class="slds-input  topMargin searchInput" type="tel" placeholder="Mobile"/>
+                                    </div>
+                                    <div class="slds-form-element">
+                                        <input id="phone" class="slds-input  topMargin searchInput" type="tel" placeholder="Phone"/>
+                                    </div>
+                                    <div class="slds-form-element">
+                                        <button id="searchBtn" class="slds-button slds-button--brand topMargin" onclick="searchContacts();return false;">
+                                        Search
+                                        </button>
+                                        &nbsp;
+                                        <button class="slds-button slds-button--neutral topMargin" onclick="resetForm();return false;">
+                                            Reset
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- results and message col -->
+                                <div class="slds-col--padded slds-size--5-of-6">
+                                    <!-- notification panel -->
+                                    <div style="height:37px;">
+                                        <div id="msgPanel" class="topMargin">
+                                            <div class="slds-notify slds-notify--alert slds-theme--alert-texture" role="alert">
+                                                <h2><span id="msgText">Enter a search term and click Search</span></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- results -->
+                                    <div style="overflow-y:scroll;max-height:500px;">
+                                        <div id="resultsPanel" class="topMargin ">
+                                            <table class="slds-table slds-table--bordered slds-no-row-hover">
+                                                <thead>
+                                                    <tr class="slds-text-heading--label">
+                                                        <th class="" scope="col">
+                                                            <div class="slds-truncate">Name</div>
+                                                        </th>
+                                                        <th class="" scope="col">
+                                                            <div class="slds-truncate">Person Id</div>
+                                                        </th>
+                                                        <th class="" scope="col">
+                                                            <div class="slds-truncate">B'Date</div>
+                                                        </th>
+                                                        <th class="" scope="col">
+                                                            <div class="slds-truncate">Monash Email</div>
+                                                        </th>
+                                                        <th class="" scope="col">
+                                                            <div class="slds-truncate">Mobile</div>
+                                                        </th>
+                                                        <th class="" scope="col">
+                                                            <div class="slds-truncate">Phone</div>
+                                                        </th>
+                                                        <th class="" scope="col">
+                                                            <div class="slds-truncate">Email</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="contactResults">
+                                                    <!-- content dynamically appended here -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                        <div class="slds-modal__footer">
+                            <button class="slds-button slds-button--brand" onclick="moveToEnquiry();return false;">No match - straight to new Enquiry</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </apex:form>
+        <script>
+            var fname,lname,pid,em,dob,monemail,mob,ph, criteria;
+            var wrapper;
+            
+            function vars(){
+                   this.fname = '';
+                   this.lname = '';
+                   this.personid = '';
+                   this.email = '';
+                   this.dob = '';
+                   this.monashemail = '';
+                   this.mobile = '';
+                   this.phone = '';
+               }
+            
+            function refreshWrapper(){
+                   wrapper = new vars();
+                   wrapper.fname = $("#firstname").val();
+                   wrapper.lname = $("#lastname").val();
+                   wrapper.personid = $("#personId").val();
+                   wrapper.email = $("#email").val();
+                   wrapper.dob = $("#birthdate").val();
+                   wrapper.monashemail = $("#monashemail").val();
+                   wrapper.mobile = $("#mobile").val();
+                   wrapper.phone = $("#phone").val();
+                   criteria = wrapper.fname + wrapper.lname + wrapper.personid + wrapper.email + wrapper.dob + wrapper.monashemail + wrapper.mobile + wrapper.phone;
+                   
+               }
+            
+            function resetForm(){
+                $(".searchInput").val("");
+                   $("#msgText").text("Enter a search term and click Search");
+                   $("#contactResults").empty();
+                   $("#lastname").focus();
+               }
+            
+            // pass inputs to remote method which adds contact, new enq and then redirect
+            function moveToEnquiry(){
+                     var res;
+                    refreshWrapper();
+                    
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.Console_ContactSearch_CC.addEnquiry}',
+                        wrapper,
+                        function(response,event){
+                               if(event.status){
+                                   if(response.indexOf('Error:') != -1){
+                                        $("#msgText").text(response);
+                                   } else {
+                                       // open new enquiry in primary tab
+                                       openTab(response,'New Enquiry');
+                                   }
+                               } else {
+                                   $("#msgText").text("Issue while contacting UniCRM. Please try again.");
+                               }
+                           },
+                           {escape: true}
+                       );
+            }
+            
+            // remoting to conduct search
+            function searchContacts(){
+                
+                   $("#searchBtn").prop("disabled","disabled");
+                     
+                   
+                   var res;
+                   refreshWrapper();
+                   
+                   if(criteria.length > 2 ){
+                       $("#msgText").text("Select from results shown, or straight to new enquiry.");
+                       
+                       Visualforce.remoting.Manager.invokeAction(
+                           '{!$RemoteAction.Console_ContactSearch_CC.getResults}',
+                           wrapper,
+                           function(response,event){
+                               if(event.status){
+                                   res = JSON.parse(response);
+                                   if(res.tooManyResults){
+                                        $("#msgText").text("Too many results - listing 20 only. Add criteria to filter further or select from the results shown.");
+                                        
+                                   }
+                                   if(res.results.length == 0){
+                                        $("#msgText").text("No results. Broaden search criteria or straight to new enquiry.");
+                                        
+                                   }
+                                   buildTableResults(res.results);
+                                   applyCssToMatches();
+                               } else {
+                                   $("#msgText").text("Issue while contacting UniCRM. Please try again.");
+                               } 
+                           },
+                           {escape: false}
+                       );
+                   } else {
+                    $("#msgText").text("Require 3 or more characters to search");
+                       
+                   }
+                   $("#searchBtn").prop("disabled","");
+               }
+            
+        	function applyCssToMatches(){
+                refreshWrapper();
+                console.log('applycss',fname);
+            	$(".firstname").each( function(index,value){ if($(value).text().toLowerCase() == wrapper.fname.toLowerCase()) $(value).addClass('highlight'); }); 
+                $(".lastname").each( function(index,value){ if($(value).text().toLowerCase() == wrapper.lname.toLowerCase()) $(value).addClass('highlight'); }); 
+                $(".personid").each( function(index,value){ if($(value).text().toLowerCase() == wrapper.personid) $(value).addClass('highlight'); }); 
+                $(".email").each( function(index,value){ if($(value).text().toLowerCase() == wrapper.email) $(value).addClass('highlight'); });
+                $(".monashemail").each( function(index,value){ if($(value).text().toLowerCase() == wrapper.monashemail.toLowerCase()) $(value).addClass('highlight'); });
+            }
+        
+            function buildTableResults(contacts){
+                var rows = '';
+                   $("#contactResults").empty();
+                   var rowHtml = '';
+                   $.each(contacts, function(index,value){
+                    if(!value.FirstName) value.FirstName = '';
+                       if(!value.LastName) value.LastName = '';
+                       if(!value.Person_ID__c) value.Person_ID__c  = '';
+                       if(!value.Birthdate) { value.Birthdate = ''; } else { var bd = value.Birthdate.split("-"); value.Birthdate = bd[2]+"-"+bd[1]+"-"+bd[0]; } 
+                       if(!value.Monash_Email_Address__c ) value.Monash_Email_Address__c  = '';
+                       if(!value.MobilePhone) value.MobilePhone = '';
+                       if(!value.Phone) value.Phone = '';
+                       if(!value.Email) value.Email = '';
+                       value.FirstName = value.FirstName.toUpperCase().replace("'","\'");
+                       value.LastName = value.LastName.toUpperCase().replace("'","\'");
+                       var tabName = value.FirstName.toUpperCase().replace("'","") + " " + value.LastName.toUpperCase().replace("'","");
+                       rowHtml += '<tr class="slds-hint-parent">';
+                       rowHtml += '<td class="slds-truncate slds-text-body--small" ><a onclick="openTab(\''+value.Id+'\',\''+ tabName +'\');"><span class="firstname">'+ value.FirstName + '</span>&nbsp;<span class="lastname">' + value.LastName + '</span></a></td>';
+                       rowHtml += '<td class="slds-truncate slds-text-body--small" ><span class="personid">'+ value.Person_ID__c  + '</span></td>';
+                       rowHtml += '<td class="slds-truncate slds-text-body--small" ><span class="dob">'+ value.Birthdate + '</span></td>';
+                       rowHtml += '<td class="slds-truncate slds-text-body--small" ><span class="monashemail">'+ value.Monash_Email_Address__c  + '</span></td>';
+                       rowHtml += '<td class="slds-truncate slds-text-body--small" ><span class="mobile">'+ value.MobilePhone + '</span></td>';
+                       rowHtml += '<td class="slds-truncate slds-text-body--small" ><span class="phone">'+ value.Phone + '</span></td>';
+                       rowHtml += '<td class="slds-truncateslds-text-body--small" ><span class="email">'+ value.Email + '</span></td>';
+                       rowHtml += '</tr>';
+                   });
+                   if(rowHtml > '') $("#contactResults").append(rowHtml);
+               }
+            
+            function openTab(recordId,label){
+                   sforce.console.openPrimaryTab(null,'/'+recordId,true,label);    
+               }
+            
+               function testSetTabTitle() {
+                   //Set the current tab's title
+                   sforce.console.setTabTitle('Contact Search');
+               }
+               var pageLoad = window.onload;
+               window.onload = function() {
+                       if (pageLoad) {
+                           pageLoad();
+                       }
+                       testSetTabTitle();
+                   $("#firstname").focus();
+               }
+               
+                   
+               
+        </script>
+    </html>
+</apex:page>

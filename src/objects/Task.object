@@ -1,0 +1,3823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ActivityDate</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+                <highPriority>true</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Normal</fullName>
+                <default>true</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <closed>true</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Answer</fullName>
+                <default>false</default>
+                <closed>true</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Voicemail Message Left</fullName>
+                <default>false</default>
+                <closed>true</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Answered (No Call Back Time)</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invalid Phone Numbers</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Call Back Requested by Student/Other</fullName>
+                <default>false</default>
+                <closed>true</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Awaiting Feedback</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending investigation</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Received a call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Called customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Called Monash Subject Matter Expert</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Met face to face</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent an email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TaskSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Call</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internal Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <recordTypes>
+        <fullName>Default</fullName>
+        <active>true</active>
+        <label>Default</label>
+        <picklistValues>
+            <picklist>Call_Attempt__c</picklist>
+            <values>
+                <fullName>First Attempt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second Attempt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Attempt</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Campus__c</picklist>
+            <values>
+                <fullName>Berwick</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caulfield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clayton</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gippsland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parkville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Peninsula</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category_Level_1__c</picklist>
+            <values>
+                <fullName>Agent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Airport Pickup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Archive Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campus Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change of preference %28COP%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Crisis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Directions%2FMaps%2FTransport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrolment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrolment - Current Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrolment Questionnaire</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entry Requirements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exams %26 Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Failed ID Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fees %26 Financial Matters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future Student Course Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Host Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Visa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAPS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MonTRACK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monash Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NTEU-Indust action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Course Info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Past Participant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prepare to study</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response to OFS outbound activity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response to Survey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safer Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholarships - Current Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholarships - Future Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Staff</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Outage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timetable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VTAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Why choose Monash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Why choose PPA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category_Level_2__c</picklist>
+            <values>
+                <fullName>ACS Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ACS Issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ACS Results</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AHEGS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATAR score requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Abandoned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Academic Dress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accept</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Access Monash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accommodation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accomodation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advanced Standing%2FCredit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Airport Reception</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocate%2B Changes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocate%2B%2FMUTTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alt Exit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Deadline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Supporting Docs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application for Participant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assignment Submissions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AusAid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Authcate%2FPortal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bourke St Closure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COP Expo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CSP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CSP incorrect answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign call back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campus%2F Campus tour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Careers and Employment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ceremony Details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change of Details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change of Enrolment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change of Preference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change of Residency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Class Clash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Services - Counselling%2E%2E%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contractual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cost of living in Melbourne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Advice%2C Progression %26 Completion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Changes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Info%2FEntry Req</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course pre-requisites</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross Institutional study</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Current Intern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Defer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Defer Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Exam</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Internship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Department Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Directions%2FMaps%2FTransport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discontinue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discounts %26 Refunds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document Certification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dress Code</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ESOS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eligibility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emergency Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Encumbrance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment process%2Fdates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrolment Day%2FDates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entry Requirements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exam Clash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exam Rules %26 Venues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Experience and Skills Learnt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Extra Tickets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities %26 Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Faculty Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fed Budget</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Help%2FSAHELP%2FSSAF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fees Extension</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Assistance Bookings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future Intern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gippsland flooding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government Funding%2FScholarships %28Int%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduation Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grant Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grievances%2FAppeals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>How to Apply</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>How to enrol</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID Cards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IELTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermission%2FDeferment%2FDiscontinuation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invite Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invoices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Irregular Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late-re-enrolment Fine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Letter%2Fevent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Library Fines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan App Processed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan App submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loans %26 Grants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loans%2Fgrants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MIGR enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mature Age</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monash College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monash College Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monash Uni Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moodle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NTEU-Indust action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Content %28eg%2E Bad Connection%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OSHC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off campus Accommodation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off campus course enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Offer status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Offshore campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-placement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online Application assistance %28eAdmissions%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Day</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open%2Fclose date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orientation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other school enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PG Expo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PORTAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPA Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parking Locations %26 Options%2FParking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parking Permit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pathway options</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment methods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal details update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post-placement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Postgraduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-placement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prior learning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Privacy Act</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional Experience%2FPlacements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RHD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rankings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Re-enrolment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receipts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to Faculty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to OFS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to Pearson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to Safer Communities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relative invite for DIAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requests for change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response to Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Results</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Results ban</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEAS application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SSAF%2FSA Help%2FFee Help%2FCSP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School visit request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Courses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sibling discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Unit %26 Cross Institutional%2FComplementary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Unit enrolment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Consideration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Opportunities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specific Participant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Staff</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Staff ID Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Statement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student ID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student life%2Fsupport services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Study Abroad %26 Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Study Abroad%2FExchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer%2FWinter Semester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Supporting Docs%2FTax Dec</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Switchboard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System%2FWES Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System%2FWeb Enrollment Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Testamur</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Party Pay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Party Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timetable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timetable Clash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcript%2FLetters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel Concession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UMAT%2FGMSAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unable to attend Info Session</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undergraduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unit Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>University Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VCE pre req</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacation Scholarships</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Verification of Qualifications %28Third Party%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WES %28Enrolment Quest%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Enrollment System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eAdmissions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eCOE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Duration_mins__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>24</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>26</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>27</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>28</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>31</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>32</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>33</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>34</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>36</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>37</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>38</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>39</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>41</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>42</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>43</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>44</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>46</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>47</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>48</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>49</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>51</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>52</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>53</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>54</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>55</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>57</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>59</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Event_Status__c</picklist>
+            <values>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Created or Unassigned</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offer_Status__c</picklist>
+            <values>
+                <fullName>Accept Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decline Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Defer Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undecided</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reaction_to_Call__c</picklist>
+            <values>
+                <fullName>Hostile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wary%2FUnsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Well Received</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resulting_Enquiry_Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Awaiting Feedback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending investigation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Visit_Type__c</picklist>
+            <values>
+                <fullName>Visit Monash Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit School for Expo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit School for Presentation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Enquiry</fullName>
+        <active>true</active>
+        <description>used by Enquiry Management</description>
+        <label>Enquiry</label>
+        <picklistValues>
+            <picklist>Call_Attempt__c</picklist>
+            <values>
+                <fullName>First Attempt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second Attempt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Attempt</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Campus__c</picklist>
+            <values>
+                <fullName>Berwick</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caulfield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clayton</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gippsland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parkville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Peninsula</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category_Level_1__c</picklist>
+            <values>
+                <fullName>Agent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Airport Pickup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Archive Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campus Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change of preference %28COP%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Crisis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Directions%2FMaps%2FTransport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrolment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrolment - Current Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrolment Questionnaire</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entry Requirements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exams %26 Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Failed ID Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fees %26 Financial Matters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future Student Course Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Host Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Visa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAPS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MonTRACK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monash Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NTEU-Indust action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Course Info</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Past Participant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prepare to study</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional Experience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response to OFS outbound activity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response to Survey</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safer Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholarships - Current Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholarships - Future Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Staff</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Outage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timetable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VTAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Why choose Monash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Why choose PPA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category_Level_2__c</picklist>
+            <values>
+                <fullName>ACS Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ACS Issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ACS Results</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AHEGS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATAR score requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Abandoned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Academic Dress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accept</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Access Monash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accommodation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accomodation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advanced Standing%2FCredit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Airport Reception</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocate%2B Changes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Allocate%2B%2FMUTTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alt Exit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Deadline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application Supporting Docs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application for Participant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Application process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assignment Submissions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AusAid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Authcate%2FPortal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bourke St Closure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COP Expo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CSP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CSP incorrect answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign call back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campus%2F Campus tour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Careers and Employment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ceremony Details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change of Details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change of Enrolment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change of Preference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change of Residency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Class Clash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Services - Counselling%2E%2E%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirmation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contractual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cost of living in Melbourne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Advice%2C Progression %26 Completion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Changes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Info%2FEntry Req</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course pre-requisites</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross Institutional study</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Current Intern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Defer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Defer Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Exam</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Internship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Department Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Directions%2FMaps%2FTransport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discontinue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discounts %26 Refunds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document Certification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dress Code</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ESOS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eligibility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emergency Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Encumbrance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment process%2Fdates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrolment Day%2FDates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entry Requirements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exam Clash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exam Rules %26 Venues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Experience and Skills Learnt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Extra Tickets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities %26 Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Faculty Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fed Budget</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee Help%2FSAHELP%2FSSAF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fees Extension</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Assistance Bookings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future Intern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gippsland flooding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government Funding%2FScholarships %28Int%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduation Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grant Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grievances%2FAppeals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>How to Apply</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>How to enrol</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID Cards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IELTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermission%2FDeferment%2FDiscontinuation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invite Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invoices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Irregular Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late-re-enrolment Fine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Letter%2Fevent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Library Fines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan App Processed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan App submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loans %26 Grants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loans%2Fgrants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MIGR enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mature Age</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monash College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monash College Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monash Uni Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moodle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NTEU-Indust action</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Content %28eg%2E Bad Connection%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OSHC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off campus Accommodation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off campus course enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Offer status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Offshore campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-placement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online Application assistance %28eAdmissions%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Day</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open%2Fclose date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orientation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other school enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PG Expo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PORTAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPA Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parking Locations %26 Options%2FParking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parking Permit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pathway options</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment methods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal details update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post-placement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Postgraduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-placement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prior learning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Privacy Act</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional Experience%2FPlacements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RHD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rankings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Re-enrolment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receipts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to Faculty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to OFS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to Pearson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referred to Safer Communities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relative invite for DIAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requests for change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response to Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Results</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Results ban</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEAS application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SSAF%2FSA Help%2FFee Help%2FCSP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School visit request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Courses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sibling discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Unit %26 Cross Institutional%2FComplementary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Unit enrolment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Consideration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Opportunities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specific Participant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Staff</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Staff ID Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Statement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student ID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student life%2Fsupport services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Study Abroad %26 Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Study Abroad%2FExchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Summer%2FWinter Semester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Supporting Docs%2FTax Dec</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Switchboard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System%2FWES Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System%2FWeb Enrollment Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Testamur</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Party Pay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Party Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timetable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timetable Clash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transcript%2FLetters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel Concession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UMAT%2FGMSAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unable to attend Info Session</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undergraduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unit Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>University Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VCE pre req</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacation Scholarships</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Verification of Qualifications %28Third Party%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WES %28Enrolment Quest%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Enrollment System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eAdmissions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eCOE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Duration_mins__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>24</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>26</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>27</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>28</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>31</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>32</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>33</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>34</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>36</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>37</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>38</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>39</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>41</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>42</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>43</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>44</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>46</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>47</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>48</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>49</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>51</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>52</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>53</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>54</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>55</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>57</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>59</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Event_Status__c</picklist>
+            <values>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Created or Unassigned</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offer_Status__c</picklist>
+            <values>
+                <fullName>Accept Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decline Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Defer Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undecided</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reaction_to_Call__c</picklist>
+            <values>
+                <fullName>Well Received</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resulting_Enquiry_Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Awaiting Feedback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending investigation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Called Monash Subject Matter Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Called customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Met face to face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Received a call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent an email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Visit_Type__c</picklist>
+            <values>
+                <fullName>Visit Monash Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit School for Expo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit School for Presentation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MonTrack</fullName>
+        <active>true</active>
+        <label>MonTrack</label>
+        <picklistValues>
+            <picklist>Call_Attempt__c</picklist>
+            <values>
+                <fullName>First Attempt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second Attempt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Attempt</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Campus__c</picklist>
+            <values>
+                <fullName>Berwick</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caulfield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clayton</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gippsland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parkville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Peninsula</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Duration_mins__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>24</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>26</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>27</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>28</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>31</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>32</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>33</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>34</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>36</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>37</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>38</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>39</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>41</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>42</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>43</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>44</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>46</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>47</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>48</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>49</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>51</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>52</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>53</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>54</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>55</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>56</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>57</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>58</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>59</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Event_Status__c</picklist>
+            <values>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Created or Unassigned</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offer_Status__c</picklist>
+            <values>
+                <fullName>Accept Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decline Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Defer Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undecided</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reaction_to_Call__c</picklist>
+            <values>
+                <fullName>Hostile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wary%2FUnsure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Well Received</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Call Back Requested by Student%2FOther</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invalid Phone Numbers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other Answered %28No Call Back Time%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail Message Left</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Visit_Type__c</picklist>
+            <values>
+                <fullName>Visit Monash Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit School for Expo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit School for Presentation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

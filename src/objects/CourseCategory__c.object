@@ -1,0 +1,2413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>used to drive behaviour in the custom agent console area of interest picklists</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>pw_courseFinder</fullName>
+        <description>used in custom console component, to select areas of interest.</description>
+        <displayedFields>
+            <field>CourseCode__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CourseName__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Specialisation__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CategoryLevel1__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CategoryLevel2__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Location__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>courseFinder</label>
+    </fieldSets>
+    <fields>
+        <fullName>CategoryLevel1__c</fullName>
+        <description>as per the Monash course finder as at 5-9-13</description>
+        <externalId>false</externalId>
+        <label>Study Area</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Communication and media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Design, creative art, architecture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environment and sustainability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Humanities and culture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Law, policy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medicine, health, pharmacy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CategoryLevel2__c</fullName>
+        <description>as per the Monash course finder as at 5-9-13</description>
+        <externalId>false</externalId>
+        <label>Detailed Study Area</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Aeronautical engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aerospace engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Biological engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chemical engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Civil engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computer science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computer systems engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Electrical engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Engineering technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environmental engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industrial engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Infrastructure engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maintenance engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Materials engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mechanical engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mechatronics engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mining engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pulp and paper technologies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Robotics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Software engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Traffic engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Actuarial studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business administration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business information systems</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business statistics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business strategy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business systems</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commerce</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>eBusiness</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Econometrics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Economics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Human resources</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industrial relations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>International business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Knowledge management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MBA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organisational leadership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public policy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Records management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Risk management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sport and outdoor recreation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sport management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Supply chain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sustainability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tourism</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Arts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Communication technologies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Communications</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Digital arts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Film and television</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graphic design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information and knowledge management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information technologies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Journalism</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Languages</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Librarianship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Library studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Linguistics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Multimedia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public relations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Visual communication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Visual culture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Visual design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Animation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Architecture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Art education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Creative arts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Curatorial studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drama</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drawing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fine arts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gallery management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Games development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industrial design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Interior architecture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Media arts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Multimedia design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Music</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Painting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Performance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Photography</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Print making</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sculpture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Theatre studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Visual arts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Adult and work-based learning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Adult learning and development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Counselling</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Early childhood education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gifted education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inclusive and gifted education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information Communication Technology (ICT) education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Literacy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mathematics and science education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mentoring and coaching</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Music education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Numeracy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Primary education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Psychology (counselling)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Psychology (educational and developmental)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regional and community education and development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School leadership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Secondary education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Teachers of English to speakers of other languages (TESOL)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Teaching</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Teaching and teacher education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Work and learning studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Atmospheric sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Biology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computational science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Energy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environmental health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Geography</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regional and community development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Renewable energy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Urban water</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Water recycling</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Anthropology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Art theory</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Australian Indigenous studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Criminology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Crisis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cultures</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disaster</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Emergency management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>English</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ethics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hazards</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Historical studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Human security</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Humanitarian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Humanities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>International studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outdoor recreation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Peace and conflict</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Philosophy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Politics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Psychology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social work</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sociology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Theology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Women&apos;s studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distributed systems</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information systems</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet systems</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Library and information studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Network computing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Programming and software</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Programming and software development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scientific computing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advocacy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Communications law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contracts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Copyright</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Criminal law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cyber law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Defamation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Diplomacy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environmental law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Family law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forensic law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Human rights</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Intellectual property</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>International law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leadership, policy and change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Media law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mediation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-adversarial justice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Patents</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Taxation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Addiction studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ambulance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Behavioural neuroscience</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Behavioural studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Biomedical sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Biostatistics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Biotechnology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dietetics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drug design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Drug discovery biology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Emergency health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Family medicine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Formulation science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>General practice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health professional education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indigenous health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>International health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medical acupuncture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medical imaging</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medical ultrasound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medicinal chemistry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mental health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Midwifery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Neurosciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nuclear medicine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nursing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nutrition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Occupational health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Occupational therapy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Paramedic studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pharmaceutical sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Physiotherapy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radiation therapy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radiography</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radiotherapy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rural health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Surgery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wound care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Astrophysics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chemistry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Climate studies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Earth sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environmental science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Geosciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Geotechnical engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hydrology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marine and freshwater biology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Materials sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mathematical sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medical bioscience</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meteorology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Physics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Psychiatry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Veterinary bioscience</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Zoology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CourseCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Course Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CourseName__c</fullName>
+        <externalId>false</externalId>
+        <label>Course Title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Alfred</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Berwick</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Caulfield</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>City</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Clayton</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gippsland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parkville</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Peninsula</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Mode__c</fullName>
+        <description>for filtering to PT or FT options</description>
+        <externalId>false</externalId>
+        <label>Mode</label>
+        <picklist>
+            <picklistValues>
+                <fullName>FT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Specialisation__c</fullName>
+        <description>Temporary field to capture new field value during transition to new course architecture</description>
+        <externalId>false</externalId>
+        <label>Specialisation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Course Category</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Course Category Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Course Categories</pluralLabel>
+    <recordTypes>
+        <fullName>Domestic</fullName>
+        <active>true</active>
+        <label>Domestic</label>
+        <picklistValues>
+            <picklist>CategoryLevel1__c</picklist>
+            <values>
+                <fullName>Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communication and media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Design%2C creative art%2C architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environment and sustainability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Humanities and culture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Law%2C policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medicine%2C health%2C pharmacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Science</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CategoryLevel2__c</picklist>
+            <values>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Actuarial studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Addiction studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adult and work-based learning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adult learning and development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advocacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aeronautical engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aerospace engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ambulance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Animation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Anthropology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Art education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Art theory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Astrophysics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atmospheric sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Australian Indigenous studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Behavioural neuroscience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Behavioural studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biological engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biomedical sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biostatistics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biotechnology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business administration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business information systems</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business statistics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business strategy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business systems</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemical engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemistry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Civil engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Climate studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communication technologies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communications law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Computational science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Computer science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Computer systems engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Computing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contracts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Copyright</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Counselling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Creative arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Criminal law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Criminology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Crisis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cultures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Curatorial studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cyber law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Defamation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dietetics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Digital arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diplomacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disaster</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distributed systems</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drama</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drawing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Drug discovery biology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Early childhood education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Earth sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Econometrics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Economics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electrical engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emergency health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emergency management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>English</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ethics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family medicine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Film and television</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fine arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forensic law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Formulation science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gallery management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Games development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General practice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geography</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geosciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geotechnical engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gifted education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graphic design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hazards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health professional education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Historical studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Human resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Human rights</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Human security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Humanitarian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Humanities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hydrology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inclusive and gifted education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indigenous health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industrial design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industrial engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industrial relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Communication Technology %28ICT%29 education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information and knowledge management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information systems</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information technologies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infrastructure engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intellectual property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interior architecture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internet systems</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Journalism</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Languages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership%2C policy and change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Librarianship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Library and information studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Library studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Linguistics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Literacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MBA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marine and freshwater biology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Materials engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Materials sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mathematical sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mathematics and science education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mechanical engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mechatronics engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mediation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical acupuncture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical bioscience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical imaging</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical ultrasound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medicinal chemistry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mentoring and coaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meteorology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwifery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mining engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multimedia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multimedia design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Music education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network computing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neurosciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-adversarial justice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nuclear medicine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Numeracy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nutrition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Occupational health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Occupational therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organisational leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outdoor recreation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Painting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paramedic studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Patents</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Peace and conflict</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmaceutical sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Philosophy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Photography</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physiotherapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Politics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Print making</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Programming and software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Programming and software development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Psychiatry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Psychology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Psychology %28counselling%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Psychology %28educational and developmental%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pulp and paper technologies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiation therapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiography</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radiotherapy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Records management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional and community development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional and community education and development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewable energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Robotics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rural health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scientific computing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sculpture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secondary education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sociology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Software engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sport and outdoor recreation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sport management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Supply chain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Surgery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sustainability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taxation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teachers of English to speakers of other languages %28TESOL%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teaching and teacher education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Theatre studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Theology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tourism</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traffic engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transport engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Urban water</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veterinary bioscience</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visual arts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visual communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visual culture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visual design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water recycling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Women%27s studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work and learning studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wound care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zoology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eBusiness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Location__c</picklist>
+            <values>
+                <fullName>Alfred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Berwick</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caulfield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>City</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clayton</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gippsland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parkville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Peninsula</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Mode__c</picklist>
+            <values>
+                <fullName>FT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

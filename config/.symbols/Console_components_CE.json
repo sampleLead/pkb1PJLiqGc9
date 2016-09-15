@@ -1,0 +1,667 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 317
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "Console_components_CE",
+            "parameters": [
+                {
+                    "name": "controller",
+                    "type": "StandardController"
+                }
+            ],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01p280000077n0IAAQ",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p280000077n0IAAQ",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 59
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "checkForEncumbrances",
+            "parameters": [],
+            "references": [],
+            "returnType": "PageReference",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 95
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "refreshLists",
+            "parameters": [],
+            "references": [],
+            "returnType": "PageReference",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 116
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "populateLists",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 258
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "retrievePersonCitizenship",
+            "parameters": [],
+            "references": [],
+            "returnType": "API_ResultWrapper",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 279
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "retrievePersonNotes",
+            "parameters": [],
+            "references": [],
+            "returnType": "API_ResultWrapper",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 299
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "retrieveEncumbrance",
+            "parameters": [],
+            "references": [],
+            "returnType": "API_ResultWrapper",
+            "type": null
+        }
+    ],
+    "name": "Console_components_CE",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 9
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "c",
+            "references": [],
+            "type": "Case"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 10
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "caseId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 11
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "contactId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 12
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "studentId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 13
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "encumbered",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 14
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "under18",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 15
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "notesLabel",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 16
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "tab",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 17
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "APIResultString",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 18
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "courseIdSelected",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 19
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "personNotes",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 20
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "caseContact",
+            "references": [],
+            "type": "Contact"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 21
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "APIResult",
+            "references": [],
+            "type": "API_ResultWrapper"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 22
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "loadingAttempted",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 23
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "encumbranceChecked",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 24
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "encumbranceError",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 25
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "httpError",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 26
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "rid",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 33
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "formattedDateTime",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 48
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "noteStyles",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 355
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "casetypes",
+            "references": [],
+            "type": "LIST"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 7
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "Console_components_CE",
+        "references": [],
+        "type": "Console_components_CE"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 35
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "encResult",
+            "references": [],
+            "type": "API_ResultWrapper"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 156
+            },
+            "modifiers": [],
+            "name": "todaysDate",
+            "references": [],
+            "type": "Date"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 191
+            },
+            "modifiers": [],
+            "name": "yrs",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 204
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "API_ResultWrapper"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 212
+            },
+            "modifiers": [],
+            "name": "pNote",
+            "references": [],
+            "type": "API_StudentPersonNote"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 35,
+                "line": 222
+            },
+            "modifiers": [],
+            "name": "resCitizen",
+            "references": [],
+            "type": "API_ResultWrapper"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 223
+            },
+            "modifiers": [],
+            "name": "updateCitizenship",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 225
+            },
+            "modifiers": [],
+            "name": "result",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 238
+            },
+            "modifiers": [],
+            "name": "pnote",
+            "references": [],
+            "type": "Person_Note__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 239
+            },
+            "modifiers": [],
+            "name": "baseStyle",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 259
+            },
+            "modifiers": [],
+            "name": "response",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 260
+            },
+            "modifiers": [],
+            "name": "citizenshipResult",
+            "references": [],
+            "type": "API_StudentCitizenship"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 280
+            },
+            "modifiers": [],
+            "name": "response",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 281
+            },
+            "modifiers": [],
+            "name": "notesResult",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 300
+            },
+            "modifiers": [],
+            "name": "response",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 301
+            },
+            "modifiers": [],
+            "name": "encResult",
+            "references": [],
+            "type": "API_StudentEncumbrance"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 63,
+                "line": 317
+            },
+            "modifiers": [],
+            "name": "controller",
+            "references": [],
+            "type": "StandardController"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 319
+            },
+            "modifiers": [],
+            "name": "recId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 326
+            },
+            "modifiers": [],
+            "name": "ctmp",
+            "references": [],
+            "type": "Contact"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 359
+            },
+            "modifiers": [],
+            "name": "fieldResult",
+            "references": [],
+            "type": "DescribeFieldResult"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 360
+            },
+            "modifiers": [],
+            "name": "ple",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 362
+            },
+            "modifiers": [],
+            "name": "f",
+            "references": [],
+            "type": "PicklistEntry"
+        }
+    ]
+}

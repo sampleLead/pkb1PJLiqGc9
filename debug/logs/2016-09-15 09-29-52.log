@@ -1,0 +1,1437 @@
+36.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,DEBUG;DB,DEBUG;SYSTEM,DEBUG;VALIDATION,DEBUG;VISUALFORCE,DEBUG;WORKFLOW,DEBUG
+09:29:45.0 (524951)|USER_INFO|[EXTERNAL]|005p0000000rQMP|ant.custodio@monash.edu.unicrm.copado|Australian Eastern Standard Time|GMT+10:00
+09:29:45.0 (592218)|EXECUTION_STARTED
+09:29:45.0 (598070)|CODE_UNIT_STARTED|[EXTERNAL]|01p28000007aWDm|Console_OffSystemEmail_CE_Test.verifyControllerExtensionLogic
+09:29:45.0 (5403119)|SYSTEM_MODE_ENTER|false
+09:29:45.0 (5413068)|SYSTEM_MODE_EXIT|false
+09:29:45.0 (5545717)|SYSTEM_MODE_ENTER|false
+09:29:45.0 (10881656)|SYSTEM_MODE_EXIT|false
+09:29:45.0 (10954620)|DML_BEGIN|[11]|Op:Insert|Type:Contact|Rows:1
+09:29:45.0 (91515817)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q42t|ContactTrigger on Contact trigger event BeforeInsert for [new]
+09:29:45.0 (96305813)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:45.0 (107553763)|USER_DEBUG|[25]|DEBUG|index =:005785538
+09:29:45.0 (113460149)|SYSTEM_MODE_ENTER|false
+09:29:45.0 (113471955)|SYSTEM_MODE_EXIT|false
+09:29:45.0 (130398252)|DML_BEGIN|[251]|Op:Insert|Type:Account|Rows:1
+09:29:45.0 (231536618)|DML_END|[251]
+09:29:45.0 (232500285)|SYSTEM_MODE_ENTER|false
+09:29:45.0 (232684574)|SYSTEM_MODE_EXIT|false
+09:29:45.235 (235417259)|CUMULATIVE_LIMIT_USAGE
+09:29:45.235 (235417259)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:45.235 (235417259)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:45.0 (238017064)|CODE_UNIT_FINISHED|ContactTrigger on Contact trigger event BeforeInsert for [new]
+09:29:45.0 (348633715)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Contact
+09:29:45.0 (364273569)|WF_RULE_EVAL_BEGIN|Workflow
+09:29:45.0 (364341965)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E5]|Monitor for Marketing Status to Opt out|01Q28000000MK7s|ON_ALL_CHANGES|0
+09:29:45.0 (368897015)|WF_RULE_FILTER|[Contact : Marketing Communications Status equals Opted in] AND
+ ([Contact : Do Not Call equals true] or [Contact : Do Not Mail equals true] or [Contact : Marketing Email Opt Out equals true] or [Contact : Deceased equals true])
+09:29:45.0 (368962474)|WF_RULE_EVAL_VALUE|
+09:29:45.0 (368969051)|WF_CRITERIA_END|false
+09:29:45.0 (368990244)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E5]|Assign Student Layout|01Q28000000Pmk8|ON_ALL_CHANGES|0
+09:29:45.0 (369322557)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 )|Values:Person_ID_unique__c=:005785538
+09:29:45.0 (369330147)|WF_CRITERIA_END|false
+09:29:45.0 (369350838)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E5]|Assign Non-Student Layout|01Q28000000PmkI|ON_ALL_CHANGES|0
+09:29:45.0 (369510553)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]NOT( AND( LEN( {!ID:00N28000007gsUa} ) < 9, LEN( {!ID:00N28000007gsUa} ) > 1 ) )|Values:Person_ID_unique__c=:005785538
+09:29:45.0 (369516893)|WF_CRITERIA_END|true
+09:29:45.0 (370615255)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E5]|Mirror True Is Corporate Contact field|01Q28000000dU6w|ON_ALL_CHANGES|0
+09:29:45.0 (370678475)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals true]
+09:29:45.0 (378457074)|WF_RULE_EVAL_VALUE|0
+09:29:45.0 (378470452)|WF_CRITERIA_END|false
+09:29:45.0 (378517134)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E5]|If Deceased opt contact out of marketing|01Q28000000dSTU|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:45.0 (378618336)|WF_RULE_FILTER|[Contact : Deceased equals true]
+09:29:45.0 (378634102)|WF_RULE_EVAL_VALUE|0
+09:29:45.0 (378637865)|WF_CRITERIA_END|false
+09:29:45.0 (378655182)|WF_CRITERIA_BEGIN|[Contact: Cruz0 John 003p000000C09E5]|Mirror False Is Corporate Contact field|01Q28000000dU76|ON_ALL_CHANGES|0
+09:29:45.0 (378709260)|WF_RULE_FILTER|[Contact : Is Corporate Contact equals false]
+09:29:45.0 (378821900)|WF_RULE_EVAL_VALUE|0
+09:29:45.0 (378827988)|WF_CRITERIA_END|true
+09:29:45.0 (378858145)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:29:45.0 (379146284)|WF_ACTION| Field Update: 2;
+09:29:45.0 (379151844)|WF_RULE_EVAL_END
+09:29:45.0 (379235828)|WF_ACTIONS_END| Field Update: 2;
+09:29:45.0 (379246412)|CODE_UNIT_FINISHED|Workflow:Contact
+09:29:45.0 (380860148)|DML_END|[11]
+09:29:45.0 (381600420)|SYSTEM_MODE_ENTER|false
+09:29:45.0 (384899326)|SYSTEM_MODE_EXIT|false
+09:29:45.0 (385034386)|DML_BEGIN|[15]|Op:Insert|Type:Case|Rows:1
+09:29:45.0 (420552109)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeInsert for [new]
+09:29:45.0 (420959580)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:45.0 (434137975)|SOQL_EXECUTE_BEGIN|[363]|Aggregations:0|SELECT id, name, course_code__c FROM course__c 
+09:29:45.0 (436330494)|SOQL_EXECUTE_END|[363]|Rows:0
+09:29:45.0 (440939993)|SOQL_EXECUTE_BEGIN|[56]|Aggregations:0|SELECT id, Enquiry_Role__c, Location__c, Profile.Name, My_Information_LastUpdate__c, Queue__c FROM User WHERE id = :tmpVar1
+09:29:45.0 (447527035)|SOQL_EXECUTE_END|[56]|Rows:1
+09:29:45.0 (448556728)|SOQL_EXECUTE_BEGIN|[41]|Aggregations:0|SELECT id, AssigneeId FROM PermissionSetAssignment 
+09:29:45.0 (453021164)|SOQL_EXECUTE_END|[41]|Rows:0
+09:29:45.0 (455134357)|SOQL_EXECUTE_BEGIN|[493]|Aggregations:0|SELECT label, Email_Address__c FROM Off_System_Email_Address__mdt 
+09:29:45.0 (458934512)|SOQL_EXECUTE_END|[493]|Rows:27
+09:29:45.461 (461236657)|CUMULATIVE_LIMIT_USAGE
+09:29:45.461 (461236657)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 28 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 3 out of 10000
+  Maximum CPU time: 65 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:45.461 (461236657)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:45.0 (462590976)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeInsert for [new]
+09:29:45.0 (500921342)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:new
+09:29:45.0 (500947023)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:29:45.0 (503112181)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Phone , $UserRole.Name=eSolutions
+09:29:45.0 (503121154)|VALIDATION_PASS
+09:29:45.0 (503124335)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:29:45.0 (504011205)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Open , Origin=Phone , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:29:45.0 (504022683)|VALIDATION_PASS
+09:29:45.0 (504025217)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:29:45.0 (504350605)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:29:45.0 (504358620)|VALIDATION_PASS
+09:29:45.0 (504361764)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:29:45.0 (504665461)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=null
+09:29:45.0 (504673377)|VALIDATION_PASS
+09:29:45.0 (504675662)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:29:45.0 (504972599)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=0 , Category_Level_2__c=null
+09:29:45.0 (504980723)|VALIDATION_PASS
+09:29:45.0 (504983051)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:29:45.0 (505274033)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Open , $UserRole.Name=eSolutions , $User.Alias=acust
+09:29:45.0 (505282004)|VALIDATION_PASS
+09:29:45.0 (505325457)|CODE_UNIT_FINISHED|Validation:Case:new
+09:29:45.0 (594464371)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterInsert for [500p0000002kJ95]
+09:29:45.0 (594823607)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:45.0 (605589317)|SOQL_EXECUTE_BEGIN|[104]|Aggregations:0|SELECT id, userrole.name FROM user 
+09:29:45.0 (736708219)|SOQL_EXECUTE_END|[104]|Rows:800
+09:29:45.0 (934647815)|SOQL_EXECUTE_BEGIN|[86]|Aggregations:0|SELECT id, firstname, lastname FROM User 
+09:29:46.52 (1052319020)|SOQL_EXECUTE_END|[86]|Rows:840
+09:29:46.52 (1399568767)|SOQL_EXECUTE_BEGIN|[90]|Aggregations:0|SELECT id, name FROM Group 
+09:29:46.52 (1403040213)|SOQL_EXECUTE_END|[90]|Rows:42
+09:29:46.52 (1405858023)|DML_BEGIN|[343]|Op:Upsert|Type:queueHours__c|Rows:1
+09:29:46.52 (1458199010)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ95]
+09:29:46.52 (1458635403)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:46.52 (1460805903)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:1|SELECT id, (SELECT id FROM enquiry_interests__r LIMIT 1) FROM case 
+09:29:46.52 (1464179580)|SOQL_EXECUTE_END|[42]|Rows:1
+09:29:46.52 (1464586509)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:29:46.52 (1465173301)|SYSTEM_MODE_ENTER|true
+09:29:46.52 (1465186221)|SYSTEM_MODE_EXIT|true
+09:29:46.52 (1465212843)|SYSTEM_MODE_ENTER|true
+09:29:46.52 (1465221919)|SYSTEM_MODE_EXIT|true
+09:29:46.465 (1465834682)|CUMULATIVE_LIMIT_USAGE
+09:29:46.465 (1465834682)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 7 out of 100
+  Number of query rows: 1711 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 226 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:46.465 (1465834682)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:46.52 (1467542272)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ95]
+09:29:46.52 (1474571749)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ95
+09:29:46.52 (1474593263)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:29:46.52 (1474870621)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Phone , $UserRole.Name=eSolutions
+09:29:46.52 (1474880237)|VALIDATION_PASS
+09:29:46.52 (1474885120)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:29:46.52 (1475585647)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Open , Origin=Phone , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:29:46.52 (1475598148)|VALIDATION_PASS
+09:29:46.52 (1475602387)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:29:46.52 (1476144321)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:29:46.52 (1476155816)|VALIDATION_PASS
+09:29:46.52 (1476159757)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:29:46.52 (1476669059)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:29:46.52 (1476679738)|VALIDATION_PASS
+09:29:46.52 (1476683902)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:29:46.52 (1477151408)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=0 , Category_Level_2__c=null
+09:29:46.52 (1477162003)|VALIDATION_PASS
+09:29:46.52 (1477166647)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:29:46.52 (1477572269)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Open , $UserRole.Name=eSolutions , $User.Alias=acust
+09:29:46.52 (1477580557)|VALIDATION_PASS
+09:29:46.52 (1477610813)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ95
+09:29:46.52 (1500899650)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ95]
+09:29:46.52 (1501334466)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:46.52 (1503470516)|SOQL_EXECUTE_BEGIN|[243]|Aggregations:0|SELECT Id, Label FROM BH_Stop_Status__mdt 
+09:29:46.52 (1506845579)|SOQL_EXECUTE_END|[243]|Rows:1
+09:29:46.52 (1510026923)|SOQL_EXECUTE_BEGIN|[106]|Aggregations:0|SELECT Id, Case_API_name__c, Contact_Field_API_name__c FROM Case_to_Contact_Field_Mapping__mdt LIMIT 400
+09:29:46.52 (1513539767)|SOQL_EXECUTE_END|[106]|Rows:14
+09:29:46.52 (1514742505)|SOQL_EXECUTE_BEGIN|[120]|Aggregations:0|select Level_of_Study__c,Supplied_Date_of_Birth__c,Supplied_Country_of_Residence__c,SuppliedEmail,Supplied_Email_Opt_out__c,Supplied_First_Name__c,Highest_Level_of_Study__c,Supplied_Name_of_Institution__c,Supplied_Nationality__c,Residency_Status__c,Supplied_City__c,Supplied_Area_of_Interest__c,Supplied_Last_Name__c,SuppliedPhone,Id,contactId from case 
+09:29:46.52 (1523543146)|SOQL_EXECUTE_END|[120]|Rows:0
+09:29:46.523 (1523949620)|CUMULATIVE_LIMIT_USAGE
+09:29:46.523 (1523949620)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 8 out of 100
+  Number of query rows: 1726 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 226 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:46.523 (1523949620)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:46.52 (1525307241)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ95]
+09:29:46.52 (1528709888)|DML_END|[343]
+09:29:46.52 (1530191414)|SOQL_EXECUTE_BEGIN|[152]|Aggregations:0|SELECT id, origin, contactid, course__c, course__r.Managing_Faculty__c, course__r.Faculty_Code__c, Supplied_Area_of_Interest__c, Supplied_Name_of_Institution__c, Commencement_Year__c, Level_of_Study__c FROM Case 
+09:29:46.52 (1534455479)|SOQL_EXECUTE_END|[152]|Rows:0
+09:29:46.534 (1534772679)|CUMULATIVE_LIMIT_USAGE
+09:29:46.534 (1534772679)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 9 out of 100
+  Number of query rows: 1726 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 4 out of 150
+  Number of DML rows: 4 out of 10000
+  Maximum CPU time: 226 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:46.534 (1534772679)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:46.52 (1536180170)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterInsert for [500p0000002kJ95]
+09:29:46.52 (1536812555)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Case
+09:29:46.52 (1554010748)|WF_RULE_EVAL_BEGIN|Assignment
+09:29:46.52 (1554048823)|WF_SPOOL_ACTION_BEGIN|Assignment
+09:29:46.52 (1554056103)|WF_ACTION|.
+09:29:46.52 (1554061217)|WF_RULE_EVAL_END
+09:29:46.52 (1554083196)|WF_RULE_EVAL_BEGIN|Workflow
+09:29:46.52 (1554124860)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:29:46.52 (1562911305)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Research Deferral Request]
+09:29:46.52 (1562949871)|WF_RULE_EVAL_VALUE|Phone
+09:29:46.52 (1562957472)|WF_CRITERIA_END|false
+09:29:46.52 (1562986323)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:29:46.52 (1563036764)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Research Future Students]
+09:29:46.52 (1563054312)|WF_RULE_EVAL_VALUE|Phone
+09:29:46.52 (1563058271)|WF_CRITERIA_END|false
+09:29:46.52 (1563074235)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:29:46.52 (1563493165)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]{!ID:Owner:Queue.QueueName} = "Schools Engagement"|Values:Owner:Queue.QueueName=null
+09:29:46.52 (1563499892)|WF_CRITERIA_END|false
+09:29:46.52 (1563518290)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:46.52 (1563775614)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( 
+{!ID:IsClosed} , 
+NOT( {!ID:$User.Alias} = "dload") /* exclude data load user */
+)|Values:IsClosed=0, $User.Alias=acust
+09:29:46.52 (1563781767)|WF_CRITERIA_END|false
+09:29:46.52 (1563799456)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:46.52 (1563938301)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:29:46.52 (1563964493)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:29:46.52 (1563969021)|WF_CRITERIA_END|false
+09:29:46.52 (1563985257)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:29:46.52 (1564106979)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web, course enquiry webform, Email - System, Web - Research Future Students, Email - study, Web - Future Students International, Web - Find Course International, Web - Monash College] 
+AND [Enquiry : Enquiry Record Type equals Standard Enquiry] 
+AND [Enquiry : Web Email not equal to , future@monash.edu] 
+AND [User : Profile not equal to Data Loading]
+09:29:46.52 (1564136477)|WF_RULE_EVAL_VALUE|Phone
+09:29:46.52 (1564140793)|WF_CRITERIA_END|false
+09:29:46.52 (1564158002)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:29:46.52 (1564202538)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Monash College]
+09:29:46.52 (1564216313)|WF_RULE_EVAL_VALUE|Phone
+09:29:46.52 (1564220114)|WF_CRITERIA_END|false
+09:29:46.52 (1564234992)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:46.52 (1564338643)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:29:46.52 (1564355645)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:29:46.52 (1564359766)|WF_CRITERIA_END|false
+09:29:46.52 (1564374643)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:29:46.52 (1564416687)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Email - Airport Pickup]
+09:29:46.52 (1564431397)|WF_RULE_EVAL_VALUE|Phone
+09:29:46.52 (1564435303)|WF_CRITERIA_END|false
+09:29:46.52 (1564449927)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:29:46.52 (1564490202)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Email - sr-socialenquiry-l]
+09:29:46.52 (1564503668)|WF_RULE_EVAL_VALUE|Phone
+09:29:46.52 (1564507362)|WF_CRITERIA_END|false
+09:29:46.52 (1564522045)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:29:46.52 (1564561107)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals course enquiry webform]
+09:29:46.52 (1564574476)|WF_RULE_EVAL_VALUE|Phone
+09:29:46.52 (1564578209)|WF_CRITERIA_END|false
+09:29:46.52 (1564592817)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:29:46.52 (1564634823)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Find Course International]
+09:29:46.52 (1564648563)|WF_RULE_EVAL_VALUE|Phone
+09:29:46.52 (1564652235)|WF_CRITERIA_END|false
+09:29:46.52 (1564666512)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:29:46.52 (1564706576)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Future Students International]
+09:29:46.52 (1564719753)|WF_RULE_EVAL_VALUE|Phone
+09:29:46.52 (1564723985)|WF_CRITERIA_END|false
+09:29:46.52 (1564738520)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:29:46.52 (1564779183)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:29:46.52 (1564784141)|WF_CRITERIA_END|true
+09:29:46.52 (1566775851)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:29:46.52 (1566831847)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Email - study]
+09:29:46.52 (1566852510)|WF_RULE_EVAL_VALUE|Phone
+09:29:46.52 (1566857308)|WF_CRITERIA_END|false
+09:29:46.52 (1566873630)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:29:46.52 (1566919355)|WF_RULE_FILTER|[Enquiry : Enquiry Origin equals Web - Research Current Students]
+09:29:46.52 (1566937903)|WF_RULE_EVAL_VALUE|Phone
+09:29:46.52 (1566942189)|WF_CRITERIA_END|false
+09:29:46.52 (1566958166)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:29:46.52 (1567142383)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Open
+09:29:46.52 (1567149325)|WF_CRITERIA_END|false
+09:29:46.52 (1567166698)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:46.52 (1567270932)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:29:46.52 (1567290687)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:29:46.52 (1567295225)|WF_CRITERIA_END|false
+09:29:46.52 (1567318609)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:29:46.52 (1567349307)|WF_ACTION| Flow Trigger: 1;
+09:29:46.52 (1567352631)|WF_RULE_EVAL_END
+09:29:46.52 (1568149553)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:29:46.568 (1568231871)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:29:46.568 (1570217613)|FLOW_CREATE_INTERVIEW_END|2170af12f47f5ceb75cbcce7e2f1572ad9eef9-5add|Set Enquiry Student Type Based on Contact Profile
+09:29:46.570 (1570656281)|FLOW_START_INTERVIEWS_BEGIN|1
+09:29:46.570 (1572427735)|FLOW_START_INTERVIEW_BEGIN|2170af12f47f5ceb75cbcce7e2f1572ad9eef9-5add|Set Enquiry Student Type Based on Contact Profile
+09:29:46.570 (1582200704)|FLOW_START_INTERVIEW_END|2170af12f47f5ceb75cbcce7e2f1572ad9eef9-5add|Set Enquiry Student Type Based on Contact Profile
+09:29:46.570 (1582219303)|FLOW_START_INTERVIEWS_END|1
+09:29:46.52 (1583958352)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:29:46.52 (1583987746)|WF_TIME_TRIGGERS_BEGIN
+09:29:46.52 (1589763795)|WF_ACTIONS_END| Flow Trigger: 1;
+09:29:46.52 (1589772373)|CODE_UNIT_FINISHED|Workflow:Case
+09:29:46.52 (1590172360)|DML_END|[15]
+09:29:46.52 (1591210171)|SYSTEM_MODE_ENTER|false
+09:29:46.52 (1592711500)|SYSTEM_MODE_EXIT|false
+09:29:46.52 (1592783691)|DML_BEGIN|[21]|Op:Insert|Type:Attachment|Rows:10
+09:29:46.599 (1599518146)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1600971114)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1602969668)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1603027714)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1605839901)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1605912163)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1605987674)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1606048103)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1608541591)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1608630217)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1608670482)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1608707961)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1608744389)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1608780813)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1608817602)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1608854013)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1608890501)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1608926883)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1608961660)|ENTERING_MANAGED_PKG|copado
+09:29:46.599 (1609007008)|ENTERING_MANAGED_PKG|copado
+09:29:46.611 (1611691688)|CUMULATIVE_LIMIT_USAGE
+09:29:46.611 (1611691688)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 9 out of 100
+  Number of query rows: 1726 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 14 out of 10000
+  Maximum CPU time: 340 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:46.611 (1611691688)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:46.721 (1721257209)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1721502000)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1721737654)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1722379226)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1722573221)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1722607331)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1722797525)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1722855331)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723116235)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723134363)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723247944)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723264238)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723373750)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723389686)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723498089)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723516399)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723624492)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723640286)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723747754)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723763602)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723871077)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723886692)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1723998513)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1724014165)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1724122756)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1724138704)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1724234223)|ENTERING_MANAGED_PKG|copado
+09:29:46.721 (1724247940)|ENTERING_MANAGED_PKG|copado
+09:29:46.724 (1724463252)|CUMULATIVE_LIMIT_USAGE
+09:29:46.724 (1724463252)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 9 out of 100
+  Number of query rows: 1726 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 5 out of 150
+  Number of DML rows: 14 out of 10000
+  Maximum CPU time: 340 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:46.724 (1724463252)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:46.52 (1727468282)|DML_END|[21]
+09:29:46.52 (1728254286)|SYSTEM_MODE_ENTER|false
+09:29:46.52 (1732293815)|SYSTEM_MODE_EXIT|false
+09:29:46.52 (1732373433)|DML_BEGIN|[23]|Op:Insert|Type:Task|Rows:10
+09:29:46.52 (1972062856)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QLNr|TaskTrigger on Task trigger event BeforeInsert for [new, new, new, new, new, new, new, new, new, new]
+09:29:46.52 (1972614471)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:46.52 (1977279011)|SOQL_EXECUTE_BEGIN|[41]|Aggregations:0|SELECT Id, Contact_field_API_name__c, Task_field_API_name__c, Task_Record_Type__c FROM Contact_to_Task_Field_Mapping__mdt LIMIT 400
+09:29:46.52 (1986647472)|SOQL_EXECUTE_END|[41]|Rows:14
+09:29:46.52 (1987091308)|SOQL_EXECUTE_BEGIN|[49]|Aggregations:0|SELECT id, developerName FROM RecordType 
+09:29:46.52 (1994020108)|SOQL_EXECUTE_END|[49]|Rows:3
+09:29:46.52 (1996040490)|SOQL_EXECUTE_BEGIN|[63]|Aggregations:0|select Course_Name__c,Faculty__c,First_in_Family__c,HomePhone,International_Student__c,MobilePhone,MonTrack_Opt_Out__c,MonTrack_Opt_Out_Reason__c,Person_ID__c,Phone,Campus__c,Course_code__c,FirstName,LastName,Id from contact 
+09:29:46.52 (2000722672)|SOQL_EXECUTE_END|[63]|Rows:1
+09:29:47.5 (2005364567)|CUMULATIVE_LIMIT_USAGE
+09:29:47.5 (2005364567)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 11 out of 100
+  Number of query rows: 1744 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 6 out of 150
+  Number of DML rows: 24 out of 10000
+  Maximum CPU time: 368 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:47.5 (2005364567)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:46.52 (2007025655)|CODE_UNIT_FINISHED|TaskTrigger on Task trigger event BeforeInsert for [new, new, new, new, new, new, new, new, new, new]
+09:29:47.272 (2272538027)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QLNr|TaskTrigger on Task trigger event AfterInsert for [00Tp0000003qVnt, 00Tp0000003qVnu, 00Tp0000003qVnv, 00Tp0000003qVnw, 00Tp0000003qVnx, 00Tp0000003qVny, 00Tp0000003qVnz, 00Tp0000003qVo0, 00Tp0000003qVo1, 00Tp0000003qVo2]
+09:29:47.272 (2273085069)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:47.272 (2274473292)|SOQL_EXECUTE_BEGIN|[428]|Aggregations:0|SELECT id, Latest_Inbound_Email__c FROM Case WHERE (id = :tmpVar1 AND Latest_Inbound_Email__c != NULL AND isClosed = FALSE)
+09:29:47.272 (2280224144)|SOQL_EXECUTE_END|[428]|Rows:0
+09:29:47.280 (2280318225)|CUMULATIVE_LIMIT_USAGE
+09:29:47.280 (2280318225)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 12 out of 100
+  Number of query rows: 1744 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 6 out of 150
+  Number of DML rows: 24 out of 10000
+  Maximum CPU time: 394 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:47.280 (2280318225)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:47.272 (2281898068)|CODE_UNIT_FINISHED|TaskTrigger on Task trigger event AfterInsert for [00Tp0000003qVnt, 00Tp0000003qVnu, 00Tp0000003qVnv, 00Tp0000003qVnw, 00Tp0000003qVnx, 00Tp0000003qVny, 00Tp0000003qVnz, 00Tp0000003qVo0, 00Tp0000003qVo1, 00Tp0000003qVo2]
+09:29:47.272 (2282531810)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Task
+09:29:47.272 (2297892798)|WF_RULE_EVAL_BEGIN|Workflow
+09:29:47.272 (2297934609)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnt]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:29:47.272 (2299866463)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:29:47.272 (2299895056)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:29:47.272 (2299900832)|WF_CRITERIA_END|false
+09:29:47.272 (2299916030)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnt]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2299967525)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:29:47.272 (2299996099)|WF_RULE_EVAL_VALUE|Completed
+09:29:47.272 (2300000585)|WF_CRITERIA_END|true
+09:29:47.272 (2317063594)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnu]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:29:47.272 (2317142207)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:29:47.272 (2317178082)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:29:47.272 (2317183994)|WF_CRITERIA_END|false
+09:29:47.272 (2317198809)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnu]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2317244285)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:29:47.272 (2317275879)|WF_RULE_EVAL_VALUE|Completed
+09:29:47.272 (2317280183)|WF_CRITERIA_END|true
+09:29:47.272 (2317296407)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnv]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:29:47.272 (2317330566)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:29:47.272 (2317346800)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:29:47.272 (2317350968)|WF_CRITERIA_END|false
+09:29:47.272 (2317363198)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnv]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2317391212)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:29:47.272 (2317408859)|WF_RULE_EVAL_VALUE|Completed
+09:29:47.272 (2317412810)|WF_CRITERIA_END|true
+09:29:47.272 (2317427666)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnw]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:29:47.272 (2317458663)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:29:47.272 (2317474119)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:29:47.272 (2317480253)|WF_CRITERIA_END|false
+09:29:47.272 (2317492708)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnw]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2317520384)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:29:47.272 (2317537233)|WF_RULE_EVAL_VALUE|Completed
+09:29:47.272 (2317541140)|WF_CRITERIA_END|true
+09:29:47.272 (2317556418)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnx]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:29:47.272 (2317585699)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:29:47.272 (2317601166)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:29:47.272 (2317605106)|WF_CRITERIA_END|false
+09:29:47.272 (2317616724)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnx]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2317644709)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:29:47.272 (2317661291)|WF_RULE_EVAL_VALUE|Completed
+09:29:47.272 (2317665131)|WF_CRITERIA_END|true
+09:29:47.272 (2317679887)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVny]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:29:47.272 (2317708999)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:29:47.272 (2317723749)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:29:47.272 (2317727652)|WF_CRITERIA_END|false
+09:29:47.272 (2317739161)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVny]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2317765913)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:29:47.272 (2317782155)|WF_RULE_EVAL_VALUE|Completed
+09:29:47.272 (2317786076)|WF_CRITERIA_END|true
+09:29:47.272 (2317800943)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnz]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:29:47.272 (2317829459)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:29:47.272 (2317844883)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:29:47.272 (2317848932)|WF_CRITERIA_END|false
+09:29:47.272 (2317860695)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVnz]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2317887540)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:29:47.272 (2317903797)|WF_RULE_EVAL_VALUE|Completed
+09:29:47.272 (2317907819)|WF_CRITERIA_END|true
+09:29:47.272 (2317928296)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVo0]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:29:47.272 (2317958086)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:29:47.272 (2317973500)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:29:47.272 (2317977497)|WF_CRITERIA_END|false
+09:29:47.272 (2317989029)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVo0]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2318015917)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:29:47.272 (2318033430)|WF_RULE_EVAL_VALUE|Completed
+09:29:47.272 (2318040120)|WF_CRITERIA_END|true
+09:29:47.272 (2318055941)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVo1]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:29:47.272 (2318085174)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:29:47.272 (2318100634)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:29:47.272 (2318104425)|WF_CRITERIA_END|false
+09:29:47.272 (2318115993)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVo1]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2318142333)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:29:47.272 (2318158597)|WF_RULE_EVAL_VALUE|Completed
+09:29:47.272 (2318162366)|WF_CRITERIA_END|true
+09:29:47.272 (2318176767)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVo2]|TASK: Copy My Information to Activities|01Q28000000MLKJ|ON_CREATE_ONLY|0
+09:29:47.272 (2318205647)|WF_RULE_FILTER|[User : Role contains Monash Connect]
+09:29:47.272 (2318220295)|WF_RULE_EVAL_VALUE|00E28000000cpns
+09:29:47.272 (2318224854)|WF_CRITERIA_END|false
+09:29:47.272 (2318236410)|WF_CRITERIA_BEGIN|[Task:  00Tp0000003qVo2]|Task - Completed Date/Time|01Q28000000MEzt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2318262488)|WF_RULE_FILTER|[Task : Status equals Completed]
+09:29:47.272 (2318278772)|WF_RULE_EVAL_VALUE|Completed
+09:29:47.272 (2318282530)|WF_CRITERIA_END|true
+09:29:47.272 (2318301974)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:29:47.272 (2318666477)|WF_FIELD_UPDATE|[Task:  00Tp0000003qVnt]|Field:Task: Completed Date/Time|Value:Wed Sep 14 23:29:47 GMT 2016|Id=04Y28000000Lzax|CurrentRule:Task - Completed Date/Time (Id=01Q28000000MEzt)
+09:29:47.272 (2318760014)|WF_FIELD_UPDATE|[Task:  00Tp0000003qVnu]|Field:Task: Completed Date/Time|Value:Wed Sep 14 23:29:47 GMT 2016|Id=04Y28000000Lzax|CurrentRule:Task - Completed Date/Time (Id=01Q28000000MEzt)
+09:29:47.272 (2318843592)|WF_FIELD_UPDATE|[Task:  00Tp0000003qVnv]|Field:Task: Completed Date/Time|Value:Wed Sep 14 23:29:47 GMT 2016|Id=04Y28000000Lzax|CurrentRule:Task - Completed Date/Time (Id=01Q28000000MEzt)
+09:29:47.272 (2318932311)|WF_FIELD_UPDATE|[Task:  00Tp0000003qVnw]|Field:Task: Completed Date/Time|Value:Wed Sep 14 23:29:47 GMT 2016|Id=04Y28000000Lzax|CurrentRule:Task - Completed Date/Time (Id=01Q28000000MEzt)
+09:29:47.272 (2319027566)|WF_FIELD_UPDATE|[Task:  00Tp0000003qVnx]|Field:Task: Completed Date/Time|Value:Wed Sep 14 23:29:47 GMT 2016|Id=04Y28000000Lzax|CurrentRule:Task - Completed Date/Time (Id=01Q28000000MEzt)
+09:29:47.272 (2319111675)|WF_FIELD_UPDATE|[Task:  00Tp0000003qVny]|Field:Task: Completed Date/Time|Value:Wed Sep 14 23:29:47 GMT 2016|Id=04Y28000000Lzax|CurrentRule:Task - Completed Date/Time (Id=01Q28000000MEzt)
+09:29:47.272 (2319193390)|WF_FIELD_UPDATE|[Task:  00Tp0000003qVnz]|Field:Task: Completed Date/Time|Value:Wed Sep 14 23:29:47 GMT 2016|Id=04Y28000000Lzax|CurrentRule:Task - Completed Date/Time (Id=01Q28000000MEzt)
+09:29:47.272 (2319273679)|WF_FIELD_UPDATE|[Task:  00Tp0000003qVo0]|Field:Task: Completed Date/Time|Value:Wed Sep 14 23:29:47 GMT 2016|Id=04Y28000000Lzax|CurrentRule:Task - Completed Date/Time (Id=01Q28000000MEzt)
+09:29:47.272 (2319358871)|WF_FIELD_UPDATE|[Task:  00Tp0000003qVo1]|Field:Task: Completed Date/Time|Value:Wed Sep 14 23:29:47 GMT 2016|Id=04Y28000000Lzax|CurrentRule:Task - Completed Date/Time (Id=01Q28000000MEzt)
+09:29:47.272 (2319448969)|WF_FIELD_UPDATE|[Task:  00Tp0000003qVo2]|Field:Task: Completed Date/Time|Value:Wed Sep 14 23:29:47 GMT 2016|Id=04Y28000000Lzax|CurrentRule:Task - Completed Date/Time (Id=01Q28000000MEzt)
+09:29:47.272 (2319471867)|WF_ACTION| Field Update: 10;
+09:29:47.272 (2319475446)|WF_RULE_EVAL_END
+09:29:47.272 (2322111038)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QLNr|TaskTrigger on Task trigger event BeforeUpdate for [00Tp0000003qVnt, 00Tp0000003qVnu, 00Tp0000003qVnv, 00Tp0000003qVnw, 00Tp0000003qVnx, 00Tp0000003qVny, 00Tp0000003qVnz, 00Tp0000003qVo0, 00Tp0000003qVo1, 00Tp0000003qVo2]
+09:29:47.272 (2322618793)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:47.272 (2323346493)|SOQL_EXECUTE_BEGIN|[41]|Aggregations:0|SELECT Id, Contact_field_API_name__c, Task_field_API_name__c, Task_Record_Type__c FROM Contact_to_Task_Field_Mapping__mdt LIMIT 400
+09:29:47.272 (2325606082)|SOQL_EXECUTE_END|[41]|Rows:14
+09:29:47.272 (2325977031)|SOQL_EXECUTE_BEGIN|[49]|Aggregations:0|SELECT id, developerName FROM RecordType 
+09:29:47.272 (2329165828)|SOQL_EXECUTE_END|[49]|Rows:3
+09:29:47.272 (2330883333)|SOQL_EXECUTE_BEGIN|[63]|Aggregations:0|select Course_Name__c,Faculty__c,First_in_Family__c,HomePhone,International_Student__c,MobilePhone,MonTrack_Opt_Out__c,MonTrack_Opt_Out_Reason__c,Person_ID__c,Phone,Campus__c,Course_code__c,FirstName,LastName,Id from contact 
+09:29:47.272 (2335724741)|SOQL_EXECUTE_END|[63]|Rows:1
+09:29:47.341 (2341203101)|CUMULATIVE_LIMIT_USAGE
+09:29:47.341 (2341203101)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 14 out of 100
+  Number of query rows: 1762 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 6 out of 150
+  Number of DML rows: 24 out of 10000
+  Maximum CPU time: 394 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:47.341 (2341203101)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:47.272 (2342730967)|CODE_UNIT_FINISHED|TaskTrigger on Task trigger event BeforeUpdate for [00Tp0000003qVnt, 00Tp0000003qVnu, 00Tp0000003qVnv, 00Tp0000003qVnw, 00Tp0000003qVnx, 00Tp0000003qVny, 00Tp0000003qVnz, 00Tp0000003qVo0, 00Tp0000003qVo1, 00Tp0000003qVo2]
+09:29:47.272 (2391216719)|WF_ACTIONS_END| Field Update: 10;
+09:29:47.272 (2391229190)|CODE_UNIT_FINISHED|Workflow:Task
+09:29:47.272 (2392728876)|DML_END|[23]
+09:29:47.272 (2393889511)|SYSTEM_MODE_ENTER|false
+09:29:47.272 (2395018303)|SYSTEM_MODE_EXIT|false
+09:29:47.272 (2395085253)|DML_BEGIN|[25]|Op:Insert|Type:EmailMessage|Rows:6
+09:29:47.272 (2707331170)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QErh|EmailMessageTrigger on EmailMessage trigger event AfterInsert for [02sp0000000H4Mv, 02sp0000000H4Mw, 02sp0000000H4Mx, 02sp0000000H4My, 02sp0000000H4Mz, 02sp0000000H4N0]
+09:29:47.272 (2707842046)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:47.272 (2711171321)|SOQL_EXECUTE_BEGIN|[24]|Aggregations:0|SELECT id, Email_To__c, Latest_Inbound_Email__c FROM Case WHERE (id = :tmpVar1 AND (Email_To__c = NULL OR Email_To__c = '') AND (Origin = 'Email' OR Origin LIKE 'Email%'))
+09:29:47.272 (2717905936)|SOQL_EXECUTE_END|[24]|Rows:0
+09:29:47.272 (2719727509)|SOQL_EXECUTE_BEGIN|[76]|Aggregations:1|SELECT id, Latest_Inbound_Email__c, Latest_Unassigned_Queue_OwnerId__c, Status, CreatedDate, Origin, (SELECT id, MessageDate FROM emailMessages WHERE Incoming = TRUE ORDER BY MessageDate DESC NULLS FIRST LIMIT 2), IsClosed FROM Case WHERE id = :tmpVar1
+09:29:47.272 (2736539389)|SOQL_EXECUTE_END|[76]|Rows:1
+09:29:47.272 (2736998394)|DML_BEGIN|[100]|Op:Update|Type:Case|Rows:1
+09:29:47.272 (2745576449)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ95]
+09:29:47.272 (2745924914)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:47.272 (2747116104)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:1|SELECT id, (SELECT id FROM enquiry_interests__r LIMIT 1) FROM case 
+09:29:47.272 (2750486907)|SOQL_EXECUTE_END|[42]|Rows:1
+09:29:47.272 (2750731579)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:29:47.751 (2751319922)|CUMULATIVE_LIMIT_USAGE
+09:29:47.751 (2751319922)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 17 out of 100
+  Number of query rows: 1764 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 8 out of 150
+  Number of DML rows: 31 out of 10000
+  Maximum CPU time: 443 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:47.751 (2751319922)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:47.272 (2752979344)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ95]
+09:29:47.272 (2756567262)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ95
+09:29:47.272 (2756580931)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:29:47.272 (2756783510)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Phone , $UserRole.Name=eSolutions
+09:29:47.272 (2756791890)|VALIDATION_PASS
+09:29:47.272 (2756794893)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:29:47.272 (2757253132)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Open , Origin=Phone , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:29:47.272 (2757264103)|VALIDATION_PASS
+09:29:47.272 (2757266638)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:29:47.272 (2757593340)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:29:47.272 (2757601924)|VALIDATION_PASS
+09:29:47.272 (2757604265)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:29:47.272 (2757944054)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:29:47.272 (2757952405)|VALIDATION_PASS
+09:29:47.272 (2757955024)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:29:47.272 (2758273115)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=0 , Category_Level_2__c=null
+09:29:47.272 (2758282391)|VALIDATION_PASS
+09:29:47.272 (2758284727)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:29:47.272 (2758587502)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Open , $UserRole.Name=eSolutions , $User.Alias=acust
+09:29:47.272 (2758594754)|VALIDATION_PASS
+09:29:47.272 (2758623357)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ95
+09:29:47.272 (2801597456)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ95]
+09:29:47.272 (2801967309)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:47.272 (2802858557)|SOQL_EXECUTE_BEGIN|[243]|Aggregations:0|SELECT Id, Label FROM BH_Stop_Status__mdt 
+09:29:47.272 (2804237050)|SOQL_EXECUTE_END|[243]|Rows:1
+09:29:47.272 (2805275212)|SOQL_EXECUTE_BEGIN|[106]|Aggregations:0|SELECT Id, Case_API_name__c, Contact_Field_API_name__c FROM Case_to_Contact_Field_Mapping__mdt LIMIT 400
+09:29:47.272 (2806532135)|SOQL_EXECUTE_END|[106]|Rows:14
+09:29:47.272 (2807319260)|SOQL_EXECUTE_BEGIN|[120]|Aggregations:0|select Level_of_Study__c,Supplied_Date_of_Birth__c,Supplied_Country_of_Residence__c,SuppliedEmail,Supplied_Email_Opt_out__c,Supplied_First_Name__c,Highest_Level_of_Study__c,Supplied_Name_of_Institution__c,Supplied_Nationality__c,Residency_Status__c,Supplied_City__c,Supplied_Area_of_Interest__c,Supplied_Last_Name__c,SuppliedPhone,Id,contactId from case 
+09:29:47.272 (2813587717)|SOQL_EXECUTE_END|[120]|Rows:0
+09:29:47.813 (2813814194)|CUMULATIVE_LIMIT_USAGE
+09:29:47.813 (2813814194)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 18 out of 100
+  Number of query rows: 1779 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 8 out of 150
+  Number of DML rows: 31 out of 10000
+  Maximum CPU time: 443 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:47.813 (2813814194)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:47.272 (2815296989)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ95]
+09:29:47.272 (2815400013)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Case
+09:29:47.272 (2831765057)|WF_RULE_EVAL_BEGIN|Assignment
+09:29:47.272 (2831797920)|WF_SPOOL_ACTION_BEGIN|Assignment
+09:29:47.272 (2831805084)|WF_ACTION|.
+09:29:47.272 (2831810329)|WF_RULE_EVAL_END
+09:29:47.272 (2831833288)|WF_RULE_EVAL_BEGIN|Workflow
+09:29:47.272 (2831877687)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:29:47.272 (2831890471)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2831919349)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:29:47.272 (2831929782)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2831955704)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:29:47.272 (2831964908)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2831987992)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2832283348)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( 
+{!ID:IsClosed} , 
+NOT( {!ID:$User.Alias} = "dload") /* exclude data load user */
+)|Values:IsClosed=0, $User.Alias=acust
+09:29:47.272 (2832294352)|WF_CRITERIA_END|false
+09:29:47.272 (2832321939)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2832501235)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:29:47.272 (2832533242)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:29:47.272 (2832539936)|WF_CRITERIA_END|false
+09:29:47.272 (2832561995)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:29:47.272 (2832570882)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2832593909)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:29:47.272 (2832602212)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2832623167)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2832747474)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:29:47.272 (2832776195)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:29:47.272 (2832784362)|WF_CRITERIA_END|false
+09:29:47.272 (2832809653)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:29:47.272 (2832820069)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2832843782)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:29:47.272 (2832853161)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2832877020)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:29:47.272 (2832886340)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2832909864)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:29:47.272 (2832919707)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2832941848)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:29:47.272 (2832951897)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2832976325)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:29:47.272 (2833000181)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:29:47.272 (2833008736)|WF_CRITERIA_END|true
+09:29:47.272 (2833048630)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:29:47.272 (2833058085)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2833081275)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:29:47.272 (2833090302)|WF_RULE_NOT_EVALUATED
+09:29:47.272 (2833120114)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:29:47.272 (2833247320)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Open
+09:29:47.272 (2833256381)|WF_CRITERIA_END|false
+09:29:47.272 (2833282054)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:47.272 (2833411307)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:29:47.272 (2833437372)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:29:47.272 (2833444746)|WF_CRITERIA_END|false
+09:29:47.272 (2833496342)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:29:47.272 (2833539164)|WF_ACTION| Flow Trigger: 1;
+09:29:47.272 (2833544357)|WF_RULE_EVAL_END
+09:29:47.272 (2833598127)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:29:47.833 (2833678256)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:29:47.833 (2833778177)|FLOW_CREATE_INTERVIEW_END|2171af12f47f5ceb75cbcce7e2f1572ad9eef9-5b45|Set Enquiry Student Type Based on Contact Profile
+09:29:47.834 (2834374874)|FLOW_START_INTERVIEWS_BEGIN|1
+09:29:47.834 (2834420560)|FLOW_START_INTERVIEW_BEGIN|2171af12f47f5ceb75cbcce7e2f1572ad9eef9-5b45|Set Enquiry Student Type Based on Contact Profile
+09:29:47.834 (2837381497)|FLOW_START_INTERVIEW_END|2171af12f47f5ceb75cbcce7e2f1572ad9eef9-5b45|Set Enquiry Student Type Based on Contact Profile
+09:29:47.834 (2837393972)|FLOW_START_INTERVIEWS_END|1
+09:29:47.272 (2838797841)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:29:47.272 (2838820907)|WF_TIME_TRIGGERS_BEGIN
+09:29:47.272 (2843286673)|WF_ACTIONS_END| Flow Trigger: 1;
+09:29:47.272 (2843300769)|CODE_UNIT_FINISHED|Workflow:Case
+09:29:47.272 (2843869179)|DML_END|[100]
+09:29:47.843 (2843984371)|CUMULATIVE_LIMIT_USAGE
+09:29:47.843 (2843984371)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 18 out of 100
+  Number of query rows: 1779 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 8 out of 150
+  Number of DML rows: 31 out of 10000
+  Maximum CPU time: 443 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:47.843 (2843984371)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:47.272 (2845490311)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert for [02sp0000000H4Mv, 02sp0000000H4Mw, 02sp0000000H4Mx, 02sp0000000H4My, 02sp0000000H4Mz, 02sp0000000H4N0]
+09:29:47.272 (2846106116)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:EmailMessage
+09:29:47.272 (2862007100)|WF_RULE_EVAL_BEGIN|Workflow
+09:29:47.272 (2862058045)|WF_CRITERIA_BEGIN|[Email Message:  02sp0000000H4Mv]|Mark_Email_Enquiry_has_Attachment30128000000J3T4|01Q280000002P50|ON_CREATE_ONLY|0
+09:29:47.272 (2862197069)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:29:47.272 (2862205867)|WF_CRITERIA_END|true
+09:29:47.272 (2876806824)|WF_CRITERIA_BEGIN|[Email Message:  02sp0000000H4Mw]|Mark_Email_Enquiry_has_Attachment30128000000J3T4|01Q280000002P50|ON_CREATE_ONLY|0
+09:29:47.272 (2876871748)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:29:47.272 (2876878519)|WF_CRITERIA_END|true
+09:29:47.272 (2876898146)|WF_CRITERIA_BEGIN|[Email Message:  02sp0000000H4Mx]|Mark_Email_Enquiry_has_Attachment30128000000J3T4|01Q280000002P50|ON_CREATE_ONLY|0
+09:29:47.272 (2876922333)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:29:47.272 (2876926521)|WF_CRITERIA_END|true
+09:29:47.272 (2876945670)|WF_CRITERIA_BEGIN|[Email Message:  02sp0000000H4My]|Mark_Email_Enquiry_has_Attachment30128000000J3T4|01Q280000002P50|ON_CREATE_ONLY|0
+09:29:47.272 (2876969200)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:29:47.272 (2876973073)|WF_CRITERIA_END|true
+09:29:47.272 (2876988950)|WF_CRITERIA_BEGIN|[Email Message:  02sp0000000H4Mz]|Mark_Email_Enquiry_has_Attachment30128000000J3T4|01Q280000002P50|ON_CREATE_ONLY|0
+09:29:47.272 (2877010486)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:29:47.272 (2877015632)|WF_CRITERIA_END|true
+09:29:47.272 (2877031276)|WF_CRITERIA_BEGIN|[Email Message:  02sp0000000H4N0]|Mark_Email_Enquiry_has_Attachment30128000000J3T4|01Q280000002P50|ON_CREATE_ONLY|0
+09:29:47.272 (2877053010)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:29:47.272 (2877056809)|WF_CRITERIA_END|true
+09:29:47.272 (2877079207)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:29:47.272 (2877121781)|WF_ACTION| Flow Trigger: 6;
+09:29:47.272 (2877125840)|WF_RULE_EVAL_END
+09:29:47.272 (2877170297)|WF_FLOW_ACTION_BEGIN|09L28000000MLl1
+09:29:47.877 (2877237839)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfT|30128000000J3T4
+09:29:47.877 (3179114366)|FLOW_CREATE_INTERVIEW_END|2172af12f47f5ceb75cbcce7e2f1572ad9eef9-5b89|Mark Email Enquiry has Attachment
+09:29:47.272 (3179513032)|WF_FLOW_ACTION_BEGIN|09L28000000MLl1
+09:29:48.179 (3179591518)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfT|30128000000J3T4
+09:29:48.179 (3179641044)|FLOW_CREATE_INTERVIEW_END|2173af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8a|Mark Email Enquiry has Attachment
+09:29:47.272 (3179836411)|WF_FLOW_ACTION_BEGIN|09L28000000MLl1
+09:29:48.179 (3179874027)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfT|30128000000J3T4
+09:29:48.179 (3179917190)|FLOW_CREATE_INTERVIEW_END|2174af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8b|Mark Email Enquiry has Attachment
+09:29:47.272 (3180115982)|WF_FLOW_ACTION_BEGIN|09L28000000MLl1
+09:29:48.180 (3180154004)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfT|30128000000J3T4
+09:29:48.180 (3180196364)|FLOW_CREATE_INTERVIEW_END|2175af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8c|Mark Email Enquiry has Attachment
+09:29:47.272 (3180385426)|WF_FLOW_ACTION_BEGIN|09L28000000MLl1
+09:29:48.180 (3180421968)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfT|30128000000J3T4
+09:29:48.180 (3180463755)|FLOW_CREATE_INTERVIEW_END|2176af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8d|Mark Email Enquiry has Attachment
+09:29:47.272 (3180651448)|WF_FLOW_ACTION_BEGIN|09L28000000MLl1
+09:29:48.180 (3180688219)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfT|30128000000J3T4
+09:29:48.180 (3180729461)|FLOW_CREATE_INTERVIEW_END|2177af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8e|Mark Email Enquiry has Attachment
+09:29:48.180 (3180973272)|FLOW_START_INTERVIEWS_BEGIN|6
+09:29:48.180 (3181009613)|FLOW_START_INTERVIEW_BEGIN|2172af12f47f5ceb75cbcce7e2f1572ad9eef9-5b89|Mark Email Enquiry has Attachment
+09:29:48.180 (3181815662)|FLOW_START_INTERVIEW_END|2172af12f47f5ceb75cbcce7e2f1572ad9eef9-5b89|Mark Email Enquiry has Attachment
+09:29:48.180 (3181820359)|FLOW_START_INTERVIEW_BEGIN|2173af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8a|Mark Email Enquiry has Attachment
+09:29:48.180 (3182372544)|FLOW_START_INTERVIEW_END|2173af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8a|Mark Email Enquiry has Attachment
+09:29:48.180 (3182377334)|FLOW_START_INTERVIEW_BEGIN|2174af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8b|Mark Email Enquiry has Attachment
+09:29:48.180 (3182912171)|FLOW_START_INTERVIEW_END|2174af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8b|Mark Email Enquiry has Attachment
+09:29:48.180 (3182917081)|FLOW_START_INTERVIEW_BEGIN|2175af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8c|Mark Email Enquiry has Attachment
+09:29:48.180 (3183476737)|FLOW_START_INTERVIEW_END|2175af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8c|Mark Email Enquiry has Attachment
+09:29:48.180 (3183481713)|FLOW_START_INTERVIEW_BEGIN|2176af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8d|Mark Email Enquiry has Attachment
+09:29:48.180 (3184017181)|FLOW_START_INTERVIEW_END|2176af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8d|Mark Email Enquiry has Attachment
+09:29:48.180 (3184021785)|FLOW_START_INTERVIEW_BEGIN|2177af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8e|Mark Email Enquiry has Attachment
+09:29:48.180 (3184554393)|FLOW_START_INTERVIEW_END|2177af12f47f5ceb75cbcce7e2f1572ad9eef9-5b8e|Mark Email Enquiry has Attachment
+09:29:48.180 (3184564117)|FLOW_START_INTERVIEWS_END|6
+09:29:47.272 (3186004138)|WF_FLOW_ACTION_END|09L28000000MLl1
+09:29:47.272 (3186008917)|WF_FLOW_ACTION_END|09L28000000MLl1
+09:29:47.272 (3186010457)|WF_FLOW_ACTION_END|09L28000000MLl1
+09:29:47.272 (3186012514)|WF_FLOW_ACTION_END|09L28000000MLl1
+09:29:47.272 (3186013836)|WF_FLOW_ACTION_END|09L28000000MLl1
+09:29:47.272 (3186015076)|WF_FLOW_ACTION_END|09L28000000MLl1
+09:29:47.272 (3186121022)|WF_ACTIONS_END| Flow Trigger: 6;
+09:29:47.272 (3186126938)|CODE_UNIT_FINISHED|Workflow:EmailMessage
+09:29:47.272 (3186311040)|DML_END|[25]
+09:29:47.272 (3196536231)|SYSTEM_MODE_ENTER|false
+09:29:47.272 (3196550319)|SYSTEM_MODE_EXIT|false
+09:29:47.272 (3196673869)|SYSTEM_MODE_ENTER|false
+09:29:47.272 (3198199067)|SOQL_EXECUTE_BEGIN|[72]|Aggregations:3|SELECT id, contactId, caseNumber, (SELECT id, name FROM Attachments ORDER BY CreatedDate DESC NULLS FIRST), (SELECT id, ActivityDate, LastModifiedDate, status, Description, subject FROM Tasks ORDER BY ActivityDate DESC NULLS LAST, LastModifiedDate DESC NULLS FIRST LIMIT 100), (SELECT id, HtmlBody, TextBody, MessageDate, FromAddress, ToAddress, FromName FROM EmailMessages ORDER BY CreatedDate ASC NULLS FIRST) FROM Case WHERE id = :tmpVar1 LIMIT 1
+09:29:47.272 (3225035443)|SOQL_EXECUTE_END|[72]|Rows:1
+09:29:47.272 (3226238775)|SOQL_EXECUTE_BEGIN|[97]|Aggregations:0|SELECT id, name FROM Attachment 
+09:29:47.272 (3231178562)|SOQL_EXECUTE_END|[97]|Rows:10
+09:29:47.272 (3232164320)|SYSTEM_MODE_EXIT|false
+09:29:47.272 (3232291736)|SOQL_EXECUTE_BEGIN|[37]|Aggregations:0|SELECT id FROM attachment
+09:29:47.272 (3240140508)|SOQL_EXECUTE_END|[37]|Rows:10
+09:29:47.272 (3241858266)|SYSTEM_MODE_ENTER|false
+09:29:47.272 (3242269511)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:0|SELECT Id, IsSandbox FROM Organization LIMIT 1
+09:29:47.272 (3244622729)|SOQL_EXECUTE_END|[42]|Rows:1
+09:29:47.272 (3245025512)|SOQL_EXECUTE_BEGIN|[54]|Aggregations:0|SELECT label, Email_Address__c FROM Off_System_Email_Address__mdt 
+09:29:47.272 (3246717917)|SOQL_EXECUTE_END|[54]|Rows:27
+09:29:47.272 (3249015319)|SYSTEM_MODE_EXIT|false
+09:29:47.272 (3249064016)|SYSTEM_MODE_ENTER|false
+09:29:47.272 (3249546515)|SOQL_EXECUTE_BEGIN|[195]|Aggregations:0|SELECT COUNT() FROM case WHERE (id = :tmpVar1 AND contactId != NULL) LIMIT 1
+09:29:47.272 (3259458573)|SOQL_EXECUTE_END|[195]|Rows:1
+09:29:47.272 (3261206604)|SOQL_EXECUTE_BEGIN|[72]|Aggregations:3|SELECT id, contactId, caseNumber, (SELECT id, name FROM Attachments ORDER BY CreatedDate DESC NULLS FIRST), (SELECT id, ActivityDate, LastModifiedDate, status, Description, subject FROM Tasks ORDER BY ActivityDate DESC NULLS LAST, LastModifiedDate DESC NULLS FIRST LIMIT 100), (SELECT id, HtmlBody, TextBody, MessageDate, FromAddress, ToAddress, FromName FROM EmailMessages ORDER BY CreatedDate ASC NULLS FIRST) FROM Case WHERE id = :tmpVar1 LIMIT 1
+09:29:48.280 (3280574752)|SOQL_EXECUTE_END|[72]|Rows:1
+09:29:48.280 (3281693271)|SOQL_EXECUTE_BEGIN|[97]|Aggregations:0|SELECT id, name FROM Attachment 
+09:29:48.280 (3285592690)|SOQL_EXECUTE_END|[97]|Rows:10
+09:29:48.280 (3291115847)|SOQL_EXECUTE_BEGIN|[254]|Aggregations:0|select Created_Date__c,CaseNumber,Subject,Description, id from Case where id ='500p0000002kJ95AAE' limit 1
+09:29:48.280 (3295701145)|SOQL_EXECUTE_END|[254]|Rows:1
+09:29:48.280 (3299156661)|SOQL_EXECUTE_BEGIN|[288]|Aggregations:0|SELECT id, contactid FROM case WHERE id = :tmpVar1 LIMIT 1
+09:29:48.280 (3302246338)|SOQL_EXECUTE_END|[288]|Rows:1
+09:29:48.280 (3305955581)|SOQL_EXECUTE_BEGIN|[240]|Aggregations:0|select FirstName,LastName,MobilePhone,Person_ID__c,Email,Monash_Email_Address__c,Applicant_Email_Address__c,Nationality__c, id from Contact where id ='003p000000C09E5AAJ' limit 1
+09:29:48.280 (3310235335)|SOQL_EXECUTE_END|[240]|Rows:1
+09:29:48.280 (3315906624)|SOQL_EXECUTE_BEGIN|[29]|Aggregations:0|SELECT id, DisplayName FROM OrgWideEmailAddress
+09:29:48.280 (3327817313)|SOQL_EXECUTE_END|[29]|Rows:14
+09:29:48.280 (3329977150)|SOQL_EXECUTE_BEGIN|[148]|Aggregations:0|SELECT id, body, name, contenttype FROM attachment 
+09:29:48.280 (3350044540)|SOQL_EXECUTE_END|[148]|Rows:10
+09:29:48.280 (3352426729)|SYSTEM_MODE_EXIT|false
+09:29:48.280 (3352505869)|SYSTEM_MODE_ENTER|false
+09:29:48.280 (3352984131)|SOQL_EXECUTE_BEGIN|[195]|Aggregations:0|SELECT COUNT() FROM case WHERE (id = :tmpVar1 AND contactId != NULL) LIMIT 1
+09:29:48.280 (3356343556)|SOQL_EXECUTE_END|[195]|Rows:1
+09:29:48.280 (3357260565)|SOQL_EXECUTE_BEGIN|[72]|Aggregations:3|SELECT id, contactId, caseNumber, (SELECT id, name FROM Attachments ORDER BY CreatedDate DESC NULLS FIRST), (SELECT id, ActivityDate, LastModifiedDate, status, Description, subject FROM Tasks ORDER BY ActivityDate DESC NULLS LAST, LastModifiedDate DESC NULLS FIRST LIMIT 100), (SELECT id, HtmlBody, TextBody, MessageDate, FromAddress, ToAddress, FromName FROM EmailMessages ORDER BY CreatedDate ASC NULLS FIRST) FROM Case WHERE id = :tmpVar1 LIMIT 1
+09:29:48.280 (3374921625)|SOQL_EXECUTE_END|[72]|Rows:1
+09:29:48.280 (3375858582)|SOQL_EXECUTE_BEGIN|[97]|Aggregations:0|SELECT id, name FROM Attachment 
+09:29:48.280 (3379360995)|SOQL_EXECUTE_END|[97]|Rows:10
+09:29:48.280 (3381595014)|SOQL_EXECUTE_BEGIN|[254]|Aggregations:0|select Created_Date__c,CaseNumber,Subject,Description, id from Case where id ='500p0000002kJ95AAE' limit 1
+09:29:48.280 (3385846492)|SOQL_EXECUTE_END|[254]|Rows:1
+09:29:48.280 (3387604360)|SOQL_EXECUTE_BEGIN|[288]|Aggregations:0|SELECT id, contactid FROM case WHERE id = :tmpVar1 LIMIT 1
+09:29:48.280 (3390055305)|SOQL_EXECUTE_END|[288]|Rows:1
+09:29:48.280 (3391419979)|SOQL_EXECUTE_BEGIN|[240]|Aggregations:0|select FirstName,LastName,MobilePhone,Person_ID__c,Email,Monash_Email_Address__c,Applicant_Email_Address__c,Nationality__c, id from Contact where id ='003p000000C09E5AAJ' limit 1
+09:29:48.280 (3395041408)|SOQL_EXECUTE_END|[240]|Rows:1
+09:29:48.280 (3399995149)|SOQL_EXECUTE_BEGIN|[29]|Aggregations:0|SELECT id, DisplayName FROM OrgWideEmailAddress
+09:29:48.280 (3401836044)|SOQL_EXECUTE_END|[29]|Rows:14
+09:29:48.280 (3403776318)|SOQL_EXECUTE_BEGIN|[148]|Aggregations:0|SELECT id, body, name, contenttype FROM attachment 
+09:29:48.280 (3416673766)|SOQL_EXECUTE_END|[148]|Rows:10
+09:29:48.280 (3421492901)|DML_BEGIN|[163]|Op:Insert|Type:EmailMessage|Rows:1
+09:29:48.280 (3468259043)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000QErh|EmailMessageTrigger on EmailMessage trigger event AfterInsert for [02sp0000000H4N1]
+09:29:48.280 (3468684794)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:48.280 (3469737417)|SOQL_EXECUTE_BEGIN|[24]|Aggregations:0|SELECT id, Email_To__c, Latest_Inbound_Email__c FROM Case WHERE (id = :tmpVar1 AND (Email_To__c = NULL OR Email_To__c = '') AND (Origin = 'Email' OR Origin LIKE 'Email%'))
+09:29:48.280 (3473392195)|SOQL_EXECUTE_END|[24]|Rows:0
+09:29:48.280 (3474150326)|SOQL_EXECUTE_BEGIN|[76]|Aggregations:1|SELECT id, Latest_Inbound_Email__c, Latest_Unassigned_Queue_OwnerId__c, Status, CreatedDate, Origin, (SELECT id, MessageDate FROM emailMessages WHERE Incoming = TRUE ORDER BY MessageDate DESC NULLS FIRST LIMIT 2), IsClosed FROM Case WHERE id = :tmpVar1
+09:29:48.280 (3485140450)|SOQL_EXECUTE_END|[76]|Rows:1
+09:29:48.280 (3485490406)|DML_BEGIN|[100]|Op:Update|Type:Case|Rows:1
+09:29:48.280 (3492977169)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ95]
+09:29:48.280 (3493376192)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:48.280 (3494996048)|SOQL_EXECUTE_BEGIN|[42]|Aggregations:1|SELECT id, (SELECT id FROM enquiry_interests__r LIMIT 1) FROM case 
+09:29:48.280 (3498120018)|SOQL_EXECUTE_END|[42]|Rows:1
+09:29:48.280 (3498349084)|USER_DEBUG|[43]|DEBUG|** adding enquiry interest count **
+09:29:48.498 (3498942190)|CUMULATIVE_LIMIT_USAGE
+09:29:48.498 (3498942190)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 18 out of 100
+  Number of query rows: 1779 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 8 out of 150
+  Number of DML rows: 31 out of 10000
+  Maximum CPU time: 498 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.498 (3498942190)|TESTING_LIMITS
+09:29:48.498 (3498942190)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 23 out of 100
+  Number of query rows: 207 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 136 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.498 (3498942190)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:48.280 (3500583051)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event BeforeUpdate for [500p0000002kJ95]
+09:29:48.280 (3503251710)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Case:500p0000002kJ95
+09:29:48.280 (3503264369)|VALIDATION_RULE|03d28000000McZg|Prevent_Use_of_Email_System
+09:29:48.280 (3503449704)|VALIDATION_FORMULA|AND(
+NOT(ISBLANK($UserRole.Name)),
+ISCHANGED(Origin ),
+ISPICKVAL(Origin,"Email - System")
+)|Origin=Phone , $UserRole.Name=eSolutions
+09:29:48.280 (3503458644)|VALIDATION_PASS
+09:29:48.280 (3503461645)|VALIDATION_RULE|03d28000000MS0q|MC_User_closing_a_Case
+09:29:48.280 (3503884214)|VALIDATION_FORMULA|AND(
+ NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS($UserRole.Name,"Monash Connect"),
+  OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ OR(
+   ISPICKVAL(Origin,""),
+   ISPICKVAL( Category_Level_1__c ,""),
+   ISPICKVAL(  Category_Level_2__c ,""),
+ISPICKVAL( Enquiry_Type__c ,"")
+ )
+)|Status=Open , Origin=Phone , Category_Level_1__c=null , Enquiry_Type__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Category_Level_2__c=null
+09:29:48.280 (3503892806)|VALIDATION_PASS
+09:29:48.280 (3503895370)|VALIDATION_RULE|03d28000000MS1t|MC_User_Course_Related_data_qa
+09:29:48.280 (3504233118)|VALIDATION_FORMULA|AND(
+NOT( $User.Username = "dataload@monash.edu"),
+ CONTAINS( $UserRole.Name ,"Monash Connect"),
+ ISPICKVAL( Enquiry_Type__c ,"Current Course"),
+ OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")),
+ ISBLANK( Course__c ),
+ ISPICKVAL(  Managing_Faculty__c, "") 
+ 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Managing_Faculty__c=null
+09:29:48.280 (3504242901)|VALIDATION_PASS
+09:29:48.280 (3504245572)|VALIDATION_RULE|03d28000000Mala|MC_User_Future_Course_Related_data
+09:29:48.280 (3504552667)|VALIDATION_FORMULA|AND( 
+NOT( $User.Username = "dataload@monash.edu"), 
+CONTAINS( $UserRole.Name ,"Monash Connect"), 
+ISPICKVAL( Enquiry_Type__c ,"Future Course"), 
+OR(ISPICKVAL(Status,"Solved"),ISPICKVAL(Status,"Referred Off-System")), 
+AND( 
+ISBLANK( Course__c ), 
+Enquiry_Interest_Count_at_Update__c = 0
+) 
+)|Status=Open , Enquiry_Type__c=null , Course__c=null , $UserRole.Name=eSolutions , $User.Username=ant.custodio@monash.edu.unicrm.copado , Enquiry_Interest_Count_at_Update__c=0
+09:29:48.280 (3504561645)|VALIDATION_PASS
+09:29:48.280 (3504563950)|VALIDATION_RULE|03d28000000F3bv|MGE_Enquiry_Closed_Validation
+09:29:48.280 (3504872959)|VALIDATION_FORMULA|AND(
+	RecordType.DeveloperName = 'MGE_Enquiry',
+	IsClosed = TRUE,
+	
+	OR(
+		ISPICKVAL( Enquiry_Type__c , '' ),
+		ISPICKVAL( Category_Level_1__c, '' ),
+		ISPICKVAL( Category_Level_2__c, '' )
+	)
+)|Category_Level_1__c=null , Enquiry_Type__c=null , RecordType.DeveloperName=Monash_Connect_Enquiry , IsClosed=0 , Category_Level_2__c=null
+09:29:48.280 (3504880478)|VALIDATION_PASS
+09:29:48.280 (3504882645)|VALIDATION_RULE|03d28000000AkpT|User_must_own_a_case_being_closed
+09:29:48.280 (3505177065)|VALIDATION_FORMULA|AND(
+NOT( $User.Alias = "dload"),
+NOT(ISBLANK(Owner:Queue.Id )),
+OR(TEXT(Status) = "Solved", CONTAINS(TEXT(Status),"Referred")),
+OR( CONTAINS($UserRole.Name,"Monash Connect"), CONTAINS($UserRole.Name,"Student Recruitment")) 
+)|Owner:Queue.Id=null , Status=Open , $UserRole.Name=eSolutions , $User.Alias=acust
+09:29:48.280 (3505185931)|VALIDATION_PASS
+09:29:48.280 (3505217905)|CODE_UNIT_FINISHED|Validation:Case:500p0000002kJ95
+09:29:48.280 (3519831954)|CODE_UNIT_STARTED|[EXTERNAL]|01q28000000Q2Hz|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ95]
+09:29:48.280 (3520354590)|EXCEPTION_THROWN|[58]|System.NullPointerException: Attempt to de-reference a null object
+09:29:48.280 (3521402428)|SOQL_EXECUTE_BEGIN|[243]|Aggregations:0|SELECT Id, Label FROM BH_Stop_Status__mdt 
+09:29:48.280 (3522667582)|SOQL_EXECUTE_END|[243]|Rows:1
+09:29:48.280 (3524015293)|SOQL_EXECUTE_BEGIN|[106]|Aggregations:0|SELECT Id, Case_API_name__c, Contact_Field_API_name__c FROM Case_to_Contact_Field_Mapping__mdt LIMIT 400
+09:29:48.280 (3525869877)|SOQL_EXECUTE_END|[106]|Rows:14
+09:29:48.280 (3526716862)|SOQL_EXECUTE_BEGIN|[120]|Aggregations:0|select Level_of_Study__c,Supplied_Date_of_Birth__c,Supplied_Country_of_Residence__c,SuppliedEmail,Supplied_Email_Opt_out__c,Supplied_First_Name__c,Highest_Level_of_Study__c,Supplied_Name_of_Institution__c,Supplied_Nationality__c,Residency_Status__c,Supplied_City__c,Supplied_Area_of_Interest__c,Supplied_Last_Name__c,SuppliedPhone,Id,contactId from case 
+09:29:48.280 (3532483238)|SOQL_EXECUTE_END|[120]|Rows:0
+09:29:48.532 (3532762249)|CUMULATIVE_LIMIT_USAGE
+09:29:48.532 (3532762249)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 18 out of 100
+  Number of query rows: 1779 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 8 out of 150
+  Number of DML rows: 31 out of 10000
+  Maximum CPU time: 498 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.532 (3532762249)|TESTING_LIMITS
+09:29:48.532 (3532762249)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 24 out of 100
+  Number of query rows: 222 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 136 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.532 (3532762249)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:48.280 (3534437290)|CODE_UNIT_FINISHED|CaseTrigger on Case trigger event AfterUpdate for [500p0000002kJ95]
+09:29:48.280 (3534563897)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Case
+09:29:48.280 (3550217083)|WF_RULE_EVAL_BEGIN|Assignment
+09:29:48.280 (3550248413)|WF_SPOOL_ACTION_BEGIN|Assignment
+09:29:48.280 (3550255454)|WF_ACTION|.
+09:29:48.280 (3550260581)|WF_RULE_EVAL_END
+09:29:48.280 (3550282014)|WF_RULE_EVAL_BEGIN|Workflow
+09:29:48.280 (3550329713)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Research Deferral Request|01Q280000002Ovo|ON_CREATE_ONLY|0
+09:29:48.280 (3550345835)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3550370899)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Research Future Students|01Q280000002Ow3|ON_CREATE_ONLY|0
+09:29:48.280 (3550379323)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3550400705)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Case (Schools Engagment) - Email New Owner|01Q28000000FMrM|ON_CREATE_ONLY|0
+09:29:48.280 (3550409113)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3550430276)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|at wrap up, add a wrap up task|01Q28000000dVD0|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:48.280 (3550684338)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND( 
+{!ID:IsClosed} , 
+NOT( {!ID:$User.Alias} = "dload") /* exclude data load user */
+)|Values:IsClosed=0, $User.Alias=acust
+09:29:48.280 (3550694031)|WF_CRITERIA_END|false
+09:29:48.280 (3550716382)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Queue Changed to MGE - Change Record Type|01Q280000002NTz|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:48.280 (3550874776)|WF_RULE_FILTER|[Enquiry : Enquiry Owner starts with MGE] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to MGE Enquiry]
+09:29:48.280 (3550903823)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:29:48.280 (3550910561)|WF_CRITERIA_END|false
+09:29:48.280 (3550931070)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Case - Auto Response Email|01Q28000000MKC4|ON_CREATE_ONLY|0
+09:29:48.280 (3550939635)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3550958094)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Monash College|01Q280000002P39|ON_CREATE_ONLY|0
+09:29:48.280 (3550965035)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3550980906)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Queue Changed to SR - Change Record Type|01Q280000002OzC|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:48.280 (3551082044)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Student Rec Enquiries] 
+AND [Enquiry : Flag Owner is Queue equals true] 
+AND [Enquiry : Enquiry Record Type not equal to SR Enquiry]
+09:29:48.280 (3551110195)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:29:48.280 (3551116839)|WF_CRITERIA_END|false
+09:29:48.280 (3551138006)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|CASE: set type if origin is airport pickup|01Q28000000MKcq|ON_CREATE_ONLY|0
+09:29:48.280 (3551145671)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3551161692)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Email - sr-socialenquiry-l|01Q280000002P0Z|ON_CREATE_ONLY|0
+09:29:48.280 (3551168070)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3551183781)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|CASE: set type if origin is web enquiry|01Q28000000MKcr|ON_CREATE_ONLY|0
+09:29:48.280 (3551190191)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3551206256)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Find Course International|01Q280000002OzW|ON_CREATE_ONLY|0
+09:29:48.280 (3551212829)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3551228488)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Future Students International|01Q280000002P2p|ON_CREATE_ONLY|0
+09:29:48.280 (3551235754)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3551251686)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Set_Enquiry_Student_Type_Based_on_Contact_Profile30128000000J3S1|01Q280000002P4R|ON_ALL_CHANGES|0
+09:29:48.280 (3551270801)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:29:48.280 (3551276307)|WF_CRITERIA_END|true
+09:29:48.280 (3551309078)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Email - study|01Q280000002P0P|ON_CREATE_ONLY|0
+09:29:48.280 (3551316970)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3551334248)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Created - Web - Research Current Students|01Q280000002Ow8|ON_CREATE_ONLY|0
+09:29:48.280 (3551341873)|WF_RULE_NOT_EVALUATED
+09:29:48.280 (3551359028)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Status Changed - Clear Latest Inbound Email Field|01Q280000002P34|ON_ALL_CHANGES|0
+09:29:48.280 (3551461568)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISCHANGED( {!ID:Status} )|Values:Status=Open
+09:29:48.280 (3551468539)|WF_CRITERIA_END|false
+09:29:48.280 (3551493834)|WF_CRITERIA_BEGIN|[Enquiry: 03108925 500p0000002kJ95]|Queue Changed to MC - Change Record Type|01Q280000002NTy|ON_CREATE_OR_TRIGGERING_UPDATE|0
+09:29:48.280 (3551618665)|WF_RULE_FILTER|[Enquiry : Enquiry Owner equals Monash Connect Enquiries] 
+AND [Enquiry : Enquiry Record Type not equal to Standard Enquiry] 
+AND [Enquiry : Flag Owner is Queue equals true]
+09:29:48.280 (3551645350)|WF_RULE_EVAL_VALUE|005p0000000rQMP
+09:29:48.280 (3551652403)|WF_CRITERIA_END|false
+09:29:48.280 (3551701207)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:29:48.280 (3551737577)|WF_ACTION| Flow Trigger: 1;
+09:29:48.280 (3551742190)|WF_RULE_EVAL_END
+09:29:48.280 (3551786621)|WF_FLOW_ACTION_BEGIN|09L28000000MLkm
+09:29:48.551 (3551852265)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfE|30128000000J3S1
+09:29:48.551 (3551943034)|FLOW_CREATE_INTERVIEW_END|2179af12f47f5ceb75cbcce7e2f1572ad9eef9-5b90|Set Enquiry Student Type Based on Contact Profile
+09:29:48.552 (3552350307)|FLOW_START_INTERVIEWS_BEGIN|1
+09:29:48.552 (3552382482)|FLOW_START_INTERVIEW_BEGIN|2179af12f47f5ceb75cbcce7e2f1572ad9eef9-5b90|Set Enquiry Student Type Based on Contact Profile
+09:29:48.552 (3555367228)|FLOW_START_INTERVIEW_END|2179af12f47f5ceb75cbcce7e2f1572ad9eef9-5b90|Set Enquiry Student Type Based on Contact Profile
+09:29:48.552 (3555383682)|FLOW_START_INTERVIEWS_END|1
+09:29:48.280 (3556291400)|WF_FLOW_ACTION_END|09L28000000MLkm
+09:29:48.280 (3556313709)|WF_TIME_TRIGGERS_BEGIN
+09:29:48.280 (3560175093)|WF_ACTIONS_END| Flow Trigger: 1;
+09:29:48.280 (3560183905)|CODE_UNIT_FINISHED|Workflow:Case
+09:29:48.280 (3560561737)|DML_END|[100]
+09:29:48.560 (3560654475)|CUMULATIVE_LIMIT_USAGE
+09:29:48.560 (3560654475)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 18 out of 100
+  Number of query rows: 1779 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 8 out of 150
+  Number of DML rows: 31 out of 10000
+  Maximum CPU time: 498 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.560 (3560654475)|TESTING_LIMITS
+09:29:48.560 (3560654475)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 24 out of 100
+  Number of query rows: 222 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 136 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.560 (3560654475)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:48.280 (3562070625)|CODE_UNIT_FINISHED|EmailMessageTrigger on EmailMessage trigger event AfterInsert for [02sp0000000H4N1]
+09:29:48.280 (3563275400)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:EmailMessage
+09:29:48.280 (3573051723)|WF_RULE_EVAL_BEGIN|Workflow
+09:29:48.280 (3573109973)|WF_CRITERIA_BEGIN|[Email Message:  02sp0000000H4N1]|Mark_Email_Enquiry_has_Attachment30128000000J3T4|01Q280000002P50|ON_CREATE_ONLY|0
+09:29:48.280 (3573170825)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+09:29:48.280 (3573179766)|WF_CRITERIA_END|true
+09:29:48.280 (3573212860)|WF_SPOOL_ACTION_BEGIN|Workflow
+09:29:48.280 (3573250781)|WF_ACTION| Flow Trigger: 1;
+09:29:48.280 (3573256773)|WF_RULE_EVAL_END
+09:29:48.280 (3573310724)|WF_FLOW_ACTION_BEGIN|09L28000000MLl1
+09:29:48.573 (3573392577)|FLOW_CREATE_INTERVIEW_BEGIN|00Dp00000008t1p|300280000000WfT|30128000000J3T4
+09:29:48.573 (3573492341)|FLOW_CREATE_INTERVIEW_END|2181af12f47f5ceb75cbcce7e2f1572ad9eef9-5b92|Mark Email Enquiry has Attachment
+09:29:48.574 (3574029032)|FLOW_START_INTERVIEWS_BEGIN|1
+09:29:48.574 (3574071680)|FLOW_START_INTERVIEW_BEGIN|2181af12f47f5ceb75cbcce7e2f1572ad9eef9-5b92|Mark Email Enquiry has Attachment
+09:29:48.574 (3575053094)|FLOW_START_INTERVIEW_END|2181af12f47f5ceb75cbcce7e2f1572ad9eef9-5b92|Mark Email Enquiry has Attachment
+09:29:48.574 (3575064403)|FLOW_START_INTERVIEWS_END|1
+09:29:48.280 (3575920081)|WF_FLOW_ACTION_END|09L28000000MLl1
+09:29:48.280 (3576024350)|WF_ACTIONS_END| Flow Trigger: 1;
+09:29:48.280 (3576033140)|CODE_UNIT_FINISHED|Workflow:EmailMessage
+09:29:48.280 (3576949756)|DML_END|[163]
+09:29:48.280 (3577439664)|SOQL_EXECUTE_BEGIN|[165]|Aggregations:0|SELECT id, body, name, contenttype FROM attachment 
+09:29:48.280 (3593137949)|SOQL_EXECUTE_END|[165]|Rows:10
+09:29:48.280 (3595053789)|DML_BEGIN|[171]|Op:Insert|Type:Attachment|Rows:10
+09:29:48.600 (3600042938)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3600213646)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3600409626)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3601002124)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3601183475)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3601208534)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3601220695)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3601229133)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3601828781)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3601873135)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3601911630)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3601955117)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3601993521)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3602030420)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3602068191)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3602104758)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3602141054)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3602177372)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3602204524)|ENTERING_MANAGED_PKG|copado
+09:29:48.600 (3602216328)|ENTERING_MANAGED_PKG|copado
+09:29:48.602 (3602427880)|CUMULATIVE_LIMIT_USAGE
+09:29:48.602 (3602427880)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 18 out of 100
+  Number of query rows: 1779 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 8 out of 150
+  Number of DML rows: 31 out of 10000
+  Maximum CPU time: 498 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.602 (3602427880)|TESTING_LIMITS
+09:29:48.602 (3602427880)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 25 out of 100
+  Number of query rows: 232 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 12 out of 10000
+  Maximum CPU time: 136 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.602 (3602427880)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:48.758 (3758915024)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3759104305)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3759313292)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3759872795)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760059979)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760085802)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760176470)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760195181)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760337715)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760354134)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760471449)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760489834)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760602003)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760617880)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760876828)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3760904764)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761097987)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761116737)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761273551)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761290484)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761402670)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761418924)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761528111)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761543771)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761651007)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761666771)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761762979)|ENTERING_MANAGED_PKG|copado
+09:29:48.758 (3761776890)|ENTERING_MANAGED_PKG|copado
+09:29:48.762 (3762015985)|CUMULATIVE_LIMIT_USAGE
+09:29:48.762 (3762015985)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 18 out of 100
+  Number of query rows: 1779 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 8 out of 150
+  Number of DML rows: 31 out of 10000
+  Maximum CPU time: 498 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.762 (3762015985)|TESTING_LIMITS
+09:29:48.762 (3762015985)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 25 out of 100
+  Number of query rows: 232 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 12 out of 10000
+  Maximum CPU time: 195 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.762 (3762015985)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:48.280 (3764984625)|DML_END|[171]
+09:29:48.280 (3765052544)|SYSTEM_MODE_EXIT|false
+09:29:48.280 (3765107145)|SYSTEM_MODE_ENTER|false
+09:29:48.280 (3765112396)|SYSTEM_MODE_EXIT|false
+09:29:48.766 (3766976719)|CUMULATIVE_LIMIT_USAGE
+09:29:48.766 (3766976719)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 18 out of 100
+  Number of query rows: 1779 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 8 out of 150
+  Number of DML rows: 31 out of 10000
+  Maximum CPU time: 498 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.766 (3766976719)|TESTING_LIMITS
+09:29:48.766 (3766976719)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 25 out of 100
+  Number of query rows: 232 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 3 out of 150
+  Number of DML rows: 12 out of 10000
+  Maximum CPU time: 195 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:29:48.766 (3766976719)|CUMULATIVE_LIMIT_USAGE_END
+
+09:29:48.280 (3767011569)|CODE_UNIT_FINISHED|Console_OffSystemEmail_CE_Test.verifyControllerExtensionLogic
+09:29:48.280 (3768228156)|EXECUTION_FINISHED

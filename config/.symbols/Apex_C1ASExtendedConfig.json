@@ -1,0 +1,665 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01p28000007ald7AAA",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p28000007ald7AAA",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 25
+            },
+            "modifiers": [
+                "static",
+                "webService",
+                "global"
+            ],
+            "name": "getValue",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "String"
+                },
+                {
+                    "name": "type",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 58
+            },
+            "modifiers": [
+                "static",
+                "webService",
+                "global"
+            ],
+            "name": "getAllValues",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 114
+            },
+            "modifiers": [
+                "static",
+                "webService",
+                "global"
+            ],
+            "name": "saveValue",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "String"
+                },
+                {
+                    "name": "type",
+                    "type": "String"
+                },
+                {
+                    "name": "value",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 216
+            },
+            "modifiers": [
+                "static",
+                "webService",
+                "global"
+            ],
+            "name": "getBookmark",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 236
+            },
+            "modifiers": [
+                "static",
+                "webService",
+                "global"
+            ],
+            "name": "saveBookmark",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "String"
+                },
+                {
+                    "name": "type",
+                    "type": "String"
+                },
+                {
+                    "name": "value",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        }
+    ],
+    "name": "Apex_C1ASExtendedConfig",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 1
+        },
+        "modifiers": [
+            "global"
+        ],
+        "name": "Apex_C1ASExtendedConfig",
+        "references": [],
+        "type": "Apex_C1ASExtendedConfig"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 42,
+                "line": 25
+            },
+            "modifiers": [],
+            "name": "key",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 54,
+                "line": 25
+            },
+            "modifiers": [],
+            "name": "type",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 33,
+                "line": 26
+            },
+            "modifiers": [],
+            "name": "u",
+            "references": [],
+            "type": "C1ASCloudConnectorConfig__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 27
+            },
+            "modifiers": [],
+            "name": "rValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 58
+            },
+            "modifiers": [],
+            "name": "key",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 60
+            },
+            "modifiers": [],
+            "name": "Results",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 61
+            },
+            "modifiers": [],
+            "name": "SQL",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 63
+            },
+            "modifiers": [],
+            "name": "qry",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 64
+            },
+            "modifiers": [],
+            "name": "count",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 69
+            },
+            "modifiers": [],
+            "name": "configs",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 71
+            },
+            "modifiers": [],
+            "name": "u",
+            "references": [],
+            "type": "C1ASCloudConnectorConfig__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 72
+            },
+            "modifiers": [],
+            "name": "rValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 114
+            },
+            "modifiers": [],
+            "name": "key",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 55,
+                "line": 114
+            },
+            "modifiers": [],
+            "name": "type",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 68,
+                "line": 114
+            },
+            "modifiers": [],
+            "name": "value",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 116
+            },
+            "modifiers": [],
+            "name": "cName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 117
+            },
+            "modifiers": [],
+            "name": "pValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 118
+            },
+            "modifiers": [],
+            "name": "value1",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 119
+            },
+            "modifiers": [],
+            "name": "value2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 120
+            },
+            "modifiers": [],
+            "name": "value3",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 121
+            },
+            "modifiers": [],
+            "name": "value4",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 122
+            },
+            "modifiers": [],
+            "name": "value5",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 123
+            },
+            "modifiers": [],
+            "name": "value6",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 124
+            },
+            "modifiers": [],
+            "name": "value7",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 125
+            },
+            "modifiers": [],
+            "name": "value8",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 126
+            },
+            "modifiers": [],
+            "name": "value9",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 127
+            },
+            "modifiers": [],
+            "name": "value10",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 130
+            },
+            "modifiers": [],
+            "name": "clength",
+            "references": [],
+            "type": "Double"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 131
+            },
+            "modifiers": [],
+            "name": "splitSize",
+            "references": [],
+            "type": "Double"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 132
+            },
+            "modifiers": [],
+            "name": "present",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 133
+            },
+            "modifiers": [],
+            "name": "temp",
+            "references": [],
+            "type": "C1ASCloudConnectorConfig__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 190
+            },
+            "modifiers": [],
+            "name": "u",
+            "references": [],
+            "type": "C1ASCloudConnectorConfig__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 216
+            },
+            "modifiers": [],
+            "name": "key",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 217
+            },
+            "modifiers": [],
+            "name": "val",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 219
+            },
+            "modifiers": [],
+            "name": "SQL",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 221
+            },
+            "modifiers": [],
+            "name": "qry",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 41,
+                "line": 224
+            },
+            "modifiers": [],
+            "name": "v",
+            "references": [],
+            "type": "C1ASCloudConnectorConfig__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 230
+            },
+            "modifiers": [],
+            "name": "u",
+            "references": [],
+            "type": "C1ASCloudConnectorConfig__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 50,
+                "line": 236
+            },
+            "modifiers": [],
+            "name": "key",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 62,
+                "line": 236
+            },
+            "modifiers": [],
+            "name": "type",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 75,
+                "line": 236
+            },
+            "modifiers": [],
+            "name": "value",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 237
+            },
+            "modifiers": [],
+            "name": "cName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 238
+            },
+            "modifiers": [],
+            "name": "pValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 240
+            },
+            "modifiers": [],
+            "name": "present",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 241
+            },
+            "modifiers": [],
+            "name": "temp",
+            "references": [],
+            "type": "C1ASCloudConnectorConfig__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 254
+            },
+            "modifiers": [],
+            "name": "u",
+            "references": [],
+            "type": "C1ASCloudConnectorConfig__c"
+        }
+    ]
+}

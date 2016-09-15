@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>used to store data about Monash offerings</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>ACAD_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>ACAD Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Admission_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Admission Category</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Australian_Accreditation__c</fullName>
+        <externalId>false</externalId>
+        <label>Australian Accreditation</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Broad_Area_Of_Study__c</fullName>
+        <description>this field has a trigger associated with it, that replaces the standard field for import \n with ; so it complies with format required.</description>
+        <externalId>false</externalId>
+        <label>Broad Area of Study</label>
+        <picklist>
+            <picklistValues>
+                <fullName>a</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Broad_Area_of_Study_Import_Field__c</fullName>
+        <description>this field is used for import mapping - trigger will then convert into the multi-select picklist field.</description>
+        <externalId>false</externalId>
+        <label>Broad Area of Study Import Field</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRICOS__c</fullName>
+        <externalId>false</externalId>
+        <label>CRICOS</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Career_Outlook__c</fullName>
+        <externalId>false</externalId>
+        <label>Career Outlook</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Course_Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Used to force uniqueness on course code. Updated from workflow.</description>
+        <externalId>true</externalId>
+        <label>Course Code Unique</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Course_Description__c</fullName>
+        <externalId>true</externalId>
+        <label>Course Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Course_Level__c</fullName>
+        <externalId>false</externalId>
+        <formula>if ( CONTAINS (Course_Description__c, &quot;Bachelor&quot;) , &quot;UG&quot; , 
+if ( CONTAINS (Course_Description__c, &quot;Master&quot;), &quot;PG&quot;, 
+if ( TEXT(Managing_Faculty__c) = &quot;PPA&quot;, &quot;Monash College - Non Award&quot;,&quot;Unknown&quot; 
+) 
+) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Course Level</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Depreciated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>if checked, then the course is no longer offered. This field is used to filter what is available from the &apos;Add Interest&apos; action on enquiry.</description>
+        <externalId>false</externalId>
+        <label>Depreciated</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Faculty_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Faculty Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Faculty_Description__c</fullName>
+        <externalId>true</externalId>
+        <label>Faculty Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>International_Accreditation__c</fullName>
+        <externalId>false</externalId>
+        <label>International Accreditation</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Managing_Faculty__c</fullName>
+        <externalId>false</externalId>
+        <label>Managing Faculty</label>
+        <picklist>
+            <picklistValues>
+                <fullName>a</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Faculty of Art, Design &amp; Architecture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Faculty of Arts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Faculty of Business &amp; Economics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Faculty of Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Faculty of Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Faculty of Information Technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Faculty of Law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Faculty of Medicine, Nursing &amp; Health Sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Faculty of Pharmacy &amp; Pharmaceutical Sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Faculty of Science</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monash College</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monash Injury Research Institute</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monash University Foundation Year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PPA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Mapped_Browse_Categories__c</fullName>
+        <description>this is populated by apex trigger, which looks at browse category to area of study map sobject.</description>
+        <externalId>false</externalId>
+        <label>Mapped Browse Categories</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Mapped_Categories__c</fullName>
+        <description>this is used to migrate long text field info over to a multiselect post import so we can use it in dynamic soql queries.</description>
+        <externalId>false</externalId>
+        <label>Mapped Categories</label>
+        <picklist>
+            <picklistValues>
+                <fullName>a</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Mode_and_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Mode and Location</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Original_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>Original ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Short_Marketing_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Short Marketing Description</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Specialisation_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Specialisation Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Specialisation__c</fullName>
+        <externalId>true</externalId>
+        <label>Specialisation</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pw_Course_Duration__c</fullName>
+        <externalId>false</externalId>
+        <label>Course Duration</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Course</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Course_Code__c</columns>
+        <columns>Course_Description__c</columns>
+        <columns>Specialisation__c</columns>
+        <columns>Faculty_Code__c</columns>
+        <columns>Broad_Area_Of_Study__c</columns>
+        <columns>Original_ID__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Course Code</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Courses</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Course_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Specialisation__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Managing_Faculty__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Mode_and_Location__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>Specialisation__c</lookupFilterFields>
+        <searchResultsAdditionalFields>Course_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Specialisation__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Mode_and_Location__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Managing_Faculty__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>
