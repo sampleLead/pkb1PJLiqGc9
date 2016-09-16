@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Airport pickup confirmation details</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Pickup confirmation</name>
+    <style>none</style>
+    <subject>Airport pickup confirmation</subject>
+    <textOnly>Dear {!Contact.First_Name_case_corrected__c}
+
+Thank you for your airport pickup request for the [DATE] on [FLIGHT NO] arriving at [TIME].
+
+A driver from Allied Chauffeured Cars (Allied) will meet you in Melbourne Airport&apos;s International Arrival Hall. Turn right when you leave the customs area and head toward “The Meeting Point”.  The driver will hold a “Monash” sign for easy identification and will take you to the following address:
+
+Address:
+Contact Name:
+Contact Tel:
+
+City of Melbourne - International Student Welcome Booth
+At key times of the year, the City of Melbourne operates the &quot;Student Welcome Desk &quot; at Melbourne Airport. At the welcome desk, volunteers greet you and provide information about welfare services, public transport, housing, employment options and social integration to help you with your stay in Melbourne.
+
+No driver waiting at Melbourne Airport
+Go to ‘The Meeting Point’.  If your driver is not there within 15 minutes find the nearest public telephone and call Allied on 1800 350 850 (this is a free call).  They will locate your driver. When calling, give Allied your Monash Student ID number (this is in your Monash offer letter), family name and given names.
+
+Changes to or cancellation of your flight
+To change or cancel your airport pickup booking, contact us at least one full working day before you arrive to avoid additional costs.  Our office hours are 9am to 5pm Monday to Friday, Australian Eastern Standard Time.
+
+To change your arrival details on Saturday or Sunday, telephone +61 3 8383 9999.
+
+If you are overseas and miss your flight or if your flight is delayed, please telephone +61 3 8383 9999 immediately to confirm your new arrival details.  This will ensure your driver is at Melbourne Airport to meet you.
+
+Enrolment
+Each course has its own enrolment date, time and location. Refer to the following website for details:  http://monash.edu/study/international/enrolment/
+
+Orientation program
+Details of the Orientation program will be available on the following website: http://monash.edu/orientation/
+
+In preparation for your arrival on campus, create your personalised Orientation schedule using the eOrientation planner.
+
+You must attend Orientation.  You will get a lot of valuable information about studying at Monash University including; your enrolment, study timetable and learning how to access the University&apos;s computer resources.
+
+Orientation includes sessions on academic and study skills, Australian culture and working in Australia, campus tours and social opportunities to meet other students.
+
+We wish you a pleasant journey and look forward to welcoming you to Monash University.
+
+Regards
+
+{!User.FirstName} {!User.Lastname_Initial__c}
+Monash Connect Officer
+{!User.Department}
+{!User.CompanyName}
+Tel: +61 3 9902 6011
+CRICOS Provider 00008C
+
+___________________________________
+Date Received : {!Case.CreatedDate}
+Your Enquiry :
+{!Case.Description}
+
+
+
+System Reference. Please do not delete. {!Case.Thread_Id}
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement. You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>custom</type>
+</EmailTemplate>

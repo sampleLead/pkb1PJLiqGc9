@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Scholarship End Date</name>
+    <style>freeForm</style>
+    <subject>Scholarship End Date</subject>
+    <textOnly>Dear {!Case.Contact},
+
+
+Our records indicate that you are approaching your scholarship end date.
+
+Outlined below are specific actions required to establish your entitlement to a scholarship extension:
+
+
+Log into WES for details of your scholarship name and end date.
+
+
+
+2.    If you hold one of the scholarship outlined below, review the Research Scholarship Conditions of Award to check your   eligibility for a scholarship extension:
+
+·         Australian Postgraduate Award (APA)
+
+·         Monash Graduate Scholarship (MGS)
+
+·         Co-funded Monash Graduate Scholarship (co-funded MGS)
+
+·         Maxwell King PhD Scholarship
+
+·         Monash Silver Jubilee Postgraduate Scholarship
+
+·         Sir James McNeill Postgraduate Research Scholarship
+
+·         Monash Indigenous Research Award (MIRA)
+
+·         Monash Equity Scholarship (MES)
+
+
+3.    The application for extension of scholarship online form is available from the Graduate Education intranet.
+
+Please note:
+
+·         A request for an extension must be submitted prior to the end date of the scholarship.  An extension will not be approved after the scholarship has ended.
+
+·        Please note that it is the responsibility of the student to ensure relevant documents are forwarded to the Graduate Education Office at least two weeks prior to the date when the proposed change/s take effect as we are unable to backdate.​Completed forms should be returned to: mge-scholarships@monash.edu. Should you have any queries, please do not hesitate to contact our office.
+
+_______________________
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 990 53009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

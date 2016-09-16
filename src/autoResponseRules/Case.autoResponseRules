@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Default</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web,course enquiry webform</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.SuppliedEmail</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>equals</operation>
+                <value>Monash Connect Enquiries</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>c-futuretst@monash.edu</replyToEmail>
+            <senderEmail>carl.vescovi+future2@monash.edu</senderEmail>
+            <senderName>Monash Support</senderName>
+            <template>Auto_responses/Branded_auto_response</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.SuppliedEmail</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>equals</operation>
+                <value>Monash Connect Enquiries</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>c-futuretst@monash.edu</replyToEmail>
+            <senderEmail>carl.vescovi+future2@monash.edu</senderEmail>
+            <senderName>Monash Support</senderName>
+            <template>Auto_responses/Branded_auto_response</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Airport Pickup</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>future@monash.edu</replyToEmail>
+            <senderEmail>no.reply-future@monash.edu</senderEmail>
+            <senderName>Monash University</senderName>
+            <template>Auto_responses/Branded_auto_response</template>
+        </ruleEntry>
+    </autoResponseRule>
+    <autoResponseRule>
+        <fullName>MGE Responses</fullName>
+        <active>false</active>
+    </autoResponseRule>
+</AutoResponseRules>

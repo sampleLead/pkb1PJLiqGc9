@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>sends note to feedback creator to notify of status change and admin notes</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>FEEDBACK: closed feedback record</name>
+    <style>none</style>
+    <subject>Admin has responded to your Feedback record Ref- {!Feedback__c.Name}</subject>
+    <type>text</type>
+</EmailTemplate>

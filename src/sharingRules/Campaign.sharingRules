@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Campaigns_Montrack_RO</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>sharing to group of same name</description>
+        <label>Campaigns - Montrack &gt; RO</label>
+        <sharedTo>
+            <group>ACCESS_Campaigns_Montrack_RO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>equals</operation>
+            <value>MonTRACK</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Campaigns_excl_Montrack_RO</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>share to group of same name</description>
+        <label>Campaigns &gt; excl Montrack &gt; RO</label>
+        <sharedTo>
+            <group>ACCESS_Campaigns_excl_Montrack_RO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value>Montrack</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Campaigns_excl_Montrack_RW</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>share to public group of same name</description>
+        <label>Campaigns - excl Montrack &gt; RW</label>
+        <sharedTo>
+            <group>ACCESS_Campaigns_excl_Montrack_RW</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value>Montrack</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

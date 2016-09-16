@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Travel Grant Cases to be made</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Travel Grant Case</name>
+    <style>freeForm</style>
+    <subject>Travel Grant Cases- More inforamtion required</subject>
+    <textOnly>Dear STUDENT OR STAFF MEMBER NAME,
+
+
+
+Following on from our conversation earlier Graduate Education has received STUDENT NAME AND ID application for Travel grant.
+
+As the student has indicated that he will be traveling from DATES OF TRAVEL this is a retrospective application and will need to be presented to the Academic Director for approval.
+
+Can you please provide us with a case on the reasons on delays of submission of application and evidence of students activities  as stated in his travel plan.
+
+Once Graduate Education has received this information STUDENT NAME application will be presented to the Academic Director.
+
+Should you have any further queries, please don&apos;t hesitate to contact me directly.
+
+
+
+
+
+
+
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

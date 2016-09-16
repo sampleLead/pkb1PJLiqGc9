@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Offer Letter - Malaysia</name>
+    <style>freeForm</style>
+    <subject>Offer of Admission to Monash University - {!Contact.Name} (ID: {!Contact.Person_ID__c})</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+I am pleased to advise that you have been made an offer of admissions to Monash University. Please find attached an electronic copy of your Offer Letter. No hard copies will be posted.
+
+Step 1: Create your Monash Account
+
+Step 2: Register your details
+
+Using your Monash Account, you can now login to register your details in the enrolment system to;
+
+· agree to education rules and health cover for overseas students,
+
+· update your contact information,
+
+· fill out the enrolment questionnaire.
+
+When you&apos;re logged in, click Enrol. You&apos;ll need to agree to the Student Acknowledgement statement first.
+
+Step 3: Attend enrolment day
+
+If you need to defer this offer, you must apply via www.monash.edu/graduate-research/deferral prior to your commencement date.  All deferral requests must be approved by your Faculty and supervisors.
+
+Recognition of Prior Learning (RPL) may be applicable to you.  Please discuss your eligibility for RPL with your supervisory team.  You will need to create Monash Account before you can download the application form
+
+Kind Regards,
+
+Admissions | Graduate Research Services
+
+Monash Graduate Education
+Monash University
+Chancellery Building D
+26 Sports Walk, Clayton Campus
+Wellington Road, VIC 3800, Australia
+
+We&apos;re listening….your feedback helps us improve.</textOnly>
+    <type>html</type>
+</EmailTemplate>

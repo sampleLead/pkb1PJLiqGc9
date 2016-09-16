@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Scholarship Extension Confirmation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Scholarship Extension Confirmation</name>
+    <style>freeForm</style>
+    <subject>Scholarship Extension Confirmation</subject>
+    <textOnly>Dear ,
+
+Please find attached a letter stating your adjusted scholarship end date as a result of your scholarship extension.
+
+Please do not hesitate to contact me should you have any queries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

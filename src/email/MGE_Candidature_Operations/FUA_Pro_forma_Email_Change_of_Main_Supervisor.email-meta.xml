@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>FUA - Pro-forma Email Change of Main Supervisor</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>FUA - Pro-forma Email Change of Main Supervisor</name>
+    <style>freeForm</style>
+    <subject>FUA - Pro-forma Email Change of Main Supervisor - {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>FUA - Email to be sent to any new supervisor and copy to student, when a change is made with regards to supervisor team for Gippsland students only
+
+
+SUBJECT HEADING   Gippsland Pro-Forma Revisit - due to Supervision Changes
+
+
+Dear  SUPERVISOR
+
+
+I am writing to you concerning the recent Change of Supervision Form which nominates you as STUDENT&apos;S NAME new MAIN/ASSOC supervisor.  As a result of this change, can you please review the current pro-forma in place (copy attached) and provide written confirmation to MGE that you are happy with the transition plan that has been put in place to manage STUDENT&apos;s NAME candidature to completion.
+
+
+Should you have any concerns regarding the process, you are welcome to contact me on this email account.
+
+
+Kind regards,
+
+{!User.FirstName}
+
+
+Graduate Research Services
+_____________________________________________
+Monash Graduate Education
+Chancellery Building D, 26 Sports Walk
+Monash University, VIC 3800, Australia
+Phone: +61 3 990 53009 | Fax: +61 3 990 55042
+Email: mge-candidature@monash.edu
+Website: monash.edu/graduate-research
+Campus Map: monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+
+We&apos;re listening….your feedback helps us improve
+
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>carl.vescovi@monash.edu</contactEmail>
+    <description>used to enable web form submit requests</description>
+    <label>RestApp v2</label>
+    <oauthConfig>
+        <callbackUrl>restapp:callback</callbackUrl>
+        <consumerKey>3MVG9Se4BnchkASmtngzNh_R0lQ3U9g.Q3OXJ4m9AdV92_ZUgUy9vZYSLbKSWi0.OyZwvayw6dzXsIIl4UOYt</consumerKey>
+        <scopes>Api</scopes>
+    </oauthConfig>
+</ConnectedApp>

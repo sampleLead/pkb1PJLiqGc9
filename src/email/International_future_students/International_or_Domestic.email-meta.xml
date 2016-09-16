@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this template when it is unclear of student domestic or international status</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Monash_Connect_Letterhead</letterhead>
+    <name>International or Domestic?</name>
+    <style>freeForm</style>
+    <subject>Thankyou for your enquiry to Monash University, ref #{!Case.CaseNumber}</subject>
+    <textOnly>Dear {!Contact.First_Name_case_corrected__c},
+
+
+
+Thank you for your interest in studying at Monash University, consistently ranked in the top one per cent of world universities (Times Higher Education World University Rankings 2015-2016).
+
+
+
+Are you able to reply back to this email to confirm under which status you will be studying at Monash University - as an international or domestic student?
+
+
+
+I have included information below for your convenience.
+
+
+You are a domestic student if you are an Australian citizen (including dual citizens), or a New Zealand citizen (including dual citizens), or a permanent resident of Australia.
+You are an international fee-paying student if you hold a permit for temporary entry to Australia.
+
+
+
+As the entry requirements and application methods vary, it would be best for us to first determine which category you fall under so that we can send you the most relevant information.
+
+
+
+Please contact me by replying to this email or calling me at 1800 MONASH (666 274).
+
+
+
+
+Kind regards
+
+
+
+
+{!User.FirstName} {!User.Lastname_Initial__c}
+
+Monash Connect Officer
+
+{!User.Department}
+
+{!User.CompanyName}
+
+Tel: 1800 MONASH (1800 666 274)
+
+
+CRICOS Provider 00008C
+
+
+
+
+___________________________________
+
+Date Received : {!Case.CreatedDate}
+
+Your Enquiry :
+
+{!Case.Description}
+
+
+
+
+
+
+System Reference. Please do not delete. {!Case.Thread_Id}
+
+
+
+
+
+
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement. You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>html</type>
+</EmailTemplate>

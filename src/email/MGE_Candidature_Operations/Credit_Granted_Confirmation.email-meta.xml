@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Credit Granted Confirmation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Credit Granted Confirmation</name>
+    <style>freeForm</style>
+    <subject>Credit Granted Confirmation - {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+
+
+I am pleased to confirm that you have now been granted credit for the following coursework unit:
+
+
+[insert unit code with title and semester taken]
+
+
+Please note that you are still required to complete the other coursework unit/s in your program. You can monitor your enrolment and scholarship (where applicable) details including your thesis submission date, scholarship end dates, milestone due dates, etc. via the Web Enrolment System (WES)
+
+
+Should you require any further changes or assistance please don’t hesitate to contact me.
+
+
+Kind regards,
+
+{!User.FirstName}
+
+
+Graduate Research Services
+_____________________________________________
+Monash Graduate Education
+Chancellery Building D, 26 Sports Walk
+Monash University, VIC 3800, Australia
+Phone: +61 3 990 53009 | Fax: +61 3 990 55042
+Email: mge-candidature@monash.edu
+Website: monash.edu/graduate-research
+Campus Map: monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+
+We&apos;re listening….your feedback helps us improve
+
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

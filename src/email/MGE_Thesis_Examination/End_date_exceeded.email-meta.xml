@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>End date exceeded</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>End date exceeded</name>
+    <style>freeForm</style>
+    <subject>Thesis Submission update - {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Dear {!Contact.First_Name__c},
+
+Congratulations on the successful online submission of your thesis.
+
+We regret to inform that we can not approve your online submission at present, as your candidature has ended.
+
+As your candidature ended on (original candidature end date) you must complete the Thesis Submission Extension before we are able to finalise your submission and dispatch the thesis to your examiners.
+
+To action this, please complete a online Thesis Submission Extension to extend your candidature as soon as possible.
+To expedite your thesis submission, you should complete the form with the following:
+
+Mandatory fields such as; &apos;Reason&apos;, &apos;Progress to Date&apos; and &apos;remaining work&apos; with the following suggested text: &apos;I have started my online submission and require an extension to my candidature to facilitate examination of my thesis&apos;
+Extension Length: apply for an adequate extension period. Eg: from the time your candidate ended to now.
+
+Once the extension is processed by the MGE Candidature Operations team; we will initiate the thesis examination.
+
+We would like to take this opportunity to congratulate you again on your achievements.
+
+Kind Regards,
+
+{!User.FirstName}
+
+Graduate Research Examinations Team | Graduate Research Services
+
+_______________________
+
+​
+
+Monash Graduate Education
+
+Chancellery Building D
+26 Sports Walk
+
+Monash University, VIC 3800, Australia
+
+T: +61 3 990 54638
+W: www.monash.edu/graduate-research
+
+Campus Map: www.monash.edu/campuses/clayton/
+
+CRICOS Provider No. 00008C
+
+
+We&apos;re listening….your feedback helps us improve
+
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

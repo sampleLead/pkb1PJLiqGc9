@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Incomplete Enrolment Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Incomplete Enrolment Email</name>
+    <style>freeForm</style>
+    <subject>Incomplete Enrolment Email - {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+
+Thank you for your Course Enrolment form and your Acceptance form. ( What ever forms we receive should be mentioned here)
+
+
+To assist us with the processing of your Enrolment, MGE requires the forms listed below and additional information in order to finalise your enrolment. Could you please send these original documents in the mail (post) to:
+
+Monash Graduate Education
+Chancellory Building D, 26 Sports Walk
+Monash University VIC 3800, Australia
+
+
+
+Documentation required to complete your enrolment:
+
+Ethics     and Intellectual Property forms - signed both by yourself and     your supervisor
+RTS     (Research Training Scheme) Form - signed by yourself
+Original     certified copies of your Academic Transcripts - (Swinburne Uni, University     of Tasmania)
+Original     Certified copy of your passport/Birth certificate/citizenship
+Original     of name/change documents - e.g: marriage/divorce certificate if applicable
+
+Should you have any concerns regarding this matter, you are welcome to contact me.
+
+
+Kind regards,
+
+{!User.FirstName}
+
+
+Graduate Research Services
+_____________________________________________
+Monash Graduate Education
+Chancellery Building D, 26 Sports Walk
+Monash University, VIC 3800, Australia
+Phone: +61 3 990 53009 | Fax: +61 3 990 55042
+Email: mge-candidature@monash.edu
+Website: monash.edu/graduate-research
+Campus Map: monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+
+We&apos;re listening….your feedback helps us improve
+
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

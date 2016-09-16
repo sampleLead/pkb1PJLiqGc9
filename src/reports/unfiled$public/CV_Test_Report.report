@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CASE_ID</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>Case.Alias__c</field>
+    </columns>
+    <columns>
+        <field>CONTACT.NAME</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <description>Test only</description>
+    <filter>
+        <criteriaItems>
+            <column>Case.Enquiry_Type__c</column>
+            <operator>equals</operator>
+            <value>Future Course</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Enquiry_Interest__c.Course__c</column>
+            <operator>equals</operator>
+            <value>E6001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Deceased__c</column>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>CV Test Report</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseCustomEntity$Enquiry_Interest__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <endDate>2015-08-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-08-01</startDate>
+    </timeFrameFilter>
+</Report>

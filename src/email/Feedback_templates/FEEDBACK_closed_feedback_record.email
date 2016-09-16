@@ -1,0 +1,15 @@
+Hi there {!Feedback__c.OwnerFirstName},
+
+Your feedback record Ref.{!Feedback__c.Name} has been set to Status of {!Feedback__c.Status__c}.  
+
+Your feedback was as follows:
+{!Feedback__c.Notes__c}
+
+
+The administrator added the following notes:
+{!Feedback__c.Response__c}
+
+Thanks again for your UAT input!
+
+Regards,
+The Project Team

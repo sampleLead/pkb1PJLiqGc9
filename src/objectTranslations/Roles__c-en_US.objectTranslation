@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Role</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Roles</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Roles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Alias --></label>
+        <name>Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Roles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Fullname --></label>
+        <name>Fullname__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>Primary_Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- Captures the assigned role (staff) within a secondary school --></help>
+        <label><!-- Role --></label>
+        <name>Role__c</name>
+        <picklistValues>
+            <masterLabel>Access Monash - Main Contact</masterLabel>
+            <translation><!-- Access Monash - Main Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Access Monash - Yr 9 Champion Contact</masterLabel>
+            <translation><!-- Access Monash - Yr 9 Champion Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Access Monash Yr 10 Champion Contact</masterLabel>
+            <translation><!-- Access Monash Yr 10 Champion Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business and Commerce Co-ordinator</masterLabel>
+            <translation><!-- Business and Commerce Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Careers Co-ordinator</masterLabel>
+            <translation><!-- Careers Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deputy Principal</masterLabel>
+            <translation><!-- Deputy Principal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English Co-ordinator</masterLabel>
+            <translation><!-- English Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gifted Student Co-ordinator</masterLabel>
+            <translation><!-- Gifted Student Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head of careers</masterLabel>
+            <translation><!-- Head of careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IB Coordinator</masterLabel>
+            <translation><!-- IB Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indigenous Coordinator</masterLabel>
+            <translation><!-- Indigenous Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Technology Co-ordinator</masterLabel>
+            <translation><!-- Information Technology Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International Student Coordinator</masterLabel>
+            <translation><!-- International Student Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International Studies Co-ordinator</masterLabel>
+            <translation><!-- International Studies Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOTE Co-ordinator</masterLabel>
+            <translation><!-- LOTE Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal Studies Co-ordinator</masterLabel>
+            <translation><!-- Legal Studies Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maths Co-ordinator</masterLabel>
+            <translation><!-- Maths Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash Scholars Contact</masterLabel>
+            <translation><!-- Monash Scholars Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pathways Coordinator</masterLabel>
+            <translation><!-- Pathways Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Principal</masterLabel>
+            <translation><!-- Principal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SEAL Coordinator</masterLabel>
+            <translation><!-- SEAL Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOSE Co-ordinator</masterLabel>
+            <translation><!-- SOSE Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Science Co-ordinator</masterLabel>
+            <translation><!-- Science Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VCE Art &amp; Design Coordinator</masterLabel>
+            <translation><!-- VCE Art &amp; Design Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VCE Co-ordinator</masterLabel>
+            <translation><!-- VCE Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year 10 Co-ordinator</masterLabel>
+            <translation><!-- Year 10 Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year 11 Co-ordinator</masterLabel>
+            <translation><!-- Year 11 Co-ordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year 12 Co-ordinator</masterLabel>
+            <translation><!-- Year 12 Co-ordinator --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

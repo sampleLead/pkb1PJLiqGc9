@@ -5,6 +5,7 @@
         <fullName>Case_API_name__c</fullName>
         <description>the case field to be mapped - API name only</description>
         <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
         <label>Case Field API name</label>
         <length>200</length>
         <required>true</required>
@@ -15,6 +16,7 @@
         <fullName>Contact_Field_API_name__c</fullName>
         <description>contact api field name to map to</description>
         <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
         <label>Contact Field API name</label>
         <length>200</length>
         <required>true</required>
@@ -26,6 +28,7 @@
         <defaultValue>false</defaultValue>
         <description>if checked, then this mapping will be used to map values from a webform onto a matched contact</description>
         <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
         <label>Use in webform mapping</label>
         <type>Checkbox</type>
     </fields>

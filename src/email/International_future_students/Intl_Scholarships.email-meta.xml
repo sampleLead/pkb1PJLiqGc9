@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Select appropriate text depending on enquiry, delete what isn’t relevant)</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Monash_Connect_Letterhead</letterhead>
+    <name>Intl - Scholarships</name>
+    <style>freeForm</style>
+    <subject>Thankyou for your enquiry to Monash University, ref #{!Case.CaseNumber}</subject>
+    <textOnly>Dear {!Contact.First_Name_case_corrected__c},
+
+
+
+Thank you for your interest in studying at Monash University, consistently ranked in the top one per cent of world universities (Times Higher Education World University Rankings 2015-2016).
+
+
+
+If you&apos;re an international applicant and apply direct with Monash University or through an Agent for entry into a course for one of the following faculties, you&apos;ll automatically be considered for either the:
+
+Business and Economics International Pathway Scholarship
+Business and Economics International China Scholarship
+Faculty of Information Technology International Merit Scholarship
+Pharmacy International Undergraduate Merit Scholarship
+Science International Merit Scholarship
+
+Because assessment is conducted automatically, no special application is needed. If you have been awarded a scholarship you will be notified in due course. The scholarships are awarded based on academic merits so exceptional grades are required as scholarship places are extremely limited and very competitive.
+
+
+
+If you are an international student studying Australian Year 12 or IB only, you will be automatically assessed for scholarships when you submit a course application through VTAC.
+
+
+Information on international scholarships can be found on the following webpage: http://www.monash.edu.au/study/scholarships/international/
+
+
+For any enquiries please contact the Coursework Scholarships Unit on: http://www.monash.edu.au/study/scholarships/contact-us.html
+
+
+For application closing dates, please refer to the following webpage: http://www.monash.edu.au/study/scholarships/applications/
+
+
+All applicants will be notified in writing.
+
+
+
+
+Monash University also offers two additional scholarships to celebrate outstanding achievement:
+
+· Monash International Leadership Scholarship
+
+· Monash International Merit Scholarship
+
+
+As there are limited scholarships, the process is highly competitive and scholarships will be awarded based on outstanding academic achievement, as well as a personal statement with the potential to become a Monash Ambassador.
+
+
+In order to be considered for these scholarships you are required to apply by submitting a separate application form.
+
+
+To apply for the Monash International Leadership Scholarship please refer to the following webpage: http://www.study.monash/fees-scholarships/scholarships/find/international-student-scholarships/international-leadership
+
+
+To apply for the Monash International Merit Scholarship please refer to the following webpage: http://www.study.monash/fees-scholarships/scholarships/find/international-student-scholarships/international-merit
+
+
+Send your completed applications to:
+
+Central Admissions
+Monash Connect, Clayton Campus
+21 Chancellors Walk, Campus Centre
+Monash University,
+VIC 3800, Australia
+
+
+OR via email to: MU.Documents@monash.edu
+
+Application and other information:
+• You must submit a separate application form for this scholarship (due dates as below).
+• Before applying for this scholarship, you must have received a full Monash course offer with no conditions.
+• Do not submit supporting documentation with your application - this will not be considered.
+
+
+
+I hope you have found this information valuable. If there is any other way in which I can be of assistance, please contact me by replying to this email or calling me at 1800 MONASH (666 274).
+
+
+
+
+Kind regards
+
+
+
+
+{!User.FirstName} {!User.Lastname_Initial__c}
+
+Monash Connect Officer
+
+{!User.Department}
+
+{!User.CompanyName}
+
+Tel: 1800 MONASH (1800 666 274)
+
+
+CRICOS Provider 00008C
+
+
+
+
+___________________________________
+
+Date Received : {!Case.CreatedDate}
+
+Your Enquiry :
+
+{!Case.Description}
+
+
+
+
+
+
+System Reference. Please do not delete. {!Case.Thread_Id}
+
+
+
+
+
+
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement. You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>html</type>
+</EmailTemplate>

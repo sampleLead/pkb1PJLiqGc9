@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Revise thesis summary</name>
+    <style>freeForm</style>
+    <subject>Thesis summary: «STDNT_FULL_NAME»</subject>
+    <textOnly>Dear {!Case.Contact},
+
+
+Congratulations on your recent submission We are almost ready to dispatch the thesis for examination.
+
+
+Regretfully, your thesis summary needs to be shortened / revised / expanded. The summary is an important aspect of the examination, as the summary will appear on the students &apos;Australian Higher Education Graduate Statement&apos; (AHEGS).
+
+
+Thesis summaries need to be simple and direct, so that readers of the AHEGS can appreciate and understand the research that has been conducted and why it is important.
+
+
+The summary provided is:  “INSERT SUMMARY”
+
+
+Kindly forward us a revised 100 words or less summary.
+
+
+Recommended format
+
+The summary either explains the study or sets out the problem, in lay language, followed in each case by a statement of its practical application.
+
+You can commence with either “This thesis” or see alternative example below.
+
+Use the present tense and short, crisp sentences to describe the research and its results.
+
+You may like to add a further sentence outlining the significance or practical value of the work.
+
+Avoid technical or specialised terms, which cannot be readily understood by the general public.
+
+
+The following is an example of an original summary which did not meet the guidelines:
+
+This thesis examined the pathophysiology of the vascular endothelium in patients with high levels of plasma lipids. It identified a new group of patients with vascular dysfunction and established that an exercise program may be of benefit to such patients.
+
+It was revised thus:
+
+This thesis examines the detrimental effect of high levels of fats in the blood on blood vessel function. It identifies a new group of patients with blood vessel disorders and establishes that a home-based exercise program may be of benefit to such patients.
+
+An example of an acceptable alternative to the format:
+
+Tropical cyclones are an important part of the climate system, but they are not well represented in computer models of climate in general. This thesis develops a realistic and efficient modelling scheme for tropical cyclones tested under a range of conditions.
+
+Please forward the amended thesis summary by email as soon as possible.
+
+
+Kind regards
+
+Thank you.
+
+_______________________
+
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 990 53009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

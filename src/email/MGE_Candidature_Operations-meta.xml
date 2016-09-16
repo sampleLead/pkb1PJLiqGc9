@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>MGE Candidature Operations</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <group>MGE_Admissions</group>
+        <group>MGE_Candidature_Operations</group>
+        <group>MGE_Scholarships</group>
+        <group>MGE_Thesis_Examinations</group>
+    </sharedTo>
+</EmailFolder>

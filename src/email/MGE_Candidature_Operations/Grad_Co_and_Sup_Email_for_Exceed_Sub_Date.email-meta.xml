@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Grad-Co and Sup Email for Exceed Sub Date</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Grad-Co and Sup Email for Exceed Sub Date</name>
+    <style>freeForm</style>
+    <subject>Exceeded Thesis Submission Dates -</subject>
+    <textOnly>Sent on behalf of the Academic Director, Graduate Research
+
+
+Dear Graduate Co-ordinators OR Supervisors,
+
+
+I am writing to inform you that your student, NAME AND ID OF STUDENT/S has exceeded their thesis submission date - (KEEP FOR SUPERVISORS ONLY. ATTACH REPORT FOR GRAD-COS)
+
+
+MGE run Reports which identifying students whose enrolment has expired and these are uploaded to the MGE intranet by the first Friday of each month.
+
+
+Under Section 8 : Graduate Research Progress Management Procedures, where a student fails to submit their thesis (or equivalent) by their thesis submission date,  will be discontinued in good standing if:
+
+they have exhausted their extension allocation, or,
+they have not responded to the University’s attempts to   contact them regarding their thesis  submission.
+
+To resume their course of study, former students must apply for re-admission as per the process outlined in the Graduate Research Re-admission Procedures.
+
+
+Monash Graduate Education (MGE) sends official notifications to each student regarding their upcoming thesis submission date: the first at three months prior, and a follow up notification, at one month prior.
+
+
+Reports identifying students approaching their thesis submission dates are uploaded to the MGE intranet by the first Friday of each month. These reports and notifications are a key element of our strategy of managing students to submission.
+
+
+To date, no action has been taken by the student to submit their thesis or apply for an extension to their thesis submission date.
+
+
+MGE will commence the process of administratively discontinuing these students in good standing by the close of business on ADD DATE HERE (= 7 WORKING DAYS).
+
+
+Should there be any extenuating circumstances that need to be considered prior to this date, Graduate Co-ordinators should contact mge-candidature@monash.edu by close of business on (ADD DATE HERE (= ONE DAY BEFORE DATE ABOVE).
+
+
+Kind regards,
+
+
+
+
+Professor Sharon Ricardo
+
+Academic Director, Graduate Research</textOnly>
+    <type>html</type>
+</EmailTemplate>

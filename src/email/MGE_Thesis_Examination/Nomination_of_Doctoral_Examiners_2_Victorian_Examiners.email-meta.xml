@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Nomination of Doctoral Examiners: 2 Victorian Examiners</name>
+    <style>freeForm</style>
+    <subject>Nomination of Doctoral Examiners: 2 Victorian Examiners</subject>
+    <textOnly>As we are In progress of ......&apos;s submission it has been noticed that both the nominated examiners are from Victoria. The committee expects at least one doctoral examiner to be from outside Victoria. Can you please provide a statement justifying these two nominees for consideration by our Steering Committee. Alternatively, you can nominate a replacement examiner for one of the two.
+
+Please email me your justification statement or send us a new Nomination form if you are nominating a replacement examiner.
+
+_______________________
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 990 53009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

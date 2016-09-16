@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Course</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Courses</value>
+    </caseValues>
+    <fields>
+        <label><!-- ACAD Year --></label>
+        <name>ACAD_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Admission Category --></label>
+        <name>Admission_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Australian Accreditation --></label>
+        <name>Australian_Accreditation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broad Area of Study --></label>
+        <name>Broad_Area_Of_Study__c</name>
+        <picklistValues>
+            <masterLabel>a</masterLabel>
+            <translation><!-- a --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Broad Area of Study Import Field --></label>
+        <name>Broad_Area_of_Study_Import_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- CRICOS --></label>
+        <name>CRICOS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Career Outlook --></label>
+        <name>Career_Outlook__c</name>
+    </fields>
+    <fields>
+        <label><!-- Course Code Unique --></label>
+        <name>Course_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Course Description --></label>
+        <name>Course_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Course Level --></label>
+        <name>Course_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Depreciated --></label>
+        <name>Depreciated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Faculty Code --></label>
+        <name>Faculty_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Faculty Description --></label>
+        <name>Faculty_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- International Accreditation --></label>
+        <name>International_Accreditation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Managing Faculty --></label>
+        <name>Managing_Faculty__c</name>
+        <picklistValues>
+            <masterLabel>Faculty of Art, Design &amp; Architecture</masterLabel>
+            <translation><!-- Faculty of Art, Design &amp; Architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty of Arts</masterLabel>
+            <translation><!-- Faculty of Arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty of Business &amp; Economics</masterLabel>
+            <translation><!-- Faculty of Business &amp; Economics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty of Education</masterLabel>
+            <translation><!-- Faculty of Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty of Engineering</masterLabel>
+            <translation><!-- Faculty of Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty of Information Technology</masterLabel>
+            <translation><!-- Faculty of Information Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty of Law</masterLabel>
+            <translation><!-- Faculty of Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty of Medicine, Nursing &amp; Health Sciences</masterLabel>
+            <translation><!-- Faculty of Medicine, Nursing &amp; Health Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty of Pharmacy &amp; Pharmaceutical Sciences</masterLabel>
+            <translation><!-- Faculty of Pharmacy &amp; Pharmaceutical Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty of Science</masterLabel>
+            <translation><!-- Faculty of Science --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash College</masterLabel>
+            <translation><!-- Monash College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash Injury Research Institute</masterLabel>
+            <translation><!-- Monash Injury Research Institute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash University Foundation Year</masterLabel>
+            <translation><!-- Monash University Foundation Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PPA</masterLabel>
+            <translation><!-- PPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>a</masterLabel>
+            <translation><!-- a --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mapped Browse Categories --></label>
+        <name>Mapped_Browse_Categories__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mapped Categories --></label>
+        <name>Mapped_Categories__c</name>
+        <picklistValues>
+            <masterLabel>a</masterLabel>
+            <translation><!-- a --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mode and Location --></label>
+        <name>Mode_and_Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original ID --></label>
+        <name>Original_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Marketing Description --></label>
+        <name>Short_Marketing_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Specialisation Code --></label>
+        <name>Specialisation_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Specialisation --></label>
+        <name>Specialisation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Course Duration --></label>
+        <name>pw_Course_Duration__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

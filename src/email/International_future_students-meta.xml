@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>International future students</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <group>Email_Template_Access</group>
+        <roleAndSubordinates>Monash_Connect</roleAndSubordinates>
+        <roleAndSubordinates>Monash_Connect_Leader</roleAndSubordinates>
+        <roleAndSubordinates>Monash_Connect_Officer</roleAndSubordinates>
+    </sharedTo>
+</EmailFolder>

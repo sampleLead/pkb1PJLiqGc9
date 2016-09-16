@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Letter sent to ECRs new to Monash inviting them to ECR Network</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>ECR Welcome to Monash</name>
+    <style>freeForm</style>
+    <subject>Welcome to Monash</subject>
+    <textOnly>Dear Colleague,
+
+
+We hope that you are settling in well to your new position and are finding your way through all the information about Monash.
+
+
+We are writing to you to invite you to join the Early Career Researcher (ECR) Network here at Monash. Membership is free for all Monash University ECRs.
+
+
+What is an ECR?
+
+Here at Monash, we define an ECR as someone who:
+
+was awarded their PhD  within five years of the last five years (or equivalent research qualification/ experience), or
+
+holds up to five cumulative years of research experience, allowing for career interruptions arising from professional or personal issues.
+
+Some faculties extend this definition to ten years post-award when inviting researchers to events in their discipline; please check with your local area about whether this applies.
+
+
+What membership provides
+
+Monash University is committed to supporting ECRs like yourself, early in your research career as it is the time when you can gain substantial benefit from professional development and other support opportunities.
+
+
+At the ECR Network we offer:
+
+Career development specifically tailored to the needs of ECRs
+Opportunities to develop the skills necessary to undertake world-class research
+Knowledge and insight into the core practices of researchers
+Networking opportunities with peers within your discipline and across the university, and with senior researchers and leaders
+Information about scholarships, grants, internships and award schemes relevant to ECRs.
+
+Join the Network now
+
+To learn more about the ECR Network and to become a member, go to: ECR Portal
+
+
+Please don&apos;t hesitate to contact me if I can be of any assistance.
+
+
+Kind regards,
+
+Alison
+
+
+
+
+
+ALISON ROACHE
+
+Supervisor &amp; ECR Development Officer
+Graduate Student Experience
+
+
+
+Monash University Graduate Education
+
+Chancellory Building D
+
+26 Sports Walk
+
+Clayton VIC 3424
+
+Australia
+
+T: +61 3 9905 3424
+
+E: ecr@monash.edu
+
+W: www.monash.edu/graduate research
+
+
+
+Empowering and Developing the ECR Community
+
+
+
+Visit the ECR Network Portal Here</textOnly>
+    <type>html</type>
+</EmailTemplate>

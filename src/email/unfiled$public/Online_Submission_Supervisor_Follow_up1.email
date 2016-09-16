@@ -1,0 +1,45 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNoSpacing" style="color: rgb(0, 0, 0);"><font size="2" face="Arial, sans-serif">Dear (<span style="background-image: initial; background-attachment: initial; background-color: yellow; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">insert supervisor's name</span>)<o:p></o:p></font></p>
+
+<p class="MsoNoSpacing" style="color: rgb(0, 0, 0);"><font size="2" face="Arial, sans-serif">&nbsp;</font></p>
+
+<p class="MsoNoSpacing"><font size="2" face="Arial, sans-serif"><span style="color: rgb(0, 0, 0);">We are very pleased to see
+that&nbsp;</span>{!Contact.Name}&nbsp;has initiated the online thesis submission.<o:p></o:p></font></p>
+
+<p class="MsoNoSpacing" style="color: rgb(0, 0, 0);"><font size="2" face="Arial, sans-serif">&nbsp;</font></p>
+
+<p class="MsoNoSpacing" style="color: rgb(0, 0, 0);"><font size="2" face="Arial, sans-serif">It has come to our
+attention that you are yet to complete the Supervisor Statement and nominate
+examiners. This delay may impact the student and we would not like him/her to
+be disadvantaged.<o:p></o:p></font></p>
+
+<p class="MsoNoSpacing" style="color: rgb(0, 0, 0);"><font size="2" face="Arial, sans-serif">&nbsp;</font></p>
+
+<p class="MsoNoSpacing" style="color: rgb(0, 0, 0);"><font size="2" face="Arial, sans-serif">So that we can manage the
+student’s expectations, please confirm by return of email:</font></p><p class="MsoNoSpacing" style="color: rgb(0, 0, 0); text-indent: 0px;"></p><ul style="color: rgb(0, 0, 0);"><li><span style="text-indent: -18pt;"><font size="2" face="Arial, sans-serif">whether you support the student’s
+submission; and</font></span></li><li><font size="2" face="Arial, sans-serif"><span style="text-indent: -18pt;"><span style="font-variant-numeric: normal; font-stretch: normal;">&nbsp;</span></span><span dir="LTR" style="text-indent: -18pt;"></span><span style="text-indent: -18pt;">the reason for the delay in
+completing your section. <i>(i.e. awaiting response from Examiner to confirm
+willingness to undertake examination)</i></span></font></li></ul><p style="color: rgb(0, 0, 0);"></p>
+
+<p class="MsoNoSpacing" style="color: rgb(0, 0, 0);"><font size="2" face="Arial, sans-serif">Your response will help us
+manage the expectations of the student.<o:p></o:p></font></p>
+
+<p class="MsoNoSpacing" style="color: rgb(0, 0, 0);"><font size="2" face="Arial, sans-serif">&nbsp;</font></p>
+
+<p class="MsoNoSpacing" style="color: rgb(0, 0, 0);"><font size="2" face="Arial, sans-serif">Yours sincerely,<o:p></o:p></font></p><p class="MsoNoSpacing" style="color: rgb(0, 0, 0);"><font size="2" face="Arial, sans-serif"><br></font></p><p class="MsoNoSpacing" style="color: rgb(0, 0, 0);"><font size="2" face="Arial, sans-serif">{!Case.OwnerFirstName}&nbsp;{!Case.OwnerLastName}</font></p>
+
+<p class="MsoNoSpacing" style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><span style="font-size:12.0pt">&nbsp;</span></p>
+
+<p class="MsoNoSpacing" style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><br></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

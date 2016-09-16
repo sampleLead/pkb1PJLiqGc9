@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CASE_console_settings_error</fullName>
+        <categories>CONSOLE, ERROR</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CASE_console_settings_error</shortDescription>
+        <value>Error: as a console user you are not permitted to add or change records until you have set up your defaults in the &apos;My Information&apos; panel.</value>
+    </labels>
+    <labels>
+        <fullName>Off_System_Default_Message</fullName>
+        <categories>Monash Connect, Off System</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Off System Default Message</shortDescription>
+        <value>Dear Colleague,
+
+We received this enquiry in UniCRM and are unable to assist.  Can you please respond directly to the customer and assist them with their enquiry.
+
+Kind regards</value>
+    </labels>
+    <labels>
+        <fullName>contact_insert_error</fullName>
+        <categories>contact,error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>contact_insert_error</shortDescription>
+        <value>A problem occurred when trying to create Contact.</value>
+    </labels>
+    <labels>
+        <fullName>montrack_ref_err1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MonTRACK Error 1</shortDescription>
+        <value>Please select one or more Referrals.</value>
+    </labels>
+    <labels>
+        <fullName>montrack_ref_err2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MonTRACK Error 2</shortDescription>
+        <value>You cannot add a Referral until the call has been Completed.</value>
+    </labels>
+    <labels>
+        <fullName>montrack_ref_hdr</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MonTRACK Header</shortDescription>
+        <value>To add a Referral, select the Referral field and click the Save button</value>
+    </labels>
+</CustomLabels>

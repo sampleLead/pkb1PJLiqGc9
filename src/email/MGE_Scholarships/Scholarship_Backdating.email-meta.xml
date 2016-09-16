@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Scholarship Backdating</name>
+    <style>freeForm</style>
+    <subject>Scholarship Backdating</subject>
+    <textOnly>Dear {!Case.Contact},
+
+
+Thank you for your email.
+
+
+Graduate Research Services has received a request to backdate:
+
+an extension to scholarship
+
+a scholarship appointment
+
+a change to costing
+
+travel grant and study away application
+
+XXXX
+
+
+While we have processed this request on this occasion, please ensure that all relevant documents are forwarded to the Graduate Education Office at least two weeks prior to the date the proposed change is to take effect as we are unable to backdate.​
+
+
+A reminder about the backdating policy was provided in The Monash Graduate Researcher: Administrative Edition – March (1), 2015.
+
+
+Please note that our forms are updated regularly and should be downloaded from the  Graduate Education intranet.
+
+Thank you for your continued support. Should you have any questions please feel free to contact: mge-scholarships@monash.edu
+
+
+Scholarships and Candidature Team
+_______________________
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 990 53009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

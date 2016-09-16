@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Extension to due date</name>
+    <style>freeForm</style>
+    <subject>Extension to due date</subject>
+    <textOnly>Dear {!Case.Contact},
+
+
+Thank you for your update on Student&apos;s thesis examination.
+
+
+The report due date has been extended to [new due date].
+
+
+Please do not hesitate to contact me if you require more time to complete the examination.
+
+
+Kind regards
+_______________________
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 990 53009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

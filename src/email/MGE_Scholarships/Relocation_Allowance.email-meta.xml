@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Relocation Allowance (Interstate &amp; International)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Relocation Allowance</name>
+    <style>freeForm</style>
+    <subject>Relocation Allowance (Interstate &amp; International)</subject>
+    <textOnly>Dear ,
+
+The scholarships team has received your enrolment. From your offer letter we can see that you are from interstate. Under section 3.2 of the 2015 Scholarship Conditions of Awards - &quot;Awardees who relocate their place of residence to Victoria from interstate or overseas to take up their scholarship will be eligible for an establishment/relocation allowance of $A1,000.
+
+The allowance will not be paid to awardees who relocated to Victoria prior to the offer of the award or to awardees who relocate their place of residence to another residence within Victoria.&quot;
+
+
+
+
+
+
+
+
+
+
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

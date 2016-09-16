@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Person Note</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Person Notes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Person Notes --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Date of expiry of note.  Once expired date arrives, note will not show in console UI sidebar --></help>
+        <label><!-- Expires --></label>
+        <name>Expires__c</name>
+    </fields>
+    <fields>
+        <help><!-- if checked, then this will drive the console component to set notes notification button to red with white text --></help>
+        <label><!-- Important --></label>
+        <name>Important__c</name>
+    </fields>
+    <fields>
+        <label><!-- LastModifiedCustom --></label>
+        <name>LastModifiedCustom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Care Reason --></label>
+        <name>Special_Care_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Problem Behaviour</masterLabel>
+            <translation><!-- Problem Behaviour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unreasonable Complainant Conduct</masterLabel>
+            <translation><!-- Unreasonable Complainant Conduct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Welfare Issues</masterLabel>
+            <translation><!-- Welfare Issues --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Style Text --></label>
+        <name>Style_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>SPECIAL CARE</masterLabel>
+            <translation><!-- SPECIAL CARE --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

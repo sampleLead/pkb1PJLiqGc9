@@ -1,0 +1,1375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Enquiry Interest</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Enquiry Interests</value>
+    </caseValues>
+    <fields>
+        <label><!-- Alias --></label>
+        <name>Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attendance Mode --></label>
+        <name>Attendance_Mode__c</name>
+        <picklistValues>
+            <masterLabel>Off Campus</masterLabel>
+            <translation><!-- Off Campus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Campus</masterLabel>
+            <translation><!-- On Campus --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Enquiry --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Enquiry Interests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Commencement Year --></label>
+        <name>Commencement_Year__c</name>
+        <picklistValues>
+            <masterLabel>2016</masterLabel>
+            <translation><!-- 2016 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2017</masterLabel>
+            <translation><!-- 2017 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2018</masterLabel>
+            <translation><!-- 2018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2019</masterLabel>
+            <translation><!-- 2019 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2020</masterLabel>
+            <translation><!-- 2020 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course Managing Faculty --></label>
+        <name>Course_Managing_Faculty__c</name>
+    </fields>
+    <fields>
+        <label><!-- Course Title Text --></label>
+        <name>Course_Title_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Course Title --></label>
+        <name>Course_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Course --></label>
+        <name>Course__c</name>
+        <relationshipLabel><!-- Enquiry Interests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Detailed Study Area --></label>
+        <name>Detailed_Study_Area__c</name>
+        <picklistValues>
+            <masterLabel>Accounting</masterLabel>
+            <translation><!-- Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Actuarial studies</masterLabel>
+            <translation><!-- Actuarial studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Addiction studies</masterLabel>
+            <translation><!-- Addiction studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adult and work-based learning</masterLabel>
+            <translation><!-- Adult and work-based learning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adult learning and development</masterLabel>
+            <translation><!-- Adult learning and development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advocacy</masterLabel>
+            <translation><!-- Advocacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aeronautical engineering</masterLabel>
+            <translation><!-- Aeronautical engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aerospace engineering</masterLabel>
+            <translation><!-- Aerospace engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ambulance</masterLabel>
+            <translation><!-- Ambulance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Animation</masterLabel>
+            <translation><!-- Animation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Anthropology</masterLabel>
+            <translation><!-- Anthropology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Architecture</masterLabel>
+            <translation><!-- Architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Art education</masterLabel>
+            <translation><!-- Art education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Art theory</masterLabel>
+            <translation><!-- Art theory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arts</masterLabel>
+            <translation><!-- Arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Astrophysics</masterLabel>
+            <translation><!-- Astrophysics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Atmospheric sciences</masterLabel>
+            <translation><!-- Atmospheric sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Australian Indigenous studies</masterLabel>
+            <translation><!-- Australian Indigenous studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking</masterLabel>
+            <translation><!-- Banking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Behavioural neuroscience</masterLabel>
+            <translation><!-- Behavioural neuroscience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Behavioural studies</masterLabel>
+            <translation><!-- Behavioural studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biological engineering</masterLabel>
+            <translation><!-- Biological engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biology</masterLabel>
+            <translation><!-- Biology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biomedical sciences</masterLabel>
+            <translation><!-- Biomedical sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biostatistics</masterLabel>
+            <translation><!-- Biostatistics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biotechnology</masterLabel>
+            <translation><!-- Biotechnology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business administration</masterLabel>
+            <translation><!-- Business administration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business information systems</masterLabel>
+            <translation><!-- Business information systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business law</masterLabel>
+            <translation><!-- Business law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business statistics</masterLabel>
+            <translation><!-- Business statistics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business strategy</masterLabel>
+            <translation><!-- Business strategy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business systems</masterLabel>
+            <translation><!-- Business systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemical engineering</masterLabel>
+            <translation><!-- Chemical engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemistry</masterLabel>
+            <translation><!-- Chemistry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Civil engineering</masterLabel>
+            <translation><!-- Civil engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Climate studies</masterLabel>
+            <translation><!-- Climate studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commerce</masterLabel>
+            <translation><!-- Commerce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial law</masterLabel>
+            <translation><!-- Commercial law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communication technologies</masterLabel>
+            <translation><!-- Communication technologies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communications</masterLabel>
+            <translation><!-- Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communications law</masterLabel>
+            <translation><!-- Communications law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computational science</masterLabel>
+            <translation><!-- Computational science --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer science</masterLabel>
+            <translation><!-- Computer science --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer systems engineering</masterLabel>
+            <translation><!-- Computer systems engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computing</masterLabel>
+            <translation><!-- Computing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contracts</masterLabel>
+            <translation><!-- Contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Copyright</masterLabel>
+            <translation><!-- Copyright --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Counselling</masterLabel>
+            <translation><!-- Counselling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Creative arts</masterLabel>
+            <translation><!-- Creative arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Criminal law</masterLabel>
+            <translation><!-- Criminal law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Criminology</masterLabel>
+            <translation><!-- Criminology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crisis</masterLabel>
+            <translation><!-- Crisis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cultures</masterLabel>
+            <translation><!-- Cultures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Curatorial studies</masterLabel>
+            <translation><!-- Curatorial studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cyber law</masterLabel>
+            <translation><!-- Cyber law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data management</masterLabel>
+            <translation><!-- Data management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Defamation</masterLabel>
+            <translation><!-- Defamation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dietetics</masterLabel>
+            <translation><!-- Dietetics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Digital arts</masterLabel>
+            <translation><!-- Digital arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diplomacy</masterLabel>
+            <translation><!-- Diplomacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disaster</masterLabel>
+            <translation><!-- Disaster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributed systems</masterLabel>
+            <translation><!-- Distributed systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drama</masterLabel>
+            <translation><!-- Drama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drawing</masterLabel>
+            <translation><!-- Drawing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drug design</masterLabel>
+            <translation><!-- Drug design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drug discovery biology</masterLabel>
+            <translation><!-- Drug discovery biology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early childhood education</masterLabel>
+            <translation><!-- Early childhood education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Earth sciences</masterLabel>
+            <translation><!-- Earth sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Econometrics</masterLabel>
+            <translation><!-- Econometrics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Economics</masterLabel>
+            <translation><!-- Economics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electrical engineering</masterLabel>
+            <translation><!-- Electrical engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics</masterLabel>
+            <translation><!-- Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Emergency health</masterLabel>
+            <translation><!-- Emergency health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Emergency management</masterLabel>
+            <translation><!-- Emergency management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy</masterLabel>
+            <translation><!-- Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering technology</masterLabel>
+            <translation><!-- Engineering technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental engineering</masterLabel>
+            <translation><!-- Environmental engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental health</masterLabel>
+            <translation><!-- Environmental health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental law</masterLabel>
+            <translation><!-- Environmental law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental science</masterLabel>
+            <translation><!-- Environmental science --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ethics</masterLabel>
+            <translation><!-- Ethics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family law</masterLabel>
+            <translation><!-- Family law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family medicine</masterLabel>
+            <translation><!-- Family medicine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Film and television</masterLabel>
+            <translation><!-- Film and television --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fine arts</masterLabel>
+            <translation><!-- Fine arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food science</masterLabel>
+            <translation><!-- Food science --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forensic law</masterLabel>
+            <translation><!-- Forensic law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Formulation science</masterLabel>
+            <translation><!-- Formulation science --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gallery management</masterLabel>
+            <translation><!-- Gallery management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Games development</masterLabel>
+            <translation><!-- Games development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General practice</masterLabel>
+            <translation><!-- General practice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Geography</masterLabel>
+            <translation><!-- Geography --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Geosciences</masterLabel>
+            <translation><!-- Geosciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Geotechnical engineering</masterLabel>
+            <translation><!-- Geotechnical engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gifted education</masterLabel>
+            <translation><!-- Gifted education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graphic design</masterLabel>
+            <translation><!-- Graphic design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hazards</masterLabel>
+            <translation><!-- Hazards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health</masterLabel>
+            <translation><!-- Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health professional education</masterLabel>
+            <translation><!-- Health professional education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Historical studies</masterLabel>
+            <translation><!-- Historical studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Human resources</masterLabel>
+            <translation><!-- Human resources --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Human rights</masterLabel>
+            <translation><!-- Human rights --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Human security</masterLabel>
+            <translation><!-- Human security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Humanitarian</masterLabel>
+            <translation><!-- Humanitarian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Humanities</masterLabel>
+            <translation><!-- Humanities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hydrology</masterLabel>
+            <translation><!-- Hydrology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inclusive and gifted education</masterLabel>
+            <translation><!-- Inclusive and gifted education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indigenous health</masterLabel>
+            <translation><!-- Indigenous health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industrial design</masterLabel>
+            <translation><!-- Industrial design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industrial engineering</masterLabel>
+            <translation><!-- Industrial engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industrial relations</masterLabel>
+            <translation><!-- Industrial relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Communication Technology (ICT) education</masterLabel>
+            <translation><!-- Information Communication Technology (ICT) education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information and knowledge management</masterLabel>
+            <translation><!-- Information and knowledge management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information management</masterLabel>
+            <translation><!-- Information management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information studies</masterLabel>
+            <translation><!-- Information studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information systems</masterLabel>
+            <translation><!-- Information systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information technologies</masterLabel>
+            <translation><!-- Information technologies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information technology</masterLabel>
+            <translation><!-- Information technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Infrastructure engineering</masterLabel>
+            <translation><!-- Infrastructure engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Installation</masterLabel>
+            <translation><!-- Installation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intellectual property</masterLabel>
+            <translation><!-- Intellectual property --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interior architecture</masterLabel>
+            <translation><!-- Interior architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International business</masterLabel>
+            <translation><!-- International business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International health</masterLabel>
+            <translation><!-- International health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International law</masterLabel>
+            <translation><!-- International law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International studies</masterLabel>
+            <translation><!-- International studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet systems</masterLabel>
+            <translation><!-- Internet systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Journalism</masterLabel>
+            <translation><!-- Journalism --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Knowledge management</masterLabel>
+            <translation><!-- Knowledge management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Languages</masterLabel>
+            <translation><!-- Languages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law</masterLabel>
+            <translation><!-- Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leadership</masterLabel>
+            <translation><!-- Leadership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leadership, policy and change</masterLabel>
+            <translation><!-- Leadership, policy and change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Librarianship</masterLabel>
+            <translation><!-- Librarianship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Library and information studies</masterLabel>
+            <translation><!-- Library and information studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Library studies</masterLabel>
+            <translation><!-- Library studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linguistics</masterLabel>
+            <translation><!-- Linguistics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Literacy</masterLabel>
+            <translation><!-- Literacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MBA</masterLabel>
+            <translation><!-- MBA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance engineering</masterLabel>
+            <translation><!-- Maintenance engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management</masterLabel>
+            <translation><!-- Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marine and freshwater biology</masterLabel>
+            <translation><!-- Marine and freshwater biology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Materials engineering</masterLabel>
+            <translation><!-- Materials engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Materials sciences</masterLabel>
+            <translation><!-- Materials sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mathematical sciences</masterLabel>
+            <translation><!-- Mathematical sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mathematics and science education</masterLabel>
+            <translation><!-- Mathematics and science education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mechanical engineering</masterLabel>
+            <translation><!-- Mechanical engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mechatronics engineering</masterLabel>
+            <translation><!-- Mechatronics engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media</masterLabel>
+            <translation><!-- Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media arts</masterLabel>
+            <translation><!-- Media arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media law</masterLabel>
+            <translation><!-- Media law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mediation</masterLabel>
+            <translation><!-- Mediation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical acupuncture</masterLabel>
+            <translation><!-- Medical acupuncture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical bioscience</masterLabel>
+            <translation><!-- Medical bioscience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical imaging</masterLabel>
+            <translation><!-- Medical imaging --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical ultrasound</masterLabel>
+            <translation><!-- Medical ultrasound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicinal chemistry</masterLabel>
+            <translation><!-- Medicinal chemistry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mental health</masterLabel>
+            <translation><!-- Mental health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mentoring and coaching</masterLabel>
+            <translation><!-- Mentoring and coaching --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meteorology</masterLabel>
+            <translation><!-- Meteorology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Midwifery</masterLabel>
+            <translation><!-- Midwifery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mining engineering</masterLabel>
+            <translation><!-- Mining engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multimedia</masterLabel>
+            <translation><!-- Multimedia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multimedia design</masterLabel>
+            <translation><!-- Multimedia design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Music</masterLabel>
+            <translation><!-- Music --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Music education</masterLabel>
+            <translation><!-- Music education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Negotiation</masterLabel>
+            <translation><!-- Negotiation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network computing</masterLabel>
+            <translation><!-- Network computing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neurosciences</masterLabel>
+            <translation><!-- Neurosciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-adversarial justice</masterLabel>
+            <translation><!-- Non-adversarial justice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nuclear medicine</masterLabel>
+            <translation><!-- Nuclear medicine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Numeracy</masterLabel>
+            <translation><!-- Numeracy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nursing</masterLabel>
+            <translation><!-- Nursing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nutrition</masterLabel>
+            <translation><!-- Nutrition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Occupational health</masterLabel>
+            <translation><!-- Occupational health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Occupational therapy</masterLabel>
+            <translation><!-- Occupational therapy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Organisational leadership</masterLabel>
+            <translation><!-- Organisational leadership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outdoor recreation</masterLabel>
+            <translation><!-- Outdoor recreation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Painting</masterLabel>
+            <translation><!-- Painting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paramedic studies</masterLabel>
+            <translation><!-- Paramedic studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Patents</masterLabel>
+            <translation><!-- Patents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peace and conflict</masterLabel>
+            <translation><!-- Peace and conflict --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance</masterLabel>
+            <translation><!-- Performance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmaceutical sciences</masterLabel>
+            <translation><!-- Pharmaceutical sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy</masterLabel>
+            <translation><!-- Pharmacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Philosophy</masterLabel>
+            <translation><!-- Philosophy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Photography</masterLabel>
+            <translation><!-- Photography --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physics</masterLabel>
+            <translation><!-- Physics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physiotherapy</masterLabel>
+            <translation><!-- Physiotherapy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Politics</masterLabel>
+            <translation><!-- Politics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary education</masterLabel>
+            <translation><!-- Primary education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print making</masterLabel>
+            <translation><!-- Print making --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product design</masterLabel>
+            <translation><!-- Product design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Programming and software</masterLabel>
+            <translation><!-- Programming and software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Programming and software development</masterLabel>
+            <translation><!-- Programming and software development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project management</masterLabel>
+            <translation><!-- Project management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Psychiatry</masterLabel>
+            <translation><!-- Psychiatry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Psychology</masterLabel>
+            <translation><!-- Psychology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Psychology (counselling)</masterLabel>
+            <translation><!-- Psychology (counselling) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Psychology (educational and developmental)</masterLabel>
+            <translation><!-- Psychology (educational and developmental) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public health</masterLabel>
+            <translation><!-- Public health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public policy</masterLabel>
+            <translation><!-- Public policy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public relations</masterLabel>
+            <translation><!-- Public relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pulp and paper technologies</masterLabel>
+            <translation><!-- Pulp and paper technologies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radiation therapy</masterLabel>
+            <translation><!-- Radiation therapy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radiography</masterLabel>
+            <translation><!-- Radiography --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radiotherapy</masterLabel>
+            <translation><!-- Radiotherapy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Records management</masterLabel>
+            <translation><!-- Records management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regional and community development</masterLabel>
+            <translation><!-- Regional and community development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regional and community education and development</masterLabel>
+            <translation><!-- Regional and community education and development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewable energy</masterLabel>
+            <translation><!-- Renewable energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk management</masterLabel>
+            <translation><!-- Risk management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Robotics</masterLabel>
+            <translation><!-- Robotics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rural health</masterLabel>
+            <translation><!-- Rural health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School leadership</masterLabel>
+            <translation><!-- School leadership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scientific computing</masterLabel>
+            <translation><!-- Scientific computing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sculpture</masterLabel>
+            <translation><!-- Sculpture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary education</masterLabel>
+            <translation><!-- Secondary education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social work</masterLabel>
+            <translation><!-- Social work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sociology</masterLabel>
+            <translation><!-- Sociology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software engineering</masterLabel>
+            <translation><!-- Software engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sport and outdoor recreation</masterLabel>
+            <translation><!-- Sport and outdoor recreation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sport management</masterLabel>
+            <translation><!-- Sport management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supply chain</masterLabel>
+            <translation><!-- Supply chain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgery</masterLabel>
+            <translation><!-- Surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sustainability</masterLabel>
+            <translation><!-- Sustainability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxation</masterLabel>
+            <translation><!-- Taxation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teachers of English to speakers of other languages (TESOL)</masterLabel>
+            <translation><!-- Teachers of English to speakers of other languages (TESOL) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teaching</masterLabel>
+            <translation><!-- Teaching --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teaching and teacher education</masterLabel>
+            <translation><!-- Teaching and teacher education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Theatre studies</masterLabel>
+            <translation><!-- Theatre studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Theology</masterLabel>
+            <translation><!-- Theology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tourism</masterLabel>
+            <translation><!-- Tourism --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade</masterLabel>
+            <translation><!-- Trade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Traffic engineering</masterLabel>
+            <translation><!-- Traffic engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport</masterLabel>
+            <translation><!-- Transport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport engineering</masterLabel>
+            <translation><!-- Transport engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Urban water</masterLabel>
+            <translation><!-- Urban water --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Veterinary bioscience</masterLabel>
+            <translation><!-- Veterinary bioscience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visual arts</masterLabel>
+            <translation><!-- Visual arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visual communication</masterLabel>
+            <translation><!-- Visual communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visual culture</masterLabel>
+            <translation><!-- Visual culture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visual design</masterLabel>
+            <translation><!-- Visual design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Water recycling</masterLabel>
+            <translation><!-- Water recycling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Women&apos;s studies</masterLabel>
+            <translation><!-- Women&apos;s studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work and learning studies</masterLabel>
+            <translation><!-- Work and learning studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wound care</masterLabel>
+            <translation><!-- Wound care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zoology</masterLabel>
+            <translation><!-- Zoology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eBusiness</masterLabel>
+            <translation><!-- eBusiness --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Faculty Code --></label>
+        <name>Faculty_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Faculty Description --></label>
+        <name>Faculty_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Faculty --></label>
+        <name>Faculty_PickList__c</name>
+        <picklistValues>
+            <masterLabel>Art, Design and Architecture</masterLabel>
+            <translation><!-- Art, Design and Architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arts</masterLabel>
+            <translation><!-- Arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business and Economics</masterLabel>
+            <translation><!-- Business and Economics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Technology</masterLabel>
+            <translation><!-- Information Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law</masterLabel>
+            <translation><!-- Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicine, Nursing and Health Sciences</masterLabel>
+            <translation><!-- Medicine, Nursing and Health Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash College</masterLabel>
+            <translation><!-- Monash College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy and Pharmaceutical Sciences</masterLabel>
+            <translation><!-- Pharmacy and Pharmaceutical Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Science</masterLabel>
+            <translation><!-- Science --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- LastModifiedCustom --></label>
+        <name>LastModifiedCustom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level of Study --></label>
+        <name>Level_of_Study__c</name>
+        <picklistValues>
+            <masterLabel>Diploma</masterLabel>
+            <translation><!-- Diploma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English Language</masterLabel>
+            <translation><!-- English Language --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash University Foundation Year</masterLabel>
+            <translation><!-- Monash University Foundation Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Postgraduate</masterLabel>
+            <translation><!-- Postgraduate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undergraduate</masterLabel>
+            <translation><!-- Undergraduate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>Alfred</masterLabel>
+            <translation><!-- Alfred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Berwick</masterLabel>
+            <translation><!-- Berwick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caulfield</masterLabel>
+            <translation><!-- Caulfield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>City</masterLabel>
+            <translation><!-- City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clayton</masterLabel>
+            <translation><!-- Clayton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gippsland</masterLabel>
+            <translation><!-- Gippsland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parkville</masterLabel>
+            <translation><!-- Parkville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peninsula</masterLabel>
+            <translation><!-- Peninsula --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Managing Faculty Code --></label>
+        <name>Managing_Faculty_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Managing Faculty --></label>
+        <name>Managing_Faculty__c</name>
+    </fields>
+    <fields>
+        <label><!-- Matching ID --></label>
+        <name>Matching_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mode --></label>
+        <name>Mode__c</name>
+        <picklistValues>
+            <masterLabel>FT</masterLabel>
+            <translation><!-- FT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PT</masterLabel>
+            <translation><!-- PT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Name of Institution --></label>
+        <name>Name_of_Institution__c</name>
+    </fields>
+    <fields>
+        <label><!-- OriginalId --></label>
+        <name>OriginalId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Person --></label>
+        <name>Person__c</name>
+        <relationshipLabel><!-- Enquiry Interests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Selected --></label>
+        <name>Selected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Specialisation --></label>
+        <name>Specialisation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Specialisation --></label>
+        <name>Specialisation_f__c</name>
+    </fields>
+    <fields>
+        <label><!-- Study Area Picklist --></label>
+        <name>Study_Area_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>Business</masterLabel>
+            <translation><!-- Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communication and media</masterLabel>
+            <translation><!-- Communication and media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design, creative art, architecture</masterLabel>
+            <translation><!-- Design, creative art, architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environment and sustainability</masterLabel>
+            <translation><!-- Environment and sustainability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Humanities and culture</masterLabel>
+            <translation><!-- Humanities and culture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information technology</masterLabel>
+            <translation><!-- Information technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law, policy</masterLabel>
+            <translation><!-- Law, policy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicine, health, pharmacy</masterLabel>
+            <translation><!-- Medicine, health, pharmacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Science</masterLabel>
+            <translation><!-- Science --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Study Area --></label>
+        <name>Study_Area__c</name>
+        <picklistValues>
+            <masterLabel>Business</masterLabel>
+            <translation><!-- Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communication and media</masterLabel>
+            <translation><!-- Communication and media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design, creative art, architecture</masterLabel>
+            <translation><!-- Design, creative art, architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environment and sustainability</masterLabel>
+            <translation><!-- Environment and sustainability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Humanities and culture</masterLabel>
+            <translation><!-- Humanities and culture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information technology</masterLabel>
+            <translation><!-- Information technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law, policy</masterLabel>
+            <translation><!-- Law, policy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicine, health, pharmacy</masterLabel>
+            <translation><!-- Medicine, health, pharmacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Science</masterLabel>
+            <translation><!-- Science --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Valid Enquiry Interest --></label>
+        <name>Valid_Enquiry_Interest__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Delete_Selected --></label>
+        <name>Delete_Selected</name>
+    </webLinks>
+</CustomObjectTranslation>

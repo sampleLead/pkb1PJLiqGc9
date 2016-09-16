@@ -1,0 +1,28 @@
+Confirmation of case creation
+
+Id: {!Case.Id}
+Number:{!Case.CaseNumber}
+Subject: {!Case.Subject}
+Origin:{!Case.Origin}
+ContactId:{!Case.ContactId}
+Contact Name:{!Case.Contact}
+Description:{!Case.Description}
+Priority:{!Case.Priority}
+Status:{!Case.Status}
+Type:{!Case.Type}
+Web Email:{!Case.SuppliedEmail}
+Web Name:{!Case.SuppliedName}
+Web Phone:{!Case.SuppliedPhone}
+
+Attendance mode:{!Case.Attendance_Mode__c}
+Attendane type:{!Case.Attendance_Type__c}
+Record type to set :{!Case.Case_Type__c}
+Category Level 1:{!Case.Category_Level_1__c}
+Category Level 2:{!Case.Category_Level_2__c}
+Commencement Date:{!Case.Commencement_Date__c}
+Commencement Year:{!Case.Commencement_Year__c}
+Course:{!Case.Course__c}
+Course Code:{!Case.Course_Code__c}
+Enquiry Type:{!Case.Enquiry_Type__c}
+Heard About from:{!Case.Heard_About_From__c}
+Highest Level ofStudy:{!Case.Highest_Level_of_Study__c}

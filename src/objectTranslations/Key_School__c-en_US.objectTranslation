@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Key School</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Key Schools</value>
+    </caseValues>
+    <fields>
+        <label><!-- Alias --></label>
+        <name>Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Faculty --></label>
+        <name>Faculty__c</name>
+        <picklistValues>
+            <masterLabel>Art, Design and Architecture</masterLabel>
+            <translation><!-- Art, Design and Architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arts</masterLabel>
+            <translation><!-- Arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business and Economics</masterLabel>
+            <translation><!-- Business and Economics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Technology</masterLabel>
+            <translation><!-- Information Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law</masterLabel>
+            <translation><!-- Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicine, Nursing and Health Sciences</masterLabel>
+            <translation><!-- Medicine, Nursing and Health Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFS</masterLabel>
+            <translation><!-- OFS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy and Pharmaceutical Sciences</masterLabel>
+            <translation><!-- Pharmacy and Pharmaceutical Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAM</masterLabel>
+            <translation><!-- SAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Science</masterLabel>
+            <translation><!-- Science --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Priority Status --></label>
+        <name>Priority_Status__c</name>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International</masterLabel>
+            <translation><!-- International --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platinum</masterLabel>
+            <translation><!-- Platinum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- School --></label>
+        <name>School__c</name>
+        <relationshipLabel><!-- Key Schools --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Year --></label>
+        <name>Year__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Default for Faculty User --></label>
+        <name>Faculty_User_RT</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please enter a valid year for this record --></errorMessage>
+        <name>Year_Numeric_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The year field should contain four characters --></errorMessage>
+        <name>year_length_validation_2</name>
+    </validationRules>
+</CustomObjectTranslation>

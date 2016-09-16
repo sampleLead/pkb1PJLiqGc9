@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Successful Re-enrolment</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Successful Re-enrolment</name>
+    <style>freeForm</style>
+    <subject>Successful Re-enrolment - {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+
+I am pleased to advise  you that you have been successfully re-enrolled in your degree.
+
+
+There has been a systemic issue with the Web Enrolment System which is presently being investigated.  Nevertheless, I have checked your enrolment in CALLISTA and can confirm that you have successfully re-enrolled for 2017.
+
+
+Should you have any concerns or require further assistance, you are welcome to contact me.
+
+
+Kind regards,
+
+{!User.FirstName}
+
+
+Graduate Research Services
+_____________________________________________
+Monash Graduate Education
+Chancellery Building D, 26 Sports Walk
+Monash University, VIC 3800, Australia
+Phone: +61 3 990 53009 | Fax: +61 3 990 55042
+Email: mge-candidature@monash.edu
+Website: monash.edu/graduate-research
+Campus Map: monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+
+We&apos;re listening….your feedback helps us improve
+
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

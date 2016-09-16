@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Travel Grant more information required -</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Travel Grant more information required -</name>
+    <style>freeForm</style>
+    <subject>Travel Grant more information required</subject>
+    <textOnly>Dear ,
+
+
+Graduate Education received your travel grant application to attend conference in ..........
+
+To finalise  your application, could you please email me the following documents immediately:
+
+1. A copy of your accepted abstract, clearly stating your name as the author and Monash University as your institutional affiliation.
+
+2. A written statement from the conference confirming that your abstract has been accepted for presentation.
+
+3. An itinerary of the research/fieldwork that will be undertaking and any correspondence exchanged between you and a third party (it can be any registrations, invitations or email confirmations).
+
+4. Travel insurance document - http://intranet.monash.edu.au/finance/assets/attachments/student-ecard.pdf
+
+
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

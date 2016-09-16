@@ -1,0 +1,14 @@
+Feedback has been added to CRM
+
+Ref: {!Feedback__c.Name}
+
+Created By: {!Feedback__c.CreatedBy}
+
+Category: {!Feedback__c.Category__c}
+
+Priority: {!Feedback__c.Priority__c}
+
+Detail Link: {!Feedback__c.Link}
+
+Notes: 
+{!Feedback__c.Notes__c}

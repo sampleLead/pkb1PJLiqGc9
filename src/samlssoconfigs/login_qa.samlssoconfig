@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>http://login-qa.monash.edu/adfs/services/trust</issuer>
+    <loginUrl>https://login-qa.monash.edu/adfs/ls/</loginUrl>
+    <logoutUrl>https://my.monash.edu.au</logoutUrl>
+    <name>login-qa</name>
+    <oauthTokenEndpoint>https://unicrm--Copado.cs31.my.salesforce.com/services/oauth2/token?so=00Dp00000008t1p</oauthTokenEndpoint>
+    <redirectBinding>false</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <salesforceLoginUrl>https://unicrm--Copado.cs31.my.salesforce.com?so=00Dp00000008t1p</salesforceLoginUrl>
+    <samlEntityId>https://unicrm.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIC4jCCAcqgAwIBAgIQH4ycj25cYbZDTHC5tOut2jANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJBREZTIFNpZ25pbmcgLSBsb2dpbi1xYS5tb25hc2guZWR1MB4XDTE1MTAxMTAzMzI1N1oXDTE4MTAxMDAzMzI1N1owLTErMCkGA1UEAxMiQURGUyBTaWduaW5nIC0gbG9naW4tcWEubW9uYXNoLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJFj156fm96VEOHRvCUunYPHkOU1HBuRYxmAD2KIRAvBy9S7paI4stKOHwzW4MC0BbNneSRkAXSszVwAvJhBYZvsDrwtM1IEEEn85thGuyK37WzKd/MzO3dJdDsjB1RgtU61bw3rcjK8Pm0vsYCIXRol5/e5DeYfNQXbsixwxvhOazYQcGk7K4ICvv303ghjhfoXjX3RkE+dNlGn5e3sPagJIM6W5Ce1MRwxgzF18wB0V+XotYIKvQmDTbQWi/Rr6Kuzg6qNKCSxW5CNeIHOQZU0X29eN835JMX283DJ18Q0lgkCunlBTAJaqJwyy2N0ylfuTrvfIUtdHr5zyS/1YAUCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAd1ZqY4UTYizUaWkhAA4aHDI+5EyZrMU1bRB2wT3WF945OmmHX2haXOu48h3+oP6G8B3zbkmrBWD5jfCqcITQxAhbalp5bRPi58I8gLr7/w/yHRP24tFXlYF/2L2MUiuAyTYj+sgLa7ESr9uO5iOT/oUOK+/4S/e5iBUxhXUYhijC37qTTqt7l/dNabOu1c5drjVfCHQ+1bv/wzSAGyMmmY3YJxfZC2k6/N+homNg1eQeQ79oRRlZxec80yNYyA0/tm/Pp0HunlPJv+BdGExntoNkEGL0SPi+5G/8IklRuOo86Lvqd7tyrjbwPgH2tZMDp+4CGxBrNWVZ+Va2sj3qmg==</validationCert>
+</SamlSsoConfig>

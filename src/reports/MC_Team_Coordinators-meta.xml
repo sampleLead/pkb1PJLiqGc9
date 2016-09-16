@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>christine.paduano@monash.edu.v2</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>irene.catis@monash.edu.v2</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>nicole.smith@monash.edu.v2</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>peter.thomas@monash.edu.v2</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>trent.davidson@monash.edu.v2</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <name>MC Team Coordinators</name>
+</ReportFolder>

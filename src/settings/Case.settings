@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseFeedItemSettings>
+        <characterLimit>400</characterLimit>
+        <collapseThread>true</collapseThread>
+        <displayFormat>Default</displayFormat>
+        <feedItemType>EmailMessageEvent</feedItemType>
+    </caseFeedItemSettings>
+    <closeCaseThroughStatusChange>true</closeCaseThroughStatusChange>
+    <defaultCaseOwner>mahesh@monash.edu.v2</defaultCaseOwner>
+    <defaultCaseOwnerType>User</defaultCaseOwnerType>
+    <defaultCaseUser>mahesh@monash.edu.v2</defaultCaseUser>
+    <emailToCase>
+        <enableEmailToCase>true</enableEmailToCase>
+        <enableHtmlEmail>true</enableHtmlEmail>
+        <enableOnDemandEmailToCase>true</enableOnDemandEmailToCase>
+        <enableThreadIDInBody>true</enableThreadIDInBody>
+        <enableThreadIDInSubject>false</enableThreadIDInSubject>
+        <notifyOwnerOnNewCaseEmail>false</notifyOwnerOnNewCaseEmail>
+        <overEmailLimitAction>Bounce</overEmailLimitAction>
+        <preQuoteSignature>false</preQuoteSignature>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - Airport Pickup</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>airportpickup@monash.edu</emailAddress>
+            <routingName>Airport Pickup Mailbox</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email MGE mge-ecr</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>ecr@monash.edu</emailAddress>
+            <routingName>MGE Early Career Researchers</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email MGE graduate-education</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>graduate-education@monash.edu</emailAddress>
+            <routingName>MGE graduate-education@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email MGE grams-enquiries</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>grams-enquiries@monash.edu</emailAddress>
+            <routingName>MGE grams-enquiries@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email MGE mge-apply</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mge-apply@monash.edu</emailAddress>
+            <routingName>MGE mge-apply@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email MGE mge-bookings</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mge-bookings@monash.edu</emailAddress>
+            <routingName>MGE mge-bookings@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email MGE mge-candidature</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mge-candidature@monash.edu</emailAddress>
+            <routingName>MGE mge-candidature@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email MGE mge-development</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mge-development@monash.edu</emailAddress>
+            <routingName>MGE mge-development@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email MGE mge-scholarships</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mge-scholarships@monash.edu</emailAddress>
+            <routingName>MGE mge-scholarships@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email MGE mge-student-experience</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mge-student-experience@monash.edu</emailAddress>
+            <routingName>MGE mge-student-experience@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email MGE mge-supervisor-accreditation</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mge-supervisor-accreditation@monash.edu</emailAddress>
+            <routingName>MGE mge-supervisor-accreditation@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email MGE mge-thesisexams</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mge-thesisexams@monash.edu</emailAddress>
+            <routingName>MGE mge-thesisexams@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - System</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>future@monash.edu</emailAddress>
+            <routingName>Monash University</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - sr-socialenquiry-l</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>sr-socialenquiry-l@monash.edu</emailAddress>
+            <routingName>sr-socialenquiry-l@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - study</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>study@monash.edu</emailAddress>
+            <routingName>study@monash.edu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Completed</taskStatus>
+        </routingAddresses>
+        <unauthorizedSenderAction>Discard</unauthorizedSenderAction>
+    </emailToCase>
+    <enableCaseFeed>true</enableCaseFeed>
+    <enableDraftEmails>true</enableDraftEmails>
+    <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
+    <enableEmailActionDefaultsHandler>false</enableEmailActionDefaultsHandler>
+    <enableSuggestedArticlesApplication>true</enableSuggestedArticlesApplication>
+    <enableSuggestedArticlesCustomerPortal>true</enableSuggestedArticlesCustomerPortal>
+    <enableSuggestedArticlesPartnerPortal>true</enableSuggestedArticlesPartnerPortal>
+    <enableSuggestedSolutions>false</enableSuggestedSolutions>
+    <keepRecordTypeOnAssignmentRule>true</keepRecordTypeOnAssignmentRule>
+    <notifyContactOnCaseComment>false</notifyContactOnCaseComment>
+    <notifyDefaultCaseOwner>false</notifyDefaultCaseOwner>
+    <notifyOwnerOnCaseComment>false</notifyOwnerOnCaseComment>
+    <notifyOwnerOnCaseOwnerChange>false</notifyOwnerOnCaseOwnerChange>
+    <showFewerCloseActions>true</showFewerCloseActions>
+    <useSystemEmailAddress>true</useSystemEmailAddress>
+    <webToCase>
+        <caseOrigin>Web</caseOrigin>
+        <enableWebToCase>true</enableWebToCase>
+    </webToCase>
+</CaseSettings>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Timeline for Extension</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Timeline for Extensions</name>
+    <style>freeForm</style>
+    <subject>Timetable for Extension</subject>
+    <textOnly>Dear,
+
+
+
+Graduate Education has received your application to extend your scholarship. Under section 11A: Extension to Scholarship you have provided reasons for you research delays.
+
+
+
+However, you also need to provide a timetable for submission of thesis.
+
+Please provide the timetable at your earliest convenience.
+
+
+
+
+
+----------------------------
+
+However, as part of the application the timetable for submission needs to outline an estimated timeline of when each section of your thesis will be completed. Your timetable can be submitted in the form of a table if that is easier.
+
+
+
+
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

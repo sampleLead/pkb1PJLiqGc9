@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Tasty Baguette order for Graduate Education</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Tasty Baguette order for Graduate Education</name>
+    <style>freeForm</style>
+    <subject>Tasty Baguette order for Graduate Education</subject>
+    <type>html</type>
+</EmailTemplate>

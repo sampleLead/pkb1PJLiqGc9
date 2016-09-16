@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Current student submitting an airport pickup request</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Not eligible</name>
+    <style>none</style>
+    <subject>Unable to help with airport pickup request</subject>
+    <textOnly>Dear {!Contact.First_Name_case_corrected__c}
+
+Thank you for your email.
+
+The airport pickup service is for new international students only.  As a current student we can no longer offer you this service.
+
+The following services offer a cost effective way to travel from the airport to Monash University.
+
+Airport Bus Dandenong
+SkyBus
+Silver Service Taxi
+
+
+Have a safe flight and we look forward to your return to Monash University!
+
+Regards
+
+{!User.FirstName} {!User.Lastname_Initial__c}
+Monash Connect Officer
+{!User.Department}
+{!User.CompanyName}
+Tel: +61 3 9902 6011
+CRICOS Provider 00008C
+
+___________________________________
+Date Received : {!Case.CreatedDate}
+Your Enquiry :
+{!Case.Description}
+
+
+
+System Reference. Please do not delete. {!Case.Thread_Id}
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement. You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_77563835</developerName>
+        <masterLabel>Enquiry Origin</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>ORIGIN</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Email</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email - Airport Pickup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email - System</sourceValue>
+            </sourceValues>
+            <value>Email</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Web</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>course enquiry webform</sourceValue>
+            </sourceValues>
+            <value>Web</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>CLOSED_DATE</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Case.Enquiry_Owner_Role__c</column>
+            <operator>contains</operator>
+            <value>Student Rec</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CLOSED</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Student_Type__c</column>
+            <operator>equals</operator>
+            <value>International</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.Enquiry_Origin_Category__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.Enquiry_Owner_Role__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Closed Intl Enquiries-all queues</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSED_DATEONLY</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

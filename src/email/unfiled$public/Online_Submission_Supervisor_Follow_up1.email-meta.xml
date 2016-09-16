@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Online Submission Supervisor Follow-up</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Online Submission Supervisor Follow-up</name>
+    <style>formalLetter</style>
+    <subject>Online Thesis Submission: {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Dear (insert supervisor&apos;s name)
+
+
+We are very pleased to see that {!Contract.Name} has initiated the online thesis submission.
+
+
+It has come to our attention that you are yet to complete the Supervisor Statement and nominate examiners. This delay may impact the student and we would not like him/her to be disadvantaged.
+
+
+So that we can manage the student’s expectations, please confirm by return of email:
+
+
+whether you support the student’s submission; an
+the reason for the delay in completing your section. (i.e. awaiting response from Examiner to confirm willingness to undertake examination)
+
+
+Your response will help us manage the expectations of the student.
+
+
+Yours sincerely,
+
+
+
+{!Case.OwnerFirstName} {!Case.OwnerLastName}</textOnly>
+    <type>html</type>
+</EmailTemplate>

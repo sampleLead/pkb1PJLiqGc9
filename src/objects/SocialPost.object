@@ -29,11 +29,19 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>MassApprovePosts</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>MassCreateCase</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>MassIgnore</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MassRejectPosts</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Monash University, thesis examination</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Overdue reports reminder 1</name>
+    <style>freeForm</style>
+    <subject>Monash University, Thesis Examination update</subject>
+    <textOnly>Dear (X),
+
+Thank you for your email.
+Your examination is progressing well. You may be aware we are unable to update you on the status of your examination results, or receipt of any specific examiner reports to date. Please be reassured that MIGR maintains contact with your examiners and reminders are issued on a regular basis. Once all reports have been proceed you will be notified as soon as possible. (due date)
+
+In extreme cases when the examination report(s) are significantly overdue, MIGR will contact your main supervisor to discuss.
+
+If you have registered to Graduate and are concerned you may not make the deadline, you can defer to the next Graduation ceremony. For detailed information, please contact Graduation www.monash.edu.au/graduations.
+
+Best wishes
+We have just received a copy of the signed Certification form for your thesis, so all we need now to process your
+degree completion is notification that your eThesis is in the repository  .
+
+Regards</textOnly>
+    <type>html</type>
+</EmailTemplate>

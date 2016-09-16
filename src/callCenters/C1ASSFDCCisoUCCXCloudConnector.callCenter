@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CallCenter xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <adapterUrl>https://NIS-LIC02-V02.AD.MONASH.EDU:8443/CloudConnectorUI_Connect/index.html</adapterUrl>
+    <customSettings>{&quot;reqTimeout&quot;:&quot;&quot;,&quot;reqStandbyUrl&quot;:&quot;&quot;,&quot;reqSoftphoneHeight&quot;:&quot;300&quot;,&quot;reqUseApi&quot;:&quot;true&quot;,&quot;reqSoftphoneWidth&quot;:&quot;200&quot;}</customSettings>
+    <displayName>C1AS - SFDC Cisco UCCX Cloud Connector</displayName>
+    <displayNameLabel>Display Name</displayNameLabel>
+    <internalNameLabel>InternalNameAAA</internalNameLabel>
+    <sections>
+        <items>
+            <label>CTI Adapter URL</label>
+            <name>reqAdapterUrl</name>
+            <value>https://NIS-LIC02-V02.AD.MONASH.EDU:8443/CloudConnectorUI_Connect/index.html</value>
+        </items>
+        <items>
+            <label>Use CTI API</label>
+            <name>reqUseApi</name>
+            <value>true</value>
+        </items>
+        <items>
+            <label>Softphone Height</label>
+            <name>reqSoftphoneHeight</name>
+            <value>300</value>
+        </items>
+        <items>
+            <label>Softphone Width</label>
+            <name>reqSoftphoneWidth</name>
+            <value>200</value>
+        </items>
+        <items>
+            <label>CTI Standby Adapter URL</label>
+            <name>reqStandbyUrl</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>TimeoutInMSecs</label>
+            <name>reqTimeout</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Primary Config URL</label>
+            <name>configurl1</name>
+            <value>http://NIS-LIC02-V02.AD.MONASH.EDU:8080/CloudConnectorServer_Connect/jsp/config.jsp</value>
+        </items>
+        <items>
+            <label>Standby Config URL</label>
+            <name>configurl2</name>
+            <value xsi:nil="true"/>
+        </items>
+        <label>General Information</label>
+        <name>reqGeneralInfo</name>
+    </sections>
+</CallCenter>

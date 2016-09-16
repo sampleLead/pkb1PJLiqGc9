@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Re-Admission Offer - International Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Re-Admission Offer - International Template</name>
+    <style>freeForm</style>
+    <subject>OFFER OF RE-ADMISSION TO MONASH – {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+
+
+I am sending you this email correspondence to assist in your re-admission to your degree at Monash University.
+
+
+Please find attached an electronic copy of your Letter of Candidature Offer for your postgraduate study.  Please note that we will not be sending any hard copies by post.
+
+
+Action Required:
+
+It is important that you read the agreement carefully before accepting an offer.
+
+
+In order for an electronic Confirmation of Enrolment (eCOE) to be made available to you, you will need to accept the offer by completing all sections of Part B of the agreement together with payment of fees or copy of sponsor letter (where applicable).
+
+
+You will need to return all pages of Part B of the International Student Course Agreement to Monash University by the offer due date. These documents should be sent by post, or email
+to: mge-candidature@monash.edu
+
+
+It is important that you take some time to carefully read the conditions on your offer and ensure that you understand and meet these requirements either at acceptance or at enrolment, as your enrolment will not be completed, until all conditions are met.
+
+
+Once you have accepted your offer, and require any further assistance or should you have any concerns or queries please send an email to: mge-candidature@monash.edu
+
+We are looking forward to you being part of the Monash research community again.
+
+
+Kind regards,
+
+{!User.FirstName}
+
+
+Graduate Research Services
+_____________________________________________
+Monash Graduate Education
+Chancellery Building D, 26 Sports Walk
+Monash University, VIC 3800, Australia
+Phone: +61 3 990 53009 | Fax: +61 3 990 55042
+Email: mge-candidature@monash.edu
+Website: monash.edu/graduate-research
+Campus Map: monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+
+We&apos;re listening….your feedback helps us improve
+
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

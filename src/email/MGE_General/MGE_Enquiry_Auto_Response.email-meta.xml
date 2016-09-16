@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template will be used for emails sent out at the time of case creation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>MGE Enquiry Auto Response</name>
+    <style>freeForm</style>
+    <subject>Monash Graduate Education REF: {!Case.CaseNumber}</subject>
+    <textOnly>Dear {!Case.SuppliedName},
+
+Thank you for your enquiry to Monash Graduate Education. Your reference no. is {!Case.CaseNumber}
+
+We will respond to your enquiry shortly.
+
+This is an automatic email response - please do not reply to this email.
+_______________________
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 990 53009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

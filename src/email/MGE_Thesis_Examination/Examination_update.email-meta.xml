@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Examination update</name>
+    <style>freeForm</style>
+    <subject>Examination update</subject>
+    <textOnly>Dear {!Case.Contact},
+
+Thank you for your email.
+
+Your examination is progressing well. Regretfully we are unable to update you on the status of your examination results, or receipt of any specific examiner reports to date due to examination rules. Please be reassured that Graduate
+
+Education maintains contact with your examiners and reminders are issued on a regular basis. Once all reports have been proceed you will be notified as soon as possible.
+
+In extreme cases when the examination report(s) are significantly overdue, Graduate Education will contact your main
+supervisor to discuss.
+
+If you have registered to Graduate and are concerned you may not make the deadline, you can defer to the next
+
+Graduation ceremony. For detailed information, please contact Graduations office.
+
+Best wishes
+
+Thank you
+_______________________
+
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 990 53009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

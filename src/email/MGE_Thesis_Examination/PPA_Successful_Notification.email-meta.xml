@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification of PPA</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>PPA Successful Notification</name>
+    <style>formalLetter</style>
+    <subject>Postgraduate Publications Award: {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+
+
+On behalf of Monash University, I am pleased to offer you a Postgraduate Publications Award. The award is designed to support graduate research students, whilst under examination, to disseminate their research findings to a wider public through publishing in professional journals or books.
+
+To be eligible for the award you must:
+
+
+Fulfil the thesis submission requirements, by ensuring your thesis is submitted for examination between 1 July – 30 September, 2016.
+Adhere to the conditions of award, outlined in the PPA Guidelines as per the website
+
+
+Acceptance
+
+To accept this award, please email mge-thesisexams@monash.edu within seven working days from the date of this email.
+
+
+
+Initiate payment
+
+To arrange payment of your Postgraduate Publication Award, you must provide the following:
+
+1. Confirmation email online thesis submission initiated
+(Note: Thesis submission date = Date online thesis submission approved)
+
+2. Complete the Scholarships Banking Details form; and
+
+3. Tax File Number Declaration form
+
+
+
+Once these criterion have been met, we will arrange payment of the award.
+
+
+
+The PPA is a taxable stipend of $6,630.00 which will be paid fortnightly over a maximum of 12 weeks period to assist you while preparing articles or a book for publication. The actual stipend will be paid on a pro-rata basis. No other benefits are payable. Please refer to PPA guidelines for full details.
+
+If you have concerns regarding access to Monash University facilities, you should discuss Monash affiliate access with your supervisor and academic unit.
+
+
+
+Upon completion of your PPA, you will be required to complete a Final report, which will assist with planning and promoting these types of awards for students in the future. The final report can be accessed here.
+
+
+
+On behalf of Monash Graduate Education, I congratulate you on being offered this award and wish you every success in the future. If you have any questions, please feel free to contact the team via: mge-thesisexams@monash.edu.
+
+
+
+Yours sincerely,
+
+
+
+The Examinations team
+Graduate Research Examinations Team
+​
+| Graduate Research Services
+_______________________
+
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 9905 3009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

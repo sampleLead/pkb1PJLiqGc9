@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Copyright Notice</name>
+    <style>freeForm</style>
+    <subject>Copyright Notice</subject>
+    <textOnly>CC: Supervisor
+
+
+Dear {!Case.Contact},
+
+
+Congratulations on your thesis submission. It has come to our attention that a copyright notice has not been included in either of your soft thermal bound or PDF thesis copies. As this is a requirement, could you kindly include a copyright notice in the preliminary pages of your PDF thesis and resend via reply email. Please refer to the template for details.
+
+
+Please note we cannot continue with the examination until this requirement has been met.
+
+
+For more information on thesis preliminary pages, please see visit the website:
+
+
+Thank you.
+
+_______________________
+
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 990 53009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

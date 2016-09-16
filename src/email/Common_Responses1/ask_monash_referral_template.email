@@ -1,0 +1,30 @@
+<messaging:emailTemplate subject="{!relatedTo.Contact.LastName}, {!relatedTo.Contact.FirstName} - Current Student - UniCRM" recipientType="User" relatedToType="Case">
+<messaging:plainTextEmailBody >
+
+Supplied customer enquiry detail: 
+
+Initial Case Ref: {!relatedTo.CaseNumber} 
+Date submitted: {!IF(NOT(ISBLANK(relatedTo.CreatedDate)),TEXT(DAY(DATEVALUE(relatedTo.CreatedDate)))&"."&TEXT(MONTH(DATEVALUE(relatedTo.CreatedDate)))&"."&TEXT(YEAR(DATEVALUE(relatedTo.CreatedDate))),"")} 
+Supplied Customer Name: {!relatedTo.SuppliedName} 
+Monash Email Address: {!relatedTo.Contact.Monash_Email_Address__c}
+Supplied Email Address: {!relatedTo.SuppliedEmail}
+Supplied Date of Birth: {!IF(NOT(ISBLANK(relatedTo.Supplied_Date_of_Birth__c)),TEXT(DAY(relatedTo.Supplied_Date_of_Birth__c))&"."&TEXT(MONTH(relatedTo.Supplied_Date_of_Birth__c))&"."&TEXT(YEAR(relatedTo.Supplied_Date_of_Birth__c)),"")} 
+
+
+Customer enquiry detail:
+ 
+Customer Name: {!relatedTo.Contact.Name} 
+Customer Email: {!relatedTo.Contact.Email} 
+Date of Birth: {!IF(NOT(ISBLANK(relatedTo.Contact.Birthdate)),TEXT(DAY(relatedTo.Contact.Birthdate))&"."&TEXT(MONTH(relatedTo.Contact.Birthdate))&"."&TEXT(YEAR(relatedTo.Contact.Birthdate)),"")} 
+Student ID: {!relatedTo.Contact.Person_ID__c}
+Course:  {!relatedTo.Course_Code__c}
+Customer question: 
+
+{!IF(CONTAINS(relatedTo.Origin,'Email'),'See details in thread below',relatedTo.Subject)} 
+
+{!relatedTo.Description}
+
+
+
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

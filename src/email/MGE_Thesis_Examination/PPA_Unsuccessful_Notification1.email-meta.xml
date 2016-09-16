@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Unsuccessful application</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>PPA Unsuccessful Notification</name>
+    <style>formalLetter</style>
+    <subject>Postgraduate Publications Award: {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+
+Thank you for lodging an application for the Postgraduate Publication Award.
+
+The Selection Committee was impressed by the standard of applications received this round and had difficulty in making its selection. Unfortunately I regret to advise that you were unsuccessful.
+
+May I take this opportunity to congratulate you on your thesis submission and wish you every success in your future endeavours.
+
+If you have any questions, please feel free to contact me via email: mge-thesisexams@monash.edu
+
+Yours sincerely,
+
+{!Case.OwnerFirstName} {!Case.OwnerLastName}
+
+Graduate Research Examinations Team | Graduate Research Services
+_______________________
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 9905 3009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>DO NOT USE - Examination outcomes</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MGE_Thesis_exams_letterhead</letterhead>
+    <name>Results - Pass Minor/Major</name>
+    <style>formalLetter</style>
+    <subject>PhD/Master Examination: {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Dear {!Contact.Gender__c} {!Contact.FirstName},
+
+
+The examination reports for your thesis titled: “Thesis Title”, have been received and are attached for your records.
+
+
+Sincere congratulations {!Contact.FirstName}, Graduate Education acknowledges the years of hard work you have undertaken.
+
+
+We are pleased to report that following the inclusion of the listed amendments; the award of degree has been recommended. The necessary steps are listed below.
+
+
+Step one: address the amendments
+
+
+A set of amendments to the report(s) must be prepared and approved by your primary supervisor/head of department. To address these, you should:
+
+
+1. Collect your thermal thesis copies from the Graduate Research Services office between
+
+9.00 am – 5.00 pm (or Research Office Malaysia or Research Office South Africa if
+
+applicable).
+
+2. Complete the recommended amendments and send the following to your supervisor/head of department (CC&apos;d in this email)
+
+a.  Summary of your corrections
+
+b.  The attached certification form
+
+c.  Final (amended) PDF thesis with Monash Preliminary pages (see template) to ensure appropriate copyright notice and declarations have been inserted correctly.
+
+3 A copy of your endorsed certification form email to mge-thesisexams@moansh.edu
+
+
+Step two: Submit your thesis for archival
+
+
+Pre-online submission
+
+Once your certification form has been endorsed, you are required to upload the following individual files onto the Monash University Research Repository for Archival at http://arrow.monash.edu.au.
+
+
+1.  PDF Thesis (final copy)
+
+2.  A copy of your endorsed certification form
+
+3.  A copy of your completed Author Agreement Form (To expedite this, we have attached a copy of the completed author agreement.)
+
+
+OR (Online submission)
+
+
+Once your certification form has been endorsed, you are required to upload a final copy of the PDF Thesis on to the Monash University Research Repository for Archival at http://arrow.monash.edu.au.
+
+
+Step three: Degree ratification
+
+
+Once we receive confirmation from the Library that your thesis has been successfully archived, your examination file will be presented for ratification.
+
+
+To expedite the ratification process, final hard-copy theses are no longer required. However, we are happy to ratify any hard-copy theses.  To find out how, and where the nearest location is, visit the website.
+
+
+Some departments/schools still require a final hard-copy thesis, please check with your department/school for their archival requirements.
+
+
+Due date
+
+
+The Committee has determined that four weeks from the date of this email is sufficient time to address the amendments. If you are experiencing any delays, you should notify mge-thesisexams@monash.edu.
+
+
+More information
+
+
+Graduations: http://www.monash.edu.au/graduations/
+WES: To keep your contact details updated, go to the Web Enrolment System WES.
+
+
+Once again, on behalf of Graduate Education, I would like to congratulate you on your achievement thus far.
+
+
+Kind regards,
+
+
+{!Case.OwnerFullName}</textOnly>
+    <type>html</type>
+</EmailTemplate>

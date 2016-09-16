@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Rounds_RO</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>share to group of same name</description>
+        <label>Rounds &gt; RO</label>
+        <sharedTo>
+            <group>ACCESS_Rounds_RO</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

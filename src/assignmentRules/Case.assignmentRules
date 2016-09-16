@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Default v16%2E09</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <assignedTo>MGE_Student_Experience</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Category_Level_1__c</field>
+                <operation>equals</operation>
+                <value>Student Experience</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Student_Experience</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE mge-student-experience</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Student_Experience</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE grams-enquiries</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Student_Experience</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE mge-development</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Directors_Office</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MGE_Cat_1__c</field>
+                <operation>equals</operation>
+                <value>Directors Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Directors_Office</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE graduate-education</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Directors_Office</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>MGE Enquiry</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>OFS_Schools_Engagement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>School Enquiry</value>
+            </criteriaItems>
+            <template>unfiled$public/Channel_Mgt_New_Enquiry_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Airport_Pickup_Enquiries</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Airport Pickup</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Monash_Connect_Enquiries</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.CaseNumber</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>default</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>MGE_Admissions</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web - Research Deferral Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>OFS_Enquiries</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - sr-socialenquiry-l</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>OFS_Enquiries</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web - Monash College</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Monash_Connect_Enquiries</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MGE_Cat_1__c</field>
+                <operation>equals</operation>
+                <value>Admissions</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Bookings</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>MGE Enquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE mge-bookings</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Admissions</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2 OR (3 AND 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web - Research Deferral Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE mge-apply</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web - Research Current Students</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Category_Level_1__c</field>
+                <operation>equals</operation>
+                <value>MGE Admissions</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Candidature_Operations</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR (2 AND 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE mge-candidature</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web - Research Current Students</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Category_Level_1__c</field>
+                <operation>equals</operation>
+                <value>Candidature</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Thesis_Examinations</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR (2 AND 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE mge-thesisexams</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web,Web - Research Current Students</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Category_Level_1__c</field>
+                <operation>equals</operation>
+                <value>Thesis exams</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Supervisor_Accreditation</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR (2 AND 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE mge-supervisor-accreditation,Email MGE mge-ecr</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web - Research Current Students</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Category_Level_1__c</field>
+                <operation>equals</operation>
+                <value>Supervisor Accreditation</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Scholarships</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR (2 AND 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE mge-scholarships</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web - Research Current Students</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Category_Level_1__c</field>
+                <operation>equals</operation>
+                <value>Scholarships</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Student_Experience</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR (2 AND 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE mge-development,Email MGE grams-enquiries,Email MGE mge-student-experience</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web - Research Current Students</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Category_Level_1__c</field>
+                <operation>equals</operation>
+                <value>Student Experience</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MGE_Directors_Office</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR (1 AND 3 AND 4) OR 1</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>MGE Enquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email MGE graduate-education</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web,Web - Research Current Students</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MGE_Cat_1__c</field>
+                <operation>equals</operation>
+                <value>Directors Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>OFS_Schools_Engagement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>School Enquiry</value>
+            </criteriaItems>
+            <template>unfiled$public/Channel_Mgt_New_Enquiry_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Airport_Pickup_Enquiries</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Airport Pickup</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Monash_Connect_Enquiries</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>General domestic enquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>course enquiry webform</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Monash_Connect_Enquiries</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.CaseNumber</field>
+                <operation>notEqual</operation>
+                <value>0</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this template to explain how to submit an international application for a UG or PG coursework program. Note remove information not relevant, for example, if prospect is not a current Yr12 studying VCE- delete the first sentence.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Monash_Connect_Letterhead</letterhead>
+    <name>Intl - How to Apply?</name>
+    <style>freeForm</style>
+    <subject>Thankyou for your enquiry to Monash University, ref #{!Case.CaseNumber}</subject>
+    <textOnly>Dear {!Contact.First_Name_case_corrected__c},
+
+
+
+Thank you for your interest in studying at Monash University, consistently ranked in the top one per cent of world universities (Times Higher Education World University Rankings 2015-2016).
+
+
+
+If you are an international student in Australia currently studying Year 12 VCE, International Baccalaureate (IB) or the NCEA in New Zealand you apply through VTAC.
+
+
+
+All other international students apply either directly to Monash University or through a Monash Registered Agent. It is advisable to apply as soon as possible as some courses have strict closing dates and you will also need to obtain a valid student visa.
+
+
+
+Apply online:
+
+First you need to create an online application account. You will get an account ID sent to your email address. Follow the link in your email to log in and start your online application.
+
+
+
+To upload your documents successfully, they need to be:
+
+
+in the correct format - .jpg, .pdf, .doc or .rtf
+smaller than 2.5MB each
+
+
+Note, our online application system runs best on Internet Explorer.
+
+
+
+Alternatively, you can apply by mail or email:
+
+To apply by mail, download an International Application Form (PDF) and post your completed application along with all supporting documents to:
+
+
+
+Central Admissions
+
+Monash Connect, Clayton Campus
+
+21 Chancellors Walk, Campus Centre
+
+Monash University,
+
+VIC  3800, Australia.
+
+
+
+To apply by email, send your completed application along with all supporting documents to MU.documents@monash.edu.
+
+
+
+
+For further details on how to apply visit www.study.monash/how-to-apply/international-student-applications.
+
+
+
+
+I hope you have found this information valuable. If there is any other way in which I can be of assistance, please contact me by replying to this email or calling me at 1800 MONASH (666 274).
+
+
+
+
+Kind regards
+
+
+
+
+{!User.FirstName} {!User.Lastname_Initial__c}
+
+Monash Connect Officer
+
+{!User.Department}
+
+{!User.CompanyName}
+
+Tel: 1800 MONASH (1800 666 274)
+
+
+CRICOS Provider 00008C
+
+
+
+
+___________________________________
+
+Date Received : {!Case.CreatedDate}
+
+Your Enquiry :
+
+{!Case.Description}
+
+
+
+
+
+
+System Reference. Please do not delete. {!Case.Thread_Id}
+
+
+
+
+
+
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement. You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>html</type>
+</EmailTemplate>

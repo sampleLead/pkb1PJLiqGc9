@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Contacts_Corporate_RW</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>share to group of same name</description>
+        <label>Contacts &gt; Corporate &gt; RW</label>
+        <sharedTo>
+            <group>ACCESS_Contacts_Corporate_RW</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Is_Corporate_Contact_Result__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Contacts_Non_Student_RO</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>share to public  group of same name</description>
+        <label>Contacts &gt; Non-Student &gt; RO</label>
+        <sharedTo>
+            <group>Contacts_Non_Student_RO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Not known to Monash systems</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Contacts_Non_Student_RW</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>share to public group of same name</description>
+        <label>Contacts &gt; Non-Student &gt; RW</label>
+        <sharedTo>
+            <group>Contacts_Non_Student_RW</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Not known to Monash systems</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Contacts_Student_RO</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>share to public group of same name</description>
+        <label>Contacts &gt; Student &gt; RO</label>
+        <sharedTo>
+            <group>Contacts_Student_RO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Known to Monash systems</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Contacts_Student_RW</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>share to public group of same name</description>
+        <label>Contacts &gt; Student &gt; RW</label>
+        <sharedTo>
+            <group>Contacts_Student_RW</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Known to Monash systems</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Corporate_Contact_RO</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>share to group of same name</description>
+        <label>Corporate Contact &gt; RO</label>
+        <sharedTo>
+            <group>ACCESS_Contacts_Corporate_RO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Is_Corporate_Contact_Result__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -4,6 +4,7 @@
     <fields>
         <fullName>Email_Address__c</fullName>
         <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
         <label>Email Address</label>
         <required>true</required>
         <type>Email</type>

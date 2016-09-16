@@ -1,0 +1,62 @@
+<messaging:emailTemplate subject="{!relatedTo.Contact.LastName}, {!relatedTo.Contact.FirstName} - Current Student - UniCRM" recipientType="User" relatedToType="Case">
+<messaging:plainTextEmailBody >
+
+Supplied customer enquiry detail: 
+
+Initial Case Ref: {!relatedTo.CaseNumber} 
+Enquiry Type: {!relatedTo.Origin}
+Date submitted: {!IF(NOT(ISBLANK(relatedTo.CreatedDate)),TEXT(DAY(DATEVALUE(relatedTo.CreatedDate)))&"."&TEXT(MONTH(DATEVALUE(relatedTo.CreatedDate)))&"."&TEXT(YEAR(DATEVALUE(relatedTo.CreatedDate))),"")} 
+Supplied Customer Name: {!relatedTo.SuppliedName} 
+Monash Email Address: {!relatedTo.Contact.Monash_Email_Address__c}
+Supplied Email Address: {!relatedTo.SuppliedEmail}
+Supplied Date of Birth: {!IF(NOT(ISBLANK(relatedTo.Supplied_Date_of_Birth__c)),TEXT(DAY(relatedTo.Supplied_Date_of_Birth__c))&"."&TEXT(MONTH(relatedTo.Supplied_Date_of_Birth__c))&"."&TEXT(YEAR(relatedTo.Supplied_Date_of_Birth__c)),"")} 
+
+Dear Staff, please use ‘Supplied Email Address’ as primary email; if blank or if enquiry was forwarded to future@monash.edu, please use Contact details below.”
+
+---------------------------------------------------------------------------------------------------------------
+
+Customer enquiry detail:
+Customer Name: {!relatedTo.Contact.Name} 
+First Name :  {!relatedTo.Contact.First_Name_case_corrected__c}
+Last Name : {!relatedTo.Contact.Last_Name_case_corrected__c}
+Customer Email: {!relatedTo.Contact.Email} 
+Date of Birth: {!IF(NOT(ISBLANK(relatedTo.Contact.Birthdate)),TEXT(DAY(relatedTo.Contact.Birthdate))&"."&TEXT(MONTH(relatedTo.Contact.Birthdate))&"."&TEXT(YEAR(relatedTo.Contact.Birthdate)),"")} 
+Student ID: {!relatedTo.Contact.Person_ID__c}
+Country of Residence: {!relatedTo.Contact.Country_of_Residence__c}
+City/Town: {!relatedTo.Contact.OtherCity}
+Nationality: {!relatedTo.Contact.Nationality__c}
+Telephone: {!relatedTo.Contact.Phone}
+Mobile: {!relatedTo.Contact.MobilePhone}
+
+Academic Achievements:
+Highest level of study: {!relatedTo.Highest_Level_of_Study__c}
+Name of Institution: {!relatedTo.Supplied_Name_of_Institution__c}
+ 
+Study at Monash:
+<apex:repeat var="study" value="{!relatedTo.Enquiry_Interests__r}">
+Course: {!study.Course__r.Name} - {!study.Course__r.Course_Description__c}
+</apex:repeat>
+Study Area: {!relatedTo.Supplied_Area_of_Interest__c}
+Level of Study: {!relatedTo.Level_of_Study__c}
+Commencement year: {!relatedTo.Commencement_Year__c}
+ 
+---------------------------------------------------------------------------------------------------------------
+
+Customer question:
+Initial Enquiry:
+{!IF(CONTAINS(relatedTo.Origin,'Email'),'See details in thread below',relatedTo.Subject)} 
+
+{!relatedTo.Description}
+
+---------------------------------------------------------------------------------------------------------------
+
+Tasks:
+<apex:repeat var="task" value="{!relatedTo.Tasks}">
+    Subject: {!task.Subject}
+    Description: {!task.Description}
+    Due Date: {!IF(NOT(ISBLANK(task.ActivityDate)),TEXT(DAY(task.ActivityDate))&"."&TEXT(MONTH(task.ActivityDate))&"."&TEXT(YEAR(task.ActivityDate)),"")} 
+    Status: {!task.Status}
+</apex:repeat>
+
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

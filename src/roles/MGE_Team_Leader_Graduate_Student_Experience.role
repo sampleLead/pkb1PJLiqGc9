@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Read</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>MGE Team Leader Graduate Student Experience</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>MGE_Senior_Manager_Graduate_Student_Experience</parentRole>
+</Role>

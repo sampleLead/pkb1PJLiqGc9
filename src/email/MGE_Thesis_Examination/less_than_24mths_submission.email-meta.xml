@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>less than 24mths submission</name>
+    <style>freeForm</style>
+    <subject>less than 24mths submission</subject>
+    <textOnly>PhD
+
+As we are in process of STUDENT NAME&apos;s (STUDENT ID) thesis submission we note she is submitting less then 24 months of her candidature, under our policy a minimum of 24 months of her candidature is require before she can submit her thesis. Since she is submitting less then 24 months of her candidature the Steering Committee require a support letter from you in support of her early submission. Once completed please email us the letter by reply to this email?
+
+
+
+Master&apos;s
+
+As we are in process of STUDENT NAME&apos;s (STUDENT ID) thesis submission we note she is submitting less then 12 months of her candidature, under our policy a minimum of 12 months of her candidature is require before she can submit her thesis. Since she is submitting less then 12 months of her candidature the Steering Committee require a support letter from you in support of her early submission. Once completed please email us the letter by reply to this email?
+_______________________
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 990 53009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

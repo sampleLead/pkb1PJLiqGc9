@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When an enquirer’s country of residence is known and they wish to apply to Monash, check the GTE country list, and for high-risk countries use this template</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Monash_Connect_Letterhead</letterhead>
+    <name>Intl - High-risk country for GTE</name>
+    <style>freeForm</style>
+    <subject>Thankyou for your enquiry to Monash University, ref #{!Case.CaseNumber}</subject>
+    <textOnly>Dear {!Contact.First_Name_case_corrected__c},
+
+
+
+Thank you for your interest in studying at Monash University, consistently ranked in the top one per cent of world universities (Times Higher Education World University Rankings 2015-2016).
+
+
+
+To assist with your Monash University application you must apply through an in-country registered Monash Agent or if unavailable an IDP office in a country/city closest to you.
+
+
+
+Registered Monash agents have expert knowledge of the University and our courses. They can help you with courses offered by Monash University, Monash College and the Monash University English Language Centre.
+
+
+
+Our registered Monash Agents will be able to assist you with preparing your application, certifying supporting documents, applying for an international student visa, accommodation and other services to commence your studies.
+
+
+
+To proceed with an application, you can locate a registered Monash Agent closest to you by visiting the Monash Agents database. You can refine your search by selecting country and/or state (city).
+
+
+
+Please note that some agents may charge a fee for additional services including out-of-pocket expenses. Ask the agent what these costs are before your appointment.
+
+
+Please contact me by replying to this email or calling me at 1800 MONASH (666 274).
+
+
+
+Kind regards
+
+
+
+
+{!User.FirstName} {!User.Lastname_Initial__c}
+
+Monash Connect Officer
+
+{!User.Department}
+
+{!User.CompanyName}
+
+Tel: 1800 MONASH (1800 666 274)
+
+
+CRICOS Provider 00008C
+
+
+
+
+___________________________________
+
+Date Received : {!Case.CreatedDate}
+
+Your Enquiry :
+
+{!Case.Description}
+
+
+
+
+
+
+System Reference. Please do not delete. {!Case.Thread_Id}
+
+
+
+
+
+
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement. You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>html</type>
+</EmailTemplate>

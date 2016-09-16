@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_74166519</developerName>
+        <masterLabel>Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Round__c.Activities$Status</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Completed</sourceValue>
+            </sourceValues>
+            <value>Complete</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>No Answer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Voicemail Message Left</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Other Answered (No Call Back Time)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Call Back Requested by Student/Other</sourceValue>
+            </sourceValues>
+            <value>Incomplete</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Invalid Phone Numbers</sourceValue>
+            </sourceValues>
+            <value>Invalid Number</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Not Started</sourceValue>
+            </sourceValues>
+            <value>Not Started</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarStacked</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Round__c.Activities$Owner</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>BucketField_74166519</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Huge</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Call Round Progress</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Round__c$Name</field>
+    </columns>
+    <columns>
+        <field>Round__c.Activities$Subject</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Round__c.Activities$Call_Attempt_Only__c</column>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Round__c$Name</column>
+            <operator>notEqual</operator>
+            <value>RND-05022</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_74166519</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Round__c.Activities$Call_Attempt__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Round__c$Cohort__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Round__c.Activities$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Call Round Progress v3</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>MonTRACK_Rounds_Activities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Round__c.Activities$LastModifiedDate</dateColumn>
+        <endDate>2016-08-25</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-08-05</startDate>
+    </timeFrameFilter>
+</Report>

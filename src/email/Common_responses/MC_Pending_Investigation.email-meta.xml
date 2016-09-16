@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response to tell customer you are looking into their enquiry</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MC Pending Investigation</name>
+    <style>none</style>
+    <subject>Thank you for contacting us - we are investigating your enquiry</subject>
+    <textOnly>Dear {!Contact.First_Name_case_corrected__c}
+
+Thank you for your enquiry.
+
+We are currently seeking more information to provide you with the most appropriate answer to your enquiry. We&apos;ll be in touch shortly.
+
+&gt;&gt;HIGHLIGHT THIS TEXT AND PASTE HERE&lt;&lt;
+
+If you have any further questions, please don’t hesitate to contact us.
+
+Regards
+
+{!User.FirstName} {!User.Lastname_Initial__c}
+Monash Connect Officer
+{!User.Department}
+{!User.CompanyName}
+Tel: 1800 MONASH (1800 666 274)
+CRICOS Provider 00008C
+
+___________________________________
+Date Received : {!Case.CreatedDate}
+Your Enquiry :
+{!Case.Description}
+
+
+
+System Reference. Please do not delete. {!Case.Thread_Id}
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement. You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>custom</type>
+</EmailTemplate>

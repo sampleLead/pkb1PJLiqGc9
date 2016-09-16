@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CASE_SUBJECT</field>
+    </columns>
+    <columns>
+        <field>Activity.User_Role__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Activity.User_Role__c</column>
+            <operator>contains</operator>
+            <value>Student Rec</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>TASK_TYPE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED_BY</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Closed Activity Report - This Month</name>
+    <params>
+        <name>closed</name>
+        <value>closed</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>units</name>
+        <value>m</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseActivity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

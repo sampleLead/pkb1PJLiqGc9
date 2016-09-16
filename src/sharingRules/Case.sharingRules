@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>ACCESS_Cases_All_Schools_Eng_RO</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>share tp public group of same name</description>
+        <label>ACCESS: Cases &gt; All Schools Eng &gt; RO</label>
+        <sharedTo>
+            <group>ACCESS_Cases_All_Schools_Eng_RO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>School Enquiry</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>ACCESS_Cases_All_Schools_Eng_RW</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>sharing to public group of same name</description>
+        <label>ACCESS: Cases &gt; All Schools Eng &gt; RW</label>
+        <sharedTo>
+            <group>ACCESS_Cases_All_Schools_Eng_RW</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>School Enquiry</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>ACCESS_Cases_All_Standard_RW</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>share to public group of same name</description>
+        <label>ACCESS: Cases &gt; All Standard &gt; RW</label>
+        <sharedTo>
+            <group>ACCESS_Cases_All_Standard_RW</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Standard Enquiry</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Access_Cases_All_Standard_RO</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>share all standard cases to RO public group</description>
+        <label>Access: Cases &gt; All Standard &gt; RO</label>
+        <sharedTo>
+            <group>ACCESS_Cases_All_Standard_RO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Standard Enquiry</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MGE_All_Enquiries_RW_Acess</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MGE All Enquiries RW Acess</label>
+        <sharedTo>
+            <group>MGE_All_Staff</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>MGE Enquiry</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SR_All_Enquiries_RW_Acess</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SR All Enquiries RW Acess</label>
+        <sharedTo>
+            <roleAndSubordinates>OFS_Leader</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SR Enquiry</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

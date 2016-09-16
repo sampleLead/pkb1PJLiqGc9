@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Deferral Request</name>
+    <style>freeForm</style>
+    <subject>Deferral request for processing - {!Case.Supplied_First_Name__c} {!Case.Supplied_Last_Name__c} (ID: {!Case.Supplied_Person_ID__c})</subject>
+    <textOnly>Dear Colleagues,
+
+We have received a deferral request. Please see below for more information.
+
+We are seeking your advice as to whether or not this is acceptable to the department/faculty/supervisor(s) and that resources and facilities will still be available at that time.
+
+If your answer is affirmative, we will note the new commencement date in our system and advise the student via an amended offer letter.
+
+It would be greatly appreciated if you could please reply to all when responding with your approval.
+
+Thank you for your assistance and we look forward to hearing from you.
+
+Kind Regards,
+
+{!Case.OwnerFirstName}
+
+
+
+Admissions | Graduate Research Services
+
+Monash Graduate Education
+Monash University
+Chancellery Building D
+26 Sports Walk, Clayton Campus
+Wellington Road, VIC 3800, Australia
+
+
+
+T: +61 3 9905 3009
+
+E: mge-apply@monash.edu
+
+W: monash.edu/graduate-research
+
+
+
+CRICOS Provider 00008C/01857J
+
+_________________________________________________________
+Follow us on Facebook www.facebook.com/MonashGraduateEducation
+
+We&apos;re listening….your feedback helps us improve.
+
+
+
+This e-mail and any attachment is confidential and for the use of the intended recipient(s) only. If you are not the intended recipient, any use, interference with, disclosure or copying of this material is unauthorised and prohibited. The responsibility for virus detection is the recipient&apos;s and we do not accept any responsibility for any loss or damage arising in any way from the use of this email or any attachments.</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Discontinued in Good Standing</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Discontinued in Good Standing</name>
+    <style>freeForm</style>
+    <subject>Discontinued in Good Standing - {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Student ID: {!Contact.Person_ID__c}
+
+
+
+Dear {!Contact.FirstName},
+
+
+
+
+It is with regret that I inform you that you have been discontinued in good standing as  at XXX due to your expired enrolment, in accordance with Section 8 of the Graduate Research Progress Management Procedures.
+
+
+
+For your information should you wish to apply to be re-admitted please refer to the Graduate Research Re-admission procedures for details.
+
+
+A student who has been discontinued in good standing is no longer a student of the University, but may apply to be re-admitted into the research degree in which they were previously enrolled at Monash, as long as the application is submitted within 4 years of the date of discontinue in good standing, in accordance with regulation 42 of the Monash University (Academic Board) Regulations.
+
+
+
+Please note that your application to be re-admitted must be submitted within 4 years of the date of ‘discontinued in good standing’ and that the Graduate Research Committee will only approve re-admission where suitable facilities and effective supervision are available to support the research project, and where the Committee is satisfied that the student is now in a position to pursue the research project to its completion.
+
+
+
+If you are an international student studying in Australia on a student visa, you are strongly encouraged to contact Monash Connect for advice on this matter by phone on +61 3 9902 011 or www.monash.edu/connect.
+
+
+
+The Monash Postgraduate Association on your campus can provide you with advice and assistance. For contact details of the MPA on your campus, please refer to http://mpa.monash.edu.au/
+
+
+
+I would also encourage you to consider seeking additional support from the following services:
+
+
+
+• Beyondblue: 1300 22 46 36
+
+• Lifeline: 1311 14
+
+• EAP: 1800 350 359 (After hours)
+
+• Your local GP/Health Service Provider
+
+• University Health Services 99053020 (Office hours)
+
+
+
+
+
+On behalf of the Academic Director (Graduate Research), we would like to take this opportunity to wish you all the very best in your future endeavours.
+
+
+
+Sincerely,
+
+
+
+Monash Graduate Education</textOnly>
+    <type>html</type>
+</EmailTemplate>

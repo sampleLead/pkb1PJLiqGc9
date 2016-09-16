@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Scholarship</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Scholarships</value>
+    </caseValues>
+    <fields>
+        <label><!-- Alias --></label>
+        <name>Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Issued --></label>
+        <name>Number_Issued__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scholarship Name --></label>
+        <name>Scholarship_Name__c</name>
+        <picklistValues>
+            <masterLabel>Colin and Eleanor Bourke Indigenous Postgraduate Scholarship</masterLabel>
+            <translation><!-- Colin and Eleanor Bourke Indigenous Postgraduate Scholarship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commonwealth Accommodation Scholarship (CAS)</masterLabel>
+            <translation><!-- Commonwealth Accommodation Scholarship (CAS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commonwealth Education Costs Scholarship (CECS)</masterLabel>
+            <translation><!-- Commonwealth Education Costs Scholarship (CECS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commonwealth Indigenous Access Scholarship</masterLabel>
+            <translation><!-- Commonwealth Indigenous Access Scholarship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty of IT Indigenous Non-Award Pathway Bursary</masterLabel>
+            <translation><!-- Faculty of IT Indigenous Non-Award Pathway Bursary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty of IT Indigenous Study Support Bursary</masterLabel>
+            <translation><!-- Faculty of IT Indigenous Study Support Bursary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Technology Indigenous Achievement Scholarship</masterLabel>
+            <translation><!-- Information Technology Indigenous Achievement Scholarship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Technology Indigenous Merit Scholarship</masterLabel>
+            <translation><!-- Information Technology Indigenous Merit Scholarship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MRS Residential Indigenous Leadership Pathway Scholarship</masterLabel>
+            <translation><!-- MRS Residential Indigenous Leadership Pathway Scholarship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash Indigenous Pathway Bursary</masterLabel>
+            <translation><!-- Monash Indigenous Pathway Bursary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash Indigenous Scholarship for Achievement and Equity</masterLabel>
+            <translation><!-- Monash Indigenous Scholarship for Achievement and Equity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash Scholarship for Exceptional Achievement</masterLabel>
+            <translation><!-- Monash Scholarship for Exceptional Achievement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash Scholarship for Outstanding Achievement</masterLabel>
+            <translation><!-- Monash Scholarship for Outstanding Achievement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sir John Monash Scholarship</masterLabel>
+            <translation><!-- Sir John Monash Scholarship --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- School --></label>
+        <name>School__c</name>
+        <relationshipLabel><!-- Scholarships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Year --></label>
+        <name>Year__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

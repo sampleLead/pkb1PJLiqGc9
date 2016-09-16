@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>To be used with graduate research supervisor accreditation certificate at level 3</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MGE_GRSA</letterhead>
+    <name>Graduate Research Supervisor Accreditation at Level 3</name>
+    <style>freeForm</style>
+    <subject>{!Contact.LastName}, {!Contact.FirstName} Graduate Research Supervisor Accreditation at Level 3</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+
+
+Graduate Research Supervisor Accreditation at Level 3
+
+
+
+It is with great pleasure we confirm your Graduate Research Supervisor Accreditation at Level 3. Your accreditation certificate is attached for your records.
+
+
+
+Ongoing Professional Development
+
+
+There are a number of opportunities for experienced research supervisors to further develop and hone their supervisory skills. These professional development master classes and good practice workshops are facilitated by experienced research supervisors and relevant experts. They are available all year round.
+
+
+
+Please visit the Research Supervision Accreditation Program Booking System to view the current list of offerings and to make a booking.
+
+
+
+Resources for Research Supervisors
+
+There are numerous resources for research supervisors wich you are welcome to access at any time.
+
+Code of practice for supervision of doctoral and research master’s candidates, which all research supervisors should remain familiar with,
+Supervision resource page,
+Monash e-Research,
+Data Storage and Management, and
+Monash Supervisor Accreditation FAQ&apos;s.
+
+Once again we&apos;d like to congratulate you on your accreditation. If you would like to learn more about Monash graduate research supervisor accreditation and professional development, you can visit the website or contact us at MIGR-Membership@monash.edu.
+
+
+
+
+Graduate Student Experience |Monash University Graduate Education
+
+Chancellery Building D
+
+26 Sports Walk,
+
+Monash University, VIC 3800, Australia
+
+Phone: +61 9905 3050</textOnly>
+    <type>html</type>
+</EmailTemplate>

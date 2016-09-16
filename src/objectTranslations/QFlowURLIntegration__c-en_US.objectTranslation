@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>QFlowURLIntegration</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>QFlowURLIntegration</value>
+    </caseValues>
+    <fields>
+        <label><!-- AnonymousId --></label>
+        <name>AnonymousId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hostname --></label>
+        <name>Hostname__c</name>
+    </fields>
+    <fields>
+        <label><!-- Visualforce_hostname --></label>
+        <name>Visualforce_hostname__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

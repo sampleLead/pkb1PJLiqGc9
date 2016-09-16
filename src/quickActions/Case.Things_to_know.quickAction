@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>used to surface person notes, past enq and interests</description>
+    <height>400</height>
+    <label>Things to know</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>Console_tabbedLists_v2</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>link to QA version of QFlow only</description>
+    <frameHeight>600</frameHeight>
+    <hasSidebar>true</hasSidebar>
+    <label>Q-Flow</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom68: Globe</motif>
+    <url>https://www.q-flow.monash.edu/QFlow/SignIn.aspx</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

@@ -337,6 +337,16 @@
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>Copado_External_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Copado External Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Copy_from_Enquiry__c</fullName>
         <defaultValue>false</defaultValue>
         <description>if checked, at creation trigger will copy fields from case over to contact</description>

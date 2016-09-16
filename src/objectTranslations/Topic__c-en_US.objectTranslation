@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transition Topic</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transition Topics</value>
+    </caseValues>
+    <fields>
+        <label><!-- Alias --></label>
+        <name>Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+        <picklistValues>
+            <masterLabel>Academic - Attendance (lectures, tutorials, labs etc.)</masterLabel>
+            <translation><!-- Academic - Attendance (lectures, tutorials, labs etc.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - English Proficiency spoken or written</masterLabel>
+            <translation><!-- Academic - English Proficiency spoken or written --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - Essay, report and assignment writing</masterLabel>
+            <translation><!-- Academic - Essay, report and assignment writing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - Exam anxiety</masterLabel>
+            <translation><!-- Academic - Exam anxiety --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - Exam preparation/revision</masterLabel>
+            <translation><!-- Academic - Exam preparation/revision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - Exam timetable</masterLabel>
+            <translation><!-- Academic - Exam timetable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - Exam venue/transport</masterLabel>
+            <translation><!-- Academic - Exam venue/transport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - Lecturer/tutor issues</masterLabel>
+            <translation><!-- Academic - Lecturer/tutor issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - Referencing and citing</masterLabel>
+            <translation><!-- Academic - Referencing and citing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - Results</masterLabel>
+            <translation><!-- Academic - Results --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - Special consideration</masterLabel>
+            <translation><!-- Academic - Special consideration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - Timetable issues</masterLabel>
+            <translation><!-- Academic - Timetable issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic - Workload/time management</masterLabel>
+            <translation><!-- Academic - Workload/time management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administration - Encumbrance</masterLabel>
+            <translation><!-- Administration - Encumbrance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administration - Enrolment queries/difficulties</masterLabel>
+            <translation><!-- Administration - Enrolment queries/difficulties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administration - Fees</masterLabel>
+            <translation><!-- Administration - Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administration - Financial issues/difficulties</masterLabel>
+            <translation><!-- Administration - Financial issues/difficulties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administration - Moodle</masterLabel>
+            <translation><!-- Administration - Moodle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administration - Orientation will miss/has missed</masterLabel>
+            <translation><!-- Administration - Orientation will miss/has missed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administration - Parking on campus</masterLabel>
+            <translation><!-- Administration - Parking on campus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administration - Parking permits</masterLabel>
+            <translation><!-- Administration - Parking permits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administration - Scholarships/bursaries</masterLabel>
+            <translation><!-- Administration - Scholarships/bursaries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administration - Semester dates</masterLabel>
+            <translation><!-- Administration - Semester dates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administratoin - IT issues</masterLabel>
+            <translation><!-- Administratoin - IT issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Career</masterLabel>
+            <translation><!-- Course - Career --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Change load</masterLabel>
+            <translation><!-- Course - Change load --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Credit/RPL</masterLabel>
+            <translation><!-- Course - Credit/RPL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Exchange/Abroad</masterLabel>
+            <translation><!-- Course - Exchange/Abroad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Intermission</masterLabel>
+            <translation><!-- Course - Intermission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Materials</masterLabel>
+            <translation><!-- Course - Materials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Placement/internship</masterLabel>
+            <translation><!-- Course - Placement/internship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Postgraduate supervision</masterLabel>
+            <translation><!-- Course - Postgraduate supervision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Progression</masterLabel>
+            <translation><!-- Course - Progression --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Research projects</masterLabel>
+            <translation><!-- Course - Research projects --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Transfer</masterLabel>
+            <translation><!-- Course - Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Unit selection</masterLabel>
+            <translation><!-- Course - Unit selection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Unit wishes to withdraw</masterLabel>
+            <translation><!-- Course - Unit wishes to withdraw --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course - Wishes to leave uni</masterLabel>
+            <translation><!-- Course - Wishes to leave uni --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Course – Choice/preference</masterLabel>
+            <translation><!-- Course – Choice/preference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No topic discussed</masterLabel>
+            <translation><!-- No topic discussed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not enroling next semester</masterLabel>
+            <translation><!-- Not enroling next semester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offer - Awaiting further offer</masterLabel>
+            <translation><!-- Offer - Awaiting further offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offer - Deferment</masterLabel>
+            <translation><!-- Offer - Deferment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offer - Has not received</masterLabel>
+            <translation><!-- Offer - Has not received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offer - Rejecting</masterLabel>
+            <translation><!-- Offer - Rejecting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peronsal - Health/disability concerns</masterLabel>
+            <translation><!-- Peronsal - Health/disability concerns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal - Accommodation</masterLabel>
+            <translation><!-- Personal - Accommodation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal - Family commitments</masterLabel>
+            <translation><!-- Personal - Family commitments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal - Homesick</masterLabel>
+            <translation><!-- Personal - Homesick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal - Isolation/friends/getting involved</masterLabel>
+            <translation><!-- Personal - Isolation/friends/getting involved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal - Job seeking</masterLabel>
+            <translation><!-- Personal - Job seeking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal - Socialising too much</masterLabel>
+            <translation><!-- Personal - Socialising too much --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal - Transport</masterLabel>
+            <translation><!-- Personal - Transport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal - Volunteering/leadership</masterLabel>
+            <translation><!-- Personal - Volunteering/leadership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal - Work commitments</masterLabel>
+            <translation><!-- Personal - Work commitments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason - Family commitments</masterLabel>
+            <translation><!-- Reason - Family commitments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason - Financial reasons</masterLabel>
+            <translation><!-- Reason - Financial reasons --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason - Health</masterLabel>
+            <translation><!-- Reason - Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason - Not ready for university study</masterLabel>
+            <translation><!-- Reason - Not ready for university study --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason - Plan to study different course at Monash</masterLabel>
+            <translation><!-- Reason - Plan to study different course at Monash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason - Plan to study similar course at different institution</masterLabel>
+            <translation><!-- Reason - Plan to study similar course at different institution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason - Relocation</masterLabel>
+            <translation><!-- Reason - Relocation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason - Unsure about course/career choice</masterLabel>
+            <translation><!-- Reason - Unsure about course/career choice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason - Wish to extend deferment for additional 12 months (reason – travel, work, financial, relocation)</masterLabel>
+            <translation><!-- Reason - Wish to extend deferment for additional 12 months (reason – travel, work, financial, relocation) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason - Working (F/T or P/T)</masterLabel>
+            <translation><!-- Reason - Working (F/T or P/T) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason -Plan to study different course at different institution</masterLabel>
+            <translation><!-- Reason -Plan to study different course at different institution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason -Travel</masterLabel>
+            <translation><!-- Reason -Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsure if they will enrol next semester</masterLabel>
+            <translation><!-- Unsure if they will enrol next semester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes they are enroling next semester</masterLabel>
+            <translation><!-- Yes they are enroling next semester --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Round --></label>
+        <name>Round__c</name>
+        <relationshipLabel><!-- Transition Topics --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SSA Identified --></label>
+        <name>SSA_Identified__c</name>
+        <relationshipLabel><!-- Transition Topics --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Student --></label>
+        <name>Student__c</name>
+        <relationshipLabel><!-- Transition Topics --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Montrack</masterLabel>
+            <translation><!-- Montrack --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Applicable</masterLabel>
+            <translation><!-- Not Applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Campaign (Not Montrack) 1</masterLabel>
+            <translation><!-- Other Campaign (Not Montrack) 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Campaign (Not Montrack) 2</masterLabel>
+            <translation><!-- Other Campaign (Not Montrack) 2 --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

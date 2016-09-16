@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>TAX FILE DECLARATION</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>TAX FILE DECLARATION</name>
+    <style>freeForm</style>
+    <subject>TAX FILE DECLARATION</subject>
+    <textOnly>Dear
+
+
+
+As you are continuing to study part-time your scholarship is taxable. Therefore you are required to complete a tax file declaration form. Please find attached a scanned copy of the tax file declaration form for you to complete and send back to this email address at your earliest convenience. The next pay cut off to process your scholarship is &lt;&lt; DATE&gt;&gt;.
+
+
+I will also be sending a hardcopy of this form to the address we have on our record:
+&lt;&lt;STUDENT POSTAL ADDRESSADDRESS&gt;&gt;
+
+Please complete the original TFN form exactly the same as the scanned copy attached including the date of the signature, and post it back to us at your earliest convenience:
+
+Graduate Education
+Chancellory Building 3D
+26 Sports Walk
+Clayton 3800
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

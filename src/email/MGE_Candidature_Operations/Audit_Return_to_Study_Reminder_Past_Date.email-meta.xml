@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Audit - Return to Study Reminder (Past Date)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Audit - Return to Study Reminder (Past Date)</name>
+    <style>freeForm</style>
+    <subject>Audit - Return to Study Reminder (Past Date) - {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Dear Student,
+
+
+An audit of student records revealed that to date your Return to Study form for your last approved [variation type] was not received when you resumed studies.
+
+
+You can now complete your return form online.  Please proceed to the online forms page at https://gradresearchforms.apps.monash.edu/. And select ‘Return Form’.
+
+
+Can you please complete this as a matter of urgency as it is important that your student record is adjusted to accurately reflect your status.
+
+
+Should you have already submitted the ‘Return Form’, please let us know.
+
+
+If you have any concerns or wish to discuss this matter further, you are most welcome to contact us on (03) 9905 3050.
+
+Kind regards,
+
+{!User.FirstName}
+
+
+Graduate Research Services
+_____________________________________________
+Monash Graduate Education
+Chancellery Building D, 26 Sports Walk
+Monash University, VIC 3800, Australia
+Phone: +61 3 990 53009 | Fax: +61 3 990 55042
+Email: mge-candidature@monash.edu
+Website: monash.edu/graduate-research
+Campus Map: monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+
+We&apos;re listening….your feedback helps us improve
+
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -4,6 +4,7 @@
     <fields>
         <fullName>Key__c</fullName>
         <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
         <label>Key</label>
         <length>100</length>
         <required>false</required>

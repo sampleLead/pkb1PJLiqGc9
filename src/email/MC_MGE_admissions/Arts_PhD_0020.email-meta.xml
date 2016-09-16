@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Arts PhD 0020</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Monash_Connect_Letterhead</letterhead>
+    <name>Arts PhD 0020</name>
+    <style>freeForm</style>
+    <subject>Thank you for your enquiry to Monash University, ref #{!Case.CaseNumber}</subject>
+    <textOnly>Dear {!Contact.First_Name_case_corrected__c},
+
+
+
+Thank you for your interest in the Monash Doctoral Program with the Faculty of Arts, Monash University.
+
+
+
+It’s fantastic to hear you that are considering undertaking your research with us.
+
+
+
+&lt;&lt;Answer query&gt;&gt;
+
+
+
+I have also included general information about this course below, including entry requirements, fees, and useful links for further information.
+
+
+
+Course information
+
+We provide programs in the following areas:
+
+
+Film, Media and Communications
+Historical Studies
+Linguistics and Applied Linguistics
+Literary and Cultural Studies
+Philosophy
+Social and Political Sciences
+Theatre, Performances and Music Program
+
+
+
+
+Along with the research component, you will also complete a series of professional development activities or coursework units relevant to your chosen research focus.
+
+
+
+Entry requirements
+
+Admission criteria for the Doctor of Philosophy requires one of the following minimum qualifications in a relevant discipline:
+
+
+a four-year bachelor&apos;s degree which normally includes a research component in the fourth year, leading to honours 1 or 2A; or
+a coursework master&apos;s degree with a significant research component including at least 25% of one full-time equivalent year of work, including a thesis (Please note that it is normally expected that a grade of honours 2A has been obtained for the research thesis or project); or
+a qualification which the Graduate Research Committee has deemed equivalent.
+
+
+Please note that music, journalism and translation research areas have additional requirements (see above Admission criteria link for full details).
+
+
+
+Applicants must also meet the university English language requirements.
+
+
+
+How to apply
+
+The PhD application process involves eight steps, outlined on our useful How to apply web page.
+
+
+
+First you need to decide on a research discipline, then look through our Graduate Research Programs to see which program best fits your area of interest.
+
+
+
+Next, you will need to find a supervisor who agrees to direct you in your research degree. You can find a list of potential supervisors on the relevant Graduate Research Program webpage for your area of interest. When you email potential supervisors, please include a brief outline of your academic interests or project and a resume.
+
+
+
+Once you have identified a supervisor, you will lodge an Expression of Interest Form by completing the provided form and emailing it to arts.research.degree@monash.edu.
+
+
+
+If approved, you will be sent an invitation to formally apply. Please allow four weeks after sending in your Expression of Interest Form for an outcome.
+
+
+
+Course fees
+
+Domestic: The Australian government covers the tuition fees for all domestic PhD students. You will be required to pay an annual Student Services and Amenities Fee (SSAF).
+
+
+
+International: Fees are subject to change annually. The international student fee for 2016 is $30,700 per full-time year.
+
+
+
+Scholarships opportunities are available, including Arts-specific graduate scholarships.
+
+
+
+Further information
+
+For more details about Faculty of Arts research, I encourage you to browse the Arts Research Graduate School website, plus the full list of Arts Research contacts.
+
+
+I hope you have found this information valuable. If there is any other way in which I can be of assistance, please contact me by replying to this email or calling me at 1800 MONASH (666 274).
+
+
+Kind regards
+
+
+
+{!User.FirstName} {!User.Lastname_Initial__c}
+
+Monash Connect Officer
+
+{!User.Department}
+
+{!User.CompanyName}
+
+Tel: 1800 MONASH (1800 666 274)
+
+
+CRICOS Provider 00008C
+
+
+
+
+___________________________________
+
+Date Received : {!Case.CreatedDate}
+
+Your Enquiry :
+
+{!Case.Description}
+
+
+
+
+
+
+System Reference. Please do not delete. {!Case.Thread_Id}
+
+
+
+
+
+
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement. You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>html</type>
+</EmailTemplate>

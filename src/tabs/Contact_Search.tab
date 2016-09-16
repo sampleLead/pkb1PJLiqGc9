@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>used to enable surfacing of the contact search panel into the service console, without requiring a &apos;no match&apos; condition from Q-Flow or CTI</description>
+    <label>Contact Search</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom15: People</motif>
+    <page>Console_ContactSearch</page>
+</CustomTab>

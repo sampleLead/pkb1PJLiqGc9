@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>SB Dispatch Confirmation</name>
+    <style>freeForm</style>
+    <subject>SB Dispatch Confirmation</subject>
+    <textOnly>Dear Professor {!Case.Contact},
+
+
+A thermal copy of the thesis entitled “XX” has been sent to you. Once you have received the thermal copy, can you kindly via email.
+
+
+Upon completion of the examination it would be greatly appreciated if you could return the thesis copy to our office.
+
+
+Yours sincerely,
+
+_______________________
+
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 990 53009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

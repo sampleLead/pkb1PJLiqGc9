@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Invalidated students</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Invalidated students</name>
+    <style>freeForm</style>
+    <subject>Invalidated students</subject>
+    <textOnly>Dear GRMF,
+
+The Student Finance Unit has provided the attached spreadsheet with details of students that have been invalidated. Their current load/s will be removed from Callista if payment is not received by 24 February 20XXX
+
+
+The students have been sent five (5) different sets of correspondence relating to their unpaid fees (such as emails, a Fee statement, Final notice, letter of encumbrance). It would appear they have made no attempts to pay and have not contacted Student Finance either.
+
+
+All students on the list have been individually informed in writing that they have been invalidated and that they must pay the reinstatement fine of $204.00 plus any outstanding fees in order to be reinstated for this semester. They have also been informed that they will be required to re-enrol for future semesters.
+
+
+Could you please follow up with these students as well to ensure their invalidation is lifted from Callista.
+
+
+Many thanks,
+
+
+{!User.FirstName}
+
+
+Kind regards,
+
+Graduate Research Services
+_____________________________________________
+Monash Graduate Education
+Chancellery Building D, 26 Sports Walk
+Monash University, VIC 3800, Australia
+Phone: +61 3 990 53009 | Fax: +61 3 990 55042
+Email: mge-candidature@monash.edu
+Website: monash.edu/graduate-research
+Campus Map: monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+
+We&apos;re listening….your feedback helps us improve
+
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

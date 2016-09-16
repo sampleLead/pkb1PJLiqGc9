@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Survey invitation email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Customer experience survey</name>
+    <style>none</style>
+    <subject>How was your experience with us? - 3 quick questions to help us improve our services</subject>
+    <textOnly>Dear {!Contact.First_Name_case_corrected__c}
+
+Recently you contacted Monash Connect with an enquiry (reference #{!Case.CaseNumber}). We hope we have met your expectations in resolving your enquiry.
+
+Our Monash Connect team are committed to delivering excellent service and striving to continually improve services.  We have designed this quick survey to request  your feedback on the service you received. Your feedback will be used for quality assurance and planning purposes including to guide the training of our Monash Connect team and focus our efforts into the future.
+
+
+I thank you for your time.
+
+
+Your sincerely,
+Ashley Keleher
+Director, Customer Service
+Monash University
+
+If you do not wish to receive this survey request in the future, simply reply to this email with &apos;unsubscribe&apos; in the subject line.
+
+For privacy information:
+Current Students - Student Privacy Collection Statement
+Visitors - Monash University Privacy Collection Statement
+
+
+System Reference. Please do not delete. {!Case.Thread_Id}
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement. You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>most basic template, using Monash header, footer and privacy text with links</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Branded auto-response</name>
+    <style>none</style>
+    <subject>Monash Support: reference number {!Case.CaseNumber}</subject>
+    <textOnly>We appreciate you contacting us.
+
+Thank you for your enquiry to the Office of Future Students at Monash University and Monash College.
+
+A Monash Adviser will respond to your enquiry within two business days.
+
+This is an automatic email response- please do not reply to this email. Should you wish to contact us again, please email future@monash.edu or phone 1800MONASH (1800 666 274).
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement ( http://privacy.monash.edu.au/guidelines/collection-personal-information.html) . You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>custom</type>
+</EmailTemplate>

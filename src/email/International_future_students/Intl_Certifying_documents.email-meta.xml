@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this template when you need to provide additional information about certifying documents either within or outside Australia</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Monash_Connect_Letterhead</letterhead>
+    <name>Intl - Certifying documents</name>
+    <style>freeForm</style>
+    <subject>Thankyou for your enquiry to Monash University, ref #{!Case.CaseNumber}</subject>
+    <textOnly>Dear {!Contact.First_Name_case_corrected__c},
+
+
+
+Thank you for your interest in studying at Monash University, consistently ranked in the top one per cent of world universities (Times Higher Education World University Rankings 2015-2016).
+
+
+
+Certification of documents must be undertaken by one of the following authorised persons:
+
+
+
+Within Australia
+
+
+Solicitor
+Pharmacist
+Justice of the Peace
+Member of the police force
+Doctor
+School principal
+Bank manager
+Chartered accountant
+
+
+
+
+Outside Australia
+
+
+Monash University registered agent (for a full list of Monash Representative please visit the following website - www.msr.monash.edu.au/monash_agents)
+Monash staff member
+Solicitor
+Commissioner for declarations
+Government official
+Public notary
+University staff (Head of Department, Dean, or Registrar)
+
+
+
+
+The certifier must sight the original documents and check that the copies are true and unchanged copies of the originals. Every page of the document(s) must be certified as follows:
+
+
+
+
+Apply the certifier organisation stamp that has wording such as &apos;certified true copy of the original&apos; or &apos;certified&apos; or &apos;original sighted&apos;. If the certifier organisation stamp does not indicate certification, the certifier must write &apos;certified true copy of the original&apos; or &apos;certified&apos; or &apos;original sighted&apos; and apply the certifier organisation stamp, and
+Sign the document, and
+Write their full name ((initials are not acceptable), and
+Written or stamped notification of their position title within the organisation (e.g. solicitor, government official etc.), and
+Date the document (date of certification)
+
+
+
+
+
+Monash University reserves the right to refuse documentation on the grounds of incorrect certification or translation.
+
+
+I hope you have found this information valuable. If there is any other way in which I can be of assistance, please contact me by replying to this email or calling me at 1800 MONASH (666 274).
+
+
+
+
+Kind regards
+
+
+
+
+{!User.FirstName} {!User.Lastname_Initial__c}
+
+Monash Connect Officer
+
+{!User.Department}
+
+{!User.CompanyName}
+
+Tel: 1800 MONASH (1800 666 274)
+
+
+CRICOS Provider 00008C
+
+
+
+
+___________________________________
+
+Date Received : {!Case.CreatedDate}
+
+Your Enquiry :
+
+{!Case.Description}
+
+
+
+
+
+
+System Reference. Please do not delete. {!Case.Thread_Id}
+
+
+
+
+
+
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement. You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>html</type>
+</EmailTemplate>

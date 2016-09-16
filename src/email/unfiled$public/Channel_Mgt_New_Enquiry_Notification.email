@@ -1,0 +1,27 @@
+The following case has been assigned to your queue. 
+
+Case #: 
+{!Case.CaseNumber} 
+
+Subject: 
+{!Case.Subject} 
+
+Description: 
+{!Case.Description} 
+
+Contact Name : 
+{!Case.SuppliedName}
+
+Contact Phone : 
+{!Case.SuppliedPhone} 
+
+Contact Email : 
+{!Case.SuppliedEmail} 
+
+Contact Address : 
+{!Case.Supplied_Street_Address__c}
+{!Case.Supplied_City__c}
+{!Case.Supplied_State__c} 
+{!Case.Supplied_Postcode__c}
+
+Click on the link to access the case: {!Case.Link}

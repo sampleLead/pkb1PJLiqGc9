@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>eThesis submission chasing</name>
+    <style>freeForm</style>
+    <subject>eThesis submission chasing</subject>
+    <textOnly>Dear {!Case.Contact},
+
+Congratulations, you’re almost there!
+
+
+In order to complete your award of degree, you will need to submit an electronic (PDF) copy of your final thesis into the Monash University Research Repository. If you have previously submitted the electronic thesis, please provide us with the eThesis deposit confirmation ID number as soon as possible.
+
+We are unable to process the award of degree until we have received confirmation that the final thesis has been lodged. A gentle reminder that the final thesis must also include a copyright notice in the preliminary pages of your thesis.  Please refer to the template for details.
+
+
+If you encounter any problems uploading your thesis to the repository, please contact Ms Julie Fairweather at etheses@monash.edu.
+
+Kind regards
+
+_______________________
+​
+Monash Graduate Education
+Chancellery Building D
+26 Sports Walk
+Monash University, VIC 3800, Australia
+T: +61 3 990 53009
+W: www.monash.edu/graduate-research
+Campus Map: www.monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+We&apos;re listening….your feedback helps us improve
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+</EmailTemplate>

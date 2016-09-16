@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>Case.Enquiry_Type__c</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Contact.Contact_Profile__c</field>
+    </columns>
+    <columns>
+        <field>Case.Student_Type__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATEONLY</field>
+    </columns>
+    <columns>
+        <field>Case.Enquiry_Owner_Role__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>ORIGIN</column>
+            <operator>equals</operator>
+            <value>Email - study,Web - Future Students International,Web - Find Course International</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Enquiry_Owner_Role__c</column>
+            <operator>notEqual</operator>
+            <value>spam</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <operator>equals</operator>
+            <value>Solved,Referred Off-System,Closed,Referred by Phone,Referred</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>International Online - Solved</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseCustomEntity$Enquiry_Interest__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_THISWEEK</interval>
+    </timeFrameFilter>
+</Report>

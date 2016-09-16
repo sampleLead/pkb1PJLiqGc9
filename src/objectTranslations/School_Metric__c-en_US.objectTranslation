@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>School Metric</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>School Metrics</value>
+    </caseValues>
+    <fields>
+        <label><!-- ATAR 60.00-64.99 --></label>
+        <name>ATAR_60_00_64_99__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATAR 65.00-69.99 --></label>
+        <name>ATAR_65_00_69_99__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATAR 70.00-74.99 --></label>
+        <name>ATAR_70_00_74_99__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATAR 75.00-79.99 --></label>
+        <name>ATAR_75_00_79_99__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATAR 80.00-84.99 --></label>
+        <name>ATAR_80_00_84_99__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATAR 85.00-89.99 --></label>
+        <name>ATAR_85_00_89_99__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATAR 90.00-94.99 --></label>
+        <name>ATAR_90_00_94_99__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATAR 95.00-98.99 --></label>
+        <name>ATAR_95_00_98_99__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATAR 99.00-99.99 --></label>
+        <name>ATAR_99_00_99_99__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATAR Below 59.99 --></label>
+        <name>ATAR_Below_59_99__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATAR --></label>
+        <name>ATAR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alias --></label>
+        <name>Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Year 10 Domestic Students --></label>
+        <name>Count_of_Year_10_Domestic_Students__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Year 11 Domestic Students --></label>
+        <name>Count_of_Year_11_Domestic_Students__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Year 12 Domestic Students --></label>
+        <name>Count_of_Year_12_Domestic_Students__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Year 12 IB Students --></label>
+        <name>Count_of_Year_12_IB_Students__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Year 12 International Students --></label>
+        <name>Count_of_Year_12_International_Students__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enhancement Studies --></label>
+        <name>Enhancement_Studies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolment Variance --></label>
+        <name>Enrolment_Variance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolment --></label>
+        <name>Enrolment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Faculty --></label>
+        <name>Faculty__c</name>
+        <picklistValues>
+            <masterLabel>Art, Design and Architecture</masterLabel>
+            <translation><!-- Art, Design and Architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arts</masterLabel>
+            <translation><!-- Arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business and Economics</masterLabel>
+            <translation><!-- Business and Economics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Technology</masterLabel>
+            <translation><!-- Information Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law</masterLabel>
+            <translation><!-- Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicine, Nursing and Health Sciences</masterLabel>
+            <translation><!-- Medicine, Nursing and Health Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFS</masterLabel>
+            <translation><!-- OFS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy and Pharmaceutical Sciences</masterLabel>
+            <translation><!-- Pharmacy and Pharmaceutical Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAM</masterLabel>
+            <translation><!-- SAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Science</masterLabel>
+            <translation><!-- Science --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- First Preference Variation --></label>
+        <name>First_Preference_Variation__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Preference --></label>
+        <name>First_Preference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Higher Education Participation --></label>
+        <name>Higher_Education_Participation__c</name>
+    </fields>
+    <fields>
+        <label><!-- ICSEA --></label>
+        <name>ICSEA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monash Extension --></label>
+        <name>Monash_Extension__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monash Scholars --></label>
+        <name>Monash_Scholars__c</name>
+    </fields>
+    <fields>
+        <label><!-- School --></label>
+        <name>School__c</name>
+        <relationshipLabel><!-- School Metrics --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Size of Year 12 cohort --></label>
+        <name>Size_of_Year_12_cohort__c</name>
+    </fields>
+    <fields>
+        <label><!-- Under Represented --></label>
+        <name>Under_Represented__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year --></label>
+        <name>Year__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Faculty --></label>
+        <name>Faculty</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- OFS --></label>
+        <name>OFS</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please make sure that the Year field contains only numeric characters --></errorMessage>
+        <name>Year_Numeric_Validation_2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The year field should contain four numbers --></errorMessage>
+        <name>Year_length_validation</name>
+    </validationRules>
+</CustomObjectTranslation>

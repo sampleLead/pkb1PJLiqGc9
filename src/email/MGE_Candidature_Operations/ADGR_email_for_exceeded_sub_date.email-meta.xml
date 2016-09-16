@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ADGR email for exceeded sub date</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>ADGR email for exceeded sub date</name>
+    <style>freeForm</style>
+    <subject>Discontinue in Good Standing</subject>
+    <textOnly>Sent on behalf of the Academic Director, Graduate Research
+
+
+DISTRIBUTION:  Associate Deans Graduate Research
+
+CC:  Graduate Research Managers
+
+
+SUBJECT: Discontinue in Good Standing
+
+
+Dear XYZ,
+
+
+I am writing to advise that the following student/s enrolment has expired:
+
+
+· SURNAME, GN (ID ########)
+
+· SURNAME, GN (ID ########)
+
+
+
+
+MGE have made at least two attempts to notify this/these student/s of their upcoming thesis submission date. The Graduate Coordinator and supervisor were also notified of the status of this/these student/s on DATE.
+
+
+To date, no action has been taken by the student to submit their thesis or apply for an extension to their thesis submission date.
+
+
+This/These student/s will now be discontinued in good standing.
+
+
+Kind regards,
+
+
+Professor Sharon Ricardo
+
+Academic Director Graduate Research</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>peter.thomas@monash.edu.v2</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>Monash_Connect_Leader</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <name>MC Dashboard source reports</name>
+</ReportFolder>

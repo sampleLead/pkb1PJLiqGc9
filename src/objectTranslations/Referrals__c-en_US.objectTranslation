@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Referral</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Referrals</value>
+    </caseValues>
+    <fields>
+        <label><!-- Alias --></label>
+        <name>Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral --></label>
+        <name>Referral__c</name>
+        <picklistValues>
+            <masterLabel>Chaplains</masterLabel>
+            <translation><!-- Chaplains --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Childcare</masterLabel>
+            <translation><!-- Childcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Counselling Service</masterLabel>
+            <translation><!-- Counselling Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disability Services</masterLabel>
+            <translation><!-- Disability Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment and Careers</masterLabel>
+            <translation><!-- Employment and Careers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty Course Adviser</masterLabel>
+            <translation><!-- Faculty Course Adviser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty Student Services</masterLabel>
+            <translation><!-- Faculty Student Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faculty Tutor/Lecturer/Unit Coordinator</masterLabel>
+            <translation><!-- Faculty Tutor/Lecturer/Unit Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Service</masterLabel>
+            <translation><!-- Health Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Language and Learning online</masterLabel>
+            <translation><!-- Language and Learning online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Learning Skills Adviser</masterLabel>
+            <translation><!-- Learning Skills Adviser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Library</masterLabel>
+            <translation><!-- Library --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash Abroad</masterLabel>
+            <translation><!-- Monash Abroad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash Connect</masterLabel>
+            <translation><!-- Monash Connect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash Postgraduate Association (MPA)</masterLabel>
+            <translation><!-- Monash Postgraduate Association (MPA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash Residential Services</masterLabel>
+            <translation><!-- Monash Residential Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monash Sport</masterLabel>
+            <translation><!-- Monash Sport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Referral given</masterLabel>
+            <translation><!-- No Referral given --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safer Community</masterLabel>
+            <translation><!-- Safer Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Association</masterLabel>
+            <translation><!-- Student Association --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Rights</masterLabel>
+            <translation><!-- Student Rights --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supervisor follow up required</masterLabel>
+            <translation><!-- Supervisor follow up required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Team Monash</masterLabel>
+            <translation><!-- Team Monash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yulendj Indigenous Engagement Unit</masterLabel>
+            <translation><!-- Yulendj Indigenous Engagement Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eSolutions</masterLabel>
+            <translation><!-- eSolutions --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Round --></label>
+        <name>Round__c</name>
+        <relationshipLabel><!-- Referrals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SSA Identified --></label>
+        <name>SSA_Identified__c</name>
+        <relationshipLabel><!-- Referrals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Student --></label>
+        <name>Student__c</name>
+        <relationshipLabel><!-- Referrals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resolution notes --></label>
+        <name>mt_Resolution_notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolved Date/time --></label>
+        <name>mt_Resolved_Date_time__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

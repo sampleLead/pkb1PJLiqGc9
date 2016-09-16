@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Lookup Metadata</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lookup Metadata</value>
+    </caseValues>
+    <fields>
+        <label><!-- Collection --></label>
+        <name>Collection__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <help><!-- value to display in the lookup or autocomplete. This may be an aggregate of multiple fields to assist user i.e. Account, city, state.  Ideally this is maintained via workflow rules. --></help>
+        <label><!-- Label --></label>
+        <name>Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- sObject Name --></label>
+        <name>sObject__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

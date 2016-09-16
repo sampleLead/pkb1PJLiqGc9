@@ -1,0 +1,12 @@
+A Montrack referral has been created and requires your attention. 
+
+Please review the following. A link to the record has been provided for your convenience. 
+
+Reference: {!Referrals__c.Referral__c} 
+Created: {!Referrals__c.CreatedDate} 
+Created by: {!Referrals__c.CreatedBy} 
+Student: {!Referrals__c.Student__c} 
+
+Link to record: {!Referrals__c.Link} 
+
+This is an automated email, so please do not reply to it.

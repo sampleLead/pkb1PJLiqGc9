@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Statistical Consulting Service</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Statistical Consulting Service</name>
+    <style>freeForm</style>
+    <subject>Statistical Consulting Service - {!Contact.Name} {!Contact.Person_ID__c}</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+
+
+Please find information and the link on statistical consulting and the link to our Statistical Support form found on our intranet.
+
+You can read about it at: https://www.monash.edu/__data/assets/pdf_file/0008/179477/monash-statistical-consulting-platform.pdf
+This service is part of the technological support provided by MAXIMA (https://platforms.monash.edu/maxima/index.php?option=com_content&amp;view=article&amp;id=86&amp;Itemid=198)
+
+For the application form to access the service please use  the following link and scroll down to the Scholarships, Award, Grant section - under Statistical Support HDR
+http://intranet.monash.edu.au/graduate-education/handbook-admin-forms/forms/index.html#Scholarships
+
+Kind regards,
+
+{!User.FirstName}
+
+
+Graduate Research Services
+_____________________________________________
+Monash Graduate Education
+Chancellery Building D, 26 Sports Walk
+Monash University, VIC 3800, Australia
+Phone: +61 3 990 53009 | Fax: +61 3 990 55042
+Email: mge-candidature@monash.edu
+Website: monash.edu/graduate-research
+Campus Map: monash.edu/campuses/clayton/
+CRICOS Provider No. 00008C
+
+
+We&apos;re listening….your feedback helps us improve
+
+Follow us on Facebook: www.facebook.com/MonashGraduateEducation</textOnly>
+    <type>html</type>
+</EmailTemplate>

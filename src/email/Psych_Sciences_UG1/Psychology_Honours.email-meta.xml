@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Psychology Honours, including original customer question</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Psychology Honours</name>
+    <style>none</style>
+    <subject>Thankyou for your enquiry to Monash University to study Psychology honours, ref #{!Case.CaseNumber}</subject>
+    <textOnly>Dear {!Contact.First_Name_case_corrected__c}
+
+Many thanks for your email and for your interest in our Psychology Honours Program .
+
+Overview
+The Monash Honours in Psychology is accredited by the Australian Psychological Accreditation Council (APAC) and delivers high quality research training that enables students to register as a provisional psychologist and pursue further research and training in psychology.
+Students study the theoretical and practical application of psychology through a combination of coursework units and a research thesis within the School’s research themes.
+
+The course is delivered on-campus at Clayton over a duration of one (1) year full-time or two (2) years part-time. Part-time students complete the coursework units in first year and their research thesis in second year.
+
+Entry requirements
+You must have completed a bachelor’s degree or graduate diploma that includes the APAC accredited major of ten units in psychology no more than five (5) years prior to commencement of the course.
+
+Admission to the program is competitive and determined on the basis of academic merit. A minimum distinction (70%) in the four (4) core Level 3 units (PSY3041, PSY3051, PSY3032 and PSY3062) is required to be competitive for selection. In practice, however, the cut-off in generally around 78-79%.
+
+We have a limited numbers of places available to external applicants. These are determined on merit and assessed within the cohort of the given year.
+
+Application process
+There is one intake period in February each year. Applications open early September and close 31 October for the intake in the following year. To apply, please submit an online application directly to the School of Psychological Sciences.
+
+Offers are issued in late December and some late round offers may be made in January. All applicants will receive a response by mid-January at the latest. Offers cannot be deferred.
+
+Fees
+Commonwealth Supported PlacesCommonwealth Supported Places are available to domestic students. Australian citizens can defer their tuition fees through the HECS-HELP loan scheme.
+
+Alternative pathways
+You can also obtain an equivalent fourth year in psychology through the Graduate Diploma in Professional Psychology or Graduate Diploma of Professional Advanced. Both courses are accredited by APAC and managed by either the Faculty of Education or Monash Online, respectively. For more information about these alternative pathways and how to apply, please refer to the course links.
+
+If you have any further questions, please don’t hesitate to contact us.
+
+Regards
+
+{!User.FirstName} {!User.Lastname_Initial__c}
+{!User.Department}
+{!User.CompanyName}
+Tel: 1800 MONASH (1800 666 274)
+CRICOS Provider 00008C
+
+___________________________________
+Date Received : {!Case.CreatedDate}
+Your Enquiry :
+{!Case.Description}
+
+
+
+System Reference. Please do not delete. {!Case.Thread_Id}
+
+The personal information collected by us, or on our behalf, will be used to respond to your inquiry, to inform you about university related events and courses in accordance with the Monash University Privacy Collection Statement. You have the right to access personal information that Monash University holds about you, subject to any exemptions in relevant legislation. Further information about how your personal information is handled at Monash University is available at http://privacy.monash.edu. If you wish to seek access to your personal information, please contact the University Privacy Officer by email at privacyofficer@monash.edu</textOnly>
+    <type>custom</type>
+</EmailTemplate>

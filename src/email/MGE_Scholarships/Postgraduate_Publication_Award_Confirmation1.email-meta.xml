@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monash_MGE_Standard</letterhead>
+    <name>Postgraduate Publication Award Confirmation</name>
+    <style>freeForm</style>
+    <subject>Postgraduate Publication Award Confirmation -</subject>
+    <textOnly>Dear 
+
+Your Postgraduate Publication Award (PPA) payment  has been processed from DATE to DATE (12 weeks).  You will be receiving your first PPA payment on Thursday DATE
+
+Please do not hesitate to contact us if you have any queries.
+
+Kind Regards,</textOnly>
+    <type>html</type>
+</EmailTemplate>
